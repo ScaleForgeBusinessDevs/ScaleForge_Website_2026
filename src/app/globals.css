@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  /* Surfaces — Attio palette */
+  --color-ink: #08090a;
+  --color-ink-soft: #0f1011;
+  --color-panel: #161718;
+  --color-line: rgba(255, 255, 255, 0.06);
+
+  /* Text scale */
+  --color-text: #f7f8f8;
+  --color-text-secondary: #d0d6e0;
+  --color-text-muted: #8a8f98;
+  --color-text-faint: #62666d;
+
+  /* Brand accents */
+  --color-lime: #e4f222;
+  --color-indigo: #5e6ad2;
+
+  /* Semantic */
+  --status-amber: #e8633a;
+  --status-green: #6fcf8e;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-akira);
+  --font-accent: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+.bg-grid-dark {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+.bg-grid-fade {
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 30%, black 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 65% 65% at 50% 30%, black 30%, transparent 78%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: rgba(94, 106, 210, 0.35);
+  color: #f7f8f8;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
