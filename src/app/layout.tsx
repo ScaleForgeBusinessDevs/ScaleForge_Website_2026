@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import BiLoader from "@/components/BiLoader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 
 const inter = Inter({
@@ -47,6 +47,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#08080a] text-white font-sans">
         <SmoothScroll />
+        <BiLoader />
         <Navbar />
         <main className="flex-1 min-w-0">
           {children}

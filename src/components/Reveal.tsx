@@ -30,6 +30,9 @@ export default function Reveal({
       const el = ref.current;
       if (!el) return;
 
+      // Promote to compositor layer before GSAP reads geometry — prevents forced reflow
+      el.style.willChange = "transform, opacity";
+
       const targets = stagger ? Array.from(el.children) : el;
 
       gsap.set(targets, { opacity: 0, y });
@@ -46,6 +49,10 @@ export default function Reveal({
             delay,
             ease: "power3.out",
             stagger: stagger ? staggerAmount : 0,
+            onComplete: () => {
+              // Release compositor layer after animation — reduces memory
+              el.style.willChange = "auto";
+            },
           });
         },
       });

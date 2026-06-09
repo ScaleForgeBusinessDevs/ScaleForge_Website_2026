@@ -9,7 +9,19 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+      // Compositor layers before GSAP reads geometry — prevents forced reflow on initial paint
+      root.current?.querySelectorAll<HTMLElement>(".hero-line, .hero-sub, .hero-cta").forEach((el) => {
+        el.style.willChange = "transform, opacity";
+      });
+
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        onComplete: () => {
+          root.current?.querySelectorAll<HTMLElement>(".hero-line, .hero-sub, .hero-cta").forEach((el) => {
+            el.style.willChange = "auto";
+          });
+        },
+      });
 
       tl.fromTo(".hero-line", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12, delay: 0.25 })
         .fromTo(".hero-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, "-=0.5")
