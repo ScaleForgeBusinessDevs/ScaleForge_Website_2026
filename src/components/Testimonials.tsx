@@ -1,62 +1,91 @@
 import Reveal from "./Reveal";
 
-const SMALL_QUOTES = [
-  { quote: "ScaleForge strengthened our automation infrastructure and enabled consistent monitoring across all workflows.", name: "Ethan Walker", role: "Operations Lead" },
-  { quote: "ScaleForge streamlined our automation workflows and gave our team real-time visibility across every execution layer.", name: "Maira Alvarez", role: "Automation Manager" },
-  { quote: "ScaleForge simplified our automation processes and provided complete insight into every workflow execution.", name: "Priya Shah", role: "Product Operations" },
+const TESTIMONIALS = [
+  {
+    initials: "LcR",
+    name: "Luxury Car Rental",
+    role: "CEO",
+    quote:
+      "One of the most corporative and active team of developers and SEO experts we have worked with yet.",
+    industry: "Car Rental Company — Malaysia",
+  },
+  {
+    initials: "DT",
+    name: "Daniel Torres",
+    role: "Founder & CEO",
+    quote:
+      "From Figma to fully deployed in under two weeks. The speed and attention to brand detail was unlike anything we experienced with previous agencies.",
+    industry: "Real Estate Agency — USA",
+  },
 ];
+
+function Stars() {
+  return (
+    <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} className="h-4 w-4 fill-[#f5a623]" viewBox="0 0 20 20" aria-hidden>
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.163c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.062 9.384c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.951-.69L9.049 2.927z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#08080a] py-24 lg:py-32">
-      <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
+    <section className="relative overflow-hidden py-28 lg:py-36">
+      {/* Background image */}
+      <img
+        src="/Assets/Testimonials.webp"
+        alt=""
+        aria-hidden
+        className="absolute inset-0 h-full w-full object-cover object-center"
+      />
+      {/* Dark overlay so text stays readable */}
+      <div className="absolute inset-0 bg-[#08090a]/78" />
+
+      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-10">
         <Reveal className="mx-auto max-w-xl text-center">
-          <h2 className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
-            Trusted by Modern Teams
+          <h2 className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal leading-[1.12] tracking-normal text-white">
+            What Our Clients Say
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/45">
-            Real teams, automated workflows, and visual control — see how
-            modern teams run on ScaleForge.
+            Real results, real feedback — from the founders and operators who&apos;ve worked with us.
           </p>
         </Reveal>
 
-        <Reveal className="mt-14 grid grid-cols-1 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#101013] lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="relative h-64 lg:h-auto">
-            <div
-              className="absolute inset-0 bg-[#1c1c20]"
-              style={{
-                backgroundImage:
-                  "radial-gradient(120% 100% at 30% 20%, rgba(255,255,255,0.16) 0%, transparent 55%), radial-gradient(100% 100% at 80% 90%, rgba(255,255,255,0.07) 0%, transparent 60%)",
-              }}
-            />
-          </div>
-          <div className="flex flex-col justify-center gap-6 p-8 lg:p-12">
-            <span className="text-[34px] leading-none text-white/20">&ldquo;</span>
-            <blockquote className="text-[19px] leading-relaxed text-white/75">
-              ScaleForge enabled us to automate repetitive workflows across
-              multiple teams while maintaining complete operational visibility
-              and structured control.
-            </blockquote>
-            <div>
-              <p className="text-[14px] font-medium text-white">Daniel Carter</p>
-              <p className="text-[13px] text-white/40">Head of Operations, Brightline</p>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal stagger className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {SMALL_QUOTES.map((q) => (
-            <figure key={q.name} className="flex flex-col gap-6 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
-              <blockquote className="text-[14px] leading-relaxed text-white/55">&ldquo;{q.quote}&rdquo;</blockquote>
-              <figcaption className="mt-auto flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.06] text-[12px] font-medium text-white/50">
-                  {q.name.split(" ").map((n) => n[0]).join("")}
+        <Reveal
+          stagger
+          className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8"
+        >
+          {TESTIMONIALS.map((t) => (
+            <figure
+              key={t.name}
+              className="flex flex-col gap-5 rounded-2xl border border-white/[0.09] bg-[#08090a]/70 p-8 backdrop-blur-md"
+            >
+              {/* Avatar + name */}
+              <figcaption className="flex items-center gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#2563eb]/20 text-[13px] font-semibold text-[#2563eb]">
+                  {t.initials}
                 </span>
                 <div>
-                  <p className="text-[13px] font-medium text-white">{q.name}</p>
-                  <p className="text-[12px] text-white/35">{q.role}</p>
+                  <p className="text-[14px] font-semibold text-white">{t.name}</p>
+                  <p className="text-[12px] text-white/40">{t.role}</p>
                 </div>
               </figcaption>
+
+              {/* Stars */}
+              <Stars />
+
+              {/* Quote */}
+              <blockquote className="text-[15px] leading-relaxed text-white/70">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+
+              {/* Industry */}
+              <p className="mt-auto text-[10px] uppercase tracking-[0.15em] text-white/25">
+                {t.industry}
+              </p>
             </figure>
           ))}
         </Reveal>
