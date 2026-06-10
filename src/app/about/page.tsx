@@ -177,7 +177,7 @@ export default function AboutPage() {
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
                       <i className="bi bi-twitter-x" aria-hidden />
                     </a>
-                    <a href="mailto:scaleforgebusiessdev@gmail.com"
+                    <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Shahood"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
                       <i className="bi bi-envelope" aria-hidden />
@@ -221,7 +221,7 @@ export default function AboutPage() {
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
                       <i className="bi bi-github" aria-hidden />
                     </a>
-                    <a href="mailto:scaleforgebusiessdev@gmail.com"
+                    <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Ruhan"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
                       <i className="bi bi-envelope" aria-hidden />
@@ -299,7 +299,7 @@ export default function AboutPage() {
                 href="mailto:careers@scaleforge.com"
                 className="text-white/65 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white"
               >
-                scaleforgebusiessdev@gmail.com
+                scaleforgebusinessdev@gmail.com
               </a>{" "}
               if you&apos;d like to introduce yourself.
             </p>

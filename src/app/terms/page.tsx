@@ -52,8 +52,8 @@ export default function TermsPage() {
             <p className="mt-2 text-[14px] text-white/35">Last updated: June 9, 2026</p>
             <p className="mt-3 text-[14px] leading-relaxed text-white/45">
               Questions about this document? Contact us at{" "}
-              <a href="mailto:hello@scaleforge.com" className="text-white/65 underline decoration-white/20 hover:text-white">
-                hello@scaleforge.com
+              <a href="mailto:scaleforgebusinessdev@gmail.com" className="text-white/65 underline decoration-white/20 hover:text-white">
+                scaleforgebusinessdev@gmail.com
               </a>{" "}
               or via the{" "}
               <Link href="/contact" className="text-white/65 underline decoration-white/20 hover:text-white">
@@ -235,7 +235,7 @@ export default function TermsPage() {
                 <p className="mb-3">For questions about these Terms:</p>
                 <div className="rounded-2xl border border-white/[0.07] bg-[#101013] p-5">
                   <p><strong className="text-white/70">Email:</strong>{" "}
-                    <a href="mailto:hello@scaleforge.com" className="text-white/65 underline decoration-white/20 hover:text-white">hello@scaleforge.com</a>
+                    <a href="mailto:scaleforgebusinessdev@gmail.com" className="text-white/65 underline decoration-white/20 hover:text-white">scaleforgebusinessdev@gmail.com</a>
                   </p>
                   <p className="mt-1.5"><strong className="text-white/70">Postal:</strong> ScaleForge, Karachi, Pakistan</p>
                   <p className="mt-1.5"><strong className="text-white/70">Legal lead:</strong> Shahood Saleem (CEO)</p>
@@ -245,7 +245,7 @@ export default function TermsPage() {
               {/* Footer cross-links */}
               <p className="border-t border-white/[0.06] pt-8 text-[13px] italic text-white/30">
                 Questions about this document?{" "}
-                <a href="mailto:hello@scaleforge.com" className="underline decoration-white/20 hover:text-white/50">Email us</a>{" "}
+                <a href="mailto:scaleforgebusinessdev@gmail.com" className="underline decoration-white/20 hover:text-white/50">Email us</a>{" "}
                 or{" "}
                 <Link href="/contact" className="underline decoration-white/20 hover:text-white/50">book a call</Link>
                 . See also our{" "}

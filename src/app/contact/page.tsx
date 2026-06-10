@@ -39,8 +39,8 @@ const DIRECT_CHANNELS = [
   {
     icon: "bi-envelope",
     label: "Email",
-    value: "hello@scaleforge.com",
-    href: "mailto:hello@scaleforge.com",
+    value: "scaleforgebusinessdev@gmail.com",
+    href: "mailto:scaleforgebusinessdev@gmail.com",
     note: "Best for detailed briefs",
   },
   {
