@@ -299,7 +299,7 @@ export default function AboutPage() {
                 href="mailto:careers@scaleforge.com"
                 className="text-white/65 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white"
               >
-                careers@scaleforge.com
+                scaleforgebusiessdev@gmail.com
               </a>{" "}
               if you&apos;d like to introduce yourself.
             </p>

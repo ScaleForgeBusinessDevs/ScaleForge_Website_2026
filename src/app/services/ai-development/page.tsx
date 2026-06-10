@@ -159,7 +159,7 @@ export default function AIDevelopmentPage() {
         <div className="mx-auto max-w-[1200px] px-6 text-center lg:px-10">
           <Reveal className="flex flex-col items-center">
             <p className="mx-auto mt-7 max-w-6xl text-[clamp(1.2rem,5vw,1.8rem)] font-normal leading-[1.3] text-white">
-              &ldquo;Businesses that automate repetitive tasks recover an average of 6+ hours per employee per week —
+              &ldquo;Businesses that automate repetitive tasks recover an average of 6+ hours per employee per week
               and reduce lead response time by up to 80%.&rdquo;
             </p>
             <p className="mx-auto mt-7 max-w-xl text-[14.5px] font-inter leading-relaxed text-white/45">

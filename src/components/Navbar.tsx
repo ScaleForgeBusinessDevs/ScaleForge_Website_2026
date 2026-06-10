@@ -23,11 +23,11 @@ const LINKS: NavLink[] = [
     label: "Services",
     href: "/services",
     children: [
-      { label: "AI Development", href: "/services/ai-development" },
       { label: "Web Design", href: "/services/web-design" },
       { label: "Web Development", href: "/services/web-development" },
       { label: "SEO", href: "/services/seo" },
       { label: "Content Creation", href: "/services/content-creation" },
+      { label: "AI Development", href: "/services/ai-development" },
     ],
   },
   { label: "Projects", href: "/projects" },
@@ -90,16 +90,14 @@ export default function Navbar() {
                 <Link href={link.href} className="flex items-center gap-1.5 transition-colors hover:text-[#a5aef0]">
                   {link.label}
                   <i
-                    className={`bi bi-chevron-down text-[8px] transition-transform duration-300 ${
-                      servicesOpen ? "rotate-180" : ""
-                    }`}
+                    className={`bi bi-chevron-down text-[8px] transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""
+                      }`}
                     aria-hidden
                   />
                 </Link>
                 <div
-                  className={`absolute left-1/2 top-full -translate-x-1/2 pt-4 transition-all duration-200 ${
-                    servicesOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none translate-y-1 opacity-0"
-                  }`}
+                  className={`absolute left-1/2 top-full -translate-x-1/2 pt-4 transition-all duration-200 ${servicesOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none translate-y-1 opacity-0"
+                    }`}
                 >
                   <div className="w-60 overflow-hidden rounded-2xl border border-white/[0.12] bg-[#0c0c0f]/95 p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] backdrop-blur-2xl">
                     {link.children.map((child) => (
@@ -155,9 +153,8 @@ export default function Navbar() {
                   >
                     {link.label}
                     <i
-                      className={`bi bi-chevron-down text-[11px] transition-transform duration-300 ${
-                        mobileServicesOpen ? "rotate-180" : ""
-                      }`}
+                      className={`bi bi-chevron-down text-[11px] transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""
+                        }`}
                       aria-hidden
                     />
                   </button>

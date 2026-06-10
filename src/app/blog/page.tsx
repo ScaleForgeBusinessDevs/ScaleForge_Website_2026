@@ -98,7 +98,7 @@ export default async function BlogIndexPage({
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 lg:px-10 lg:pt-28">
           <Reveal className="max-w-2xl">
             <h1 className="mt-6 text-[clamp(1.8rem,7vw,3rem)] font-display font-normal leading-[1.14] text-white">
-              The ScaleForge Blog: Actionable Insights
+              The ScaleForge Blog : Actionable Insights
             </h1>
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/45">
               No fluff. No filler. Practical web design, custom engineering, SEO, and AI automation playbooks from a
