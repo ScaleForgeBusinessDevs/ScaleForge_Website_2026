@@ -29,6 +29,7 @@ export default function ContactForm() {
   const [budget, setBudget] = useState("");
   const [timeline, setTimeline] = useState("");
   const [formState, setFormState] = useState<FormState>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function toggleService(s: string) {
     setSelectedServices((prev) =>
@@ -38,10 +39,43 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (selectedServices.length === 0) {
+      setFormState("error");
+      setErrorMessage("Please select at least one service you're interested in.");
+      return;
+    }
+
     setFormState("submitting");
-    // Placeholder: replace with actual form submission (API route / Formspree / EmailJS)
-    await new Promise((r) => setTimeout(r, 1000));
-    setFormState("success");
+    setErrorMessage("");
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          company: formData.get("company"),
+          services: selectedServices,
+          budget,
+          timeline,
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      setFormState("success");
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      setFormState("error");
+    }
   }
 
   if (formState === "success") {
@@ -199,6 +233,9 @@ export default function ContactForm() {
             </>
           )}
         </button>
+        {formState === "error" && (
+          <p className="mt-3 text-[13px] text-[#e8633a]">{errorMessage}</p>
+        )}
         <p className="mt-3 text-[12px] italic text-white/30">
           We typically respond within 4 business hours during our working window (Mon–Fri, flexible coverage across US/EU/AU time zones).
         </p>
