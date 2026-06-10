@@ -1,60 +1,24 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
-declare global {
-  interface Window {
-    THREE: any;
-  }
-}
+import * as THREE from "three";
 
 export function ShaderAnimation() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const sceneRef = useRef<{
-    camera: any;
-    scene: any;
-    renderer: any;
-    uniforms: any;
-    animationId: number | null;
-  }>({
-    camera: null,
-    scene: null,
-    renderer: null,
-    uniforms: null,
-    animationId: null,
-  });
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js";
-    script.onload = () => {
-      if (containerRef.current && window.THREE) initThreeJS();
-    };
-    document.head.appendChild(script);
-
-    return () => {
-      if (sceneRef.current.animationId) cancelAnimationFrame(sceneRef.current.animationId);
-      if (sceneRef.current.renderer) sceneRef.current.renderer.dispose();
-      if (document.head.contains(script)) document.head.removeChild(script);
-    };
-  }, []);
-
-  const initThreeJS = () => {
-    if (!containerRef.current || !window.THREE) return;
-
-    const THREE = window.THREE;
     const container = containerRef.current;
-    container.innerHTML = "";
+    if (!container) return;
 
     const camera = new THREE.Camera();
     camera.position.z = 1;
 
     const scene = new THREE.Scene();
-    const geometry = new THREE.PlaneBufferGeometry(2, 2);
+    const geometry = new THREE.PlaneGeometry(2, 2);
 
     const uniforms = {
-      time: { type: "f", value: 1.0 },
-      resolution: { type: "v2", value: new THREE.Vector2() },
+      time: { value: 1.0 },
+      resolution: { value: new THREE.Vector2() },
     };
 
     const vertexShader = `void main() { gl_Position = vec4(position, 1.0); }`;
@@ -104,8 +68,6 @@ export function ShaderAnimation() {
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
-    sceneRef.current = { camera, scene, renderer, uniforms, animationId: null };
-
     const onWindowResize = () => {
       const rect = container.getBoundingClientRect();
       renderer.setSize(rect.width, rect.height);
@@ -116,14 +78,24 @@ export function ShaderAnimation() {
     onWindowResize();
     window.addEventListener("resize", onWindowResize, false);
 
+    let animationId: number;
     const animate = () => {
-      sceneRef.current.animationId = requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
       uniforms.time.value += 0.05;
       renderer.render(scene, camera);
     };
 
     animate();
-  };
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", onWindowResize);
+      renderer.dispose();
+      if (renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement);
+      }
+    };
+  }, []);
 
   return <div ref={containerRef} className="absolute inset-0 h-full w-full" />;
 }
