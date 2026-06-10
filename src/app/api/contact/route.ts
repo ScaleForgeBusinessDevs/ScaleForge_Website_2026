@@ -74,7 +74,7 @@ export async function POST(request: Request) {
   try {
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || "ScaleForge <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL || "scaleforgebusiessdev@gmail.com",
+      to: process.env.CONTACT_TO_EMAIL || "scaleforgebusinessdev@gmail.com",
       replyTo: email,
       subject: `New project inquiry from ${name}`,
       text: textBody,
