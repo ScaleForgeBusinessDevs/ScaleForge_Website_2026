@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScroll from "@/components/SmoothScroll";
 import BiLoader from "@/components/BiLoader";
 import Navbar from "@/components/Navbar";
@@ -53,6 +54,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
