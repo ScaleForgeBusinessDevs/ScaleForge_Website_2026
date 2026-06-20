@@ -31,8 +31,8 @@ const BELIEFS = [
 
 const FACTS = [
   { label: "Founded", value: "2024" },
-  { label: "HQ", value: "Karachi, Pakistan" },
-  { label: "Structure", value: "Pakistan Companies Act 2017" },
+  { label: "Team", value: "Remote - First" },
+  { label: "Structure", value: "Registered Studio" },
   { label: "Coverage", value: "US / EU / AU time zones" },
 ];
 
@@ -255,17 +255,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Where We Work From */}
+      {/* How We Work */}
       <section className="border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto flex max-w-3xl flex-col items-center text-center">
             <h2 className="mt-5 text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
-              Where We Work From
+              Remote - First, Globally Covered
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/45">
-              ScaleForge operates remote-first from Karachi, Pakistan, with clients across the US, UK, Canada,
-              Australia, and the EU. We work in your time zone — meetings booked during your business hours, async
-              updates delivered overnight when needed.
+              ScaleForge operates remote-first, with clients across the US, UK, Canada, Australia, and the EU. We
+              work in your time zone — meetings booked during your business hours, async updates delivered
+              overnight when needed.
             </p>
           </Reveal>
 
@@ -296,7 +296,7 @@ export default function AboutPage() {
             <p className="text-[15px] italic leading-relaxed text-white/45">
               Always interested in connecting with senior engineers, designers, and SEO specialists. Email{" "}
               <a
-                href="mailto:careers@scaleforge.com"
+                href="mailto:scaleforgebusinessdev@gmail.com"
                 className="text-white/65 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white"
               >
                 scaleforgebusinessdev@gmail.com

@@ -51,9 +51,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 border-b border-white/[0.06] pb-14 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-white">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/15 text-[13px] font-semibold">
-                S
-              </span>
+              <img src="/Assets/favicon_SF.png" alt="" className="h-7 w-7 object-contain" />
               ScaleForge
             </Link>
             <p className="mt-4 max-w-[280px] text-[13.5px] leading-relaxed text-white/40">
