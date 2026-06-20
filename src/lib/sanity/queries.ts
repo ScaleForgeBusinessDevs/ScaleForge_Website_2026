@@ -54,13 +54,20 @@ export async function getAllPosts(): Promise<SanityPost[]> {
 }
 
 export async function getFeaturedPost(): Promise<SanityPost | null> {
-  // No featured boolean in schema — return the most recent post
-  const results = await sanityClient.fetch<SanityPost[]>(
+  const featured = await sanityClient.fetch<SanityPost[]>(
+    `*[_type == "post" && featured == true] | order(publishedAt desc)[0..0] { ${postFields} }`,
+    {},
+    REVALIDATE
+  );
+  if (featured[0]) return featured[0];
+
+  // No post explicitly marked featured — fall back to the most recent post
+  const latest = await sanityClient.fetch<SanityPost[]>(
     `*[_type == "post"] | order(publishedAt desc)[0..0] { ${postFields} }`,
     {},
     REVALIDATE
   );
-  return results[0] ?? null;
+  return latest[0] ?? null;
 }
 
 export async function getPostsByFilter(type?: string): Promise<SanityPost[]> {

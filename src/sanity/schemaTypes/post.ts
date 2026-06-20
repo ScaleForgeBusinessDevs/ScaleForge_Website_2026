@@ -8,24 +8,25 @@ export const postType = defineType({
     defineField({ name: "title", title: "Title", type: "string", validation: (r) => r.required() }),
     defineField({ name: "slug", title: "Slug", type: "slug", options: { source: "title", maxLength: 96 }, validation: (r) => r.required() }),
     defineField({
-      name: "type",
+      name: "category",
       title: "Post Type",
       type: "string",
-      options: { list: [{ title: "Blog", value: "blog" }, { title: "Case Study", value: "case-study" }], layout: "radio" },
-      initialValue: "blog",
+      options: { list: [{ title: "Blog", value: "Blogs" }, { title: "Case Study", value: "Case Studies" }], layout: "radio" },
+      initialValue: "Blogs",
     }),
-    defineField({ name: "featuredImage", title: "Featured Image", type: "image", options: { hotspot: true }, fields: [defineField({ name: "alt", title: "Alt Text", type: "string" })] }),
-    defineField({ name: "excerpt", title: "Excerpt", type: "text", rows: 3 }),
+    defineField({ name: "coverImage", title: "Cover Image", type: "image", options: { hotspot: true }, fields: [defineField({ name: "alt", title: "Alt Text", type: "string" })] }),
+    defineField({ name: "description", title: "Description / Excerpt", type: "text", rows: 3 }),
+    defineField({ name: "executiveSummary", title: "Executive Summary", description: "Short plain-language summary used for AI/answer-engine citations.", type: "text", rows: 4 }),
     defineField({ name: "readTime", title: "Read Time (minutes)", type: "number" }),
     defineField({ name: "author", title: "Author", type: "reference", to: [{ type: "author" }] }),
-    defineField({ name: "publishedDate", title: "Published Date", type: "date", initialValue: () => new Date().toISOString().split("T")[0] }),
+    defineField({ name: "publishedAt", title: "Published Date", type: "date", initialValue: () => new Date().toISOString().split("T")[0] }),
     defineField({ name: "featured", title: "Featured Post", type: "boolean", initialValue: false }),
     defineField({ name: "body", title: "Body", type: "array", of: [{ type: "block" }, { type: "image", options: { hotspot: true } }] }),
   ],
   preview: {
-    select: { title: "title", media: "featuredImage", type: "type" },
-    prepare({ title, media, type }) {
-      return { title, media, subtitle: type === "case-study" ? "Case Study" : "Blog" };
+    select: { title: "title", media: "coverImage", category: "category" },
+    prepare({ title, media, category }) {
+      return { title, media, subtitle: category === "Case Studies" ? "Case Study" : "Blog" };
     },
   },
 });
