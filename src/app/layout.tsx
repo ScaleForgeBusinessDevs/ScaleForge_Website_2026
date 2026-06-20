@@ -46,7 +46,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${akira.variable} ${turismo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#08080a] text-white font-sans">
+      <body className="min-h-full flex flex-col bg-[#08080a] text-white font-sans" suppressHydrationWarning>
         <SmoothScroll />
         <BiLoader />
         <Navbar />
