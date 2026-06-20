@@ -60,24 +60,44 @@ export default function NeatBackground({ className = "" }: { className?: string 
     }
 
     const start = () => {
-      if (!cancelled) gradient = createGradient();
+      if (!cancelled && !gradient) gradient = createGradient();
+    };
+
+    let idleId = -1;
+    let timeoutId = -1;
+
+    const cancelScheduled = () => {
+      if (idleId !== -1) window.cancelIdleCallback(idleId);
+      if (timeoutId !== -1) window.clearTimeout(timeoutId);
+      idleId = -1;
+      timeoutId = -1;
+    };
+
+    const schedule = (timeout: number) => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(start, { timeout });
+      } else {
+        timeoutId = window.setTimeout(start, Math.min(timeout, 200));
+      }
     };
 
     // Defer WebGL init until the browser is idle so it doesn't compete with
-    // hydration/paint during the critical loading window. Safari has no
-    // requestIdleCallback, so fall back to a short timeout there.
-    let idleId = -1;
-    let timeoutId = -1;
-    if (typeof window.requestIdleCallback === "function") {
-      idleId = window.requestIdleCallback(start, { timeout: 2000 });
-    } else {
-      timeoutId = window.setTimeout(start, 200);
-    }
+    // hydration/paint during the critical loading window. The 4s ceiling
+    // keeps it well clear of a desktop visitor's likely first click — if
+    // one arrives sooner, reschedule for right after that click finishes
+    // instead of letting the shader-compile work block its repaint (INP).
+    schedule(4000);
+
+    const onFirstInteraction = () => {
+      cancelScheduled();
+      schedule(0);
+    };
+    window.addEventListener("pointerdown", onFirstInteraction, { once: true, passive: true });
 
     return () => {
       cancelled = true;
-      if (idleId !== -1) window.cancelIdleCallback(idleId);
-      if (timeoutId !== -1) window.clearTimeout(timeoutId);
+      window.removeEventListener("pointerdown", onFirstInteraction);
+      cancelScheduled();
       gradient?.destroy();
     };
   }, []);
