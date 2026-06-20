@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { ShaderAnimation } from "./ShaderAnimation";
+import { ShaderAnimation } from "./ShaderAnimationLazy";
 
 interface CtaLink {
   label: string;

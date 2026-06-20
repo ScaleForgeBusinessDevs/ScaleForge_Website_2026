@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import Reveal from "@/components/Reveal";
-import { ShaderAnimation } from "@/components/ShaderAnimation";
+import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import CTASection from "@/components/CTASection";
 import BlogFilterBar from "@/components/BlogFilterBar";
 import BlogNewsletterCard from "@/components/BlogNewsletterCard";

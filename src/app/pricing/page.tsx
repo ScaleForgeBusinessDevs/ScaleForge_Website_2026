@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
-import { ShaderAnimation } from "@/components/ShaderAnimation";
+import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 import PricingAnchorNav from "@/components/PricingAnchorNav";
 

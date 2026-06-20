@@ -54,7 +54,7 @@ export default function Footer() {
               <img src="/Assets/favicon_SF.png" alt="" className="h-7 w-7 object-contain" />
               ScaleForge
             </Link>
-            <p className="mt-4 max-w-[280px] text-[13.5px] leading-relaxed text-white/40">
+            <p className="mt-4 max-w-[280px] text-[13.5px] leading-relaxed text-white/60">
               Visual automation for modern teams — build, run and monitor
               workflows from one workspace.
             </p>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           <div>
             <p className="text-[13px] font-medium text-white/85">Stay in the loop</p>
-            <p className="mt-2 text-[13px] text-white/40">Product news and automation tips, monthly.</p>
+            <p className="mt-2 text-[13px] text-white/60">Product news and automation tips, monthly.</p>
             <form className="mt-4 flex max-w-sm gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
@@ -82,11 +82,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-10 py-14 sm:grid-cols-3">
           {COLUMNS.map((col) => (
             <div key={col.title}>
-              <h4 className="text-[13px] font-medium text-white/85">{col.title}</h4>
+              <h3 className="text-[13px] font-medium text-white/85">{col.title}</h3>
               <ul className="mt-4 flex flex-col gap-3">
                 {col.links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-[13.5px] text-white/40 transition-colors hover:text-white/75">
+                    <Link href={link.href} className="text-[13.5px] text-white/60 transition-colors hover:text-white/75">
                       {link.label}
                     </Link>
                   </li>
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-6 border-t border-white/[0.06] pt-8 sm:flex-row sm:items-center">
-          <p className="text-[12.5px] text-white/35">
+          <p className="text-[12.5px] text-white/60">
             © {new Date().getFullYear()} ScaleForge, Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-5">

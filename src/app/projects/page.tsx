@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { ShaderAnimation } from "@/components/ShaderAnimation";
+import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import CTASection from "@/components/CTASection";
 import ProjectFilterBar from "@/components/ProjectFilterBar";
 import { ProjectCard } from "@/components/ProjectCard";

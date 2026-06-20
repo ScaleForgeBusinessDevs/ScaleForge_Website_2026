@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
-import { ShaderAnimation } from "@/components/ShaderAnimation";
+import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 
 export const metadata: Metadata = {
   title: "About ScaleForge | Our Team, Story & Values",
