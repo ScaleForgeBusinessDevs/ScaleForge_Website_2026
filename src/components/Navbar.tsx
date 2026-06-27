@@ -59,7 +59,7 @@ export default function Navbar() {
     };
   }, [open]);
 
-  if (pathname.startsWith("/studio")) return null;
+  if (pathname.startsWith("/studio") || pathname.startsWith("/portal")) return null;
 
   return (
     <header ref={ref} className="fixed inset-x-0 top-4 z-50 px-4 lg:px-6">

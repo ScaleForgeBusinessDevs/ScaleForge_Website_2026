@@ -43,7 +43,7 @@ const SOCIALS = [
 
 export default function Footer() {
   const pathname = usePathname();
-  if (pathname.startsWith("/studio")) return null;
+  if (pathname.startsWith("/studio") || pathname.startsWith("/portal")) return null;
 
   return (
     <footer className="border-t border-white/[0.06] bg-[#08080a] pb-10 pt-20">
