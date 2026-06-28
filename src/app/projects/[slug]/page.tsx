@@ -50,6 +50,9 @@ export async function generateMetadata({
 
 const ptComponents: PortableTextComponents = {
   block: {
+    h1: ({ children }) => (
+      <h2 className="mb-4 mt-10 text-[26px] font-medium leading-snug text-white sm:text-[30px]">{children}</h2>
+    ),
     h2: ({ children }) => (
       <h2 className="mb-4 mt-10 text-[22px] font-medium leading-snug text-white sm:text-[25px]">{children}</h2>
     ),

@@ -73,7 +73,7 @@ export default function Navbar() {
           aria-hidden
         />
 
-        <Link href="/" className="relative z-10 flex items-center gap-2 text-[15px] font-semibold tracking-tight">
+        <Link href="/" aria-label="ScaleForge Home" className="relative z-10 flex items-center gap-2 text-[15px] font-semibold tracking-tight">
           <img src="/Assets/favicon_SF.png" alt="" className="h-7 w-7 object-contain" />
           ScaleForge
         </Link>

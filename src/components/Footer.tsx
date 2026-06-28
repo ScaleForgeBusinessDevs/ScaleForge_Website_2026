@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-12 border-b border-white/[0.06] pb-14 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-8">
           <div>
-            <Link href="/" className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-white">
+            <Link href="/" aria-label="ScaleForge Home" className="flex items-center gap-2 text-[15px] font-semibold tracking-tight text-white">
               <img src="/Assets/favicon_SF.png" alt="" className="h-7 w-7 object-contain" />
               ScaleForge
             </Link>

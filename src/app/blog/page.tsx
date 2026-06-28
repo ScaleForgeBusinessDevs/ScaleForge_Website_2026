@@ -13,11 +13,24 @@ import { urlFor } from "@/lib/sanity/client";
 
 export const revalidate = 3600;
 
-export const metadata: Metadata = {
-  title: "Blog & Insights | ScaleForge",
-  description:
-    "Practical guides on Next.js, SEO, AI automation, and web development from ScaleForge — the studio building high-performance sites and AI systems for ambitious brands.",
-};
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const isCaseStudy = params.type === "case-study" || params.type === "case-studies";
+  
+  return {
+    title: isCaseStudy ? "Case Studies | ScaleForge" : "Blog & Insights | ScaleForge",
+    description: isCaseStudy
+      ? "Explore our latest case studies and success stories."
+      : "Practical guides on Next.js, SEO, AI automation, and web development from ScaleForge.",
+    alternates: {
+      canonical: "/blog", // Consolidate duplicate content to the base blog URL
+    },
+  };
+}
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("en-US", { month: "long", year: "numeric" });

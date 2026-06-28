@@ -34,11 +34,19 @@ export async function generateMetadata({
     const imgUrl = post.featuredImage?.asset
       ? urlFor(post.featuredImage).width(1200).height(630).url()
       : undefined;
+    let finalTitle = post.seoTitle ?? `${post.title} | ScaleForge Blog`;
+    if (finalTitle.length > 70) {
+      finalTitle = post.title;
+      if (finalTitle.length > 70) {
+        finalTitle = finalTitle.substring(0, 67) + "...";
+      }
+    }
+
     return {
-      title: post.seoTitle ?? `${post.title} | ScaleForge Blog`,
+      title: finalTitle,
       description: post.seoDescription ?? post.excerpt,
       openGraph: {
-        title: post.title,
+        title: finalTitle,
         description: post.excerpt,
         images: imgUrl ? [{ url: imgUrl, width: 1200, height: 630 }] : undefined,
         type: "article",
@@ -60,6 +68,9 @@ export async function generateMetadata({
 // Portable Text custom components
 const ptComponents: PortableTextComponents = {
   block: {
+    h1: ({ children }) => (
+      <h2 className="mb-4 mt-10 text-[26px] font-medium leading-snug text-white sm:text-[30px]">{children}</h2>
+    ),
     h2: ({ children }) => (
       <h2 className="mb-4 mt-10 text-[22px] font-medium leading-snug text-white sm:text-[25px]">{children}</h2>
     ),

@@ -53,17 +53,17 @@ export default async function ProjectsPage({
         <div className="pointer-events-none absolute inset-0 z-0"><ShaderAnimation /></div>
         <div className="pointer-events-none absolute inset-0 z-[1] bg-[#08090a]/80" />
         <div className="bg-grid-dark bg-grid-fade pointer-events-none absolute inset-0 z-[2]" />
-        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 lg:px-10 lg:pt-28">
-          <Reveal className="max-w-4xl">
+        <div className="relative z-10 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center px-6 pb-16 pt-32 text-center lg:px-10 lg:pt-28">
+          <Reveal className="mx-auto flex max-w-4xl flex-col items-center">
             <span className="font-accent text-[10px] uppercase tracking-[0.2em] text-white/35">
               Our Work
             </span>
             <h1 className="mt-6 text-[clamp(1.8rem,7vw,3rem)] font-display font-normal leading-[1.14] text-white">
               Projects That Prove What&apos;s Possible
             </h1>
-            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/45">
+            <h2 className="mx-auto mt-6 text-center text-[15px] leading-[1.8] text-white/50">
               Real websites, real SEO results, real AI systems — built for ambitious brands that refuse to settle for average.
-            </p>
+            </h2>
           </Reveal>
         </div>
       </section>
@@ -76,6 +76,15 @@ export default async function ProjectsPage({
       {/* Grid */}
       <section className="bg-[#08080a] py-16 lg:py-20">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
+
+          <Reveal className="mx-auto mb-16 max-w-7xl space-y-4 text-center text-[15px] leading-[1.8] text-white/50">
+            <p>
+              Real websites, real SEO results, real AI systems, built for ambitious brands that refuse to settle for average.
+              At ScaleForge, our portfolio represents more than just aesthetic design; it showcases engineered growth. We partner with industry-leading founders and marketing teams to architect digital experiences that seamlessly convert visitors into loyal customers. Our approach prioritizes performance, technical excellence, and user-centric design principles.
+              Whether we are developing a lightning-fast Next.js web application, orchestrating a technical SEO turnaround to capture organic market share, or building custom AI automation pipelines to streamline backend operations, every project is treated as a foundational asset for your business. We don't just build websites; we build scalable digital infrastructure.
+              Explore our recent case studies and client deployments below to see how we meticulously blend data-driven strategy, modern web typography, and premium software engineering to deliver measurable, compounding ROI across every single engagement.
+            </p>
+          </Reveal>
 
           {/* Featured project */}
           {featured && !category && (
