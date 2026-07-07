@@ -60,7 +60,7 @@ export default function Pricing() {
                 <span className="text-[13px] text-white/40">/ month</span>
               </p>
               <a
-                href="#"
+                href="/pricing"
                 className={`mt-6 inline-flex items-center justify-center rounded-full px-5 py-2.5 font-accent text-[11px] uppercase tracking-[0.12em] transition-transform hover:scale-[1.02] ${plan.featured ? "bg-[#2563eb] text-white" : "border border-white/15 text-white/80"
                   }`}
               >
@@ -82,7 +82,7 @@ export default function Pricing() {
 
         <Reveal className="mt-10 text-center">
           <a
-            href="#"
+            href="/pricing#compare"
             className="inline-flex items-center gap-2 text-[13.5px] font-medium text-white/55 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
           >
             Compare Plans

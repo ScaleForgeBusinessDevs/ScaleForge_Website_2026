@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -8,6 +8,31 @@ export const metadata: Metadata = {
   title: "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
   description:
     "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/solutions",
+  },
+  openGraph: {
+    title: "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
+    description:
+      "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
+    url: "https://scaleforgewebdev.vercel.app/solutions",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
+    description:
+      "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
+    images: ["/og-image.png"],
+  },
 };
 
 const STATS = [

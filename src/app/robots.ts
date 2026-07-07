@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://scaleforge.agency";
+const siteUrl = "https://scaleforgewebdev.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/studio/", "/api/"],
+        disallow: ["/studio", "/portal", "/admin", "/api"],
       },
     ],
     sitemap: `${siteUrl}/sitemap.xml`,

@@ -20,14 +20,36 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const params = await searchParams;
   const isCaseStudy = params.type === "case-study" || params.type === "case-studies";
+  const title = isCaseStudy ? "Case Studies | ScaleForge" : "Blog & Insights | ScaleForge";
+  const description = isCaseStudy
+    ? "Explore our latest case studies and success stories."
+    : "Practical guides on Next.js, SEO, AI automation, and web development from ScaleForge.";
   
   return {
-    title: isCaseStudy ? "Case Studies | ScaleForge" : "Blog & Insights | ScaleForge",
-    description: isCaseStudy
-      ? "Explore our latest case studies and success stories."
-      : "Practical guides on Next.js, SEO, AI automation, and web development from ScaleForge.",
+    title,
+    description,
     alternates: {
-      canonical: "/blog", // Consolidate duplicate content to the base blog URL
+      canonical: "https://scaleforgewebdev.vercel.app/blog",
+    },
+    openGraph: {
+      title,
+      description,
+      url: "https://scaleforgewebdev.vercel.app/blog",
+      siteName: "ScaleForge",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
     },
   };
 }

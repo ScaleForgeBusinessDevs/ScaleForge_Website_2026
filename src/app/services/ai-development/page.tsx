@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
@@ -8,6 +8,25 @@ export const metadata: Metadata = {
   title: "AI Development & Automation Services | ScaleForge",
   description:
     "Build AI automation that scrapes leads, runs cold-calling agents, and publishes social content 24/7. ScaleForge builds with n8n, Make, Vapi, and Zapier.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services/ai-development",
+  },
+  openGraph: {
+    title: "AI Development & Automation Services | ScaleForge",
+    description:
+      "Build AI automation that scrapes leads, runs cold-calling agents, and publishes social content 24/7. ScaleForge builds with n8n, Make, Vapi, and Zapier.",
+    url: "https://scaleforgewebdev.vercel.app/services/ai-development",
+    siteName: "ScaleForge",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Development & Automation Services | ScaleForge",
+    description:
+      "Build AI automation that scrapes leads, runs cold-calling agents, and publishes social content 24/7. ScaleForge builds with n8n, Make, Vapi, and Zapier.",
+    images: ["/og-image.png"],
+  },
 };
 
 const CAPABILITIES = [
@@ -144,8 +163,27 @@ function StepFlow({ steps }: { steps: { title: string; body: string }[] }) {
 }
 
 export default function AIDevelopmentPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Development & Automation",
+    "serviceType": "AI Automation",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scaleforgewebdev.vercel.app"
+    },
+    "description": "Build AI automation that scrapes leads, runs cold-calling agents, and publishes social content 24/7. ScaleForge builds with n8n, Make, Vapi, and Zapier.",
+    "areaServed": "Worldwide",
+    "url": "https://scaleforgewebdev.vercel.app/services/ai-development"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow="AI AUTOMATION"
         title="AI Systems That Scale Your Business on Autopilot"

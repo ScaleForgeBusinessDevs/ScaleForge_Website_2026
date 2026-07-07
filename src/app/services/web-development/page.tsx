@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -9,6 +9,25 @@ export const metadata: Metadata = {
   title: "Next.js Web Development Services | ScaleForge",
   description:
     "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services/web-development",
+  },
+  openGraph: {
+    title: "Next.js Web Development Services | ScaleForge",
+    description:
+      "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+    url: "https://scaleforgewebdev.vercel.app/services/web-development",
+    siteName: "ScaleForge",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Next.js Web Development Services | ScaleForge",
+    description:
+      "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+    images: ["/og-image.png"],
+  },
 };
 
 const CAPABILITIES = [
@@ -90,8 +109,27 @@ const FAQS = [
 ];
 
 export default function WebDevelopmentPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Next.js Web Development",
+    "serviceType": "Web Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scaleforgewebdev.vercel.app"
+    },
+    "description": "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+    "areaServed": "Worldwide",
+    "url": "https://scaleforgewebdev.vercel.app/services/web-development"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow="ELITE CODING"
         title="Custom Web Development Built for Supersonic Speed"

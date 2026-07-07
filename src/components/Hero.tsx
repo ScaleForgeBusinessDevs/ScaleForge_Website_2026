@@ -43,11 +43,12 @@ export default function Hero() {
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center px-6 text-center lg:px-10">
         <h1 className="mx-auto max-w-6xl text-[clamp(1.9rem,6vw,3rem)] font-display font-normal tracking-normal leading-[1.1] text-white">
           <span className="hero-line block">Building Online Presence</span>
+          {" "}
           <span className="hero-line block">For Businesses Around the Globe</span>
         </h1>
 
         <p className="hero-sub mx-auto mt-6 max-w-lg text-balance text-[15.5px] leading-relaxed text-white/45">
-          Creating Websites, Content and AI Automations While Scaling Businesses Using SEO , PPC and Meta Marketing
+          Creating Websites, Content and AI Automations While Scaling Businesses Using SEO, PPC and Meta Marketing
         </p>
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

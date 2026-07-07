@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -8,6 +8,31 @@ export const metadata: Metadata = {
   title: "Services | Web Design, Development, SEO, Content & AI Automation",
   description:
     "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services",
+  },
+  openGraph: {
+    title: "Services | Web Design, Development, SEO, Content & AI Automation",
+    description:
+      "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
+    url: "https://scaleforgewebdev.vercel.app/services",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Web Design, Development, SEO, Content & AI Automation",
+    description:
+      "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
+    images: ["/og-image.png"],
+  },
 };
 
 const SERVICES = [

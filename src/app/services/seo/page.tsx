@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -9,6 +9,25 @@ export const metadata: Metadata = {
   title: "SEO Services | Rank Higher on Google with ScaleForge",
   description:
     "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services/seo",
+  },
+  openGraph: {
+    title: "SEO Services | Rank Higher on Google with ScaleForge",
+    description:
+      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+    url: "https://scaleforgewebdev.vercel.app/services/seo",
+    siteName: "ScaleForge",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO Services | Rank Higher on Google with ScaleForge",
+    description:
+      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+    images: ["/og-image.png"],
+  },
 };
 
 const MODULES = [
@@ -88,8 +107,27 @@ const FAQS = [
 ];
 
 export default function SEOPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Search Engine Optimization",
+    "serviceType": "SEO",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scaleforgewebdev.vercel.app"
+    },
+    "description": "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+    "areaServed": "Worldwide",
+    "url": "https://scaleforgewebdev.vercel.app/services/seo"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow="ORGANIC GROWTH"
         title="SEO Services That Secure First-Page Rankings"

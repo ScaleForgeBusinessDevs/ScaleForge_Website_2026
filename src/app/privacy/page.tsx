@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: "Privacy Policy | ScaleForge",
   description:
     "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | ScaleForge",
+    description:
+      "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    url: "https://scaleforgewebdev.vercel.app/privacy",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | ScaleForge",
+    description:
+      "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    images: ["/og-image.png"],
+  },
 };
 
 const TOC = [

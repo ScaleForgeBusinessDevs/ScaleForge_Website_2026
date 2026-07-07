@@ -16,6 +16,31 @@ export const metadata: Metadata = {
   title: "Projects | ScaleForge",
   description:
     "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/projects",
+  },
+  openGraph: {
+    title: "Projects | ScaleForge",
+    description:
+      "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+    url: "https://scaleforgewebdev.vercel.app/projects",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects | ScaleForge",
+    description:
+      "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+    images: ["/og-image.png"],
+  },
 };
 
 function formatDate(dateStr: string) {

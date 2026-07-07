@@ -34,17 +34,35 @@ export async function generateMetadata({
     const imgUrl = project.coverImage?.asset
       ? urlFor(project.coverImage).width(1200).height(630).url()
       : undefined;
+    const title = `${project.title} | ScaleForge Projects`;
     return {
-      title: `${project.title} | ScaleForge Projects`,
+      title,
       description: project.excerpt,
+      alternates: {
+        canonical: `https://scaleforgewebdev.vercel.app/projects/${slug}`,
+      },
       openGraph: {
-        title: project.title,
+        title,
         description: project.excerpt,
+        url: `https://scaleforgewebdev.vercel.app/projects/${slug}`,
+        siteName: "ScaleForge",
         images: imgUrl ? [{ url: imgUrl, width: 1200, height: 630 }] : undefined,
+        type: "website",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description: project.excerpt,
+        images: imgUrl ? [imgUrl] : undefined,
       },
     };
   } catch {
-    return { title: "ScaleForge Projects" };
+    return {
+      title: "ScaleForge Projects",
+      alternates: {
+        canonical: `https://scaleforgewebdev.vercel.app/projects/${slug}`,
+      },
+    };
   }
 }
 

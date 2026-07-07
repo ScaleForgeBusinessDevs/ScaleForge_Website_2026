@@ -1,13 +1,39 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
+import DisabledSocialLink from "@/components/DisabledSocialLink";
 
 export const metadata: Metadata = {
   title: "About ScaleForge | Our Team, Story & Values",
   description:
     "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/about",
+  },
+  openGraph: {
+    title: "About ScaleForge | Our Team, Story & Values",
+    description:
+      "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+    url: "https://scaleforgewebdev.vercel.app/about",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About ScaleForge | Our Team, Story & Values",
+    description:
+      "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+    images: ["/og-image.png"],
+  },
 };
 
 const BELIEFS = [
@@ -211,16 +237,23 @@ export default function AboutPage() {
                     every build hits 90+ PageSpeed scores and remains maintainable long after launch.
                   </p>
                   <div className="mt-5 flex items-center gap-2.5">
-                    <a href="#"
+                    <a
+                      href="https://www.linkedin.com/in/ruhan-bhaleshah-aa50761b3"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label="Ruhan on LinkedIn"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
+                    >
                       <i className="bi bi-linkedin" aria-hidden />
                     </a>
-                    <a href="#"
-                      aria-label="Ruhan on GitHub"
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
+                    {/* TODO: Add Ruhan's real GitHub URL once confirmed */}
+                    <DisabledSocialLink
+                      href="#"
+                      ariaLabel="Ruhan on GitHub"
+                      className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
+                    >
                       <i className="bi bi-github" aria-hidden />
-                    </a>
+                    </DisabledSocialLink>
                     <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Ruhan"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">

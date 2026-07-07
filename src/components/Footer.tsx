@@ -35,10 +35,11 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
-  { label: "X", icon: "bi-twitter-x" },
-  { label: "LinkedIn", icon: "bi-linkedin" },
-  { label: "GitHub", icon: "bi-github" },
-  { label: "YouTube", icon: "bi-youtube" },
+  // TODO: Replace placeholder hrefs with real social URLs once supervisor confirms
+  { label: "X", icon: "bi-twitter-x", href: "#" },
+  { label: "LinkedIn", icon: "bi-linkedin", href: "#" },
+  { label: "GitHub", icon: "bi-github", href: "#" },
+  { label: "YouTube", icon: "bi-youtube", href: "#" },
 ];
 
 export default function Footer() {
@@ -104,9 +105,15 @@ export default function Footer() {
             {SOCIALS.map((social) => (
               <a
                 key={social.label}
-                href="#"
+                href={social.href}
                 aria-label={social.label}
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-[14px] text-white/40 transition-colors hover:border-[#5e6ad2]/40 hover:text-[#a5aef0]"
+                aria-disabled={social.href === "#" ? "true" : undefined}
+                onClick={social.href === "#" ? (e) => e.preventDefault() : undefined}
+                className={`flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-[14px] transition-colors ${
+                  social.href === "#"
+                    ? "cursor-not-allowed text-white/20 opacity-50"
+                    : "text-white/40 hover:border-[#5e6ad2]/40 hover:text-[#a5aef0]"
+                }`}
               >
                 <i className={`bi ${social.icon}`} aria-hidden />
               </a>

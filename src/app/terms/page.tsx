@@ -6,6 +6,31 @@ export const metadata: Metadata = {
   title: "Terms of Service | ScaleForge",
   description:
     "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | ScaleForge",
+    description:
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+    url: "https://scaleforgewebdev.vercel.app/terms",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | ScaleForge",
+    description:
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+    images: ["/og-image.png"],
+  },
 };
 
 const TOC = [

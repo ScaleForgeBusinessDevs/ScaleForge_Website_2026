@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
@@ -9,6 +9,31 @@ export const metadata: Metadata = {
   title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
   description:
     "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/pricing",
+  },
+  openGraph: {
+    title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+    description:
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
+    url: "https://scaleforgewebdev.vercel.app/pricing",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+    description:
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
+    images: ["/og-image.png"],
+  },
 };
 
 interface Tier {

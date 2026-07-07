@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -9,6 +9,25 @@ export const metadata: Metadata = {
   title: "Content Creation & SEO Copywriting Services | ScaleForge",
   description:
     "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services/content-creation",
+  },
+  openGraph: {
+    title: "Content Creation & SEO Copywriting Services | ScaleForge",
+    description:
+      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+    url: "https://scaleforgewebdev.vercel.app/services/content-creation",
+    siteName: "ScaleForge",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Content Creation & SEO Copywriting Services | ScaleForge",
+    description:
+      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+    images: ["/og-image.png"],
+  },
 };
 
 const SERVICES = [
@@ -79,8 +98,27 @@ const FAQS = [
 ];
 
 export default function ContentCreationPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SEO Content Creation & Copywriting",
+    "serviceType": "SEO Copywriting",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scaleforgewebdev.vercel.app"
+    },
+    "description": "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+    "areaServed": "Worldwide",
+    "url": "https://scaleforgewebdev.vercel.app/services/content-creation"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow="SEARCH CONTENT"
         title="Content That Ranks and Establishes Authority"

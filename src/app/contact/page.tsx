@@ -10,6 +10,31 @@ export const metadata: Metadata = {
   title: "Contact ScaleForge | Book a Call or Send a Message",
   description:
     "Get in touch with ScaleForge. Email, WhatsApp, LinkedIn, or book a free 30-minute strategy call. Responses within 4 business hours.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/contact",
+  },
+  openGraph: {
+    title: "Contact ScaleForge | Book a Call or Send a Message",
+    description:
+      "Get in touch with ScaleForge. Email, WhatsApp, LinkedIn, or book a free 30-minute strategy call. Responses within 4 business hours.",
+    url: "https://scaleforgewebdev.vercel.app/contact",
+    siteName: "ScaleForge",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact ScaleForge | Book a Call or Send a Message",
+    description:
+      "Get in touch with ScaleForge. Email, WhatsApp, LinkedIn, or book a free 30-minute strategy call. Responses within 4 business hours.",
+    images: ["/og-image.png"],
+  },
 };
 
 const CONTACT_FAQS = [
@@ -46,7 +71,7 @@ const DIRECT_CHANNELS = [
   {
     icon: "bi-whatsapp",
     label: "WhatsApp",
-    value: "+92 — see form",
+    value: "WhatsApp Us",
     href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "923000000000"}`,
     note: "Fastest for urgent matters",
   },
@@ -56,13 +81,6 @@ const DIRECT_CHANNELS = [
     value: "@scaleforge",
     href: "https://linkedin.com/company/scaleforge",
     note: "For partnerships & press",
-  },
-  {
-    icon: "bi-chat-dots",
-    label: "Live Chat",
-    value: "During working hours",
-    href: "#",
-    note: "Mon–Fri, PKT (UTC +5)",
   },
 ];
 

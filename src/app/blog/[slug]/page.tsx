@@ -45,9 +45,14 @@ export async function generateMetadata({
     return {
       title: finalTitle,
       description: post.seoDescription ?? post.excerpt,
+      alternates: {
+        canonical: `https://scaleforgewebdev.vercel.app/blog/${slug}`,
+      },
       openGraph: {
         title: finalTitle,
         description: post.excerpt,
+        url: `https://scaleforgewebdev.vercel.app/blog/${slug}`,
+        siteName: "ScaleForge",
         images: imgUrl ? [{ url: imgUrl, width: 1200, height: 630 }] : undefined,
         type: "article",
         publishedTime: post.publishedDate,
@@ -61,7 +66,12 @@ export async function generateMetadata({
       },
     };
   } catch {
-    return { title: "ScaleForge Blog" };
+    return {
+      title: "ScaleForge Blog",
+      alternates: {
+        canonical: `https://scaleforgewebdev.vercel.app/blog/${slug}`,
+      },
+    };
   }
 }
 

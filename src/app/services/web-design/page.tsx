@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
@@ -9,6 +9,25 @@ export const metadata: Metadata = {
   title: "Web Design Services | Custom UI/UX from ScaleForge",
   description:
     "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+  alternates: {
+    canonical: "https://scaleforgewebdev.vercel.app/services/web-design",
+  },
+  openGraph: {
+    title: "Web Design Services | Custom UI/UX from ScaleForge",
+    description:
+      "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+    url: "https://scaleforgewebdev.vercel.app/services/web-design",
+    siteName: "ScaleForge",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Web Design Services | Custom UI/UX from ScaleForge",
+    description:
+      "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+    images: ["/og-image.png"],
+  },
 };
 
 const OFFERINGS = [
@@ -80,8 +99,27 @@ const FAQS = [
 ];
 
 export default function WebDesignPage() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Web Design",
+    "serviceType": "UI/UX Web Design",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scaleforgewebdev.vercel.app"
+    },
+    "description": "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+    "areaServed": "Worldwide",
+    "url": "https://scaleforgewebdev.vercel.app/services/web-design"
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow="INTERACTIVE DESIGN"
         title="Web Design That Converts Traffic into Clients"

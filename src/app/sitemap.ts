@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPostSlugs } from "@/lib/sanity/queries";
 import { getAllProjectSlugs } from "@/lib/sanity/projectQueries";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://scaleforge.agency";
+const siteUrl = "https://scaleforgewebdev.vercel.app";
 
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${siteUrl}/`,                              priority: 1.0,  changeFrequency: "weekly"  },
