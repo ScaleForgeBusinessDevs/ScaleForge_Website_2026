@@ -130,9 +130,9 @@ export default function WebDesignPage() {
 
       {/* Did You Know */}
       <section className="border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
-        <div className="mx-auto max-w-[820px] px-6 text-center lg:px-10">
+        <div className="mx-auto max-w-[1100px] px-6 text-center lg:px-10">
           <Reveal className="flex flex-col items-center">
-            <p className="mx-auto mt-7 max-w-2xl text-[clamp(1.4rem,3vw,1.9rem)] font-display font-normal leading-[1.3] text-white">
+            <p className="mx-auto mt-7 text-[clamp(1.4rem,3vw,1.9rem)] font-display font-normal leading-[1.3] text-white">
               &ldquo;It takes only 50 milliseconds (0.05 seconds) for users to form an opinion about your website&apos;s
               aesthetic and decide whether they will stay or leave.&rdquo;
             </p>
