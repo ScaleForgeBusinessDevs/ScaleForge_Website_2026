@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { Check, ArrowRight } from "lucide-react";
 
 const PLANS = [
   {
@@ -70,7 +71,7 @@ export default function Pricing() {
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2.5 text-[13px] text-white/55">
                     <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-[9px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
+                      <Check size={9} aria-hidden />
                     </span>
                     {feature}
                   </li>
@@ -86,7 +87,7 @@ export default function Pricing() {
             className="inline-flex items-center gap-2 text-[13.5px] font-medium text-white/55 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
           >
             Compare Plans
-            <i className="bi bi-arrow-right" aria-hidden />
+            <ArrowRight size={14} aria-hidden />
           </a>
         </Reveal>
       </div>

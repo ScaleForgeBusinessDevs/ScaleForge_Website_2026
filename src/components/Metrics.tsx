@@ -1,23 +1,24 @@
 import Reveal from "./Reveal";
+import { Zap, CheckCircle2, Award } from "lucide-react";
 
 const METRICS = [
   {
     index: "01",
-    icon: "bi-lightning-charge",
+    icon: Zap,
     stat: "340%",
     title: "Average Valuation Expansion",
     body: "Achieved across built & advised portfolio within 18 months of engagement.",
   },
   {
     index: "02",
-    icon: "bi-check-circle",
+    icon: CheckCircle2,
     stat: "14 Days",
     title: "Prototype-to-Market Delivery",
     body: "Aggressive engineering sprints to launch fully tested, scalable initial products.",
   },
   {
     index: "03",
-    icon: "bi-award",
+    icon: Award,
     stat: "Tier 1",
     title: "Global Capital Backing",
     body: "Portfolio companies successfully backed by leading syndicates and top-tier global venture firms.",
@@ -35,8 +36,9 @@ export default function Metrics() {
           {METRICS.map((metric) => (
             <div key={metric.index} className="rounded-2xl border border-white/[0.07] bg-white/[0.02] p-7">
               <div className="flex items-center justify-between">
-                <i
-                  className={`bi ${metric.icon} text-[20px] text-white`}
+                <metric.icon
+                  size={20}
+                  className="text-white"
                   style={{ filter: "drop-shadow(0 0 10px rgba(245, 245, 245, 0.55))" }}
                   aria-hidden
                 />

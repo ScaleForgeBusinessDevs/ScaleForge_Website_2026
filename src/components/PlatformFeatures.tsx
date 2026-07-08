@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { Network, Clock, Sparkles, Sliders, ArrowLeftRight, AlertTriangle, RefreshCw, Zap, Gauge } from "lucide-react";
 
 const FEATURES = [
   {
@@ -31,27 +32,29 @@ const CONFIG_ITEMS = [
   { label: "Rate limits", icon: "gauge" as const },
 ];
 
-const FEATURE_ICONS: Record<(typeof FEATURES)[number]["icon"], string> = {
-  flow: "bi-diagram-3",
-  clock: "bi-clock-history",
-  spark: "bi-stars",
-  sliders: "bi-sliders",
+const FEATURE_ICONS = {
+  flow: Network,
+  clock: Clock,
+  spark: Sparkles,
+  sliders: Sliders,
 };
 
 function FeatureIcon({ kind }: { kind: (typeof FEATURES)[number]["icon"] }) {
-  return <i className={`bi ${FEATURE_ICONS[kind]} text-[20px] leading-none`} aria-hidden />;
+  const Icon = FEATURE_ICONS[kind];
+  return <Icon size={20} aria-hidden />;
 }
 
-const CONFIG_ICONS: Record<(typeof CONFIG_ITEMS)[number]["icon"], string> = {
-  api: "bi-arrow-left-right",
-  alert: "bi-exclamation-triangle",
-  sync: "bi-arrow-repeat",
-  bolt: "bi-lightning-charge-fill",
-  gauge: "bi-speedometer2",
+const CONFIG_ICONS = {
+  api: ArrowLeftRight,
+  alert: AlertTriangle,
+  sync: RefreshCw,
+  bolt: Zap,
+  gauge: Gauge,
 };
 
 function ConfigIcon({ kind }: { kind: (typeof CONFIG_ITEMS)[number]["icon"] }) {
-  return <i className={`bi ${CONFIG_ICONS[kind]} text-[15px] leading-none text-white/45`} aria-hidden />;
+  const Icon = CONFIG_ICONS[kind];
+  return <Icon size={15} className="text-white/45" aria-hidden />;
 }
 
 function FeatureCard({ feature }: { feature: (typeof FEATURES)[number] }) {

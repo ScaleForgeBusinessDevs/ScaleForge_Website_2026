@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { TwitterXIcon } from "./TwitterXIcon";
+import { LinkedinIcon, GithubIcon, YoutubeIcon } from "./BrandIcons";
 
 const COLUMNS = [
   {
@@ -36,10 +38,10 @@ const COLUMNS = [
 
 const SOCIALS = [
   // TODO: Replace placeholder hrefs with real social URLs once supervisor confirms
-  { label: "X", icon: "bi-twitter-x", href: "#" },
-  { label: "LinkedIn", icon: "bi-linkedin", href: "#" },
-  { label: "GitHub", icon: "bi-github", href: "#" },
-  { label: "YouTube", icon: "bi-youtube", href: "#" },
+  { label: "X", icon: TwitterXIcon, href: "#" },
+  { label: "LinkedIn", icon: LinkedinIcon, href: "#" },
+  { label: "GitHub", icon: GithubIcon, href: "#" },
+  { label: "YouTube", icon: YoutubeIcon, href: "#" },
 ];
 
 export default function Footer() {
@@ -115,7 +117,7 @@ export default function Footer() {
                     : "text-white/40 hover:border-[#5e6ad2]/40 hover:text-[#a5aef0]"
                 }`}
               >
-                <i className={`bi ${social.icon}`} aria-hidden />
+                <social.icon size={14} aria-hidden />
               </a>
             ))}
           </div>

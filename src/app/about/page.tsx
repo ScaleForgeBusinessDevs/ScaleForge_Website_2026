@@ -4,6 +4,9 @@ import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import DisabledSocialLink from "@/components/DisabledSocialLink";
+import { CreditCard, Landmark, ShieldCheck, Mail } from "lucide-react";
+import { LinkedinIcon, GithubIcon } from "@/components/BrandIcons";
+import TwitterXIcon from "@/components/TwitterXIcon";
 
 export const metadata: Metadata = {
   title: "About ScaleForge | Our Team, Story & Values",
@@ -63,9 +66,9 @@ const FACTS = [
 ];
 
 const PAYMENT = [
-  { icon: "bi-credit-card", label: "Stripe" },
-  { icon: "bi-bank2", label: "Wise / Payoneer" },
-  { icon: "bi-shield-check", label: "Upwork / Contra Escrow" },
+  { icon: CreditCard, label: "Stripe" },
+  { icon: Landmark, label: "Wise / Payoneer" },
+  { icon: ShieldCheck, label: "Upwork / Contra Escrow" },
 ];
 
 export default function AboutPage() {
@@ -196,17 +199,17 @@ export default function AboutPage() {
                     <a href="https://www.linkedin.com/in/shahood-saleem/" target="_blank" rel="noopener noreferrer"
                       aria-label="Shahood on LinkedIn"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
-                      <i className="bi bi-linkedin" aria-hidden />
+                      <LinkedinIcon size={14} aria-hidden />
                     </a>
                     <a href="https://x.com/scaleforge" target="_blank" rel="noopener noreferrer"
                       aria-label="Shahood on X"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
-                      <i className="bi bi-twitter-x" aria-hidden />
+                      <TwitterXIcon className="h-[14px] w-[14px] fill-current" aria-hidden />
                     </a>
                     <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Shahood"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
-                      <i className="bi bi-envelope" aria-hidden />
+                      <Mail size={14} aria-hidden />
                     </a>
                   </div>
                 </div>
@@ -244,7 +247,7 @@ export default function AboutPage() {
                       aria-label="Ruhan on LinkedIn"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
                     >
-                      <i className="bi bi-linkedin" aria-hidden />
+                      <LinkedinIcon size={14} aria-hidden />
                     </a>
                     {/* TODO: Add Ruhan's real GitHub URL once confirmed */}
                     <DisabledSocialLink
@@ -252,12 +255,12 @@ export default function AboutPage() {
                       ariaLabel="Ruhan on GitHub"
                       className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
                     >
-                      <i className="bi bi-github" aria-hidden />
+                      <GithubIcon size={14} aria-hidden />
                     </DisabledSocialLink>
                     <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Ruhan"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
-                      <i className="bi bi-envelope" aria-hidden />
+                      <Mail size={14} aria-hidden />
                     </a>
                   </div>
                 </div>
@@ -314,7 +317,7 @@ export default function AboutPage() {
           <Reveal className="mt-8 flex flex-wrap items-center justify-center gap-4">
             {PAYMENT.map((p) => (
               <div key={p.label} className="flex items-center gap-2.5 rounded-full border border-white/[0.07] px-5 py-2.5">
-                <i className={`bi ${p.icon} text-[13px] text-white/40`} aria-hidden />
+                <p.icon size={13} className="text-white/40" aria-hidden />
                 <span className="text-[12px] text-white/45">{p.label}</span>
               </div>
             ))}

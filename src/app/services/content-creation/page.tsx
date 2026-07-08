@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
+import { Pencil, Megaphone, MapPin, Book, MessageSquareQuote, Check, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Content Creation & SEO Copywriting Services | ScaleForge",
@@ -32,27 +33,27 @@ export const metadata: Metadata = {
 
 const SERVICES = [
   {
-    icon: "bi-pencil",
+    icon: Pencil,
     title: "SEO Blog Articles",
     body: "Expertly written articles targeting high-volume keywords, structured strictly to win Google Featured Snippets and appear in AI Overviews.",
   },
   {
-    icon: "bi-megaphone",
+    icon: Megaphone,
     title: "Commercial Landing Pages",
     body: "High-converting copywriting specifically built to capture commercial-intent searches, detailing your services and driving inquiries.",
   },
   {
-    icon: "bi-geo",
+    icon: MapPin,
     title: "Geographic Location Pages",
     body: "Optimized local landing pages designed for multi-location businesses looking to rank locally across different cities and regions.",
   },
   {
-    icon: "bi-book",
+    icon: Book,
     title: "Long-Form Pillar Guides",
     body: "Extensive resource hubs (2,000+ words) that establish massive topical authority, attract organic backlink citations, and anchor your SEO silos.",
   },
   {
-    icon: "bi-chat-quote",
+    icon: MessageSquareQuote,
     title: "Brand Copywriting",
     body: "Polishing your homepage, about page, and service sections to speak clearly and persuasively, matching your authentic company voice.",
   },
@@ -162,7 +163,7 @@ export default function ContentCreationPage() {
             {SERVICES.map((item) => (
               <div key={item.title} className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                  <i className={`bi ${item.icon} text-[16px]`} aria-hidden />
+                  <item.icon size={16} aria-hidden />
                 </span>
                 <div>
                   <h3 className="text-[15px] font-medium text-white">{item.title}</h3>
@@ -186,7 +187,7 @@ export default function ContentCreationPage() {
                 {STANDARDS.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[14px] leading-relaxed text-white/55">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/15 text-[10px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
+                      <Check size={10} aria-hidden />
                     </span>
                     {item}
                   </li>
@@ -195,7 +196,7 @@ export default function ContentCreationPage() {
             </Reveal>
 
             <Reveal className="rounded-2xl border border-white/[0.07] bg-[#101013] p-8">
-              <i className="bi bi-quote text-[24px] text-white/20" aria-hidden />
+              <Quote size={24} className="text-white/20" aria-hidden />
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 100% human-crafted editorial. AI is used for research support and outline scaffolding — never for
                 final prose.

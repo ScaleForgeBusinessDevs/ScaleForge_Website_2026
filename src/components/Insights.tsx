@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import Reveal from "./Reveal";
 import { GlassBlogCard } from "./GlassBlogCard";
 import { getLatestPosts } from "@/lib/sanity/queries";
@@ -33,7 +34,7 @@ export default async function Insights() {
             href="/blog"
             className="text-[13.5px] font-medium text-white/55 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
           >
-            View all posts <i className="bi bi-arrow-right" aria-hidden />
+            View all posts <ArrowRight size={14} className="inline" aria-hidden />
           </Link>
         </Reveal>
 

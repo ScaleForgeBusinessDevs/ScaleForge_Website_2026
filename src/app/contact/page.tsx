@@ -5,6 +5,8 @@ import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 import ContactForm from "@/components/ContactForm";
 import NewsletterForm from "@/components/NewsletterForm";
+import { Mail, MessageCircle } from "lucide-react";
+import { LinkedinIcon } from "@/components/BrandIcons";
 
 export const metadata: Metadata = {
   title: "Contact ScaleForge | Book a Call or Send a Message",
@@ -62,21 +64,21 @@ const CONTACT_FAQS = [
 
 const DIRECT_CHANNELS = [
   {
-    icon: "bi-envelope",
+    icon: Mail,
     label: "Email",
     value: "scaleforgebusinessdev@gmail.com",
     href: "mailto:scaleforgebusinessdev@gmail.com",
     note: "Best for detailed briefs",
   },
   {
-    icon: "bi-whatsapp",
+    icon: MessageCircle,
     label: "WhatsApp",
     value: "WhatsApp Us",
     href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "923000000000"}`,
     note: "Fastest for urgent matters",
   },
   {
-    icon: "bi-linkedin",
+    icon: LinkedinIcon,
     label: "LinkedIn",
     value: "@scaleforge",
     href: "https://linkedin.com/company/scaleforge",
@@ -169,7 +171,7 @@ export default function ContactPage() {
                 className="group flex flex-col gap-3 rounded-2xl border border-white/[0.07] bg-[#101013] p-6 transition-colors hover:border-white/15"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-[18px] text-white/50 transition-colors group-hover:text-white/75">
-                  <i className={`bi ${ch.icon}`} aria-hidden />
+                  <ch.icon size={18} aria-hidden />
                 </span>
                 <div>
                   <p className="font-accent text-[10px] uppercase tracking-[0.12em] text-white/35">{ch.label}</p>

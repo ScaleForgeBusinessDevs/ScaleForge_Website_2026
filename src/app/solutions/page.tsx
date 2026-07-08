@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
+import { CheckCircle2, ArrowRight, ArrowUpRight, User, Plus, Building2, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
@@ -91,10 +92,10 @@ function CodeSnippetVisual() {
       <p>{"}"}</p>
       <div className="mt-4 flex items-center gap-4 border-t border-white/[0.07] pt-4 text-[11px] text-white/40">
         <span className="flex items-center gap-1.5">
-          <i className="bi bi-check-circle-fill text-[#6fcf8e]/70" aria-hidden /> Type-safe
+          <CheckCircle2 size={12} className="text-[#6fcf8e]/70" aria-hidden /> Type-safe
         </span>
         <span className="flex items-center gap-1.5">
-          <i className="bi bi-check-circle-fill text-[#6fcf8e]/70" aria-hidden /> Zero errors
+          <CheckCircle2 size={12} className="text-[#6fcf8e]/70" aria-hidden /> Zero errors
         </span>
       </div>
     </div>
@@ -130,7 +131,7 @@ function RankingLadderVisual() {
             >
               {step}
             </span>
-            {i < steps.length - 1 && <i className="bi bi-arrow-right text-[12px] text-white/25" aria-hidden />}
+            {i < steps.length - 1 && <ArrowRight size={12} className="text-white/25" aria-hidden />}
           </div>
         ))}
       </div>
@@ -151,7 +152,7 @@ function GrowthGraphVisual() {
       <div className="mt-4 flex items-center justify-between text-[11px] text-white/40">
         <span>100 visitors</span>
         <span className="flex items-center gap-1.5 text-white/60">
-          <i className="bi bi-arrow-up-right text-[#6fcf8e]" aria-hidden /> No ceiling. No rebuild.
+          <ArrowUpRight size={14} className="text-[#6fcf8e]" aria-hidden /> No ceiling. No rebuild.
         </span>
         <span>100,000+</span>
       </div>
@@ -170,7 +171,7 @@ function RosterVisual() {
               i < 4 ? "border-white/15 bg-white/[0.04] text-white/50" : "border-dashed border-white/15 text-white/25"
             }`}
           >
-            <i className={`bi ${i < 4 ? "bi-person-fill" : "bi-plus-lg"}`} aria-hidden />
+            {i < 4 ? <User size={14} aria-hidden /> : <Plus size={14} aria-hidden />}
           </div>
         ))}
       </div>
@@ -341,7 +342,7 @@ export default function SolutionsPage() {
             {INDUSTRIES.map((industry) => (
               <div key={industry} className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.02] px-5 py-5">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/50">
-                  <i className="bi bi-building text-[14px]" aria-hidden />
+                  <Building2 size={14} aria-hidden />
                 </span>
                 <span className="text-[13.5px] leading-snug text-white/65">{industry}</span>
               </div>
@@ -349,7 +350,7 @@ export default function SolutionsPage() {
           </Reveal>
 
           <Reveal className="mx-auto mt-14 max-w-2xl rounded-2xl border border-white/[0.07] bg-white/[0.02] px-8 py-10 text-center">
-            <i className="bi bi-quote text-[26px] text-white/20" aria-hidden />
+            <Quote size={26} className="text-white/20" aria-hidden />
             <p className="mt-3 text-[17px] font-medium leading-relaxed text-white/75">
               &ldquo;No matter your industry, if your customers search online, we can help you get found.&rdquo;
             </p>

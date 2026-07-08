@@ -1,20 +1,21 @@
 import Reveal from "./Reveal";
+import { SlidersHorizontal, TrendingUp, Network, CheckCircle2, Hourglass, Sparkles, Check } from "lucide-react";
 
 const FEATURES = [
   {
-    icon: "bi-sliders2",
+    icon: SlidersHorizontal,
     title: "Workflow Execution Control",
     body: "Monitor workflow runs in real time, pause and resume processes, and retain full operational visibility across every run.",
     points: ["Real-time run monitoring", "Detailed progress logs", "Built-in error handling"],
   },
   {
-    icon: "bi-graph-up-arrow",
+    icon: TrendingUp,
     title: "Performance Analytics & Insights",
     body: "Analyze workflow performance with real-time metrics, execution insights, and visual dashboards designed for operators.",
     points: ["Workflow performance metrics", "Visual trend dashboards", "Actionable automation insights"],
   },
   {
-    icon: "bi-diagram-3",
+    icon: Network,
     title: "Connected Integrations",
     body: "Integrate leading platforms and synchronize data seamlessly across your entire automation environment without manual coordination.",
     points: ["200+ supported platforms", "Secure data synchronization", "Real-time cross-platform triggers"],
@@ -57,14 +58,14 @@ export default function AutomationLimits() {
                 <div key={step} className="flex items-center gap-3 rounded-md border border-white/[0.06] bg-white/[0.015] px-3 py-2">
                   <span className={`h-1.5 w-1.5 rounded-full ${i < 2 ? "bg-[#6fcf8e]" : "bg-white/25"}`} />
                   <span className="text-[12.5px] text-white/55">{step}</span>
-                  <i className={`bi ${i < 2 ? "bi-check-circle-fill text-[#6fcf8e]/70" : "bi-hourglass-split text-white/25"} ml-auto text-[12px]`} aria-hidden />
+                  {i < 2 ? <CheckCircle2 size={12} className="ml-auto text-[#6fcf8e]/70" aria-hidden /> : <Hourglass size={12} className="ml-auto text-white/25" aria-hidden />}
                 </div>
               ))}
             </div>
           </div>
           <div className="border-t border-white/[0.07] p-7 sm:border-t-0">
             <div className="flex items-center gap-2.5">
-              <i className="bi bi-stars text-[14px] text-white/55" aria-hidden />
+              <Sparkles size={14} className="text-white/55" aria-hidden />
               <h3 className="text-[15px] font-medium text-white">AI Workflow Agent</h3>
             </div>
             <p className="mt-2 text-[13px] leading-relaxed text-white/40">An always-on layer that watches every run and improves it over time.</p>
@@ -83,7 +84,7 @@ export default function AutomationLimits() {
           {FEATURES.map((feature) => (
             <div key={feature.title} className="flex flex-col gap-5 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                <i className={`bi ${feature.icon} text-[16px]`} aria-hidden />
+                <feature.icon size={16} aria-hidden />
               </span>
               <div>
                 <h3 className="text-[15px] font-medium text-white">{feature.title}</h3>
@@ -93,7 +94,7 @@ export default function AutomationLimits() {
                 {feature.points.map((point) => (
                   <li key={point} className="flex items-center gap-2.5 text-[12px] text-white/55">
                     <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-[9px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
+                      <Check size={9} aria-hidden />
                     </span>
                     {point}
                   </li>

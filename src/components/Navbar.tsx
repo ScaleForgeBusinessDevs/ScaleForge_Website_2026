@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { gsap, useGSAP } from "@/lib/gsap";
+import { ChevronDown, X, Menu } from "lucide-react";
 
 interface NavChild {
   label: string;
@@ -45,11 +46,10 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useGSAP(() => {
-    gsap.fromTo(
-      ref.current,
-      { y: -24, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.1 }
-    );
+    if (!ref.current) return;
+    // Hide only after JS confirms GSAP is ready — navbar is visible by default
+    gsap.set(ref.current, { y: -24, opacity: 0 });
+    gsap.to(ref.current, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.1 });
   });
 
   useEffect(() => {
@@ -89,9 +89,9 @@ export default function Navbar() {
               >
                 <Link href={link.href} className="flex items-center gap-1.5 transition-colors hover:text-[#a5aef0]">
                   {link.label}
-                  <i
-                    className={`bi bi-chevron-down text-[8px] transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""
-                      }`}
+                  <ChevronDown
+                    size={12}
+                    className={`transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
                     aria-hidden
                   />
                 </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
           className="relative z-10 flex h-9 w-9 items-center justify-center text-[18px] text-white lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
-          <i className={`bi ${open ? "bi-x-lg" : "bi-list"}`} aria-hidden />
+          {open ? <X size={20} aria-hidden /> : <Menu size={20} aria-hidden />}
         </button>
       </nav>
 
@@ -152,9 +152,9 @@ export default function Navbar() {
                     aria-expanded={mobileServicesOpen}
                   >
                     {link.label}
-                    <i
-                      className={`bi bi-chevron-down text-[11px] transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""
-                        }`}
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
                       aria-hidden
                     />
                   </button>

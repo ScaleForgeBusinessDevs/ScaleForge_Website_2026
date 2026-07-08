@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Check, ArrowRight } from "lucide-react";
 
 const SERVICES = [
   "AI Automation",
@@ -82,7 +83,7 @@ export default function ContactForm() {
     return (
       <div className="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-10 text-center">
         <span className="flex h-14 w-14 items-center justify-center rounded-full border border-[#6fcf8e]/30 bg-[#6fcf8e]/10">
-          <i className="bi bi-check2 text-[24px] text-[#6fcf8e]" aria-hidden />
+          <Check size={24} className="text-[#6fcf8e]" aria-hidden />
         </span>
         <h3 className="text-[20px] font-medium text-white">Message Sent!</h3>
         <p className="max-w-xs text-[14px] leading-relaxed text-white/45">
@@ -229,7 +230,7 @@ export default function ContactForm() {
           ) : (
             <>
               Send Message
-              <i className="bi bi-arrow-right" aria-hidden />
+              <ArrowRight size={14} aria-hidden />
             </>
           )}
         </button>

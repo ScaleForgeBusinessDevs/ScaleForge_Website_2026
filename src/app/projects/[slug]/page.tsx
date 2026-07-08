@@ -10,6 +10,7 @@ import type { SanityProject } from "@/lib/sanity/projectQueries";
 import { urlFor } from "@/lib/sanity/client";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectGallery } from "@/components/ProjectGallery";
+import { ChevronRight, Building2, ExternalLink, ArrowRight } from "lucide-react";
 
 export const revalidate = 3600;
 
@@ -175,9 +176,9 @@ export default async function ProjectDetailPage({
             {/* Breadcrumb */}
             <nav className="mb-6 flex items-center gap-2 font-accent text-[10px] uppercase tracking-[0.14em] text-white/35">
               <Link href="/" className="hover:text-white/60">Home</Link>
-              <i className="bi bi-chevron-right text-[8px]" aria-hidden />
+              <ChevronRight size={10} className="text-white/35" aria-hidden />
               <Link href="/projects" className="hover:text-white/60">Projects</Link>
-              <i className="bi bi-chevron-right text-[8px]" aria-hidden />
+              <ChevronRight size={10} className="text-white/35" aria-hidden />
               <span className="text-white/50">{project.title}</span>
             </nav>
 
@@ -198,7 +199,7 @@ export default async function ProjectDetailPage({
             <div className="mt-5 flex flex-wrap items-center gap-4">
               {project.client && (
                 <span className="flex items-center gap-2 text-[13px] text-white/45">
-                  <i className="bi bi-building text-[12px]" aria-hidden />
+                  <Building2 size={12} aria-hidden />
                   {project.client}
                 </span>
               )}
@@ -209,7 +210,7 @@ export default async function ProjectDetailPage({
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 rounded-full border border-white/10 px-3.5 py-1.5 text-[12px] font-[500] text-white/65 transition-all hover:border-white/25 hover:text-white"
                 >
-                  <i className="bi bi-box-arrow-up-right text-[11px]" aria-hidden />
+                  <ExternalLink size={12} aria-hidden />
                   View Live Site
                 </a>
               )}
@@ -356,7 +357,7 @@ export default async function ProjectDetailPage({
                     className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#2563eb] px-5 py-2.5 text-[13px] font-[500] text-white transition-transform hover:scale-[1.02]"
                   >
                     Book a Free Strategy Call
-                    <i className="bi bi-arrow-right" aria-hidden />
+                    <ArrowRight size={16} aria-hidden />
                   </Link>
                 </div>
               </Reveal>

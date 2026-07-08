@@ -3,32 +3,36 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import NeatBackground from "./NeatBackground";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const root = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     () => {
-      // Compositor layers before GSAP reads geometry — prevents forced reflow on initial paint
-      root.current?.querySelectorAll<HTMLElement>(".hero-line, .hero-sub, .hero-cta").forEach((el) => {
-        el.style.willChange = "transform, opacity";
-      });
+      const els = root.current?.querySelectorAll<HTMLElement>(".hero-line, .hero-sub, .hero-cta");
+      if (!els?.length) return;
+
+      // Promote compositor layers before GSAP reads geometry — prevents forced reflow
+      els.forEach((el) => { el.style.willChange = "transform, opacity"; });
 
       const tl = gsap.timeline({
         defaults: { ease: "power3.out" },
         onComplete: () => {
-          root.current?.querySelectorAll<HTMLElement>(".hero-line, .hero-sub, .hero-cta").forEach((el) => {
-            el.style.willChange = "auto";
-          });
+          els.forEach((el) => { el.style.willChange = "auto"; });
         },
       });
 
-      tl.fromTo(".hero-line", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.9, stagger: 0.12, delay: 0.25 })
-        .fromTo(".hero-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7 }, "-=0.5")
-        .fromTo(".hero-cta", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 }, "-=0.45");
+      // Hide elements immediately before animating — not before JS loads.
+      // Content was visible by default; GSAP takes over only now.
+      tl.set(".hero-line, .hero-sub, .hero-cta", { opacity: 0, y: 0 })
+        .to(".hero-line", { opacity: 1, y: 0, duration: 0.9, stagger: 0.12, delay: 0.1 })
+        .to(".hero-sub", { opacity: 1, y: 0, duration: 0.7 }, "-=0.5")
+        .to(".hero-cta", { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 }, "-=0.45");
     },
     { scope: root }
   );
+
 
   return (
     <section
@@ -63,7 +67,7 @@ export default function Hero() {
             className="hero-cta inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-6 py-3 text-[12px] uppercase tracking-[0.12em] text-white transition-transform hover:scale-[1.03]"
           >
             Contact Us
-            <i className="bi bi-arrow-right" aria-hidden />
+            <ArrowRight size={14} aria-hidden />
           </a>
         </div>
       </div>

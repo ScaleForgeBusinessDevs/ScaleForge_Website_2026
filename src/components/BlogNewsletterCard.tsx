@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function BlogNewsletterCard() {
   return (
     <div className="flex flex-col rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
-      <i className="bi bi-envelope-heart text-[28px] text-white/20" aria-hidden />
+      <Mail size={28} className="text-white/20" aria-hidden />
       <h3 className="mt-4 text-[16px] font-medium text-white">Get Weekly Insights Delivered to Your Inbox</h3>
       <p className="mt-2 text-[13px] leading-relaxed text-white/45">
         One actionable tip per week covering Next.js, AI automation, local SEO, or conversion copy. No spam. No

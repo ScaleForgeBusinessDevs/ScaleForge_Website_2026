@@ -10,6 +10,9 @@ import { getPostBySlug, getAllPostSlugs, getPostsByFilter } from "@/lib/sanity/q
 import type { SanityPost } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/client";
 import { GlassBlogCard } from "@/components/GlassBlogCard";
+import { ChevronRight, ArrowRight, Mail } from "lucide-react";
+import { LinkedinIcon } from "@/components/BrandIcons";
+import TwitterXIcon from "@/components/TwitterXIcon";
 
 export const revalidate = 3600; // ISR: revalidate every hour
 
@@ -208,11 +211,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Reveal>
               <nav className="mb-6 flex items-center gap-2 font-accent text-[10px] uppercase tracking-[0.14em] text-white/35">
                 <Link href="/" className="hover:text-white/60">Home</Link>
-                <i className="bi bi-chevron-right text-[8px]" aria-hidden />
+                <ChevronRight size={10} className="text-white/35" aria-hidden />
                 <Link href="/blog" className="hover:text-white/60">Blog</Link>
                 {primaryTopic && (
                   <>
-                    <i className="bi bi-chevron-right text-[8px]" aria-hidden />
+                    <ChevronRight size={10} className="text-white/35" aria-hidden />
                     <span className="text-white/50">{primaryTopic.title}</span>
                   </>
                 )}
@@ -290,7 +293,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-accent text-[11px] uppercase tracking-[0.12em] text-[#08080a] transition-transform hover:scale-[1.02]"
                   >
                     Book a Free Strategy Call
-                    <i className="bi bi-arrow-right" aria-hidden />
+                    <ArrowRight size={14} aria-hidden />
                   </Link>
                 </div>
 
@@ -325,7 +328,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-2.5 font-accent text-[10.5px] uppercase tracking-[0.12em] text-[#08080a] transition-transform hover:scale-[1.02]"
                     >
                       Book a Call
-                      <i className="bi bi-arrow-right" aria-hidden />
+                      <ArrowRight size={14} aria-hidden />
                     </Link>
                   </div>
 
@@ -333,22 +336,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div className="rounded-2xl border border-white/[0.07] bg-[#101013] p-5">
                     <p className="font-accent text-[10px] uppercase tracking-[0.14em] text-white/35">Share</p>
                     <div className="mt-3 flex items-center gap-2.5">
-                      {[
-                        { icon: "bi-twitter-x", label: "Share on X", href: `https://x.com/intent/tweet?url=https://scaleforge.com/blog/${post.slug.current}` },
-                        { icon: "bi-linkedin", label: "Share on LinkedIn", href: `https://linkedin.com/sharing/share-offsite/?url=https://scaleforge.com/blog/${post.slug.current}` },
-                        { icon: "bi-envelope", label: "Share via Email", href: `mailto:?subject=${encodeURIComponent(post.title)}&body=https://scaleforge.com/blog/${post.slug.current}` },
-                      ].map((item) => (
-                        <a
-                          key={item.icon}
-                          href={item.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={item.label}
-                          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[13px] text-white/40 transition-colors hover:border-white/25 hover:text-white/70"
-                        >
-                          <i className={`bi ${item.icon}`} aria-hidden />
-                        </a>
-                      ))}
+                      <a
+                        href={`https://x.com/intent/tweet?url=https://scaleforge.com/blog/${post.slug.current}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share on X"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[13px] text-white/40 transition-colors hover:border-white/25 hover:text-white/70"
+                      >
+                        <TwitterXIcon className="h-[13px] w-[13px] fill-current" aria-hidden />
+                      </a>
+                      <a
+                        href={`https://linkedin.com/sharing/share-offsite/?url=https://scaleforge.com/blog/${post.slug.current}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share on LinkedIn"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[13px] text-white/40 transition-colors hover:border-white/25 hover:text-white/70"
+                      >
+                        <LinkedinIcon size={13} aria-hidden />
+                      </a>
+                      <a
+                        href={`mailto:?subject=${encodeURIComponent(post.title)}&body=https://scaleforge.com/blog/${post.slug.current}`}
+                        aria-label="Share via Email"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[13px] text-white/40 transition-colors hover:border-white/25 hover:text-white/70"
+                      >
+                        <Mail size={13} aria-hidden />
+                      </a>
                     </div>
                   </div>
                 </div>

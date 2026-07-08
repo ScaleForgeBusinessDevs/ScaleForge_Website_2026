@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Plus } from "lucide-react";
 import Reveal from "./Reveal";
 
 const QUESTIONS = [
@@ -83,7 +84,7 @@ export default function FAQ() {
                       isOpen ? "rotate-45" : ""
                     }`}
                   >
-                    <i className="bi bi-plus-lg" aria-hidden />
+                    <Plus size={14} aria-hidden />
                   </span>
                 </button>
                 <div

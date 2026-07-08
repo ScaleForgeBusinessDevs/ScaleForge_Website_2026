@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { ArrowRight } from "lucide-react";
 
 interface CtaLink {
   label: string;
@@ -37,7 +38,7 @@ export default function CTASection({ title, body, primaryCta, secondaryCta }: CT
             className="inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-6 py-3 font-accent text-[12px] uppercase tracking-[0.12em] text-white transition-transform hover:scale-[1.03]"
           >
             {primaryCta.label}
-            <i className="bi bi-arrow-right" aria-hidden />
+            <ArrowRight size={14} aria-hidden />
           </a>
         </Reveal>
       </div>

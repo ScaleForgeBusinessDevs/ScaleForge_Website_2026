@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 const STATS = [
@@ -51,7 +52,7 @@ export default function Capabilities() {
             >
               {item.title}
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/40 transition-all duration-300 group-hover:border-white/40 group-hover:bg-white/10 group-hover:text-white">
-                <i className="bi bi-arrow-up-right text-[15px] transition-transform duration-300 group-hover:rotate-45" aria-hidden />
+                <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:rotate-45" aria-hidden />
               </span>
             </Link>
           ))}
