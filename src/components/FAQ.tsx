@@ -6,32 +6,32 @@ import Reveal from "./Reveal";
 
 const QUESTIONS = [
   {
-    q: "Is my data secure?",
-    a: "Yes. All data is encrypted in transit and at rest, and access is governed by role-based permissions and detailed audit logs.",
+    q: "How long does a typical project take?",
+    a: "A custom web design and development project takes between 4 to 8 weeks. Custom AI automation pipelines and SEO integrations typically deploy within 3 to 6 weeks, depending on system complexity.",
   },
   {
-    q: "Is there a free trial available?",
-    a: "Every plan starts with a 14-day free trial — no credit card required, with full access to core automation features.",
+    q: "What is included in a monthly retainer vs. a one-off project?",
+    a: "One-off projects cover defined deliverables like website redesigns or custom tool development. Monthly retainers (e.g., for SEO, Content, and AI monitoring) provide continuous optimization, routine maintenance, and ongoing strategy updates.",
   },
   {
-    q: "Which tools can I integrate with?",
-    a: "ScaleForge connects with 200+ platforms including CRMs, communication tools, payment processors, and data warehouses.",
+    q: "How does the project revision process work?",
+    a: "We work in collaborative milestone stages. For design work, we offer up to 3 rounds of structural revisions during the Figma design phase before moving into development, ensuring you sign off on the exact visual layout first.",
   },
   {
-    q: "What is a virtual automation workspace?",
-    a: "A dedicated environment where your team builds, tests and runs workflows together — with shared visibility and version history.",
+    q: "What if I need custom development outside your standard services?",
+    a: "We build bespoke integrations, custom data pipelines, and custom software systems regularly. During our initial scoping call, we will map out your exact system requirements and propose a tailored technical solution.",
   },
   {
-    q: "How does the AI Suggestions feature work?",
-    a: "ScaleForge analyzes your workflow patterns and execution history to recommend optimizations, flag risks, and suggest new automations.",
+    q: "Do you work with international clients?",
+    a: "Yes. While we are based globally, we work with ambitious businesses, venture-backed startups, and remote teams across the US, UK, Europe, and Asia. Communication is managed asynchronously via Slack and Loom updates.",
   },
   {
-    q: "Do I need coding experience to use the platform?",
-    a: "No. ScaleForge is built around a visual, drag-and-drop workflow builder — though advanced users can extend flows with custom code.",
+    q: "How do we monitor campaign performance and results?",
+    a: "We set up live performance dashboards for all retainer clients. You can track search engine visibility, PageSpeed scores, and conversion metrics in real-time, backed by monthly strategy syncs.",
   },
   {
-    q: "What makes this different from traditional tools?",
-    a: "ScaleForge combines visual building, real-time monitoring and AI-driven intelligence in one workspace — instead of stitching tools together.",
+    q: "What's the process for getting started?",
+    a: "You can select a starter package on our Pricing page or book a discovery call. We'll audit your current digital channels, align on deliverables, and kick off the project within 3 business days of signing.",
   },
 ];
 
@@ -60,11 +60,10 @@ export default function FAQ() {
       <div className="mx-auto max-w-[860px] px-6 lg:px-10">
         <Reveal className="mx-auto max-w-xl text-center">
           <h2 className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
-            Automation, Explained
+            Frequently Asked Questions
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/45">
-            Everything you need to know about managing, automating, and
-            scaling visual workflows with confidence.
+            Have questions about our process, packages, or technical capabilities? Find answers here or get in touch.
           </p>
         </Reveal>
 

@@ -36,12 +36,55 @@ export default function AutomationLimits() {
         </Reveal>
 
         <Reveal className="mt-14">
-          <div className="relative h-72 overflow-hidden rounded-2xl border border-white/[0.07] sm:h-96">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url(/Assets/n8n.jpg)" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#08080a]/70 via-transparent to-transparent" />
+          <div className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-[#101013] p-8 sm:p-12">
+            <div className="absolute inset-0 opacity-20 pointer-events-none" aria-hidden>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_70%)]" />
+            </div>
+            
+            <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-[1.2fr_1fr_1.2fr] items-center">
+              
+              {/* Left Column: Lighthouse Score Dial */}
+              <div className="flex flex-col items-center text-center p-6 border border-white/[0.05] rounded-xl bg-white/[0.01]">
+                <span className="font-accent text-[9px] uppercase tracking-[0.16em] text-white/35">Illustrative Goal</span>
+                <div className="relative mt-5 flex h-28 w-28 items-center justify-center rounded-full border-4 border-white/5 bg-white/[0.02]">
+                  <div className="absolute inset-0 rounded-full border-4 border-t-[#6fcf8e] border-r-[#6fcf8e] border-b-[#6fcf8e]/30 border-l-[#6fcf8e]/10 animate-[spin_3s_linear_infinite]" />
+                  <span className="text-[32px] font-bold text-white tracking-tight">95+</span>
+                </div>
+                <h4 className="mt-4 text-[14px] font-semibold text-white">PageSpeed Target</h4>
+                <p className="mt-1.5 text-[12px] text-white/40 leading-normal">Optimized code architecture for mobile and desktop screens.</p>
+              </div>
+
+              {/* Middle Column: Speed Milestone Comparison */}
+              <div className="flex flex-col gap-4">
+                <div className="p-5 border border-white/[0.05] rounded-xl bg-white/[0.01] text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-white/30">Legacy Setup</span>
+                  <p className="mt-2 text-[18px] font-semibold text-white/35 line-through decoration-white/20">Slow Loading</p>
+                  <span className="mt-1 inline-block rounded-full bg-red-500/10 px-2.5 py-0.5 text-[10px] text-red-400">High Bounce Rate</span>
+                </div>
+                <div className="p-5 border border-[#6fcf8e]/10 rounded-xl bg-white/[0.02] text-center shadow-[0_0_30px_rgba(111,207,142,0.03)]">
+                  <span className="text-[10px] uppercase tracking-wider text-white/50">ScaleForge Optimized</span>
+                  <p className="mt-2 text-[18px] font-semibold text-[#6fcf8e]">Sub-Second Speed</p>
+                  <span className="mt-1 inline-block rounded-full bg-[#6fcf8e]/10 px-2.5 py-0.5 text-[10px] text-[#6fcf8e]">Instant Loading</span>
+                </div>
+              </div>
+
+              {/* Right Column: Growth Target Trend */}
+              <div className="flex flex-col items-center text-center p-6 border border-white/[0.05] rounded-xl bg-white/[0.01]">
+                <span className="font-accent text-[9px] uppercase tracking-[0.16em] text-white/35">Illustrative Goal</span>
+                <div className="mt-4 flex h-28 items-end gap-2.5 w-full max-w-[160px] px-2">
+                  {[25, 40, 35, 60, 50, 85, 75, 100].map((h, i) => (
+                    <span
+                      key={i}
+                      className="flex-1 rounded-sm bg-gradient-to-t from-white/5 to-[#6fcf8e]/60"
+                      style={{ height: `${h}%` }}
+                    />
+                  ))}
+                </div>
+                <h4 className="mt-5 text-[14px] font-semibold text-white">Traffic Compound Target</h4>
+                <p className="mt-1.5 text-[12px] text-white/40 leading-normal">Building organic authority designed to achieve compound traffic growth.</p>
+              </div>
+
+            </div>
           </div>
         </Reveal>
 
