@@ -5,6 +5,11 @@ export default function LogoStrip() {
   return (
     <section className="border-y border-white/[0.06] bg-[#08080a] py-12">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
+        <Reveal>
+          <p className="mb-8 text-center font-accent text-[10.5px] uppercase tracking-[0.16em] text-white/35">
+            Compatible with Your Existing Work Stack
+          </p>
+        </Reveal>
         <Reveal
           stagger
           staggerAmount={0.06}

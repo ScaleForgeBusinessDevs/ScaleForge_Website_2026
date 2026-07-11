@@ -4,21 +4,21 @@ import { SlidersHorizontal, TrendingUp, Network, CheckCircle2, Hourglass, Sparkl
 const FEATURES = [
   {
     icon: SlidersHorizontal,
-    title: "Workflow Execution Control",
-    body: "Monitor workflow runs in real time, pause and resume processes, and retain full operational visibility across every run.",
-    points: ["Real-time run monitoring", "Detailed progress logs", "Built-in error handling"],
+    title: "Our Delivery Process",
+    body: "Every project moves through structured sprints. You retain full visibility, track progress in real time, and sign off at each milestone.",
+    points: ["Structured sprint roadmaps", "Direct Slack & Figma access", "Milestone-based sign-offs"],
   },
   {
     icon: TrendingUp,
-    title: "Performance Analytics & Insights",
-    body: "Analyze workflow performance with real-time metrics, execution insights, and visual dashboards designed for operators.",
-    points: ["Workflow performance metrics", "Visual trend dashboards", "Actionable automation insights"],
+    title: "How We Monitor Your Results",
+    body: "Continuous post-launch analytics. We track site speed, SEO rankings, and conversion metrics to keep your channels optimized.",
+    points: ["SEO & speed monitoring", "Custom performance dashboards", "Actionable growth insights"],
   },
   {
     icon: Network,
-    title: "Connected Integrations",
-    body: "Integrate leading platforms and synchronize data seamlessly across your entire automation environment without manual coordination.",
-    points: ["200+ supported platforms", "Secure data synchronization", "Real-time cross-platform triggers"],
+    title: "Full-Stack Technical Capability",
+    body: "From headless CMS builds and third-party API wiring to n8n automation pipelines — we handle every layer of your technical infrastructure.",
+    points: ["CMS, CRM & API integrations", "Custom n8n & AI pipelines", "Third-party tool connectivity"],
   },
 ];
 
@@ -28,11 +28,10 @@ export default function AutomationLimits() {
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
         <Reveal className="mx-auto max-w-xl text-center">
           <h2 className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
-            Automation Without Limits
+            What We Build For You
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/45">
-            Advanced automation capabilities designed to support growing teams
-            and evolving operational systems.
+            Bespoke digital architecture engineered to scale your operations, presence, and client acquisition.
           </p>
         </Reveal>
 
@@ -50,11 +49,11 @@ export default function AutomationLimits() {
           <div className="p-7 sm:border-r sm:border-white/[0.07]">
             <div className="flex items-center gap-2.5">
               <span className="h-1.5 w-1.5 rounded-full bg-[#6fcf8e]" />
-              <h3 className="text-[15px] font-medium text-white">Workflow run</h3>
+              <h3 className="text-[15px] font-medium text-white">Delivery Milestone</h3>
             </div>
-            <p className="mt-2 text-[13px] leading-relaxed text-white/40">Live status of an automation as it moves through each stage.</p>
+            <p className="mt-2 text-[13px] leading-relaxed text-white/40">Live tracking of your service sprint as it goes from design to live launch.</p>
             <div className="mt-5 space-y-2.5">
-              {["Webhook triggered", "Data validated", "Action executed"].map((step, i) => (
+              {["Sprint Kickoff", "Figma Design Approved", "Production Code Deployed"].map((step, i) => (
                 <div key={step} className="flex items-center gap-3 rounded-md border border-white/[0.06] bg-white/[0.015] px-3 py-2">
                   <span className={`h-1.5 w-1.5 rounded-full ${i < 2 ? "bg-[#6fcf8e]" : "bg-white/25"}`} />
                   <span className="text-[12.5px] text-white/55">{step}</span>
@@ -66,11 +65,11 @@ export default function AutomationLimits() {
           <div className="border-t border-white/[0.07] p-7 sm:border-t-0">
             <div className="flex items-center gap-2.5">
               <Sparkles size={14} className="text-white/55" aria-hidden />
-              <h3 className="text-[15px] font-medium text-white">AI Workflow Agent</h3>
+              <h3 className="text-[15px] font-medium text-white">Continuous Optimization</h3>
             </div>
-            <p className="mt-2 text-[13px] leading-relaxed text-white/40">An always-on layer that watches every run and improves it over time.</p>
+            <p className="mt-2 text-[13px] leading-relaxed text-white/40">Our post-launch retainer teams monitor performance, apply upgrades, and iterate content weekly.</p>
             <ul className="mt-5 space-y-2.5">
-              {["Detects workflow anomalies", "Suggests optimizations automatically", "Learns from execution history"].map((line) => (
+              {["Tracks SEO & performance metrics", "Improves conversion rates over time", "Maintains zero-downtime operations"].map((line) => (
                 <li key={line} className="flex items-start gap-2.5 rounded-md border border-white/[0.06] bg-white/[0.015] px-3 py-2 text-[12.5px] leading-relaxed text-white/55">
                   <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-white/30" />
                   {line}

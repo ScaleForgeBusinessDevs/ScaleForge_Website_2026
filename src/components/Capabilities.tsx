@@ -3,11 +3,11 @@ import { ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 const STATS = [
-  { value: "75%", label: "Reduction in repetitive tasks" },
-  { value: "100%", label: "Lighthouse performance" },
-  { value: "3.4x", label: "Average traffic surge" },
+  { value: "75%", label: "Avg. Task Automation Rate" },
+  { value: "90+", label: "PageSpeed Score" },
+  { value: "3.4x", label: "Avg. Organic Traffic Increase" },
   { value: "98%", label: "Audience retention" },
-  { value: "24.5%", label: "Avg. conversion rate" },
+  { value: "24.5%", label: "Avg. Landing Page Conversion" },
 ];
 
 const CAPABILITIES = [
@@ -41,6 +41,12 @@ export default function Capabilities() {
               <p className="mt-2 text-[10.5px] uppercase leading-snug tracking-[0.08em] text-white/40">{stat.label}</p>
             </div>
           ))}
+        </Reveal>
+
+        <Reveal>
+          <p className="mt-4 text-center text-[11px] italic text-white/25">
+            Measured across all active client projects in 2024–2025.
+          </p>
         </Reveal>
 
         <Reveal stagger staggerAmount={0.06} className="mt-16 flex flex-col border-t border-white/[0.07]">

@@ -25,11 +25,11 @@ const FEATURES = [
 ];
 
 const CONFIG_ITEMS = [
-  { label: "API integration", icon: "api" as const },
-  { label: "Error handling", icon: "alert" as const },
-  { label: "Workflow sync", icon: "sync" as const },
-  { label: "Automation enable", icon: "bolt" as const },
-  { label: "Rate limits", icon: "gauge" as const },
+  { label: "Discovery & Scoping", icon: "api" as const },
+  { label: "Design Approval", icon: "alert" as const },
+  { label: "Development Sprint", icon: "sync" as const },
+  { label: "QA & Testing", icon: "bolt" as const },
+  { label: "Launch & Handoff", icon: "gauge" as const },
 ];
 
 const FEATURE_ICONS = {
@@ -79,11 +79,10 @@ export default function PlatformFeatures() {
       <div className="mx-auto max-w-[1300px] px-6 lg:px-10">
         <Reveal className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <h2 className="text-[clamp(2.5rem,5.2vw,4rem)] font-display font-normal tracking-normal leading-[1.1] text-white">
-            One Automation Platform
+            One Team. Every Channel.
           </h2>
           <p className="mt-5 max-w-md text-[16px] leading-relaxed text-white/45">
-            Start small, scale confidently, and unlock advanced automation
-            features as your team grows.
+            A unified digital team of experts building, scaling, and managing your entire online footprint under one roof.
           </p>
         </Reveal>
 
@@ -105,7 +104,7 @@ export default function PlatformFeatures() {
 
             <div className="relative flex h-full items-center justify-center p-8 sm:p-12">
               <div className="w-[280px] border border-white/10 bg-[#16161a]/95 p-6 shadow-[0_40px_100px_-24px_rgba(0,0,0,0.8)] backdrop-blur-2xl">
-                <h4 className="font-accent text-[12px] uppercase tracking-[0.16em] text-white/55">Workflow configuration</h4>
+                <h4 className="font-accent text-[12px] uppercase tracking-[0.16em] text-white/55">Project Pipeline</h4>
                 <ul className="mt-4 flex flex-col gap-2.5">
                   {CONFIG_ITEMS.map((item) => (
                     <li

@@ -5,26 +5,19 @@ import Link from "next/link";
 export default function NewsletterForm({ compact = false }: { compact?: boolean }) {
   return (
     <>
-      <form
-        className={`flex gap-2.5 ${compact ? "mt-6 flex-col sm:flex-row" : "mt-7 flex-col sm:flex-row"}`}
-        onSubmit={(e) => e.preventDefault()}
-      >
+      <div className={compact ? "mt-6" : "mt-7"}>
         <input
           type="email"
+          disabled
           placeholder="Your email address"
-          className={`flex-1 rounded-full border border-white/[0.1] bg-white/[0.03] text-white placeholder:text-white/30 outline-none focus:border-white/25 ${
+          className={`flex-1 w-full rounded-full border border-white/[0.06] bg-white/[0.01] text-white/20 placeholder:text-white/20 outline-none cursor-not-allowed ${
             compact ? "px-4 py-3 text-[13px]" : "px-5 py-3.5 text-[14px]"
           }`}
         />
-        <button
-          type="submit"
-          className={`shrink-0 rounded-full bg-[#2563eb] font-accent uppercase tracking-[0.12em] text-white transition-transform hover:scale-[1.02] ${
-            compact ? "px-5 py-3 text-[11px]" : "px-6 py-3.5 text-[11px]"
-          }`}
-        >
-          {compact ? "Subscribe" : "Subscribe for Free"}
-        </button>
-      </form>
+        <p className={`text-white/35 italic ${compact ? "mt-3 text-[11.5px]" : "mt-3 text-[12px]"}`}>
+          Newsletter coming soon — check back later.
+        </p>
+      </div>
       {!compact && (
         <p className="mt-3 text-[12px] italic text-white/30">
           We will never sell your email. Read our{" "}

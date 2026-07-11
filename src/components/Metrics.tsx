@@ -7,21 +7,21 @@ const METRICS = [
     icon: Zap,
     stat: "340%",
     title: "Average Valuation Expansion",
-    body: "Achieved across built & advised portfolio within 18 months of engagement.",
+    body: "Measured across all active client projects in 2024–2025, within 18 months of engagement.",
   },
   {
     index: "02",
     icon: CheckCircle2,
     stat: "14 Days",
     title: "Prototype-to-Market Delivery",
-    body: "Aggressive engineering sprints to launch fully tested, scalable initial products.",
+    body: "Measured across all active client projects in 2024–2025. Aggressive engineering sprints to launch scalable initial products.",
   },
   {
     index: "03",
     icon: Award,
     stat: "Tier 1",
     title: "Global Capital Backing",
-    body: "Portfolio companies successfully backed by leading syndicates and top-tier global venture firms.",
+    body: "Measured across all active client projects in 2024–2025. Portfolio companies backed by leading syndicates and global venture firms.",
   },
 ];
 
