@@ -190,9 +190,13 @@ export default function AboutPage() {
                     Founder &amp; CEO
                   </p>
                   <p className="mt-3 text-[14px] leading-relaxed text-white/50">
-                    Shahood leads Scale Forge&apos;s strategy and client partnerships, ensuring every project is
-                    aligned with measurable growth outcomes. With a background in conversion-focused design and
-                    technical SEO, he oversees the full delivery pipeline from first brief to final launch.
+                    Shahood isn&apos;t just part of Scale Forge&apos;s success, he is Scale Forge&apos;s success.
+                    The strategist, the closer, the architect of every custom Next.js build the agency ships.
+                    He owns the client relationships from first cold DM to final invoice, runs the social
+                    media branding and management personally, and sets the engineering bar for performance
+                    and scalability along the way. Bring him a problem; he&apos;ll bring back a growth curve,
+                    a shipped build, and a mic drop, because there&apos;s no part of this pipeline he
+                    doesn&apos;t touch.
                   </p>
                   <div className="mt-5 flex items-center gap-2.5">
                     <a href="https://www.linkedin.com/in/shahood-saleem/" target="_blank" rel="noopener noreferrer"
@@ -234,10 +238,12 @@ export default function AboutPage() {
                     Partner &amp; Technical Lead
                   </p>
                   <p className="mt-3 text-[14px] leading-relaxed text-white/50">
-                    Ruhan architects the custom Next.js codebases that power Scale Forge&apos;s client websites.
-                    He sets the engineering standards for performance, type safety, and scalability — making sure
-                    every build hits 90+ PageSpeed scores and remains maintainable long after launch.
+                    Ruhan handles SEO, the technical audits, the keyword grind, the unglamorous crawl reports
+                    nobody reads until rankings move. He works in the margins of what Shahood builds, quietly
+                    making sure Google notices the sites long after launch day. No client calls, no spotlight
+                    just the guy tuning the algorithm's opinion of you from the shadows.
                   </p>
+
                   <div className="mt-5 flex items-center gap-2.5">
                     <a
                       href="https://www.linkedin.com/in/ruhan-bhaleshah-aa50761b3"
@@ -249,7 +255,7 @@ export default function AboutPage() {
                       <LinkedinIcon size={14} aria-hidden />
                     </a>
                     <a
-                      href="https://www.biztechra.site/"
+                      href="https://scaleforgewebdev.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Ruhan on BizTech"

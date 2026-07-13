@@ -189,7 +189,7 @@ export default function WebDevelopmentPage() {
       <section id="stack" className="scroll-mt-28 border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto flex max-w-3xl flex-col items-center text-center">
-            <h2 className="mt-5 text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
+            <h2 className="mt-5 text-[clamp(3rem,6.0vw,2.5rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
               Engineered with Top-Tier Tools
             </h2>
           </Reveal>

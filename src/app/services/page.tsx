@@ -3,7 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
-import { Sparkles, Palette, Code, TrendingUp, SquarePen, Check, ArrowRight } from "lucide-react";
+import { Sparkles, Palette, Code, TrendingUp, SquarePen, Check, ArrowRight, Lightbulb, Megaphone, GitBranch, Crosshair } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services | Web Design, Development, SEO, Content & AI Automation",
@@ -131,6 +131,82 @@ const SERVICES = [
     ],
     href: "/services/content-creation",
     linkLabel: "View Content Creation Details",
+  },
+  {
+    icon: Lightbulb,
+    eyebrow: "ADVISORY",
+    name: "Startup Advisory",
+    valueProp: "Strategic Mentorship for Founders Who Move Fast",
+    body: [
+      "We work directly with early-stage founders to sharpen strategy, build investor-ready materials, and open doors. From pitch deck creation and fundraising strategy to OKR frameworks and go-to-market planning — hands-on advisory from people who have been in the room.",
+      "Every engagement is structured, prepared, and output-driven. No generic mentorship sessions. Every week produces something concrete your business can act on immediately.",
+    ],
+    included: [
+      "Weekly one-on-one founder advisory sessions",
+      "Investor-ready pitch deck creation and review",
+      "Fundraising strategy and round sizing guidance",
+      "Go-to-market roadmap and channel selection",
+      "Warm investor introductions from our network",
+    ],
+    href: "/services/startup-advisory",
+    linkLabel: "View Startup Advisory Details",
+  },
+  {
+    icon: Megaphone,
+    eyebrow: "BRANDING",
+    name: "Social Media Branding",
+    valueProp: "A Brand Identity That Stops the Scroll",
+    body: [
+      "We build complete social media brand systems — visual identity, content templates, strategy, and voice guidelines — so your business looks premium and posts consistently across every platform.",
+      "Every template is designed to be used the same day. No design skills required. We hand off a full library of editable assets plus a 30-day content calendar your team can execute immediately.",
+    ],
+    included: [
+      "Full visual identity guide (colours, fonts, iconography)",
+      "20+ editable post and story templates per platform",
+      "30-day content calendar with topic and hook mapping",
+      "Optimised profile and bio copy for all platforms",
+      "Brand voice and tone-of-voice documentation",
+    ],
+    href: "/services/social-media-branding",
+    linkLabel: "View Social Media Branding Details",
+  },
+  {
+    icon: GitBranch,
+    eyebrow: "OPERATIONS",
+    name: "Supply Chain Management",
+    valueProp: "Custom Software That Forecasts Demand and Cuts Waste",
+    body: [
+      "We build purpose-built supply chain platforms with AI-powered sales forecasting, real-time inventory intelligence, and supplier analytics — replacing spreadsheets with systems that actually scale.",
+      "Custom models trained on your historical data deliver 85–96% forecast accuracy at the 30-day horizon, with automated reorder triggers and live ERP sync eliminating manual data entry entirely.",
+    ],
+    included: [
+      "AI demand forecasting models built on your data",
+      "Automated inventory reorder and safety stock engine",
+      "Real-time supplier performance scorecards",
+      "Full ERP integration (SAP, Oracle, Dynamics, Odoo)",
+      "Role-based executive dashboards and alert system",
+    ],
+    href: "/services/supply-chain-management",
+    linkLabel: "View Supply Chain Management Details",
+  },
+  {
+    icon: Crosshair,
+    eyebrow: "EFFICIENCY",
+    name: "Motion Analysis",
+    valueProp: "Eliminate Wasted Motion. Recover Hidden Capacity.",
+    body: [
+      "We conduct digital time and motion studies that identify exactly where your workforce time goes — and precisely how to get more output from the same headcount without adding cost.",
+      "Our studies combine industrial engineering methodology with modern digital capture tools to deliver results that are 3× faster and significantly more accurate than traditional clipboard-based approaches.",
+    ],
+    included: [
+      "Full digital time study with elemental breakdown",
+      "Workflow and motion mapping with annotated diagrams",
+      "Standard time calculations and performance ratings",
+      "Efficiency benchmarking against industry norms",
+      "90-day improvement roadmap with projected ROI",
+    ],
+    href: "/services/motion-analysis",
+    linkLabel: "View Motion Analysis Details",
   },
 ];
 

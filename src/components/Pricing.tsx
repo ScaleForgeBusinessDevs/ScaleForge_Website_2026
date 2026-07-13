@@ -37,7 +37,7 @@ export default function Pricing() {
           <span className="font-accent text-[10px] uppercase tracking-[0.2em] text-white/35">
             Transparent Investment
           </span>
-          <h2 className="mt-5 text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
+          <h2 className="mt-5 text-[clamp(1.9rem,4.0vw,2.0rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
             Simple, Service-Based Pricing Tiers
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/45">

@@ -87,7 +87,7 @@ const DIRECT_CHANNELS = [
 ];
 
 const OFFICE_TILES = [
-  { label: "Office", value: "Karachi, Pakistan" },
+  { label: "Client Base", value: "USA" },
   { label: "Time zone", value: "PKT (UTC +5)" },
   { label: "Working hours", value: "Mon–Fri, flexible US / EU / AU coverage" },
 ];
@@ -218,10 +218,10 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mb-10">
             <h2 className="mt-4 text-[clamp(1.5rem,2.8vw,2rem)] font-display font-normal text-white">
-              Karachi, Pakistan · Remote-First
+              Global Reach - Remote-First
             </h2>
             <p className="mt-3 max-w-xl text-[14.5px] leading-relaxed text-white/45">
-              ScaleForge operates remote-first from Karachi, Pakistan, with team members working across multiple time
+              ScaleForge operates remote-first with team members working across multiple time
               zones. While we don&apos;t host walk-ins, we&apos;re happy to meet clients in person when projects require it.
             </p>
           </Reveal>
