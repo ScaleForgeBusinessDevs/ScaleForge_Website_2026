@@ -3,9 +3,8 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
-import DisabledSocialLink from "@/components/DisabledSocialLink";
-import { CreditCard, Landmark, ShieldCheck, Mail } from "lucide-react";
-import { LinkedinIcon, GithubIcon } from "@/components/BrandIcons";
+import { CreditCard, Landmark, ShieldCheck, Mail, Globe } from "lucide-react";
+import { LinkedinIcon } from "@/components/BrandIcons";
 import TwitterXIcon from "@/components/TwitterXIcon";
 
 export const metadata: Metadata = {
@@ -249,14 +248,15 @@ export default function AboutPage() {
                     >
                       <LinkedinIcon size={14} aria-hidden />
                     </a>
-                    {/* TODO: Add Ruhan's real GitHub URL once confirmed */}
-                    <DisabledSocialLink
-                      href="#"
-                      ariaLabel="Ruhan on GitHub"
-                      className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
+                    <a
+                      href="https://www.biztechra.site/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ruhan on BizTech"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]"
                     >
-                      <GithubIcon size={14} aria-hidden />
-                    </DisabledSocialLink>
+                      <Globe size={14} aria-hidden />
+                    </a>
                     <a href="mailto:scaleforgebusinessdev@gmail.com"
                       aria-label="Email Ruhan"
                       className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.10] text-[14px] text-white/40 transition-all hover:border-[#2563eb]/50 hover:text-[#2563eb]">
