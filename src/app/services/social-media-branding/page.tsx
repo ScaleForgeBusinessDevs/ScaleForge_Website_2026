@@ -147,6 +147,9 @@ export default function SocialMediaBrandingPage() {
         </div>
       </section>
 
+      {/* LinkedIn Posts — Live Feed */}
+      <LinkedInPosts />
+
       {/* Core Offerings */}
       <section className="bg-[#08080a] py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
@@ -201,9 +204,6 @@ export default function SocialMediaBrandingPage() {
           </div>
         </div>
       </section>
-
-      {/* LinkedIn Posts — Live Feed */}
-      <LinkedInPosts />
 
       {/* Process */}
       <section className="bg-[#08080a] py-24 lg:py-32">
