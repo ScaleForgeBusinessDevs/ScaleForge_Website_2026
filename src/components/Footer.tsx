@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { TwitterXIcon } from "./TwitterXIcon";
+import { LinkedinIcon, GithubIcon, YoutubeIcon } from "./BrandIcons";
+
 const COLUMNS = [
   {
     title: "Navigation",
@@ -36,10 +39,10 @@ const COLUMNS = [
 
 const SOCIALS = [
   // TODO: Replace placeholder hrefs with real social URLs once supervisor confirms
-  { label: "X", icon: "bi-twitter-x", href: "#" },
-  { label: "LinkedIn", icon: "bi-linkedin", href: "#" },
-  { label: "GitHub", icon: "bi-github", href: "#" },
-  { label: "YouTube", icon: "bi-youtube", href: "#" },
+  { label: "X", icon: TwitterXIcon, href: "#" },
+  { label: "LinkedIn", icon: LinkedinIcon, href: "#" },
+  { label: "GitHub", icon: GithubIcon, href: "#" },
+  { label: "YouTube", icon: YoutubeIcon, href: "#" },
 ];
 
 export default function Footer() {
@@ -56,27 +59,24 @@ export default function Footer() {
               ScaleForge
             </Link>
             <p className="mt-4 max-w-[280px] text-[13.5px] leading-relaxed text-white/60">
-              Visual automation for modern teams — build, run and monitor
-              workflows from one workspace.
+              Bespoke web development, content creation, and custom AI automations designed for scale.
             </p>
           </div>
 
           <div>
             <p className="text-[13px] font-medium text-white/85">Stay in the loop</p>
             <p className="mt-2 text-[13px] text-white/60">Product news and automation tips, monthly.</p>
-            <form className="mt-4 flex max-w-sm gap-2" onSubmit={(e) => e.preventDefault()}>
+            <div className="mt-4 max-w-sm">
               <input
                 type="email"
+                disabled
                 placeholder="Your email"
-                className="w-full rounded-full border border-white/[0.1] bg-white/[0.03] px-4 py-2.5 text-[13px] text-white placeholder:text-white/30 outline-none transition-colors focus:border-white/25"
+                className="w-full rounded-full border border-white/[0.06] bg-white/[0.01] px-4 py-2.5 text-[13px] text-white/20 placeholder:text-white/20 outline-none cursor-not-allowed"
               />
-              <button
-                type="submit"
-                className="shrink-0 rounded-full bg-[#2563eb] px-5 py-2.5 font-accent text-[11px] uppercase tracking-[0.12em] text-white transition-transform hover:scale-[1.03]"
-              >
-                Subscribe
-              </button>
-            </form>
+              <p className="mt-2 text-[12px] italic text-white/35">
+                Newsletter coming soon — check back later.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -115,7 +115,7 @@ export default function Footer() {
                     : "text-white/40 hover:border-[#5e6ad2]/40 hover:text-[#a5aef0]"
                 }`}
               >
-                <i className={`bi ${social.icon}`} aria-hidden />
+                <social.icon size={14} aria-hidden />
               </a>
             ))}
           </div>

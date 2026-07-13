@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
+import { PenTool, Split, Smartphone, Palette, Rocket, Check, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Web Design Services | Custom UI/UX from ScaleForge",
@@ -32,27 +33,27 @@ export const metadata: Metadata = {
 
 const OFFERINGS = [
   {
-    icon: "bi-vector-pen",
+    icon: PenTool,
     title: "Custom UI Design",
     body: "Absolutely zero pre-made templates. Every layout, margin, and hover effect is drawn from scratch to match your specific brand personality and goals.",
   },
   {
-    icon: "bi-signpost-split",
+    icon: Split,
     title: "UX & Conversion Architecture",
     body: "We define logical page hierarchies, smooth content layouts, and strategic CTA placements that eliminate scrolling fatigue and drive engagement.",
   },
   {
-    icon: "bi-phone",
+    icon: Smartphone,
     title: "Mobile-First Responsive Design",
     body: "Over 60% of organic traffic is mobile. We design for the smallest screen widths first and scale upward, ensuring your site looks flawless on every device.",
   },
   {
-    icon: "bi-palette",
+    icon: Palette,
     title: "Brand Identity & Style Guides",
     body: "Logo refinement, harmonized HSL color palettes, modern typography selections, and a comprehensive spacing guide to keep your brand coherent across every touchpoint.",
   },
   {
-    icon: "bi-rocket-takeoff",
+    icon: Rocket,
     title: "Landing Page Optimization",
     body: "High-converting standalone single-page systems specifically tuned for Google Ads, social media campaigns, and fast lead acquisition.",
   },
@@ -158,7 +159,7 @@ export default function WebDesignPage() {
             {OFFERINGS.map((item) => (
               <div key={item.title} className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                  <i className={`bi ${item.icon} text-[16px]`} aria-hidden />
+                  <item.icon size={16} aria-hidden />
                 </span>
                 <div>
                   <h3 className="text-[15px] font-medium text-white">{item.title}</h3>
@@ -182,7 +183,7 @@ export default function WebDesignPage() {
                 {STANDARDS.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[14px] leading-relaxed text-white/55">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/15 text-[10px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
+                      <Check size={10} aria-hidden />
                     </span>
                     {item}
                   </li>
@@ -191,7 +192,7 @@ export default function WebDesignPage() {
             </Reveal>
 
             <Reveal className="rounded-2xl border border-white/[0.07] bg-[#101013] p-8">
-              <i className="bi bi-quote text-[24px] text-white/20" aria-hidden />
+              <Quote size={24} className="text-white/20" aria-hidden />
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 100% custom wireframes in Figma. No templates. No stock layouts. No exceptions.
               </p>

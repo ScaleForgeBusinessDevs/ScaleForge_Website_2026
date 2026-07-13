@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScroll from "@/components/SmoothScroll";
-import BiLoader from "@/components/BiLoader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -16,13 +15,35 @@ const inter = Inter({
 });
 
 const akira = localFont({
-  src: "../fonts/Akira-Expanded-Bold.otf",
+  src: [
+    {
+      path: "../fonts/Akira-Expanded-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Akira-Expanded-Bold.otf",
+      weight: "700",
+      style: "normal",
+    }
+  ],
   variable: "--font-akira",
   display: "swap",
 });
 
 const turismo = localFont({
-  src: "../fonts/Turismo-Bold.otf",
+  src: [
+    {
+      path: "../fonts/Turismo-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Turismo-Bold.otf",
+      weight: "700",
+      style: "normal",
+    }
+  ],
   variable: "--font-turismo",
   display: "swap",
 });
@@ -96,7 +117,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(profSchema) }}
         />
         <SmoothScroll />
-        <BiLoader />
         <Navbar />
         <main className="flex-1 min-w-0">
           {children}

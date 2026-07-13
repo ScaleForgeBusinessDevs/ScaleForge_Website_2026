@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { LayoutGrid, ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
 
 interface ProjectCardProps {
@@ -50,7 +51,7 @@ export function ProjectCard({
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-[#0f1011]">
-              <i className="bi bi-grid-1x2 text-[40px] text-white/10" aria-hidden />
+              <LayoutGrid size={40} className="text-white/10" aria-hidden />
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#08090a]/80 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-30" />
@@ -70,7 +71,7 @@ export function ProjectCard({
               href={href}
               className="flex items-center gap-2 rounded-full bg-[#2563eb] px-5 py-2.5 text-[13px] font-[500] text-white shadow-lg shadow-[#2563eb]/30 transition-transform hover:scale-[1.03]"
             >
-              <i className="bi bi-arrow-up-right text-[13px]" aria-hidden />
+              <ArrowUpRight size={13} aria-hidden />
               View Project
             </Link>
           </div>

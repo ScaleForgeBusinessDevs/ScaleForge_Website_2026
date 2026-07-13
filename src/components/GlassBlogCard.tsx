@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Reveal from "./Reveal";
+import { FileText, BookOpen, Clock } from "lucide-react";
 
 interface GlassBlogCardProps {
   title: string;
@@ -44,7 +45,7 @@ export function GlassBlogCard({
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-[#0f1011]">
-              <i className="bi bi-file-text text-[36px] text-white/10" aria-hidden />
+              <FileText size={36} className="text-white/10" aria-hidden />
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#08090a]/80 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
@@ -69,7 +70,7 @@ export function GlassBlogCard({
               href={href}
               className="flex items-center gap-2 rounded-full bg-[#2563eb] px-5 py-2.5 text-[13px] font-[500] text-white shadow-lg shadow-[#2563eb]/30 transition-transform hover:scale-[1.03]"
             >
-              <i className="bi bi-book text-[13px]" aria-hidden />
+              <BookOpen size={13} aria-hidden />
               Read Article
             </Link>
           </div>
@@ -109,7 +110,7 @@ export function GlassBlogCard({
               )}
               {readTime && (
                 <div className="flex items-center gap-1 text-[11px] text-white/35">
-                  <i className="bi bi-clock text-[11px]" aria-hidden />
+                  <Clock size={11} aria-hidden />
                   <span>{readTime} min read</span>
                 </div>
               )}

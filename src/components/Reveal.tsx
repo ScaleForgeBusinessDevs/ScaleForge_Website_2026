@@ -30,10 +30,16 @@ export default function Reveal({
       const el = ref.current;
       if (!el) return;
 
+      const targets = stagger ? Array.from(el.children) : el;
+
+      // Apply hidden state via JS only after mount — content is visible by default
+      // so it stays readable if GSAP fails or is slow to execute.
+      (targets instanceof Element ? [targets] : Array.from(targets as HTMLElement[])).forEach((t) => {
+        (t as HTMLElement).classList.add("gsap-will-reveal");
+      });
+
       // Promote to compositor layer before GSAP reads geometry — prevents forced reflow
       el.style.willChange = "transform, opacity";
-
-      const targets = stagger ? Array.from(el.children) : el;
 
       gsap.set(targets, { opacity: 0, y });
 
@@ -52,6 +58,9 @@ export default function Reveal({
             onComplete: () => {
               // Release compositor layer after animation — reduces memory
               el.style.willChange = "auto";
+              (targets instanceof Element ? [targets] : Array.from(targets as HTMLElement[])).forEach((t) => {
+                (t as HTMLElement).classList.remove("gsap-will-reveal");
+              });
             },
           });
         },

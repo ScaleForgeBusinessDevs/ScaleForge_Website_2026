@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
+import { Magnet, PhoneOutgoing, Share2, Sparkles, Network, Bot } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "AI Development & Automation Services | ScaleForge",
@@ -31,32 +32,32 @@ export const metadata: Metadata = {
 
 const CAPABILITIES = [
   {
-    icon: "bi-magnet",
+    icon: Magnet,
     title: "Lead Generation Automation",
     body: "Automatically scrape, enrich, qualify, and deliver high-intent leads directly into your CRM — without touching a spreadsheet.",
   },
   {
-    icon: "bi-telephone-outbound",
+    icon: PhoneOutgoing,
     title: "AI Cold Calling Agents",
     body: "Deploy Vapi-powered AI voice agents that call your lead list, handle objections, and book qualified appointments into your calendar — 24/7.",
   },
   {
-    icon: "bi-share",
+    icon: Share2,
     title: "Social Media Automation",
     body: "Generate, schedule, and publish branded content across Instagram, LinkedIn, X, and TikTok on a fully automated publishing pipeline.",
   },
   {
-    icon: "bi-stars",
+    icon: Sparkles,
     title: "AI Content Generation",
     body: "Automatically produce SEO blog posts, email sequences, and ad copy from a single brief using structured AI pipelines built in n8n or Make.com.",
   },
   {
-    icon: "bi-diagram-3",
+    icon: Network,
     title: "Workflow & CRM Automation",
     body: "Connect your entire business stack — Notion, Google Sheets, HubSpot, Slack — into one seamless automated data pipeline with zero manual input.",
   },
   {
-    icon: "bi-robot",
+    icon: Bot,
     title: "Custom AI Agents & Chatbots",
     body: "Build bespoke AI agents trained on your business data to handle customer queries, internal requests, and support tickets autonomously.",
   },
@@ -222,7 +223,7 @@ export default function AIDevelopmentPage() {
             {CAPABILITIES.map((cap) => (
               <div key={cap.title} className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                  <i className={`bi ${cap.icon} text-[16px]`} aria-hidden />
+                  <cap.icon size={16} aria-hidden />
                 </span>
                 <div>
                   <h3 className="text-[15px] font-medium text-white">{cap.title}</h3>

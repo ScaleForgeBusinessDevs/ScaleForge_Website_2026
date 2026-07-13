@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
+import { Bug, FileText, Search, MapPin, Link as LinkIcon, Check, Quote, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "SEO Services | Rank Higher on Google with ScaleForge",
@@ -32,27 +33,27 @@ export const metadata: Metadata = {
 
 const MODULES = [
   {
-    icon: "bi-bug",
+    icon: Bug,
     title: "Technical SEO Audit & Fixing",
     body: "We identify and resolve indexation blocks, crawling bottlenecks, sitemap errors, duplicate paths, structured data errors, and Core Web Vitals issues.",
   },
   {
-    icon: "bi-file-text",
+    icon: FileText,
     title: "Precision On-Page SEO",
     body: "Optimizing titles, meta tags, and structured headers (H1–H4) across your priority commercial pages, using natural keyword distribution and link silos.",
   },
   {
-    icon: "bi-search",
+    icon: Search,
     title: "Keyword Strategy & Mapping",
     body: "We research high-intent search phrases that your primary customers type during their purchase decision phase, mapping keywords directly to service pages.",
   },
   {
-    icon: "bi-geo-alt",
+    icon: MapPin,
     title: "Local SEO & Maps Dominance",
     body: "Optimizing your Google Business Profile, setting up consistent local citations, and crafting location-specific pages to dominate the Map Pack.",
   },
   {
-    icon: "bi-link-45deg",
+    icon: LinkIcon,
     title: "Authority Link Building",
     body: "Custom guest-outreach campaigns and digital PR to secure high-authority backlinks from established editorial platforms in your industry.",
   },
@@ -170,7 +171,7 @@ export default function SEOPage() {
             {MODULES.map((item) => (
               <div key={item.title} className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                  <i className={`bi ${item.icon} text-[16px]`} aria-hidden />
+                  <item.icon size={16} aria-hidden />
                 </span>
                 <div>
                   <h3 className="text-[15px] font-medium text-white">{item.title}</h3>
@@ -194,7 +195,7 @@ export default function SEOPage() {
                 {MONTHLY_INCLUSIONS.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-[14px] leading-relaxed text-white/55">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-white/15 text-[10px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
+                      <Check size={10} aria-hidden />
                     </span>
                     {item}
                   </li>
@@ -203,7 +204,7 @@ export default function SEOPage() {
             </Reveal>
 
             <Reveal className="rounded-2xl border border-white/[0.07] bg-[#101013] p-8">
-              <i className="bi bi-quote text-[24px] text-white/20" aria-hidden />
+              <Quote size={24} className="text-white/20" aria-hidden />
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 Full-service monthly retainers. Tier-dependent inclusions detailed on the{" "}
                 <Link
@@ -238,7 +239,7 @@ export default function SEOPage() {
                 <p className="mt-3 text-[12.5px] leading-relaxed text-white/50">{item.body}</p>
                 {i < TIMELINE.length - 1 && (
                   <span className="absolute -right-2.5 top-1/2 z-10 hidden -translate-y-1/2 rounded-full border border-white/10 bg-[#101013] p-1 lg:flex">
-                    <i className="bi bi-arrow-right text-[10px] text-white/30" aria-hidden />
+                    <ArrowRight size={10} className="text-white/30" aria-hidden />
                   </span>
                 )}
               </div>

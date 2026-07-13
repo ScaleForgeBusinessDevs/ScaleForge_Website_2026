@@ -1,26 +1,31 @@
 import Reveal from "./Reveal";
+import { ArrowRight, Code, Sparkles, TrendingUp, PenTool } from "lucide-react";
+import Link from "next/link";
 
-const PLANS = [
+const SERVICES_TEASER = [
   {
-    name: "Starter Plan",
-    price: "$899",
-    desc: "For small teams automating their first workflows.",
-    features: ["Up to 5 active workflows", "Monthly maintainance", "Core integrations", "Email support"],
-    featured: false,
+    title: "Web Design & Development",
+    desc: "From bespoke high-converting marketing sites to complex web applications. Built with modern tech stacks, fully SEO-optimized, and hand-off ready.",
+    icon: Code,
+    priceEstimate: "Starts at $1,800",
   },
   {
-    name: "Growth Plan",
-    price: "$1299",
-    desc: "For growing teams that need more power and visibility.",
-    features: ["Up to 25 active workflows", "Monthly maintainance", "AI workflow agent", "Priority support", "Advanced analytics"],
-    featured: true,
+    title: "AI Development & Automation",
+    desc: "Custom scraping, lead enrichment, CRM sync, and Vapi AI voice calling setups. Turn manual spreadsheets and workflows into hands-free operating engines.",
+    icon: Sparkles,
+    priceEstimate: "Starts at $1,200",
   },
   {
-    name: "Pro Plan",
-    price: "$1599",
-    desc: "For organizations running automation at scale.",
-    features: ["Unlimited active workflows", "Monthly maintainance", "Custom integrations", "Dedicated success manager", "SOC 2 & SSO"],
-    featured: false,
+    title: "SEO & Traffic Growth",
+    desc: "Targeted keyword research, on-page optimization, and authority link-building. Built to secure search page real estate and compound inbound pipeline monthly.",
+    icon: TrendingUp,
+    priceEstimate: "Starts at $650 / mo",
+  },
+  {
+    title: "Content & Social Strategy",
+    desc: "Authority-building articles, branded graphics, email newsletter layouts, and daily social media calendar management to own your niche.",
+    icon: PenTool,
+    priceEstimate: "Starts at $750 / mo",
   },
 ];
 
@@ -28,66 +33,51 @@ export default function Pricing() {
   return (
     <section className="border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-        <Reveal className="mx-auto max-w-xl text-center">
-          <h2 className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
-            Simple, Transparent Pricing
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <span className="font-accent text-[10px] uppercase tracking-[0.2em] text-white/35">
+            Transparent Investment
+          </span>
+          <h2 className="mt-5 text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
+            Simple, Service-Based Pricing Tiers
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/45">
-            Start small, scale as you grow — no hidden fees, no surprises.
+            Select standard standalone plans or bundle multiple service tracks. Configure project deliverables or monthly retainers to match your growth objectives.
           </p>
         </Reveal>
 
-        <Reveal stagger className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {PLANS.map((plan) => (
+        <Reveal stagger className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {SERVICES_TEASER.map((service) => (
             <div
-              key={plan.name}
-              className={`flex flex-col rounded-2xl border p-8 ${plan.featured
-                ? "border-[#5e6ad2]/30 bg-[#161718] shadow-[0_40px_120px_-50px_rgba(94,106,210,0.35)]"
-                : "border-white/[0.07] bg-[#101013]"
-                }`}
+              key={service.title}
+              className="flex flex-col rounded-2xl border border-white/[0.07] bg-[#101013] p-7 transition-colors duration-300 hover:border-white/[0.12]"
             >
-              <div className="flex items-center justify-between">
-                <h3 className="text-[15px] font-medium text-white">{plan.name}</h3>
-                {plan.featured && (
-                  <span className="rounded-full bg-[#2563eb] px-3 py-1 text-[11px] font-medium text-white">
-                    Most popular
-                  </span>
-                )}
-              </div>
-              <p className="mt-2 text-[13px] leading-relaxed text-white/40">{plan.desc}</p>
-              <p className="mt-6 flex items-baseline gap-1">
-                <span className="text-[36px] font-semibold tracking-[-0.02em] text-white">{plan.price}</span>
-                <span className="text-[13px] text-white/40">/ month</span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
+                <service.icon size={16} aria-hidden />
+              </span>
+              <h3 className="mt-5 text-[15.5px] font-medium text-white">{service.title}</h3>
+              <p className="mt-2.5 text-[13px] leading-relaxed text-white/40">{service.desc}</p>
+              <p className="mt-auto pt-6 text-[13px] font-medium text-white/60">
+                {service.priceEstimate}
               </p>
-              <a
-                href="/pricing"
-                className={`mt-6 inline-flex items-center justify-center rounded-full px-5 py-2.5 font-accent text-[11px] uppercase tracking-[0.12em] transition-transform hover:scale-[1.02] ${plan.featured ? "bg-[#2563eb] text-white" : "border border-white/15 text-white/80"
-                  }`}
-              >
-                Get Started
-              </a>
-              <ul className="mt-8 flex flex-col gap-3 border-t border-white/[0.07] pt-6">
-                {plan.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2.5 text-[13px] text-white/55">
-                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-[9px] text-white/60">
-                      <i className="bi bi-check-lg" aria-hidden />
-                    </span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </Reveal>
 
-        <Reveal className="mt-10 text-center">
-          <a
-            href="/pricing#compare"
-            className="inline-flex items-center gap-2 text-[13.5px] font-medium text-white/55 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
+        <Reveal className="mt-14 flex flex-col items-center justify-center gap-4">
+          <Link
+            href="/pricing"
+            className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-accent text-[11px] uppercase tracking-[0.12em] text-[#08080a] transition-transform hover:scale-[1.02]"
           >
-            Compare Plans
-            <i className="bi bi-arrow-right" aria-hidden />
-          </a>
+            Configure Package & View Pricing
+            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+          </Link>
+          <p className="text-[12px] text-white/30">
+            Have custom requirements? We build hybrid retainer structures.{" "}
+            <Link href="/contact" className="text-white/55 underline decoration-white/20 underline-offset-4 hover:text-white/80">
+              Request a quote
+            </Link>
+            .
+          </p>
         </Reveal>
       </div>
     </section>

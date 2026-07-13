@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import { Check } from "lucide-react";
 
 const STEPS = [
   {
@@ -33,7 +34,7 @@ function StepGraphic({ kind }: { kind: (typeof STEPS)[number]["graphic"] }) {
               }`}
           >
             {item}
-            {i === 0 && <i className="bi bi-check-lg text-white/50" aria-hidden />}
+            {i === 0 && <Check size={14} className="text-white/50" aria-hidden />}
           </div>
         ))}
       </div>

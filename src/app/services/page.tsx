@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
+import { Sparkles, Palette, Code, TrendingUp, SquarePen, Check, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services | Web Design, Development, SEO, Content & AI Automation",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 
 const SERVICES = [
   {
-    icon: "bi-stars",
+    icon: Sparkles,
     eyebrow: "FLAGSHIP",
     name: "AI Development & Automation",
     valueProp: "Automated Systems That Generate Leads, Call Prospects, and Publish Content — 24/7",
@@ -56,7 +57,7 @@ const SERVICES = [
     linkLabel: "View AI Development & Automation Details",
   },
   {
-    icon: "bi-palette",
+    icon: Palette,
     eyebrow: "DESIGN",
     name: "Web Design",
     valueProp: "Conversion-Focused UI/UX That Builds Trust Instantly",
@@ -75,7 +76,7 @@ const SERVICES = [
     linkLabel: "View Web Design Details",
   },
   {
-    icon: "bi-code-slash",
+    icon: Code,
     eyebrow: "ENGINEERING",
     name: "Web Development",
     valueProp: "Fast, Scalable Websites Built with Next.js",
@@ -94,7 +95,7 @@ const SERVICES = [
     linkLabel: "View Web Development Details",
   },
   {
-    icon: "bi-graph-up-arrow",
+    icon: TrendingUp,
     eyebrow: "VISIBILITY",
     name: "Search Engine Optimization",
     valueProp: "Rank Higher on Google. Stay There.",
@@ -113,7 +114,7 @@ const SERVICES = [
     linkLabel: "View SEO Details",
   },
   {
-    icon: "bi-pencil-square",
+    icon: SquarePen,
     eyebrow: "AUTHORITY",
     name: "Content Creation & Strategy",
     valueProp: "Content That Builds Authority and Drives Organic Traffic",
@@ -178,7 +179,7 @@ export default function ServicesIndexPage() {
                   <div>
                     <div className="flex items-center gap-3">
                       <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 text-white/70">
-                        <i className={`bi ${service.icon} text-[18px]`} aria-hidden />
+                        <service.icon size={18} aria-hidden />
                       </span>
                       <span className="font-accent text-[10px] uppercase tracking-[0.18em] text-white/40">{service.eyebrow}</span>
                     </div>
@@ -196,7 +197,7 @@ export default function ServicesIndexPage() {
                       className="group mt-7 inline-flex items-center gap-2 text-[13.5px] font-medium text-white/75 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
                     >
                       {service.linkLabel}
-                      <i className="bi bi-arrow-right text-[12px] transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+                      <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
                     </Link>
                   </div>
 
@@ -206,7 +207,7 @@ export default function ServicesIndexPage() {
                       {service.included.map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-[13px] leading-relaxed text-white/55">
                           <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-[9px] text-white/60">
-                            <i className="bi bi-check-lg" aria-hidden />
+                            <Check size={9} aria-hidden />
                           </span>
                           {item}
                         </li>

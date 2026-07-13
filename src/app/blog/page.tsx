@@ -10,6 +10,7 @@ import { GlassBlogCard } from "@/components/GlassBlogCard";
 import { getFeaturedPost, getPostsByFilter } from "@/lib/sanity/queries";
 import type { SanityPost } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/client";
+import { Search, ArrowRight } from "lucide-react";
 
 export const revalidate = 3600;
 
@@ -89,7 +90,7 @@ function FeaturedPostCard({ post }: { post: SanityPost }) {
           className="group mt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/65 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
         >
           Read Full Article
-          <i className="bi bi-arrow-right text-[12px] transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+          <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
         </Link>
       </div>
     </div>
@@ -166,7 +167,7 @@ export default async function BlogIndexPage({
           {/* Empty state */}
           {gridPosts.length === 0 && (
             <div className="py-20 text-center">
-              <i className="bi bi-search text-[36px] text-white/20" aria-hidden />
+              <Search size={36} className="mx-auto text-white/20" aria-hidden />
               <p className="mt-4 text-[15px] text-white/40">
                 {posts.length === 0
                   ? "No articles yet — check back soon."

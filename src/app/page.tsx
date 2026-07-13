@@ -13,16 +13,16 @@ import Insights from "@/components/Insights";
 import ClosingCTA from "@/components/ClosingCTA";
 
 export const metadata: Metadata = {
-  title: "ScaleForge - Building Business and Automating Workflows",
+  title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
   description:
-    "ScaleForge lets modern teams build, automate and monitor powerful workflows from one visual workspace.",
+    "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
   alternates: {
     canonical: "https://scaleforgewebdev.vercel.app/",
   },
   openGraph: {
-    title: "ScaleForge - Building Business and Automating Workflows",
+    title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
     description:
-      "ScaleForge lets modern teams build, automate and monitor powerful workflows from one visual workspace.",
+      "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
     url: "https://scaleforgewebdev.vercel.app/",
     siteName: "ScaleForge",
     images: [
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScaleForge - Building Business and Automating Workflows",
+    title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
     description:
-      "ScaleForge lets modern teams build, automate and monitor powerful workflows from one visual workspace.",
+      "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
     images: ["/og-image.png"],
   },
 };

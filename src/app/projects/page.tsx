@@ -9,6 +9,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { getProjectsByCategory } from "@/lib/sanity/projectQueries";
 import type { SanityProject } from "@/lib/sanity/projectQueries";
 import { urlFor } from "@/lib/sanity/client";
+import { LayoutGrid } from "lucide-react";
 
 export const revalidate = 3600;
 
@@ -168,7 +169,7 @@ export default async function ProjectsPage({
           {/* Empty state */}
           {projects.length === 0 && (
             <div className="py-24 text-center">
-              <i className="bi bi-grid-1x2 text-[48px] text-white/10" aria-hidden />
+              <LayoutGrid size={48} className="mx-auto text-white/10" aria-hidden />
               <p className="mt-4 text-[15px] text-white/30">
                 {category ? `No ${category} projects yet — check back soon.` : "No projects published yet — check back soon."}
               </p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface GalleryImage {
   src: string;
@@ -63,7 +64,7 @@ export function ProjectGallery({ images, projectTitle }: ProjectGalleryProps) {
               />
               <div className="absolute inset-0 flex items-center justify-center bg-[#08090a]/0 opacity-0 transition-all duration-300 group-hover:bg-[#08090a]/40 group-hover:opacity-100">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
-                  <i className="bi bi-arrows-fullscreen text-[14px] text-white" aria-hidden />
+                  <Maximize2 size={14} className="text-white" aria-hidden />
                 </span>
               </div>
             </div>
@@ -86,7 +87,7 @@ export function ProjectGallery({ images, projectTitle }: ProjectGalleryProps) {
             className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.07] text-white/70 transition-colors hover:bg-white/[0.13] hover:text-white"
             aria-label="Close"
           >
-            <i className="bi bi-x-lg text-[14px]" aria-hidden />
+            <X size={14} aria-hidden />
           </button>
 
           {/* Prev */}
@@ -96,7 +97,7 @@ export function ProjectGallery({ images, projectTitle }: ProjectGalleryProps) {
               className="absolute left-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.07] text-white/70 transition-colors hover:bg-white/[0.13] hover:text-white lg:left-8"
               aria-label="Previous image"
             >
-              <i className="bi bi-chevron-left text-[16px]" aria-hidden />
+              <ChevronLeft size={16} aria-hidden />
             </button>
           )}
 
@@ -127,7 +128,7 @@ export function ProjectGallery({ images, projectTitle }: ProjectGalleryProps) {
               className="absolute right-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.07] text-white/70 transition-colors hover:bg-white/[0.13] hover:text-white lg:right-8"
               aria-label="Next image"
             >
-              <i className="bi bi-chevron-right text-[16px]" aria-hidden />
+              <ChevronRight size={16} aria-hidden />
             </button>
           )}
 

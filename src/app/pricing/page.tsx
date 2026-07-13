@@ -4,6 +4,7 @@ import CTASection from "@/components/CTASection";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import FAQAccordion from "@/components/FAQAccordion";
 import PricingAnchorNav from "@/components/PricingAnchorNav";
+import { ArrowRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
@@ -414,7 +415,7 @@ function TierCard({ tier }: { tier: Tier }) {
         {tier.includes.map((item) => (
           <li key={item} className="flex items-start gap-2.5 text-[12.5px] leading-relaxed text-white/50">
             <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-white/15 text-[9px] text-white/60">
-              <i className="bi bi-check-lg" aria-hidden />
+              <Check size={9} aria-hidden />
             </span>
             {item}
           </li>
@@ -459,7 +460,7 @@ function BundleTierCard({ tier }: { tier: BundleTier }) {
           <li key={track.label} className="flex flex-col gap-0.5">
             <span className="flex items-center gap-2 text-[12.5px] font-[500] text-white/80">
               <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-[#5e6ad2]/40 bg-[#5e6ad2]/10 text-[9px] text-[#a5aef0]">
-                <i className="bi bi-check-lg" aria-hidden />
+                <Check size={9} aria-hidden />
               </span>
               {track.label}
             </span>
@@ -532,7 +533,7 @@ export default function PricingPage() {
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-accent text-[12px] uppercase tracking-[0.12em] text-[#08080a] transition-transform hover:scale-[1.03]"
               >
                 Book a Free Strategy Call
-                <i className="bi bi-arrow-right" aria-hidden />
+                <ArrowRight size={16} aria-hidden />
               </a>
               <a
                 href="#faq"
@@ -642,7 +643,7 @@ export default function PricingPage() {
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-accent text-[11px] uppercase tracking-[0.12em] text-[#08080a] transition-transform hover:scale-[1.02]"
                   >
                     Request a Custom Quote
-                    <i className="bi bi-arrow-right" aria-hidden />
+                    <ArrowRight size={16} aria-hidden />
                   </a>
                   <a
                     href="https://cal.com/shahood-saleem-gbzisb/30min"

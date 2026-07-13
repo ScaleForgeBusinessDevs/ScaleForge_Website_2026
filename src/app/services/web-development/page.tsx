@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
+import { Globe, ShoppingBag, Zap, Sidebar, SquarePen, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Next.js Web Development Services | ScaleForge",
@@ -32,27 +33,27 @@ export const metadata: Metadata = {
 
 const CAPABILITIES = [
   {
-    icon: "bi-globe2",
+    icon: Globe,
     title: "Business Websites",
     body: "Highly customized web presences from 5 to 30+ pages, built with semantic HTML and full metadata schemas to secure top-tier organic visibility.",
   },
   {
-    icon: "bi-bag-check",
+    icon: ShoppingBag,
     title: "E-Commerce Portals",
     body: "Supersonic online stores featuring advanced catalogs, instant checkout, secure payment pipelines, and custom inventory databases.",
   },
   {
-    icon: "bi-lightning-charge",
+    icon: Zap,
     title: "Landing Pages",
     body: "Single-page lightweight React applications built specifically for extreme loading speeds and automated Google Ads conversions.",
   },
   {
-    icon: "bi-layout-sidebar",
+    icon: Sidebar,
     title: "Web Application Interfaces",
     body: "Clean, reliable, and responsive React/Next.js client-facing frontends tailored for SaaS products and online platforms.",
   },
   {
-    icon: "bi-pencil-square",
+    icon: SquarePen,
     title: "Headless CMS Integration",
     body: "Connecting our custom components to user-friendly editing dashboards like Sanity CMS, allowing your team to update content without code.",
   },
@@ -172,7 +173,7 @@ export default function WebDevelopmentPage() {
             {CAPABILITIES.map((item) => (
               <div key={item.title} className="flex flex-col gap-4 rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70">
-                  <i className={`bi ${item.icon} text-[16px]`} aria-hidden />
+                  <item.icon size={16} aria-hidden />
                 </span>
                 <div>
                   <h3 className="text-[15px] font-medium text-white">{item.title}</h3>
@@ -222,10 +223,10 @@ export default function WebDevelopmentPage() {
             <p>{"}"}</p>
             <div className="mt-4 flex items-center gap-4 border-t border-white/[0.07] pt-4 text-[11px] text-white/35">
               <span className="flex items-center gap-1.5">
-                <i className="bi bi-check-circle-fill text-[#6fcf8e]/70" aria-hidden /> 0 TypeScript errors
+                <CheckCircle2 size={12} className="text-[#6fcf8e]/70" aria-hidden /> 0 TypeScript errors
               </span>
               <span className="flex items-center gap-1.5">
-                <i className="bi bi-check-circle-fill text-[#6fcf8e]/70" aria-hidden /> Static + server hybrid
+                <CheckCircle2 size={12} className="text-[#6fcf8e]/70" aria-hidden /> Static + server hybrid
               </span>
             </div>
           </Reveal>
