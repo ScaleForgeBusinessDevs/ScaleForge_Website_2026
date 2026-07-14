@@ -255,7 +255,7 @@ export default function AboutPage() {
                       <LinkedinIcon size={14} aria-hidden />
                     </a>
                     <a
-                      href="https://scaleforgewebdev.vercel.app/"
+                      href="https://www.biztechra.site/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Ruhan on BizTech"
