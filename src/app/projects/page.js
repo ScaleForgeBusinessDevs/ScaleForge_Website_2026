@@ -9,7 +9,7 @@ import { getProjectsByCategory } from "@/lib/sanity/projectQueries";
 import { urlFor } from "@/lib/sanity/client";
 import { LayoutGrid } from "lucide-react";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 600; // Revalidate every 10 minutes (ISR)
 
 export const metadata = {
   title: "Projects | ScaleForge",
@@ -57,7 +57,25 @@ export const metadata = {
   },
 };
 
-export default function ProjectsPage() {
+function getImageUrl(project) {
+  return project.coverImage?.asset
+    ? urlFor(project.coverImage).width(800).height(500).url()
+    : null;
+}
+
+export default async function ProjectsPage({ searchParams }) {
+  const params = await searchParams;
+  const category = params.category;
+
+  let projects = [];
+  try {
+    projects = await getProjectsByCategory(category);
+  } catch {
+    // Sanity not yet configured — show empty state
+  }
+
+  const featured = projects.find((p) => p.featured);
+  const grid = featured ? projects.filter((p) => p._id !== featured._id) : projects;
 
   return (
     <>

@@ -10,7 +10,7 @@ import { getFeaturedPost, getPostsByFilter } from "@/lib/sanity/queries";
 import { urlFor } from "@/lib/sanity/client";
 import { Search, ArrowRight } from "lucide-react";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300; // Revalidate every 5 minutes (ISR)
 
 export async function generateMetadata({ searchParams }) {
   const params = await searchParams;
@@ -68,7 +68,68 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function BlogPage() {
+const NEWSLETTER_INSERT_AFTER = 8;
+
+function formatDate(dateStr) {
+  return new Date(dateStr).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+
+function FeaturedPostCard({ post }) {
+  const imgUrl = post.featuredImage?.asset
+    ? urlFor(post.featuredImage).width(1200).height(630).url()
+    : null;
+  return (
+    <div className="overflow-hidden rounded-3xl border border-white/[0.07] bg-[#101013]">
+      {imgUrl && (
+        <div className="relative aspect-[16/7] w-full overflow-hidden">
+          <img src={imgUrl} alt={post.featuredImage?.alt ?? post.title} className="h-full w-full object-cover" />
+        </div>
+      )}
+      <div className="p-8 lg:p-10">
+        <div className="flex items-center gap-3">
+          <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-white/45">
+            {post.type === "case-study" ? "Case Study" : "Blog"}
+          </span>
+          <span className="text-[12px] text-white/35">
+            {formatDate(post.publishedDate)} · {post.readTime ?? "5"} min read
+          </span>
+        </div>
+        <h2 className="mt-4 text-[22px] font-medium leading-snug text-white sm:text-[26px]">
+          <Link href={`/blog/${post.slug.current}`} className="hover:opacity-80 transition-opacity">
+            {post.title}
+          </Link>
+        </h2>
+        <p className="mt-3 max-w-2xl text-[14px] leading-relaxed text-white/45">{post.excerpt}</p>
+        <Link
+          href={`/blog/${post.slug.current}`}
+          className="group mt-6 inline-flex items-center gap-2 text-[13px] font-medium text-white/65 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/50"
+        >
+          Read Full Article
+          <ArrowRight size={12} className="transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export default async function BlogPage({ searchParams }) {
+  const params = await searchParams;
+  const type = params.type;
+
+  let featured = null;
+  let posts = [];
+
+  try {
+    [featured, posts] = await Promise.all([
+      getFeaturedPost(),
+      getPostsByFilter(type),
+    ]);
+  } catch {
+    // Sanity not yet configured — show empty state
+  }
+
+  // Exclude featured from the grid to avoid duplication
+  const gridPosts = featured ? posts.filter((p) => p._id !== featured._id) : posts;
 
   return (
     <>
