@@ -1,53 +1,24 @@
 # ScaleForge
 
-> ScaleForge is a high-performance digital agency specialising in web design, web development, SEO, AI automation, content creation, and social media marketing for ambitious businesses.
+> ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies for ambitious teams.
 
-Website: https://scaleforge.agency
-Contact: scaleforgebusiessdev@gmail.com
-Book a call: https://cal.com/shahood-saleem-gbzisb/30min
+## Core Navigation
+* [Home](https://scalesforge.site/): High-level overview of our services, performance metrics, and client testimonials.
+* [Services](https://scalesforge.site/services): Full catalog of our digital capability suites.
+* [Solutions](https://scalesforge.site/solutions): Bespoke software packages and custom integrations for businesses.
+* [Pricing](https://scalesforge.site/pricing): Transparent tiers for web design, web development, SEO, content creation, and AI automations.
+* [Projects](https://scalesforge.site/projects): Selected case studies demonstrating user growth and workflow optimizations.
+* [About](https://scalesforge.site/about): ScaleForge story, core team profiles, and operational standards.
+* [Blog](https://scalesforge.site/blog): Strategic insights on development, automation, and search engine optimization.
+* [Contact](https://scalesforge.site/contact): Consultation request form and scheduling calendars.
 
-## About
-
-ScaleForge builds pixel-perfect websites, high-intent SEO architectures, and AI automation systems that compound a business's authority and efficiency month after month. The agency works primarily with founders, growing SMEs, and established brands in the US, UK, Canada, Australia, and the EU.
-
-Core belief: most agencies ship templates, disappear, and leave clients with slow, bloated sites invisible on Google. ScaleForge is the antidote — engineering-first, results-obsessed, and built for the long game.
-
-## Services
-
-- **AI Automation & Development** — Custom n8n, Make.com, and Zapier workflows; Vapi AI cold-call agents; AI content engines; lead enrichment and CRM sync pipelines.
-- **Web Design** — Conversion-focused UI/UX design in Figma; landing pages; brand identity alignment.
-- **Web Development** — Next.js App Router builds; Sanity CMS integration; e-commerce; performance and security hardening.
-- **SEO** — Keyword research; on-page and technical SEO; link building; Google Search Console management; local SEO.
-- **Content Creation** — SEO blog articles; commercial landing pages; pillar guides; brand copywriting; E-E-A-T compliant writing.
-- **Social Media Marketing** — Multi-platform management; branded graphics; Reels/TikTok scripts; community management; paid social ad creative.
-
-## Pricing
-
-Transparent, tier-based pricing — no hidden fees, no lock-in contracts.
-
-- AI Automation: $1,200 – $7,500+ per project
-- Web Design & Development: $1,800 – $9,500+ per project
-- SEO: $650 – $3,200 / month
-- Content Creation: $900 – $4,800 / month
-- Social Media Marketing: $750 – $3,800 / month
-- All-in-One Growth Bundles: $3,800 – $14,500+ / month
-
-## Pages
-
-- [Home](https://scaleforge.agency/): Agency overview, capabilities, metrics, and testimonials.
-- [Solutions](https://scaleforge.agency/solutions): Strategic service combinations for different business goals.
-- [Services](https://scaleforge.agency/services): Full service catalogue overview.
-- [AI Development](https://scaleforge.agency/services/ai-development): AI automation workflows, Vapi agents, and intelligent pipelines.
-- [Web Design](https://scaleforge.agency/services/web-design): UI/UX design, landing pages, and conversion-focused interfaces.
-- [Web Development](https://scaleforge.agency/services/web-development): Next.js engineering, CMS builds, and e-commerce.
-- [SEO](https://scaleforge.agency/services/seo): Organic growth, technical SEO, and link building.
-- [Content Creation](https://scaleforge.agency/services/content-creation): Authority-building SEO content and copywriting.
-- [Projects](https://scaleforge.agency/projects): Portfolio of completed client work.
-- [Pricing](https://scaleforge.agency/pricing): Transparent tier-based pricing for all services.
-- [Blog](https://scaleforge.agency/blog): Practical guides on Next.js, SEO, AI automation, and web development.
-- [About](https://scaleforge.agency/about): Team, values, and company story.
-- [Contact](https://scaleforge.agency/contact): Enquiry form, WhatsApp, and email contact.
-
-## Technologies Used
-
-Next.js 15 (App Router), React 19, Tailwind CSS v4, TypeScript, Sanity CMS, GSAP, Three.js, Vercel.
+## Digital Services & Capabilities
+* [AI Development & Automation](https://scalesforge.site/services/ai-development): n8n, Make.com, and Zapier workflows, custom AI cold-calling voice agents (Vapi), automated lead scraping pipelines, and social media posting autopilot configurations.
+* [Web Design](https://scalesforge.site/services/web-design): Brand-driven responsive wireframing and high-fidelity layouts designed from scratch in Figma. Zero templates.
+* [Web Development](https://scalesforge.site/services/web-development): Fast React & Next.js client-facing websites, edge-cached hosting, clean Tailwind styling, and headless CMS integrations (Sanity).
+* [SEO (Search Engine Optimization)](https://scalesforge.site/services/seo): Full technical crawls, page load speed improvements, custom schema markup, on-page optimization, and organic traffic growth.
+* [Content Creation](https://scalesforge.site/services/content-creation): High-authority SEO blogs, engaging email newsletters, marketing copy, and multi-channel content pipelines.
+* [Startup Advisory](https://scalesforge.site/services/startup-advisory): Technical validation, MVP scope definition, and investor-ready pitch decks for founders.
+* [Social Media Branding](https://scalesforge.site/services/social-media-branding): Design systems, templates, and asset creation for digital profiles.
+* [Supply Chain Software](https://scalesforge.site/services/supply-chain-management): Custom sales forecasting pipelines, inventory systems, and ERP integrations.
+* [Motion Analysis](https://scalesforge.site/services/motion-analysis): Spacing, speed, and time-and-motion studies to optimize industrial/operational workflows.
