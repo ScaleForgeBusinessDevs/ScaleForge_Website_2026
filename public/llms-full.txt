@@ -1,0 +1,138 @@
+# ScaleForge - Complete Website Digest
+
+> ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.
+
+---
+
+## 1. AI Development & Automation Services
+URL: https://scalesforge.site/services/ai-development
+
+We build bespoke automation workflows to eliminate repetitive work, generate qualified leads, and publish marketing content 24/7.
+
+### Core Capabilities
+* **Lead Generation Automation**: Automatically scrape, enrich, qualify, and deliver high-intent leads directly into your CRM inside Notion or Google Sheets.
+* **AI Cold Calling Agents**: Deploy Vapi-powered AI voice agents that call your lead list, handle objections, and book qualified appointments into Calendly.
+* **Social Media Autopilot**: From a single brief in Notion, write captions, generate branded visuals, schedule, and auto-publish posts across Instagram, LinkedIn, X, and TikTok.
+* **AI Content Generation**: Produce SEO blog posts, email sequences, and ad copy from a single brief using structured AI pipelines built in n8n or Make.com.
+* **Workflow & CRM Integration**: Connect Notion, Google Sheets, HubSpot, Slack, and other SaaS tools into one unified automated pipeline.
+* **Custom AI Chatbots**: Build bespoke AI assistants trained on your business data to handle customer queries and support tickets.
+
+### Technology Stack
+* **n8n**: Complex self-hosted multi-step AI workflow automation.
+* **Make.com**: Visual drag-and-drop integration for 1,000+ business applications.
+* **Zapier**: Rapid business tool connections.
+* **Vapi**: Infrastructure for real-time phone call automation.
+* **Notion & Google Sheets**: Dynamic databases serving as content and lead management hubs.
+
+---
+
+## 2. Web Design Services
+URL: https://scalesforge.site/services/web-design
+
+We design custom, conversion-focused websites in Figma from scratch. Absolutely zero pre-made templates.
+
+### Core Offerings
+* **Custom UI Design**: Unique layouts, spacing, and hover effects built from scratch to match your specific brand personality.
+* **UX & Conversion Architecture**: Logical page hierarchies, smooth content layouts, and strategic CTA placements that reduce scroll fatigue and drive engagement.
+* **Mobile-First Responsive Design**: Fluid responsive breakpoints scaled upward to look flawless on desktops, tablets, and smartphones.
+* **Brand Identity & Style Guides**: Logo refinement, harmonized HSL color scales, typography selections, and comprehensive spacing systems.
+* **Landing Page Optimization**: Single-page campaign designs specifically tuned for search advertisements and fast lead acquisition.
+
+### Standards Included
+* Comprehensive competitor visual design audit.
+* Fully editable Figma source files.
+* Spacing guide, color scales, and typography hierarchies.
+* WCAG 2.1 AA accessibility-compliant UI layouts.
+
+---
+
+## 3. Next.js Web Development Services
+URL: https://scalesforge.site/services/web-development
+
+We build custom Next.js, React, and TypeScript websites engineered for Core Web Vitals dominance, sub-1.5s load times, and lasting search engine authority.
+
+### Core Capabilities
+* **Business Websites**: Highly customized static and dynamic pages with semantic HTML structures and full JSON-LD schemas.
+* **E-Commerce Portals**: Supersonic online stores featuring advanced product catalogs, secure payment pipelines, and custom databases.
+* **Landing Pages**: Ultra-lightweight single-page apps optimized for maximum loading speeds and Google Ads conversion targets.
+* **Web Application Interfaces**: Clean, responsive frontend layouts designed for online SaaS products and dashboard platforms.
+
+### Technology Stack
+* **Next.js & React**: The powerful framework powering TikTok, Hulu, and Twitch.
+* **Tailwind CSS**: A utility-first stylesheet framework that compiles to tiny, bloat-free CSS classes.
+* **Vercel CDN**: Global edge serverless hosting for sub-200ms response times.
+* **TypeScript**: Strict type-safe programming that eliminates runtime layout bugs before deployment.
+* **Headless CMS**: Sanity CMS integration for visual editing.
+
+---
+
+## 4. Search Engine Optimization (SEO) Services
+URL: https://scalesforge.site/services/seo
+
+We optimize site speed, fix sitemap/crawling errors, inject structured schema markup, and build high-authority links to capture consistent organic revenue.
+
+### Strategic Roadmap
+* **Months 1–2 (Audit & Base)**: Technical SEO audit, sitemap check, Core Web Vitals optimization, meta updates, and search console setup.
+* **Months 3–4 (Content & Spacing)**: High-intent keyword targeting, on-page optimization, content production, and structural landing page checks.
+* **Months 5+ (Authority & Scale)**: High-quality link acquisition, programmatic page setups, analytics reporting, and conversion audits.
+
+---
+
+## 5. Content Creation & Copywriting Services
+URL: https://scalesforge.site/services/content-creation
+
+We draft SEO-optimized articles, newsletters, landing page copy, and video scripts to convert search engines and customers.
+
+### Deliverables
+* **SEO Blog Posts**: Informative, long-form articles that target search intent and establish authority.
+* **Email Newsletters**: Conversational newsletter campaigns designed to build trust and drive direct sales.
+* **Landing Page Copy**: Benefit-focused headlines and conversion copy written to capture leads.
+* **Video & Ad Scripts**: Multi-channel marketing scripts that retain attention.
+
+---
+
+## 6. Startup Advisory Services
+URL: https://scalesforge.site/services/startup-advisory
+
+We offer strategic mentorship, pitch deck refinement, and technical MVP definition to help founders validate their ideas and raise capital.
+
+---
+
+## 7. Social Media Branding
+URL: https://scalesforge.site/services/social-media-branding
+
+We design cohesive profile templates, layouts, and brand systems to establish consistent authority across digital networks.
+
+---
+
+## 8. Supply Chain Management Software
+URL: https://scalesforge.site/services/supply-chain-management
+
+We build custom sales forecasting dashboards, warehouse inventory trackers, and ERP system integrations.
+
+---
+
+## 9. Motion Analysis Services
+URL: https://scalesforge.site/services/motion-analysis
+
+We perform time-and-motion studies, ergonomics analysis, and operational efficiency reviews to optimize industrial and business workflows.
+
+---
+
+## 10. Pricing & Packages
+URL: https://scalesforge.site/pricing
+
+We provide transparent, upfront monthly pricing tiers for digital services:
+
+### Web Design & Development (Figma + Next.js)
+* **Essential** ($1,200/mo): Perfect for small sites (up to 5 pages), basic custom design, clean responsive Next.js build, and standard SEO schema.
+* **Growth** ($2,500/mo): Designed for growing teams. Up to 12 pages, custom animations, headless CMS integrations (Sanity), and complete technical audit.
+* **Elite** ($4,500/mo): Full-scale custom application interfaces, advanced e-commerce databases, custom portal tools, and 90-day support.
+
+### SEO & Content Strategy
+* **Basic Audit** ($800/mo): Full technical crawl audit, error fixes, metadata optimization, and page speed checks.
+* **Full-Scale Campaign** ($2,000/mo): Monthly keyword maps, 4 long-form content articles, link acquisition, and monthly conversion reviews.
+
+### AI Automation Sprints
+* **Workflow Sprint** ($1,500/mo): Notion + CRM automations, n8n/Make integration setups, and team training.
+* **Agent Integration** ($3,500/mo): AI voice agents, appointment booking scripts, and advanced databases.

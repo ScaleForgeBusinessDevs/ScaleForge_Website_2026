@@ -1,0 +1,146 @@
+import { getAllPosts } from "@/lib/sanity/queries";
+import { getAllProjects } from "@/lib/sanity/projectQueries";
+import { urlFor } from "@/lib/sanity/client";
+
+const siteUrl = "https://scalesforge.site";
+
+const STATIC_PAGES = [
+  { url: `${siteUrl}/`, priority: 1.0, changeFrequency: "weekly", images: [
+    "https://scalesforge.site/Assets/favicon_SF.png",
+    "https://scalesforge.site/Assets/linkedin-post-1.avif",
+    "https://scalesforge.site/Assets/linkedin-post-2.avif",
+    "https://scalesforge.site/Assets/linkedin-post-3.avif"
+  ] },
+  { url: `${siteUrl}/solutions`, priority: 0.9, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services`, priority: 0.9, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/ai-development`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/web-design`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/web-development`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/seo`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/content-creation`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/supply-chain-management`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/motion-analysis`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/social-media-branding`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/startup-advisory`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/pricing`, priority: 0.8, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/projects`, priority: 0.8, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/about`, priority: 0.7, changeFrequency: "monthly", images: [
+    "https://scalesforge.site/Assets/Shahood.avif",
+    "https://scalesforge.site/Assets/Ruhan_2.avif"
+  ] },
+  { url: `${siteUrl}/blog`, priority: 0.75, changeFrequency: "daily", images: [] },
+  { url: `${siteUrl}/contact`, priority: 0.7, changeFrequency: "yearly", images: [] },
+  { url: `${siteUrl}/privacy`, priority: 0.3, changeFrequency: "yearly", images: [] },
+  { url: `${siteUrl}/terms`, priority: 0.3, changeFrequency: "yearly", images: [] },
+];
+
+export async function GET() {
+  const now = new Date().toISOString();
+  let posts = [];
+  let projects = [];
+
+  try {
+    [posts, projects] = await Promise.all([
+      getAllPosts(),
+      getAllProjects()
+    ]);
+  } catch (error) {
+    console.error("Error fetching sitemap data from Sanity:", error);
+  }
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
+
+  // 1. Static Pages
+  for (const page of STATIC_PAGES) {
+    xml += `
+  <url>
+    <loc>${page.url}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>${page.changeFrequency}</changefreq>
+    <priority>${page.priority}</priority>`;
+    
+    if (page.images && page.images.length > 0) {
+      for (const img of page.images) {
+        xml += `
+    <image:image>
+      <image:loc>${img}</image:loc>
+    </image:image>`;
+      }
+    }
+    
+    xml += `
+  </url>`;
+  }
+
+  // 2. Blog Posts
+  for (const post of posts) {
+    if (!post.slug?.current) continue;
+    
+    const postUrl = `${siteUrl}/blog/${post.slug.current}`;
+    xml += `
+  <url>
+    <loc>${postUrl}</loc>
+    <lastmod>${post.publishedDate ? new Date(post.publishedDate).toISOString() : now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>`;
+
+    if (post.featuredImage?.asset) {
+      try {
+        const imageUrl = urlFor(post.featuredImage).url();
+        const safeTitle = post.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
+        xml += `
+    <image:image>
+      <image:loc>${imageUrl}</image:loc>
+      <image:title>${safeTitle}</image:title>
+    </image:image>`;
+      } catch (e) {
+        console.error("Error building image URL for post:", post.slug.current, e);
+      }
+    }
+
+    xml += `
+  </url>`;
+  }
+
+  // 3. Projects
+  for (const proj of projects) {
+    if (!proj.slug?.current) continue;
+
+    const projUrl = `${siteUrl}/projects/${proj.slug.current}`;
+    xml += `
+  <url>
+    <loc>${projUrl}</loc>
+    <lastmod>${proj.publishedAt ? new Date(proj.publishedAt).toISOString() : now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>`;
+
+    if (proj.coverImage?.asset) {
+      try {
+        const imageUrl = urlFor(proj.coverImage).url();
+        const safeTitle = proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
+        xml += `
+    <image:image>
+      <image:loc>${imageUrl}</image:loc>
+      <image:title>${safeTitle}</image:title>
+    </image:image>`;
+      } catch (e) {
+        console.error("Error building image URL for project:", proj.slug.current, e);
+      }
+    }
+
+    xml += `
+  </url>`;
+  }
+
+  xml += `
+</urlset>`;
+
+  return new Response(xml, {
+    headers: {
+      "Content-Type": "application/xml",
+      "Cache-Control": "public, max-age=3600, s-maxage=18000, stale-while-revalidate=600"
+    }
+  });
+}
