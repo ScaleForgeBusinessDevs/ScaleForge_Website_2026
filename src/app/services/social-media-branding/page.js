@@ -27,7 +27,7 @@ export const metadata = {
       "only screen and (max-width: 640px)": "https://scalesforge.site/services/social-media-branding"
     }
   },
-  keywords: ["Social Media Branding","Brand Visual Identity Design","Canva Templates Design","Brand Guidelines Booklet","Scroll Stopping Graphics"],
+  keywords: ["Social Media Branding", "Brand Visual Identity Design", "Canva Templates Design", "Brand Guidelines Booklet", "Scroll Stopping Graphics"],
   robots: {
     index: true,
     follow: true,
@@ -61,80 +61,80 @@ export const metadata = {
 
 export default function SocialMediaBrandingPage() {
 
-const OFFERINGS = [
-  { title: "Visual Identity System", body: "Custom color palettes, typography pairings, icon sets, and a comprehensive brand guideline document that keeps every post, story, and reel unmistakably yours.", icon: Palette },
-  { title: "Content Template Design", body: "A full library of editable Canva or Figma templates — post formats, carousel slides, story frames, and highlight covers — designed to your brand and ready for your team to use daily.", icon: Camera },
-  { title: "Profile & Bio Optimisation", body: "Profile pictures, banner artwork, keyword-optimised bios, and link-in-bio pages that communicate authority and drive clicks across LinkedIn, Instagram, and X.", icon: PenTool },
-  { title: "Content Strategy & Calendar", body: "A data-driven content strategy defining your pillars, posting frequency, hook frameworks, and a 30-day editorial calendar mapped to your business goals.", icon: BarChart2 },
-  { title: "Brand Voice Guidelines", body: "A documented brand voice playbook — tone, vocabulary, do's and don'ts — so every caption and comment sounds like you, whether written by the founder or a hired copywriter.", icon: Megaphone }
-];
+  const OFFERINGS = [
+    { title: "Visual Identity System", body: "Custom color palettes, typography pairings, icon sets, and a comprehensive brand guideline document that keeps every post, story, and reel unmistakably yours.", icon: Palette },
+    { title: "Content Template Design", body: "A full library of editable Canva or Figma templates — post formats, carousel slides, story frames, and highlight covers — designed to your brand and ready for your team to use daily.", icon: Camera },
+    { title: "Profile & Bio Optimisation", body: "Profile pictures, banner artwork, keyword-optimised bios, and link-in-bio pages that communicate authority and drive clicks across LinkedIn, Instagram, and X.", icon: PenTool },
+    { title: "Content Strategy & Calendar", body: "A data-driven content strategy defining your pillars, posting frequency, hook frameworks, and a 30-day editorial calendar mapped to your business goals.", icon: BarChart2 },
+    { title: "Brand Voice Guidelines", body: "A documented brand voice playbook — tone, vocabulary, do's and don'ts — so every caption and comment sounds like you, whether written by the founder or a hired copywriter.", icon: Megaphone }
+  ];
 
-const PROCESS = [
-  { title: "Brand Discovery", body: "We interview you on your audience, competitors, aspirations, and what feeling you want your brand to evoke before we design a single pixel." },
-  { title: "Competitor Visual Audit", body: "We study the top accounts in your niche — what works, what's oversaturated, and where the white space is for you to stand out." },
-  { title: "Identity Design", body: "We build your full visual identity system: palette, type stack, grid rules, and a master style guide that governs every platform." },
-  { title: "Template Library", body: "We design your platform-specific content templates in Figma or Canva, covering all major post formats and stories." },
-  { title: "Strategy & Handoff", body: "We deliver your content strategy, 30-day calendar, and a guided walkthrough of every deliverable so your team is immediately operational." }
-];
+  const PROCESS = [
+    { title: "Brand Discovery", body: "We interview you on your audience, competitors, aspirations, and what feeling you want your brand to evoke before we design a single pixel." },
+    { title: "Competitor Visual Audit", body: "We study the top accounts in your niche — what works, what's oversaturated, and where the white space is for you to stand out." },
+    { title: "Identity Design", body: "We build your full visual identity system: palette, type stack, grid rules, and a master style guide that governs every platform." },
+    { title: "Template Library", body: "We design your platform-specific content templates in Figma or Canva, covering all major post formats and stories." },
+    { title: "Strategy & Handoff", body: "We deliver your content strategy, 30-day calendar, and a guided walkthrough of every deliverable so your team is immediately operational." }
+  ];
 
-const STANDARDS = [
-  "Full social media brand audit and competitive benchmarking",
-  "Custom visual identity guide (colours, fonts, iconography)",
-  "20+ editable post and story templates per platform",
-  "30-day content calendar with topic and hook mapping",
-  "Optimised profile and bio copy for all active platforms",
-  "Brand voice and tone-of-voice documentation"
-];
+  const STANDARDS = [
+    "Full social media brand audit and competitive benchmarking",
+    "Custom visual identity guide (colours, fonts, iconography)",
+    "20+ editable post and story templates per platform",
+    "30-day content calendar with topic and hook mapping",
+    "Optimised profile and bio copy for all active platforms",
+    "Brand voice and tone-of-voice documentation"
+  ];
 
-const FAQS = [
-  { q: "What platforms do you design for?", a: "We cover LinkedIn, Instagram, X (Twitter), Facebook, TikTok, and YouTube. Most branding engagements focus on 2–3 platforms chosen based on where your audience is most concentrated. We always recommend LinkedIn for B2B and Instagram for B2C as starting points." },
-  { q: "Do I need to have an existing brand before starting?", a: "No. We can work from scratch — starting with just your business name and a rough sense of your audience and values. If you have existing brand assets (logo, colours, fonts), we'll build on them. If you don't, we create them from the ground up as part of the engagement." },
-  { q: "How long does the branding process take?", a: "A full social media branding engagement typically takes 3–4 weeks: one week for discovery and audit, one to two weeks for identity design and feedback cycles, and one week for template production and strategy delivery." },
-  { q: "Will my team be able to use the templates independently?", a: "Yes — that's the whole point. All templates are built in Canva or Figma with clearly labelled layers, locked brand elements, and editable text/image zones. We walk your team through every template in a recorded handoff session." },
-  { q: "Can you also manage our social media after the branding is done?", a: "We don't offer ongoing social media management directly, but we can connect you with our AI automation pipelines that auto-generate and schedule content, or refer you to trusted content management partners in our network." }
-];
+  const FAQS = [
+    { q: "What platforms do you design for?", a: "We cover LinkedIn, Instagram, X (Twitter), Facebook, TikTok, and YouTube. Most branding engagements focus on 2–3 platforms chosen based on where your audience is most concentrated. We always recommend LinkedIn for B2B and Instagram for B2C as starting points." },
+    { q: "Do I need to have an existing brand before starting?", a: "No. We can work from scratch — starting with just your business name and a rough sense of your audience and values. If you have existing brand assets (logo, colours, fonts), we'll build on them. If you don't, we create them from the ground up as part of the engagement." },
+    { q: "How long does the branding process take?", a: "A full social media branding engagement typically takes 3–4 weeks: one week for discovery and audit, one to two weeks for identity design and feedback cycles, and one week for template production and strategy delivery." },
+    { q: "Will my team be able to use the templates independently?", a: "Yes — that's the whole point. All templates are built in Canva or Figma with clearly labelled layers, locked brand elements, and editable text/image zones. We walk your team through every template in a recorded handoff session." },
+    { q: "Can you also manage our social media after the branding is done?", a: "We don't offer ongoing social media management directly, but we can connect you with our AI automation pipelines that auto-generate and schedule content, or refer you to trusted content management partners in our network." }
+  ];
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://scalesforge.site"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://scalesforge.site/services"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Social Media Branding Services",
-            "item": "https://scalesforge.site/services/social-media-branding"
-        }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://scalesforge.site/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Social Media Branding Services",
+        "item": "https://scalesforge.site/services/social-media-branding"
+      }
     ]
-};
+  };
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Social Media Branding Services",
     "description": "ScaleForge builds cohesive social media brand identities — visual systems, content frameworks, and channel strategy — that make your brand instantly recognisable and impossible to ignore.",
     "brand": {
-        "@type": "Brand",
-        "name": "ScaleForge"
+      "@type": "Brand",
+      "name": "ScaleForge"
     },
     "offers": {
-        "@type": "AggregateOffer",
-        "priceCurrency": "USD",
-        "lowPrice": "1200",
-        "highPrice": "8000",
-        "offerCount": "3"
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "lowPrice": "1200",
+      "highPrice": "8000",
+      "offerCount": "3"
     }
-};
+  };
 
   return (
     <>
@@ -170,7 +170,7 @@ const FAQS = [
             <p className="mx-auto mt-7 max-w-xl text-[14.5px] leading-relaxed text-white/60">
               Most businesses post inconsistently, use mismatched fonts and
               colours, and wonder why their follower count stagnates. A cohesive
-              brand system removes all of that friction — your audience
+              brand system removes all of that friction, your audience
               immediately knows who you are and what you stand for, every single
               time they see your content.
             </p>
