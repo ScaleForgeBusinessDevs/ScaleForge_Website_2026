@@ -20,7 +20,7 @@ export const metadata = {
       "only screen and (max-width: 640px)": "https://scalesforge.site/contact"
     }
   },
-  keywords: ["Contact ScaleForge","Hire Digital Agency","Book Tech Audit","Cal.com Audit ScaleForge","Web Development Quote"],
+  keywords: ["Contact ScaleForge", "Hire Digital Agency", "Book Tech Audit", "Cal.com Audit ScaleForge", "Web Development Quote"],
   robots: {
     index: true,
     follow: true,
@@ -133,18 +133,18 @@ export default function ContactPage() {
         "url": "https://scalesforge.site/contact"
       }
     },
-  keywords: ["Contact ScaleForge","Hire Digital Agency","Book Tech Audit","Cal.com Audit ScaleForge","Web Development Quote"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    keywords: ["Contact ScaleForge", "Hire Digital Agency", "Book Tech Audit", "Cal.com Audit ScaleForge", "Web Development Quote"],
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1
+      }
     }
-  }
   };
 
   return (
@@ -256,36 +256,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Booking Widget */}
-      <section className="bg-[#08080a] py-16 lg:py-20">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-          <Reveal className="mb-8">
-            <h2 className="mt-4 text-[clamp(1.5rem,2.8vw,2rem)] font-display font-normal text-white">
-              Book a Free 30-Minute Strategy Call
-            </h2>
-            <p className="mt-3 text-[15px] leading-relaxed text-white/60">
-              Pick a time that works. We&apos;ll send a calendar invite with a
-              video link automatically.
-            </p>
-          </Reveal>
-
-          {/* Cal.com iframe embed */}
-          <div className="overflow-hidden rounded-2xl border border-white/[0.07]">
-            <iframe
-              src={`${calUrl}?embed=true&theme=dark&brandColor=e8633a`}
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Schedule a strategy call with ScaleForge"
-              className="bg-[#101013]"
-            />
-          </div>
-          <p className="mt-4 text-[12.5px] italic text-white/30">
-            No prep needed. Bring your situation, your questions, and your
-            skepticism. We&apos;ll do the rest.
-          </p>
-        </div>
-      </section>
 
       {/* Office Info */}
       <section className="border-y border-white/[0.06] bg-[#0c0c0f] py-16 lg:py-20">
