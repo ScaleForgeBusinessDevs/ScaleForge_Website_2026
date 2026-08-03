@@ -6,7 +6,7 @@ import { topicSchema } from "./src/lib/sanity/schema/topic";
 import { personSchema } from "./src/lib/sanity/schema/person";
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "placeholder-id";
-const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production";
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET ?? "blogs";
 
 export default defineConfig({
   name: "scaleforge-studio",
