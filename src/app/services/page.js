@@ -260,19 +260,7 @@ export default function ServicesIndexPage() {
           "@type": "Organization",
           "name": "ScaleForge"
         }
-      },
-  keywords: ["ScaleForge Capabilities","Digital Agency Services","Enterprise Web Development","Local SEO Plans","Automated Pipelines"],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1
-    }
-  }
+      }
     }))
   };
 

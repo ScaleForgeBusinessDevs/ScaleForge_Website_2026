@@ -456,7 +456,7 @@ export default async function BlogPostPage({ params }) {
                     </p>
                     <div className="mt-3 flex items-center gap-2.5">
                       <a
-                        href={`https://x.com/intent/tweet?url=https://scaleforge.com/blog/${post.slug.current}`}
+                        href={`https://x.com/intent/tweet?url=https://scalesforge.site/blog/${post.slug.current}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Share on X"
@@ -468,7 +468,7 @@ export default async function BlogPostPage({ params }) {
                         />
                       </a>
                       <a
-                        href={`https://linkedin.com/sharing/share-offsite/?url=https://scaleforge.com/blog/${post.slug.current}`}
+                        href={`https://linkedin.com/sharing/share-offsite/?url=https://scalesforge.site/blog/${post.slug.current}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Share on LinkedIn"
@@ -477,7 +477,7 @@ export default async function BlogPostPage({ params }) {
                         <LinkedinIcon size={13} aria-hidden />
                       </a>
                       <a
-                        href={`mailto:?subject=${encodeURIComponent(post.title)}&body=https://scaleforge.com/blog/${post.slug.current}`}
+                        href={`mailto:?subject=${encodeURIComponent(post.title)}&body=https://scalesforge.site/blog/${post.slug.current}`}
                         aria-label="Share via Email"
                         className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[13px] text-white/40 transition-colors hover:border-white/25 hover:text-white/70"
                       >

@@ -125,7 +125,7 @@ export default function TermsPage() {
                 </h2>
                 <p>
                   These Terms of Service (&quot;Terms&quot;) govern your use of
-                  the ScaleForge website (scaleforge.com) and our services. By
+                  the ScaleForge website (scalesforge.site) and our services. By
                   accessing the Site or engaging ScaleForge for services, you
                   agree to be bound by these Terms. If you do not agree, do not
                   use the Site or our services.

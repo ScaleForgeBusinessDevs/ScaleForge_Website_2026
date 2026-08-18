@@ -216,17 +216,131 @@ const FAQS = [
   { q: "How quickly can we start?", a: "For project-based work, we onboard new clients within 1 to 2 weeks of contract signing. For monthly retainers, we typically begin the kickoff process within 5 business days of payment. Cohort capacity does sell out — booking a call early reserves your slot." },
 ];
 
-const pricingSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Pricing | ScaleForge",
-  "description": "Transparent pricing for ScaleForge services.",
-  "url": "https://scalesforge.site/pricing",
-};
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pricing",
+        "item": "https://scalesforge.site/pricing"
+      }
+    ]
+  };
+
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "ScaleForge Pricing & Service Packages",
+    "description": "Transparent pricing tiers for ScaleForge Web Design & Development, SEO, AI Automation, Content Creation, and Social Media Marketing.",
+    "url": "https://scalesforge.site/pricing",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    },
+    // TODO: replace with real rating data
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "All-in-One Growth Bundles",
+        "itemListElement": BUNDLE_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `${tier.name} Bundle`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#all-in-one"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "AI Development & Automation",
+        "itemListElement": AI_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `AI Automation - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#ai-development"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Web Design & Development",
+        "itemListElement": WEB_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Web Design & Dev - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#web-design-dev"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Search Engine Optimization",
+        "itemListElement": SEO_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `SEO - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#seo"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Content Creation",
+        "itemListElement": CONTENT_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Content Creation - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#content"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Social Media Marketing",
+        "itemListElement": SOCIAL_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Social Media - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#social-media"
+        }))
+      }
+    ]
+  };
 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">

@@ -112,7 +112,7 @@ export default function PrivacyPage() {
                   ScaleForge (&quot;we,&quot; &quot;our,&quot; or
                   &quot;us&quot;) respects your privacy. This Privacy Policy
                   explains how we collect, use, share, and protect your personal
-                  information when you visit scaleforge.com (the
+                  information when you visit scalesforge.site (the
                   &quot;Site&quot;) or engage our services.
                 </p>
                 <p className="mt-4">
