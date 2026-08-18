@@ -63,9 +63,48 @@ const TOC = [
 ];
 
 export default function PrivacyPage() {
+  const privacySchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy | ScaleForge",
+    "description": "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    "url": "https://scalesforge.site/privacy",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://scalesforge.site/privacy"
+      }
+    ]
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#08080a] pb-12 pt-40 lg:pb-16 lg:pt-48">
         <div className="bg-grid-dark bg-grid-fade pointer-events-none absolute inset-0" />

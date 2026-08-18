@@ -131,8 +131,48 @@ export default async function BlogPage({ searchParams }) {
   // Exclude featured from the grid to avoid duplication
   const gridPosts = featured ? posts.filter((p) => p._id !== featured._id) : posts;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "ScaleForge Insights & Case Studies",
+    "description": "Insights on web performance, SEO strategies, AI automation, and systems architecture from the ScaleForge engineering team.",
+    "url": "https://scalesforge.site/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://scalesforge.site/blog"
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
