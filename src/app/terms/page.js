@@ -31,7 +31,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge",
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
     url: "https://scalesforge.site/terms",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -42,7 +42,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge",
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
     images: ["/og-image.png"],
   },
 };

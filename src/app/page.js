@@ -12,7 +12,7 @@ import Insights from "@/components/Insights";
 import ClosingCTA from "@/components/ClosingCTA";
 
 export const metadata = {
-  title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
+  title: "ScaleForge | Premier Web, SEO & AI Agency",
   description:
     "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
   alternates: {
@@ -26,7 +26,7 @@ export const metadata = {
     }
   },
   openGraph: {
-    title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
+    title: "ScaleForge | Premier Web, SEO & AI Agency",
     description:
       "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
     url: "https://scalesforge.site/",
@@ -42,7 +42,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScaleForge - Premier Digital Agency: Web, SEO & AI Automation",
+    title: "ScaleForge | Premier Web, SEO & AI Agency",
     description:
       "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
     images: ["/og-image.png"],

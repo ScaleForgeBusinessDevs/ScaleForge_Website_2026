@@ -14,7 +14,7 @@ import {
 export const metadata = {
   title: "Next.js Web Development Services | ScaleForge",
   description:
-    "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+    "Custom Next.js, React, and TypeScript web development by ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and engineered for SEO dominance.",
   alternates: {
     canonical: "https://scalesforge.site/services/web-development",
     languages: {
@@ -41,7 +41,7 @@ export const metadata = {
     title:
       "Next.js Web Development Services | ScaleForge",
     description:
-      "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+      "Custom Next.js, React, and TypeScript web development by ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and engineered for SEO dominance.",
     url: "https://scalesforge.site/services/web-development",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -52,7 +52,7 @@ export const metadata = {
     title:
       "Next.js Web Development Services | ScaleForge",
     description:
-      "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+      "Custom Next.js, React, and TypeScript web development by ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and engineered for SEO dominance.",
     images: ["/og-image.png"],
   },
 };
@@ -117,7 +117,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Next.js Web Development Services",
-    "description": "Custom Next.js, React, and TypeScript development from ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and Core Web Vitals dominance — engineered for SEO and conversions.",
+    "description": "Custom Next.js, React, and TypeScript web development by ScaleForge. Sub-1.5s load times, 90+ PageSpeed scores, and engineered for SEO dominance.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"

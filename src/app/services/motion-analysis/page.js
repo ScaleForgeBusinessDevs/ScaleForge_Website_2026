@@ -15,7 +15,7 @@ import {
 export const metadata = {
   title: "Motion Analysis & Time and Motion Study | ScaleForge",
   description:
-    "ScaleForge delivers digital time and motion studies — capturing, analysing, and optimising workforce activity to eliminate inefficiency and increase throughput without adding headcount.",
+    "ScaleForge delivers digital time and motion studies to eliminate workflow inefficiency, optimize workforce activity, and increase throughput.",
   alternates: {
     canonical: "https://scalesforge.site/services/motion-analysis",
     languages: {
@@ -42,7 +42,7 @@ export const metadata = {
     title:
       "Motion Analysis & Time and Motion Study | ScaleForge",
     description:
-      "ScaleForge delivers digital time and motion studies — capturing, analysing, and optimising workforce activity to eliminate inefficiency and increase throughput without adding headcount.",
+      "ScaleForge delivers digital time and motion studies to eliminate workflow inefficiency, optimize workforce activity, and increase throughput.",
     url: "https://scalesforge.site/services/motion-analysis",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -53,7 +53,7 @@ export const metadata = {
     title:
       "Motion Analysis & Time and Motion Study | ScaleForge",
     description:
-      "ScaleForge delivers digital time and motion studies — capturing, analysing, and optimising workforce activity to eliminate inefficiency and increase throughput without adding headcount.",
+      "ScaleForge delivers digital time and motion studies to eliminate workflow inefficiency, optimize workforce activity, and increase throughput.",
     images: ["/og-image.png"],
   },
 };
@@ -128,7 +128,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Motion Analysis & Time and Motion Study",
-    "description": "ScaleForge delivers digital time and motion studies — capturing, analysing, and optimising workforce activity to eliminate inefficiency and increase throughput without adding headcount.",
+    "description": "ScaleForge delivers digital time and motion studies to eliminate workflow inefficiency, optimize workforce activity, and increase throughput.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"

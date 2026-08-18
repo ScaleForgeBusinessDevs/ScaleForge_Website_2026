@@ -6,7 +6,7 @@ import PricingAnchorNav from "@/components/PricingAnchorNav";
 import { ArrowRight, Check } from "lucide-react";
 
 export const metadata = {
-  title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+  title: "Pricing | Transparent Service Tiers | ScaleForge",
   description:
     "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
   alternates: {
@@ -33,9 +33,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+      "Pricing | Transparent Service Tiers | ScaleForge",
     description:
-      "Transparent pricing for ScaleForge",
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
     url: "https://scalesforge.site/pricing",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -46,7 +46,7 @@ export const metadata = {
     title:
       "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
     description:
-      "Transparent pricing for ScaleForge",
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
     images: ["/og-image.png"],
   },
 };

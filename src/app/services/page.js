@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Services | Web Design, Development, SEO, Content & AI Automation",
+  title: "Services | Web, SEO, AI & Content | ScaleForge",
   description:
     "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
   alternates: {
@@ -43,7 +43,7 @@ export const metadata = {
     }
   },
   openGraph: {
-    title: "Services | Web Design, Development, SEO, Content & AI Automation",
+    title: "Services | Web, SEO, AI & Content | ScaleForge",
     description:
       "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
     url: "https://scalesforge.site/services",
@@ -59,7 +59,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services | Web Design, Development, SEO, Content & AI Automation",
+    title: "Services | Web, SEO, AI & Content | ScaleForge",
     description:
       "Custom web design, Next.js development, SEO, AI automation, and content creation services from ScaleForge. Five integrated capabilities, one delivery team.",
     images: ["/og-image.png"],

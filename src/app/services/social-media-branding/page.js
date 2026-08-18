@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "Social Media Branding Services | ScaleForge",
   description:
-    "ScaleForge builds cohesive social media brand identities — visual systems, content frameworks, and channel strategy — that make your brand instantly recognisable and impossible to ignore.",
+    "ScaleForge builds cohesive social media brand systems, visual assets, and content frameworks that make your business recognisable and authoritative.",
   alternates: {
     canonical: "https://scalesforge.site/services/social-media-branding",
     languages: {
@@ -43,7 +43,7 @@ export const metadata = {
     title:
       "Social Media Branding Services | ScaleForge",
     description:
-      "ScaleForge builds cohesive social media brand identities — visual systems, content frameworks, and channel strategy — that make your brand instantly recognisable and impossible to ignore.",
+      "ScaleForge builds cohesive social media brand systems, visual assets, and content frameworks that make your business recognisable and authoritative.",
     url: "https://scalesforge.site/services/social-media-branding",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -54,7 +54,7 @@ export const metadata = {
     title:
       "Social Media Branding Services | ScaleForge",
     description:
-      "ScaleForge builds cohesive social media brand identities — visual systems, content frameworks, and channel strategy — that make your brand instantly recognisable and impossible to ignore.",
+      "ScaleForge builds cohesive social media brand systems, visual assets, and content frameworks that make your business recognisable and authoritative.",
     images: ["/og-image.png"],
   },
 };
@@ -122,7 +122,7 @@ export default function SocialMediaBrandingPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Social Media Branding Services",
-    "description": "ScaleForge builds cohesive social media brand identities — visual systems, content frameworks, and channel strategy — that make your brand instantly recognisable and impossible to ignore.",
+    "description": "ScaleForge builds cohesive social media brand systems, visual assets, and content frameworks that make your business recognisable and authoritative.",
     "brand": {
       "@type": "Brand",
       "name": "ScaleForge"
