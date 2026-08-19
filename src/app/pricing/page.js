@@ -170,7 +170,7 @@ function PricingTrack({ id, eyebrow, heading, subhead, tiers, dark }) {
 const AI_TIERS = [
   { name: "Starter", price: "$800", suffix: "one-time", description: "A single automated workflow to eliminate your most painful manual task.", included: ["1 custom n8n/Make workflow", "CRM or spreadsheet integration", "Documentation & handoff"], featured: false },
   { name: "Growth", price: "$2,400", suffix: "one-time", description: "A connected automation stack that handles lead gen, outreach, and reporting.", included: ["Up to 5 workflows", "AI lead enrichment pipeline", "Outreach sequence automation", "CRM sync + reporting dashboard"], detail: "3 workflows — lead enrichment, outreach, CRM sync", featured: true },
-  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Ongoing support retainer"], detail: "Automation Engine — unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
+  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Support retainer available (billed separately)"], detail: "Automation Engine — unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
 ];
 
 const WEB_TIERS = [
@@ -354,9 +354,9 @@ const FAQS = [
               Choose Your Growth Path
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">
-              Flexible, transparent pricing for every stage of growth. No hidden
-              fees, no &ldquo;contact us for a quote&rdquo; games. Pick a tier
-              and let&apos;s build.
+              Flexible, transparent pricing for every stage of growth. Fixed
+              pricing on individual services, custom quotes for bundles — no
+              hidden fees, ever. Pick a tier and let&apos;s build.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -393,9 +393,9 @@ const FAQS = [
               All-in-One Growth Bundles
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              Every channel. One team. One invoice. Bundled pricing saves you
-              15–20% versus booking services individually — and gives you a
-              unified strategy that actually compounds.
+              Every channel. One team. One invoice. Bundled pricing costs less
+              than booking services individually — and gives you a unified
+              strategy that actually compounds.
             </p>
           </Reveal>
 
