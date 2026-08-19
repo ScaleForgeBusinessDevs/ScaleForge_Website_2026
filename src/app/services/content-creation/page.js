@@ -154,7 +154,7 @@ const FAQS = [
           label: "Book a Free Content Strategy Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
         }}
-        secondaryCta={{ label: "Read Our Blog", href: "/blog" }}
+        secondaryCta={{ label: "View Our Projects", href: "/projects" }}
       />
 
       {/* Quality Over Volume */}

@@ -476,7 +476,7 @@ export default function About() {
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
     </>

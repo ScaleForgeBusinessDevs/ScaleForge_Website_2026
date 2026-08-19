@@ -1,4 +1,3 @@
-import { getAllPosts } from "@/lib/sanity/queries";
 import { getAllProjects } from "@/lib/sanity/projectQueries";
 import { urlFor } from "@/lib/sanity/client";
 
@@ -28,7 +27,6 @@ const STATIC_PAGES = [
     "https://scalesforge.site/Assets/Shahood.avif",
     "https://scalesforge.site/Assets/Ruhan_2.avif"
   ] },
-  { url: `${siteUrl}/blog`, priority: 0.75, changeFrequency: "daily", images: [] },
   { url: `${siteUrl}/contact`, priority: 0.7, changeFrequency: "yearly", images: [] },
   { url: `${siteUrl}/privacy`, priority: 0.3, changeFrequency: "yearly", images: [] },
   { url: `${siteUrl}/terms`, priority: 0.3, changeFrequency: "yearly", images: [] },
@@ -36,14 +34,10 @@ const STATIC_PAGES = [
 
 export async function GET() {
   const now = new Date().toISOString();
-  let posts = [];
   let projects = [];
 
   try {
-    [posts, projects] = await Promise.all([
-      getAllPosts(),
-      getAllProjects()
-    ]);
+    projects = await getAllProjects();
   } catch (error) {
     console.error("Error fetching sitemap data from Sanity:", error);
   }
@@ -70,36 +64,6 @@ export async function GET() {
       }
     }
     
-    xml += `
-  </url>`;
-  }
-
-  // 2. Blog Posts
-  for (const post of posts) {
-    if (!post.slug?.current) continue;
-    
-    const postUrl = `${siteUrl}/blog/${post.slug.current}`;
-    xml += `
-  <url>
-    <loc>${postUrl}</loc>
-    <lastmod>${post.publishedDate ? new Date(post.publishedDate).toISOString() : now}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>`;
-
-    if (post.featuredImage?.asset) {
-      try {
-        const imageUrl = urlFor(post.featuredImage).url();
-        const safeTitle = post.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
-        xml += `
-    <image:image>
-      <image:loc>${imageUrl}</image:loc>
-      <image:title>${safeTitle}</image:title>
-    </image:image>`;
-      } catch (e) {
-        console.error("Error building image URL for post:", post.slug.current, e);
-      }
-    }
-
     xml += `
   </url>`;
   }

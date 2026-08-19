@@ -33,7 +33,6 @@ const LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 

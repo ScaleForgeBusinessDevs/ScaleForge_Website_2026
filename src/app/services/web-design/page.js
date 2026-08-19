@@ -157,7 +157,7 @@ const FAQS = [
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
 
@@ -312,7 +312,7 @@ const FAQS = [
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
     </>

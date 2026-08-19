@@ -356,50 +356,6 @@ const FAQS = [
         </div>
       </section>
 
-      {/* Related Resources / SEO Guides */}
-      <section className="border-t border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
-        <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-          <Reveal className="mb-14">
-            <span className="font-accent text-[10px] uppercase tracking-[0.2em] text-[#93b4ff]">
-              RESOURCES
-            </span>
-            <h2 className="mt-4 text-[clamp(1.8rem,3.6vw,2.5rem)] font-display font-normal text-white">
-              SEO Guides &amp; Insights
-            </h2>
-            <p className="mt-3 max-w-xl text-[14.5px] leading-relaxed text-white/55">
-              Read our latest research and actionable strategies on SEO automation, AI integrations, and search visibility guidelines.
-            </p>
-          </Reveal>
-
-          <Reveal className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <Link
-              href="/blog/can-seo-be-automated"
-              className="group rounded-2xl border border-white/[0.07] bg-[#101013] p-7 transition-colors hover:border-[#2563eb]/30 hover:bg-[#101013]/85"
-            >
-              <span className="text-[12px] text-white/35 font-accent">01 · GUIDE</span>
-              <h3 className="mt-4 text-[17px] font-medium text-white transition-colors group-hover:text-[#93b4ff]">
-                Can SEO Be Automated? What AI and Tools Can (and Can&apos;t) Do
-              </h3>
-              <p className="mt-3 text-[13px] leading-relaxed text-white/55">
-                Understand the limits of automated optimization algorithms, what workflows can be outsourced to machines, and what requires senior technical strategy.
-              </p>
-            </Link>
-
-            <Link
-              href="/blog/can-seo-be-replaced-by-ai"
-              className="group rounded-2xl border border-white/[0.07] bg-[#101013] p-7 transition-colors hover:border-[#2563eb]/30 hover:bg-[#101013]/85"
-            >
-              <span className="text-[12px] text-white/35 font-accent">02 · INDUSTRY ANALYSIS</span>
-              <h3 className="mt-4 text-[17px] font-medium text-white transition-colors group-hover:text-[#93b4ff]">
-                Can SEO Be Replaced by AI? The Future of Search Optimization
-              </h3>
-              <p className="mt-3 text-[13px] leading-relaxed text-white/55">
-                Analyze how AI search summaries (like Google AI Overviews and Search Generative Experience) change user behavior, and how to optimize for LLM citations.
-              </p>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
 
       <FAQAccordion
         eyebrow="CLARITY"

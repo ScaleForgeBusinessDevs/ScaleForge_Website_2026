@@ -8,7 +8,6 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
-import Insights from "@/components/Insights";
 import ClosingCTA from "@/components/ClosingCTA";
 
 export const metadata = {
@@ -58,18 +57,17 @@ export default function Home() {
       "url": "https://scalesforge.site",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://scalesforge.site/blog?q={search_term_string}",
+        "target": "https://scalesforge.site/projects?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
     {
       "@context": "https://schema.org",
       "@type": "SiteNavigationElement",
-      "name": ["Services", "Projects", "Blog", "Pricing", "About", "Contact"],
+      "name": ["Services", "Projects", "Pricing", "About", "Contact"],
       "url": [
         "https://scalesforge.site/services",
         "https://scalesforge.site/projects",
-        "https://scalesforge.site/blog",
         "https://scalesforge.site/pricing",
         "https://scalesforge.site/about",
         "https://scalesforge.site/contact"
@@ -96,7 +94,6 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <FAQ />
-      <Insights />
       <ClosingCTA />
     </>
   );
