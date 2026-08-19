@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "fe15f47b-67e3-4e56-a2d5-a74612fe656e",
+    "category": "Web Development",
+    "challenge": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lobortis metus. Proin orci odio, posuere quis magna sed, fringilla placerat ligula. Duis ut dolor porta, placerat magna vitae, semper tortor. Aliquam ultrices eros quis ante placerat, sit amet vehicula mauris luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam hendrerit gravida mauris id aliquam. Donec fermentum pretium magna, a lobortis tellus euismod a. Etiam dignissim luctus libero, quis laoreet justo. Donec bibendum, neque et cursus semper, lectus nisi vehicula mauris, a pretium tellus justo nec neque. Fusce aliquet bibendum orci sit amet efficitur.",
+    "client": "Scale Forge",
+    "coverImage": {
+      "alt": null,
+      "asset": {
+        "_ref": "image-aaa377a4b7b92db9b837b57baf7e74104a45a0b5-1917x958-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/aaa377a4b7b92db9b837b57baf7e74104a45a0b5-1917x958.png",
+      "localPath": "/Assets/projects/property-seven-crm-for-real-estate-agencies-cover.png"
+    },
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla mauris et est porttitor, non scelerisque odio pharetra. Donec et erat id dui hendrerit tempor. Curabitur accumsan metus venenatis ligula bibendum, sed malesuada tellus consectetur.",
+    "featured": true,
+    "gallery": [
+      {
+        "alt": null,
+        "asset": {
+          "_ref": "image-cf93577820ebf56ca7f6e6c80ec5c6ed68827a80-1919x997-png",
+          "_type": "reference"
+        },
+        "caption": null,
+        "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/cf93577820ebf56ca7f6e6c80ec5c6ed68827a80-1919x997.png",
+        "localPath": "/Assets/projects/property-seven-crm-for-real-estate-agencies-gallery-1.png"
+      },
+      {
+        "alt": null,
+        "asset": {
+          "_ref": "image-64792df9fc79480ed2bb5bf3643c83c8c98394c4-1919x999-png",
+          "_type": "reference"
+        },
+        "caption": null,
+        "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/64792df9fc79480ed2bb5bf3643c83c8c98394c4-1919x999.png",
+        "localPath": "/Assets/projects/property-seven-crm-for-real-estate-agencies-gallery-2.png"
+      }
+    ],
+    "projectUrl": "https://propertyseven.vercel.app/",
+    "publishedAt": "2026-06-28",
+    "results": null,
+    "slug": {
+      "_type": "slug",
+      "current": "property-seven-crm-for-real-estate-agencies"
+    },
+    "solution": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget lobortis metus. Proin orci odio, posuere quis magna sed, fringilla placerat ligula. Duis ut dolor porta, placerat magna vitae, semper tortor. Aliquam ultrices eros quis ante placerat, sit amet vehicula mauris luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam hendrerit gravida mauris id aliquam. Donec fermentum pretium magna, a lobortis tellus euismod a. Etiam dignissim luctus libero, quis laoreet justo. Donec bibendum, neque et cursus semper, lectus nisi vehicula mauris, a pretium tellus justo nec neque. Fusce aliquet bibendum orci sit amet efficitur.",
+    "title": "Property Seven - CRM for Real Estate Agencies"
+  }
+]

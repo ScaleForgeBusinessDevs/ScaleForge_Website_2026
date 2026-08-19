@@ -3,12 +3,7 @@ import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
-import {
-  getProjectBySlug,
-  getAllProjectSlugs,
-  getProjectsByCategory,
-} from "@/lib/sanity/projectQueries";
-import { urlFor } from "@/lib/sanity/client";
+import projectsData from "@/data/projects.json";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import {
@@ -18,16 +13,16 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export const dynamic = "force-dynamic";
+export async function generateStaticParams() {
+  return projectsData.map((p) => ({ slug: p.slug.current }));
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
-    const project = await getProjectBySlug(slug);
+    const project = projectsData.find((p) => p.slug?.current === slug);
     if (!project) return { title: "Project Not Found" };
-    const imgUrl = project.coverImage?.asset
-      ? urlFor(project.coverImage).width(1200).height(630).url()
-      : undefined;
+    const imgUrl = project.coverImage?.localPath || project.coverImage?.url || undefined;
     const suffix = " | ScaleForge Projects";
     const maxTitleLen = 70 - suffix.length;
     let title = "";
@@ -40,15 +35,15 @@ export async function generateMetadata({ params }) {
       title,
       description: project.excerpt,
       alternates: {
-    canonical: `https://scalesforge.site/projects/${slug}`,
-    languages: {
-      "en": `https://scalesforge.site/projects/${slug}`,
-      "x-default": `https://scalesforge.site/projects/${slug}`
-    },
-    media: {
-      "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
-    }
-  },
+        canonical: `https://scalesforge.site/projects/${slug}`,
+        languages: {
+          "en": `https://scalesforge.site/projects/${slug}`,
+          "x-default": `https://scalesforge.site/projects/${slug}`
+        },
+        media: {
+          "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
+        }
+      },
       openGraph: {
         title,
         description: project.excerpt,
@@ -75,10 +70,10 @@ export async function generateMetadata({ params }) {
           "en": `https://scalesforge.site/projects/${slug}`,
           "x-default": `https://scalesforge.site/projects/${slug}`
         },
-    media: {
-      "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
-    }
-  },
+        media: {
+          "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
+        }
+      },
     };
   }
 }
@@ -164,11 +159,12 @@ const ptComponents = {
   },
   types: {
     image: ({ value }) => {
-      if (!value?.asset) return null;
+      const src = value?.localPath || value?.url;
+      if (!src) return null;
       return (
         <figure className="my-8">
           <img
-            src={urlFor(value).width(1100).url()}
+            src={src}
             alt={value.alt ?? ""}
             className="w-full rounded-2xl"
           />
@@ -202,40 +198,31 @@ const CATEGORY_COLORS = {
 
 export default async function ProjectDetailPage({ params }) {
   const { slug } = await params;
-  let project = null;
-  let related = [];
-
-  try {
-    project = await getProjectBySlug(slug);
-    if (!project) notFound();
-
-    const relatedRaw = await getProjectsByCategory(project.category);
-    related = relatedRaw.filter((p) => p._id !== project._id).slice(0, 3);
-  } catch {
-    notFound();
-  }
+  const project = projectsData.find((p) => p.slug?.current === slug);
 
   if (!project) notFound();
 
-  const heroImgUrl = project.coverImage?.asset
-    ? urlFor(project.coverImage).width(1440).height(810).url()
-    : null;
+  const related = projectsData
+    .filter((p) => p.category === project.category && p._id !== project._id)
+    .slice(0, 3);
+
+  const heroImgUrl = project.coverImage?.localPath || project.coverImage?.url || null;
 
   const categoryStyle =
     CATEGORY_COLORS[project.category] ?? "border-white/20 text-white/50";
 
-  const projectDetailSchema = project ? {
+  const projectDetailSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     "name": project.title,
     "description": project.excerpt,
-    "image": project.coverImage?.asset ? urlFor(project.coverImage).url() : undefined,
+    "image": project.coverImage?.localPath || project.coverImage?.url || undefined,
     "creator": {
       "@type": "Organization",
       "name": "ScaleForge",
       "url": "https://scalesforge.site"
     }
-  } : null;
+  };
 
   return (
     <>
@@ -397,9 +384,9 @@ export default async function ProjectDetailPage({ params }) {
                   <ProjectGallery
                     projectTitle={project.title}
                     images={project.gallery
-                      .filter((img) => img.asset)
+                      .filter((img) => img.localPath || img.url)
                       .map((img) => ({
-                        src: urlFor(img).width(1600).height(1000).url(),
+                        src: img.localPath || img.url,
                         alt: img.alt,
                         caption: img.caption,
                       }))}
@@ -503,11 +490,7 @@ export default async function ProjectDetailPage({ params }) {
                   href={`/projects/${p.slug.current}`}
                   title={p.title}
                   excerpt={p.excerpt}
-                  image={
-                    p.coverImage?.asset
-                      ? urlFor(p.coverImage).width(600).height(375).url()
-                      : null
-                  }
+                  image={p.coverImage?.localPath || p.coverImage?.url || null}
                   category={p.category}
                   client={p.client}
                 />

@@ -5,8 +5,7 @@ import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import CTASection from "@/components/CTASection";
 import ProjectFilterBar from "@/components/ProjectFilterBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { getProjectsByCategory } from "@/lib/sanity/projectQueries";
-import { urlFor } from "@/lib/sanity/client";
+import projectsData from "@/data/projects.json";
 import { LayoutGrid } from "lucide-react";
 
 export const revalidate = 600; // Revalidate every 10 minutes (ISR)
@@ -58,23 +57,29 @@ export const metadata = {
 };
 
 function getImageUrl(project) {
-  return project.coverImage?.asset
-    ? urlFor(project.coverImage).width(800).height(500).url()
-    : null;
+  return project.coverImage?.localPath || project.coverImage?.url || null;
 }
 
 export default async function ProjectsPage({ searchParams }) {
   const params = await searchParams;
-  const category = params.category;
+  const rawCategory = params.category;
+  // Next.js searchParams delivers "+" literally (not decoded to space).
+  // Decode it so "Web+Development" matches "Web Development".
+  const category = rawCategory
+    ? decodeURIComponent(rawCategory.replace(/\+/g, " "))
+    : undefined;
 
-  let projects = [];
-  try {
-    projects = await getProjectsByCategory(category);
-  } catch {
-    // Sanity not yet configured — show empty state
+  let projects = projectsData;
+  if (category && category !== "all") {
+    projects = projectsData.filter(
+      (p) => p.category?.toLowerCase() === category.toLowerCase()
+    );
   }
 
-  const featured = projects.find((p) => p.featured);
+  // Only split out a featured project on the unfiltered "All Projects" view.
+  // When a category filter is active the featured banner is hidden (!category guard),
+  // so we must NOT remove the featured project from the grid — or it disappears entirely.
+  const featured = !category ? projects.find((p) => p.featured) : null;
   const grid = featured ? projects.filter((p) => p._id !== featured._id) : projects;
 
   const projectsSchema = {
@@ -187,13 +192,10 @@ export default async function ProjectsPage({ searchParams }) {
                 href={`/projects/${featured.slug.current}`}
                 className="group relative block overflow-hidden rounded-3xl border border-white/[0.07] bg-[#101013]"
               >
-                {featured.coverImage?.asset && (
+                {(featured.coverImage?.localPath || featured.coverImage?.url) && (
                   <div className="relative aspect-[21/9] overflow-hidden">
                     <img
-                      src={urlFor(featured.coverImage)
-                        .width(1440)
-                        .height(617)
-                        .url()}
+                      src={featured.coverImage.localPath || featured.coverImage.url}
                       alt={featured.coverImage.alt ?? featured.title}
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />

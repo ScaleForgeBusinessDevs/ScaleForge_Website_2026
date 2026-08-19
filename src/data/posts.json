@@ -1,0 +1,711 @@
+[
+  {
+    "_id": "21410fe9-2743-4e93-a333-5fb55f95f6cb",
+    "excerpt": "Understand how SEO fits into the broader digital marketing ecosystem — and why it’s the highest-ROI channel for businesses that want long-term, sustainable online growth.",
+    "featuredImage": {
+      "alt": "Digital marketing ecosystem diagram showing SEO at the center connected to content marketing, social media, PPC, and email",
+      "asset": {
+        "_ref": "image-83928fe4a6dc8015ef1672baf8cfe907ce7c5dd5-500x333-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/83928fe4a6dc8015ef1672baf8cfe907ce7c5dd5-500x333.png",
+      "localPath": "/Assets/blog/how-seo-works-in-digital-marketing-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works-in-digital-marketing"
+    },
+    "title": "How SEO Works in Digital Marketing: The Complete Integration Guide",
+    "type": "blog"
+  },
+  {
+    "_id": "54dfcbcb-1672-4ea0-841d-41572b2f6f47",
+    "excerpt": "Discover the concrete, measurable ways SEO helps your business — from driving qualified leads and reducing advertising costs to building brand authority and outpacing competitors.",
+    "featuredImage": {
+      "alt": "Business growth chart showing organic traffic increase over time with SEO investment milestones marked",
+      "asset": {
+        "_ref": "image-99c1ef977a5e20f5ef43fead2f319c310af1c33f-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/99c1ef977a5e20f5ef43fead2f319c310af1c33f-1470x980.png",
+      "localPath": "/Assets/blog/how-seo-helps-your-business-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-helps-your-business"
+    },
+    "title": "How SEO Helps Your Business: Real Benefits You Can Measure",
+    "type": "blog"
+  },
+  {
+    "_id": "6c9b6dd9-ef44-434c-8f56-6d80cf61d7dd",
+    "excerpt": "Curious about how SEO is actually done? This guide walks through the real process — from audits and research to implementation and reporting — so you know exactly what goes into a professional SEO campaign.",
+    "featuredImage": {
+      "alt": "SEO professional working on a laptop with analytics dashboards showing keyword rankings and traffic growth",
+      "asset": {
+        "_ref": "image-29dfb1b491923fa9a3f1180cf7fd5fb80952ec59-1420x1005-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/29dfb1b491923fa9a3f1180cf7fd5fb80952ec59-1420x1005.png",
+      "localPath": "/Assets/blog/how-seo-is-done-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 10,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-is-done"
+    },
+    "title": "How SEO Is Done: A Practical Guide to Implementing Search Optimization",
+    "type": "blog"
+  },
+  {
+    "_id": "b5b953a3-3153-4234-9bac-eef968a03f64",
+    "excerpt": "Discover how SEO should be integrated into web development from day one — and why websites built with SEO foundations outperform those that try to bolt on optimization afterwards",
+    "featuredImage": {
+      "alt": "Web developer coding on dual monitors with SEO audit results and site architecture diagram visible on screen",
+      "asset": {
+        "_ref": "image-8def168a85056adeef8b9a277d37a591f8411273-1280x719-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/8def168a85056adeef8b9a277d37a591f8411273-1280x719.png",
+      "localPath": "/Assets/blog/how-seo-works-in-website-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works-in-website"
+    },
+    "title": "How SEO Works in Website Development: Building Sites That Google Loves",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-ai-do-seo",
+    "excerpt": "AI is transforming SEO workflows — but can AI fully replace human SEO expertise? Discover what AI excels at in search optimization and where human judgment remains irreplaceable.",
+    "featuredImage": {
+      "alt": "Robot and human hands working together on SEO analytics dashboard representing AI and human collaboration in search optimization",
+      "asset": {
+        "_ref": "image-317811d5dd12546e80b24929ffe20a4d12368038-1932x1087-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/317811d5dd12546e80b24929ffe20a4d12368038-1932x1087.png",
+      "localPath": "/Assets/blog/can-ai-do-seo-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "can-ai-do-seo"
+    },
+    "title": "Can AI Do SEO? What Artificial Intelligence Can and Cannot Do for Search",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-i-do-seo-on-my-own",
+    "excerpt": "Can a business owner do SEO without hiring an expert? The honest answer: some of it, yes. Learn what you can realistically handle yourself and where professional expertise makes the biggest difference.",
+    "featuredImage": {
+      "alt": "Business owner working on laptop optimizing website content and Google Business Profile for basic DIY SEO improvements",
+      "asset": {
+        "_ref": "image-71d9b20a3b74bf66ea71a41d4fd1a8266a887ced-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/71d9b20a3b74bf66ea71a41d4fd1a8266a887ced-1470x980.png",
+      "localPath": "/Assets/blog/can-i-do-seo-on-my-own-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-i-do-seo-on-my-own"
+    },
+    "title": "Can I Do SEO on My Own? The Honest Guide for Business Owners",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-i-learn-seo-on-my-own",
+    "excerpt": "Absolutely — SEO can be learned independently. This guide gives you a structured self-study roadmap, the best free and paid resources, and realistic expectations for how long it takes.",
+    "featuredImage": {
+      "alt": "Person studying SEO course on laptop with notepad and coffee surrounded by books about digital marketing and search optimization",
+      "asset": {
+        "_ref": "image-2680bdb33a263a66c64ea1562a7c1efe592c3faa-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/2680bdb33a263a66c64ea1562a7c1efe592c3faa-1470x980.png",
+      "localPath": "/Assets/blog/can-i-learn-seo-on-my-own-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-i-learn-seo-on-my-own"
+    },
+    "title": "Can I Learn SEO on My Own? A Self-Study Roadmap for Beginners",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-seo-be-automated",
+    "excerpt": "Can SEO tasks be automated? Some can — but fully automating SEO remains impossible and counterproductive. Learn what should be automated, what requires human expertise, and how smart agencies use automation to deliver better results.",
+    "featuredImage": {
+      "alt": "Digital interface showing SEO automation dashboard with automated rank tracking, audit tools, and AI-assisted content analysis",
+      "asset": {
+        "_ref": "image-9329b941017f94395c2c1d46a3a00a9685d72b5e-1542x950-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/9329b941017f94395c2c1d46a3a00a9685d72b5e-1542x950.png",
+      "localPath": "/Assets/blog/can-seo-be-automated-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-seo-be-automated"
+    },
+    "title": "Can SEO Be Automated? What AI and Tools Can (and Can’t) Do",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-seo-be-replaced-by-ai",
+    "excerpt": "Will AI replace SEO? The answer is nuanced. AI is transforming search and changing how SEO is done — but human expertise, creativity, and strategic judgment remain irreplaceable. Here’s the real story",
+    "featuredImage": {
+      "alt": "Futuristic image of AI brain merging with SEO magnifying glass symbolizing artificial intelligence transforming search optimization",
+      "asset": {
+        "_ref": "image-e81b5d6eee0188be8a3239ac0f963c19e375284f-1932x1087-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/e81b5d6eee0188be8a3239ac0f963c19e375284f-1932x1087.png",
+      "localPath": "/Assets/blog/can-seo-be-replaced-by-ai-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-seo-be-replaced-by-ai"
+    },
+    "title": "Can SEO Be Replaced by AI? The Future of Search Optimization",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-seo-help-your-business",
+    "excerpt": "Can SEO really help your business grow? Absolutely — and in more ways than you might expect. Discover the seven most powerful ways SEO creates tangible business value for companies of all sizes.",
+    "featuredImage": {
+      "alt": "Seven growth arrows rising from a business foundation labeled with SEO benefits including leads traffic credibility and ROI",
+      "asset": {
+        "_ref": "image-08b05c79409c82e39d4380d85dac9d40e2c3e6c6-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/08b05c79409c82e39d4380d85dac9d40e2c3e6c6-1470x980.png",
+      "localPath": "/Assets/blog/can-seo-help-your-business-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "can-seo-help-your-business"
+    },
+    "title": "Can SEO Help Your Business? 7 Powerful Ways SEO Drives Business Growth",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-seo-make-you-rich",
+    "excerpt": "Can SEO make you rich? For the right person with the right approach, yes — significantly so. This guide breaks down the realistic income potential from SEO as a service, an agency, or a business growth tool.",
+    "featuredImage": {
+      "alt": "Upward trending revenue graph with SEO analytics overlay showing organic traffic growth translating into business revenue increase",
+      "asset": {
+        "_ref": "image-cead9bc37c4d6049c22f4d88ca8611f7f36613b2-1472x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/cead9bc37c4d6049c22f4d88ca8611f7f36613b2-1472x980.png",
+      "localPath": "/Assets/blog/can-seo-make-you-rich-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-seo-make-you-rich"
+    },
+    "title": "Can SEO Make You Rich? The Real Truth About SEO Income Potential",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-can-you-do-seo-yourself",
+    "excerpt": "You can do SEO yourself — but should you? This guide gives you an honest assessment of DIY SEO feasibility, the skills required, common mistakes to avoid, and when to call in the professionals",
+    "featuredImage": {
+      "alt": "Business owner frustrated with complex SEO tools on computer screen considering whether to hire professional SEO help",
+      "asset": {
+        "_ref": "image-0497d05b292df34df5445b4ee0ea295895ce3d98-1079x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/0497d05b292df34df5445b4ee0ea295895ce3d98-1079x750.png",
+      "localPath": "/Assets/blog/can-you-do-seo-yourself-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "can-you-do-seo-yourself"
+    },
+    "title": "Can You Do SEO Yourself? A Realistic Assessment for Business Owners",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-how-seo-works-on-youtube",
+    "excerpt": "YouTube is the world’s second-largest search engine. Learn how YouTube SEO works — and how to optimize your videos to rank in both YouTube search results and Google’s video results.",
+    "featuredImage": {
+      "alt": "YouTube creator recording video with analytics dashboard showing high search rankings and subscriber growth from SEO optimization",
+      "asset": {
+        "_ref": "image-f0fa0eedaaccfb8d6996151401a474227df5e824-1125x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/f0fa0eedaaccfb8d6996151401a474227df5e824-1125x750.png",
+      "localPath": "/Assets/blog/how-seo-works-on-youtube-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works-on-youtube"
+    },
+    "title": "How SEO Works on YouTube: Ranking Your Videos to Reach More Viewers",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-does-seo-analyst-do",
+    "excerpt": "Wondering what an SEO analyst actually does day-to-day? This guide covers the full scope of an SEO analyst’s responsibilities — from keyword research and technical audits to reporting and strategy.",
+    "featuredImage": {
+      "alt": "SEO analyst working at desk surrounded by multiple monitors showing keyword rankings, analytics dashboards, and competitor analysis tools",
+      "asset": {
+        "_ref": "image-032777d9c7060e37f4e3986908f334fb3dd72bda-1125x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/032777d9c7060e37f4e3986908f334fb3dd72bda-1125x750.png",
+      "localPath": "/Assets/blog/what-does-seo-analyst-do-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "what-does-seo-analyst-do"
+    },
+    "title": "What Does an SEO Analyst Do? A Complete Role Breakdown",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-does-seo-do",
+    "excerpt": "What exactly does SEO do for your website and business? This guide breaks down the concrete effects of SEO — from traffic and rankings to revenue and brand awareness.",
+    "featuredImage": {
+      "alt": "Before and after comparison showing website traffic graphs — low flat traffic before SEO and rising organic traffic after SEO implementation",
+      "asset": {
+        "_ref": "image-faf175239eb8b8f9cfc91386f9f4cdb4d18f991c-1125x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/faf175239eb8b8f9cfc91386f9f4cdb4d18f991c-1125x750.png",
+      "localPath": "/Assets/blog/what-does-seo-do-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "what-does-seo-do"
+    },
+    "title": "What Does SEO Do? Understanding the Real Impact on Your Website and Business",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-does-seo-executive-do",
+    "excerpt": "In an agency or corporate setting, an SEO executive is an entry-to-mid level practitioner executing day-to-day optimization tasks. Here’s what the role actually involves.",
+    "featuredImage": {
+      "alt": "Young marketing professional reviewing website analytics and keyword rankings on laptop in modern office SEO team setting",
+      "asset": {
+        "_ref": "image-99cacd3437cfe2797b2f28fb780c82f7cf9b8ff4-1124x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/99cacd3437cfe2797b2f28fb780c82f7cf9b8ff4-1124x750.png",
+      "localPath": "/Assets/blog/what-does-seo-executive-do-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "what-does-seo-executive-do"
+    },
+    "title": "What Does an SEO Executive Do? Understanding the Role in an Agency Setting",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-does-seo-specialist-do",
+    "excerpt": "Thinking about hiring an SEO specialist or becoming one? This guide covers everything an SEO specialist does — from technical optimization and keyword strategy to content direction and performance reporting.",
+    "featuredImage": {
+      "alt": "SEO specialist presenting organic growth strategy to business team using charts and keyword ranking reports on large screen",
+      "asset": {
+        "_ref": "image-4d6b460254b2052bcef142b00f35de26d5b93864-1125x750-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/4d6b460254b2052bcef142b00f35de26d5b93864-1125x750.png",
+      "localPath": "/Assets/blog/what-does-seo-specialist-do-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "what-does-seo-specialist-do"
+    },
+    "title": "What Does an SEO Specialist Do? The Full Scope of the Role",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-does-seo-stand-for",
+    "excerpt": "SEO stands for Search Engine Optimization — but there’s much more to understand. This guide explains the full meaning, history, and modern application of the term.",
+    "featuredImage": {
+      "alt": "SEO acronym broken down with icons for Search magnifying glass, Engine gears, and Optimization upward arrow",
+      "asset": {
+        "_ref": "image-e5c4bfbe16c952dbc11a50f52984a381febf51f9-1280x640-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/e5c4bfbe16c952dbc11a50f52984a381febf51f9-1280x640.png",
+      "localPath": "/Assets/blog/what-does-seo-stand-for-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 6,
+    "slug": {
+      "_type": "slug",
+      "current": "what-does-seo-stand-for"
+    },
+    "title": "What Does SEO Stand For? Plus Everything Else You Need to Know",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-is-seo",
+    "excerpt": "New to SEO? This plain-English guide explains exactly what SEO is, what it involves, and why it’s essential for any business with an online presence.",
+    "featuredImage": {
+      "alt": "Simple infographic explaining what SEO means with search bar, ranking arrows, and website traffic icons",
+      "asset": {
+        "_ref": "image-a82e03d343387ac5be34d70318fa0e425aa79e8b-1280x800-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/a82e03d343387ac5be34d70318fa0e425aa79e8b-1280x800.png",
+      "localPath": "/Assets/blog/what-is-seo-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "what-is-seo"
+    },
+    "title": "What Is SEO? The Plain-English Guide to Search Engine Optimization",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-is-seo-in-digital-marketing",
+    "excerpt": "Understand SEO’s specific role within digital marketing — how it differs from other channels, how it works alongside paid search, content, and social, and why it’s the channel most businesses should prioritize.",
+    "featuredImage": {
+      "alt": "Digital marketing channel comparison chart showing SEO as highest ROI channel alongside PPC social media and email marketing",
+      "asset": {
+        "_ref": "image-35669b4ec877210ad677e97fd283d7558180efdc-1280x853-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/35669b4ec877210ad677e97fd283d7558180efdc-1280x853.png",
+      "localPath": "/Assets/blog/what-is-seo-in-digital-marketing-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "what-is-seo-in-digital-marketing"
+    },
+    "title": "What Is SEO in Digital Marketing? The Complete Integration Guide",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-seo-means",
+    "excerpt": "What does\nSEO really mean? This guide goes beyond the textbook definition to explain what SEO means in practice for businesses trying to grow in a competitive digital world\n",
+    "featuredImage": {
+      "alt": "Magnifying glass over search results page highlighting top organic rankings with SEO acronym letters displayed",
+      "asset": {
+        "_ref": "image-68936d3e59b2207b66cc2d147e21ffd9e3021c08-1280x853-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/68936d3e59b2207b66cc2d147e21ffd9e3021c08-1280x853.png",
+      "localPath": "/Assets/blog/what-seo-means-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "what-seo-means"
+    },
+    "title": "What SEO Means: A Clear Definition and Why It Matters More Than Ever",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-seo-means-in-marketing",
+    "excerpt": "In marketing, SEO means much more than rankings. Discover how SEO integrates with content marketing, brand strategy, and customer acquisition to create the most cost-effective inbound marketing channel.",
+    "featuredImage": {
+      "alt": "Marketing funnel diagram showing SEO driving organic traffic through awareness, consideration, and conversion stages",
+      "asset": {
+        "_ref": "image-8335503ba5f978bdaa49cb3e872a6449b7f7fb5b-1280x853-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/8335503ba5f978bdaa49cb3e872a6449b7f7fb5b-1280x853.png",
+      "localPath": "/Assets/blog/what-seo-means-in-marketing-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "what-seo-means-in-marketing"
+    },
+    "title": "What SEO Means in Marketing: The Marketer’s Complete Guide",
+    "type": "blog"
+  },
+  {
+    "_id": "blog-what-seo-stands-for-in-marketing",
+    "excerpt": "SEO stands for Search Engine Optimization — but in marketing, it stands for something bigger: sustainable growth, brand authority, and the most efficient customer acquisition channel available.",
+    "featuredImage": {
+      "alt": "Marketing chalkboard showing SEO acronym with search engine optimization written below and rising traffic arrow graphic",
+      "asset": null
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 7,
+    "slug": {
+      "_type": "slug",
+      "current": "what-seo-stands-for-in-marketing"
+    },
+    "title": "What SEO Stands For in Marketing: Why the Acronym Barely Captures Its Power",
+    "type": "blog"
+  },
+  {
+    "_id": "e3eff312-862c-454f-8769-1587f21fd8ed",
+    "excerpt": "Learn how businesses of all sizes use SEO to attract new customers, generate leads, and grow revenue — with practical insights on making SEO work for your specific business model.",
+    "featuredImage": {
+      "alt": "Business owner reviewing SEO analytics dashboard on tablet showing organic traffic leads and revenue metrics",
+      "asset": {
+        "_ref": "image-e00734343581437cd657bb7ab9d5f39bd501fa5c-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/e00734343581437cd657bb7ab9d5f39bd501fa5c-1470x980.png",
+      "localPath": "/Assets/blog/how-seo-works-for-business-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works-for-business"
+    },
+    "title": "How SEO Works for Business: Turning Search Traffic into Revenue",
+    "type": "blog"
+  },
+  {
+    "_id": "eda3594a-2c40-4c8b-b4b2-6ceb5d0078b6",
+    "excerpt": "Instagram SEO is more powerful than most people realize. Learn how the Instagram algorithm processes search queries and how to optimize your profile and content to get discovered by your ideal audience",
+    "featuredImage": {
+      "alt": "Instagram profile on phone screen showing optimized bio with keywords, highlighted stories, and high-engagement posts",
+      "asset": {
+        "_ref": "image-3ac92f932a798335658bd41e21809163df038738-1634x917-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/3ac92f932a798335658bd41e21809163df038738-1634x917.png",
+      "localPath": "/Assets/blog/how-seo-works-on-instagram-featured.png"
+    },
+    "publishedDate": "2026-05-17",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works-on-instagram"
+    },
+    "title": "How SEO Works on Instagram: Optimizing for Search on Social Media",
+    "type": "blog"
+  },
+  {
+    "_id": "1ce01bb6-3398-444e-bff7-1b1cb5dd0a64",
+    "excerpt": " Discover exactly how SEO works, why search engines rank pages the way they do, and how your business can leverage it to drive consistent, free traffic from Google.\n",
+    "featuredImage": {
+      "alt": "Illustrated diagram showing how search engines crawl, index, and rank websites for SEO",
+      "asset": {
+        "_ref": "image-20391f0baf9540aa9f6a911ab61ba76b7ae0ab32-1632x918-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/20391f0baf9540aa9f6a911ab61ba76b7ae0ab32-1632x918.png",
+      "localPath": "/Assets/blog/how-seo-works-featured.png"
+    },
+    "publishedDate": "2026-05-16",
+    "readTime": 8,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-works"
+    },
+    "title": "How SEO Works: A Beginner’s Guide to Search Engine Optimization",
+    "type": "blog"
+  },
+  {
+    "_id": "26b64eab-2f9d-42c2-8d6a-b552a9429ec1",
+    "excerpt": "Learn how SEO optimization works in practice — from keyword research and\non-page tuning to technical audits and link building strategies that move your\nwebsite up Google’s rankings.",
+    "featuredImage": {
+      "alt": "SEO optimization workflow showing keyword research, on-page optimization, link building, and analytics tracking",
+      "asset": {
+        "_ref": "image-35e5b649936a2f6d5097728886e21fd78017e74f-1471x981-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/35e5b649936a2f6d5097728886e21fd78017e74f-1471x981.png",
+      "localPath": "/Assets/blog/how-seo-optimization-works-featured.png"
+    },
+    "publishedDate": "2026-05-16",
+    "readTime": 9,
+    "slug": {
+      "_type": "slug",
+      "current": "how-seo-optimization-works"
+    },
+    "title": "How SEO Optimization Works: The Step-byStep Process Behind Higher Rankings",
+    "type": "blog"
+  },
+  {
+    "_id": "61dc3d36-d7bd-405f-b1b8-4ec681738b35",
+    "excerpt": "A slow website kills your rankings and revenue. Scale Forge’s website performance optimization service fixes Core Web Vitals, speeds up load times, and boosts conversions.",
+    "featuredImage": {
+      "alt": "Why Website Speed Is Killing Your Sales (And How to Fix It)",
+      "asset": {
+        "_ref": "image-9cdfef209691c5f46a619df1cb9c28fec8e8bd7e-1470x980-png",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/9cdfef209691c5f46a619df1cb9c28fec8e8bd7e-1470x980.png",
+      "localPath": "/Assets/blog/website-performance-optimization-guide-featured.png"
+    },
+    "publishedDate": "2026-05-10",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "website-performance-optimization-guide"
+    },
+    "title": "Why Website Speed Is Killing Your Sales (And How to Fix It)",
+    "type": "blog"
+  },
+  {
+    "_id": "7e2348ef-7b98-4d07-a4a5-60175977e05f",
+    "excerpt": "Turn your website data into business growth. Scale Forge’s analytics service sets up conversion tracking, builds custom dashboards, and delivers insights that help you scale.",
+    "featuredImage": {
+      "alt": "Stop Guessing, Start Growing: How Analytics Transforms Your Digital Strategy",
+      "asset": {
+        "_ref": "image-fdd223a54fbefabb0a1f8e75f9e2205b33dab9fb-1476x978-heif",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/fdd223a54fbefabb0a1f8e75f9e2205b33dab9fb-1476x978.heif",
+      "localPath": "/Assets/blog/website-analytics-conversion-tracking-featured.heif"
+    },
+    "publishedDate": "2026-05-10",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "website-analytics-conversion-tracking"
+    },
+    "title": "Stop Guessing, Start Growing: How Analytics Transforms Your Digital Strategy",
+    "type": "blog"
+  },
+  {
+    "_id": "62214e9d-d108-4940-b581-878c79df8e2e",
+    "excerpt": "Discover why hiring a web design agency is essential in 2026 to boost online presence, improve conversion rates, and build brand credibility. Learn how fast, mobile-first, SEO-optimized websites drive traffic, generate leads, and deliver long-term business growth.",
+    "featuredImage": {
+      "alt": "Why Your Business Needs a Professional Web Design Agency in 2026",
+      "asset": {
+        "_ref": "image-1476ccdc070d426cfb01277b31ea4161ce8ac43f-3908x4885-jpg",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/1476ccdc070d426cfb01277b31ea4161ce8ac43f-3908x4885.jpg",
+      "localPath": "/Assets/blog/why-your-business-needs-a-professional-web-design-agency-in-2026-featured.jpg"
+    },
+    "publishedDate": "2026-05-04",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "why-your-business-needs-a-professional-web-design-agency-in-2026"
+    },
+    "title": "Why Your Business Needs a Professional Web Design Agency in 2026",
+    "type": "blog"
+  },
+  {
+    "_id": "6e99cc95-c2de-4651-83d8-5f7204e8cab7",
+    "excerpt": "Discover why hiring a branding agency for small business is key to building brand identity, increasing customer trust, and driving business growth. Learn how strategic branding, logo design, and consistent messaging help attract clients, boost loyalty, and maximize marketing ROI.",
+    "featuredImage": {
+      "alt": " a branding agency for small business is key to building brand identity, increasing customer trust, and driving business growth. Learn how strategic branding, logo design, and consistent messaging help attract clients, boost loyalty, and maximize marketing ROI.",
+      "asset": {
+        "_ref": "image-0ff4cc630a7846eae5d15e6e3ec5dc21fd8fec35-5460x3642-jpg",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/0ff4cc630a7846eae5d15e6e3ec5dc21fd8fec35-5460x3642.jpg",
+      "localPath": "/Assets/blog/why-strong-branding-is-the-secret-weapon-of-every-successful-business-featured.jpg"
+    },
+    "publishedDate": "2026-05-04",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "why-strong-branding-is-the-secret-weapon-of-every-successful-business"
+    },
+    "title": "Why Strong Branding Is the Secret Weapon of Every Successful Business",
+    "type": "blog"
+  },
+  {
+    "_id": "8692f53c-dfa5-4823-abe8-807251aa7419",
+    "excerpt": "A strong content strategy turns your website into a lead machine. Scale Forge builds data-driven content strategies that drive organic traffic, build authority, and grow your business.",
+    "featuredImage": {
+      "alt": "How a Smart Content Strategy Turns Your Website Into a Lead-Generating Machine",
+      "asset": {
+        "_ref": "image-ac69768d9d6a712429b55ae5c26376ce93cdb2e2-696x1021-heif",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/ac69768d9d6a712429b55ae5c26376ce93cdb2e2-696x1021.heif",
+      "localPath": "/Assets/blog/content-strategy-agency-guide-featured.heif"
+    },
+    "publishedDate": "2026-05-04",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "content-strategy-agency-guide"
+    },
+    "title": "How a Smart Content Strategy Turns Your Website Into a Lead-Generating Machine",
+    "type": "blog"
+  },
+  {
+    "_id": "b0281715-1365-4d88-83e7-e5869c13c11c",
+    "excerpt": "Learn what Scale Forge does and how SEO boosts Google rankings, organic traffic, and leads. Discover key services like keyword research, on-page SEO, technical SEO, content marketing, and link building to drive visibility, targeted traffic, and long-term business growth.",
+    "featuredImage": {
+      "alt": "What Scale Forge does and how Search Engine Optimization (SEO) helps businesses increase organic traffic, improve Google rankings, and generate high converting leads. In today’s competitive digital landscape, driven by AI search, zero-click searches, and constant Google algorithm updates—investing in professional SEO services is essential for online visibility and long-term growth. It highlights how a results-driven agency like Scale Forge uses keyword research, on-page SEO, technical SEO audits, content marketing, and link building to boost search engine rankings, attract targeted website traffic, and deliver measurable ROI for businesses looking to scale.",
+      "asset": {
+        "_ref": "image-00ef298712e45c4802ffd7d79f567f14ad6b7675-4810x3207-jpg",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/00ef298712e45c4802ffd7d79f567f14ad6b7675-4810x3207.jpg",
+      "localPath": "/Assets/blog/How-the-Right-SEO-Agency-Can-Transform-Your-Business-in-2026-featured.jpg"
+    },
+    "publishedDate": "2026-05-01",
+    "readTime": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "How-the-Right-SEO-Agency-Can-Transform-Your-Business-in-2026"
+    },
+    "title": "How the Right SEO Agency Can Transform Your Business in 2026",
+    "type": "blog"
+  },
+  {
+    "_id": "83689d8b-73d6-40cf-87ab-6cceab10494b",
+    "excerpt": "How a regional real estate firm tripled qualified lead volume in 9 months.",
+    "featuredImage": {
+      "alt": "Real estate website analytics dashboard showing growth in organic traffic",
+      "asset": {
+        "_ref": "image-5cc982510b1659b06c227a04e82066c721bd6653-1596x930-heif",
+        "_type": "reference"
+      },
+      "url": "https://cdn.sanity.io/images/aj16x5pr/blogs/5cc982510b1659b06c227a04e82066c721bd6653-1596x930.heif",
+      "localPath": "/Assets/blog/zero-organic-traction-to-page-one-dominance-featured.heif"
+    },
+    "publishedDate": "2026-04-15",
+    "readTime": 4,
+    "slug": {
+      "_type": "slug",
+      "current": "zero-organic-traction-to-page-one-dominance"
+    },
+    "title": "Zero Organic Traction to Page-One Dominance",
+    "type": "case-study"
+  }
+]
