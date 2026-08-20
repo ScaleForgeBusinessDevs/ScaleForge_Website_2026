@@ -1,6 +1,5 @@
 const nextConfig = {
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
@@ -40,15 +39,6 @@ const nextConfig = {
       },
       {
         source: "/portal/:path*",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow",
-          },
-        ],
-      },
-      {
-        source: "/studio/:path*",
         headers: [
           {
             key: "X-Robots-Tag",

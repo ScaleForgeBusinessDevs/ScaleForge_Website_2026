@@ -165,7 +165,6 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${akira.variable} ${turismo.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://cdn.sanity.io" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body

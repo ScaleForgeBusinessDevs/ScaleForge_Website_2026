@@ -1,5 +1,4 @@
-import { getAllProjects } from "@/lib/sanity/projectQueries";
-import { urlFor } from "@/lib/sanity/client";
+import projectsData from "@/data/projects.json";
 
 const siteUrl = "https://scalesforge.site";
 
@@ -34,13 +33,6 @@ const STATIC_PAGES = [
 
 export async function GET() {
   const now = new Date().toISOString();
-  let projects = [];
-
-  try {
-    projects = await getAllProjects();
-  } catch (error) {
-    console.error("Error fetching sitemap data from Sanity:", error);
-  }
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -68,8 +60,8 @@ export async function GET() {
   </url>`;
   }
 
-  // 3. Projects
-  for (const proj of projects) {
+  // 2. Projects
+  for (const proj of projectsData) {
     if (!proj.slug?.current) continue;
 
     const projUrl = `${siteUrl}/projects/${proj.slug.current}`;
@@ -80,18 +72,15 @@ export async function GET() {
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>`;
 
-    if (proj.coverImage?.asset) {
-      try {
-        const imageUrl = urlFor(proj.coverImage).url();
-        const safeTitle = proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
-        xml += `
+    const imgPath = proj.coverImage?.localPath || proj.coverImage?.url;
+    if (imgPath) {
+      const fullImgUrl = imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath}`;
+      const safeTitle = proj.title ? proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c])) : "";
+      xml += `
     <image:image>
-      <image:loc>${imageUrl}</image:loc>
+      <image:loc>${fullImgUrl}</image:loc>
       <image:title>${safeTitle}</image:title>
     </image:image>`;
-      } catch (e) {
-        console.error("Error building image URL for project:", proj.slug.current, e);
-      }
     }
 
     xml += `
