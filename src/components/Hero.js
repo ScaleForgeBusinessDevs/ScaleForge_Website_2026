@@ -74,7 +74,7 @@ export default function Hero() {
 
         <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
-            href="/contact"
+            href="https://cal.com/shahood-saleem-gbzisb/30min"
             className="hero-cta inline-flex items-center gap-2 rounded-full bg-[#2563eb] px-6 py-3 text-[12px] uppercase tracking-[0.12em] text-white transition-transform hover:scale-[1.03]"
           >
             Book Strategy Call
