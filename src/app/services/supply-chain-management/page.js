@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Supply Chain Management Software | Sales Forecasting | ScaleForge",
+  title: "Supply Chain Software & Sales Forecasting | ScaleForge",
   description:
-    "ScaleForge builds custom supply chain management software with AI-powered sales forecasting, inventory optimisation, and supplier analytics — purpose-built for your operations.",
+    "ScaleForge builds custom supply chain software with AI sales forecasting, inventory optimization, and supplier analytics purpose-built for your operations.",
   alternates: {
     canonical: "https://scalesforge.site/services/supply-chain-management",
     languages: {
@@ -39,10 +39,9 @@ export const metadata = {
     }
   },
   openGraph: {
-    title:
-      "Supply Chain Management Software | Sales Forecasting | ScaleForge",
+    title: "Supply Chain Software & Sales Forecasting | ScaleForge",
     description:
-      "ScaleForge builds custom supply chain management software with AI-powered sales forecasting, inventory optimisation, and supplier analytics — purpose-built for your operations.",
+      "ScaleForge builds custom supply chain software with AI sales forecasting, inventory optimization, and supplier analytics purpose-built for your operations.",
     url: "https://scalesforge.site/services/supply-chain-management",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -50,10 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Supply Chain Management Software | Sales Forecasting | ScaleForge",
+    title: "Supply Chain Software & Sales Forecasting | ScaleForge",
     description:
-      "ScaleForge builds custom supply chain management software with AI-powered sales forecasting, inventory optimisation, and supplier analytics — purpose-built for your operations.",
+      "ScaleForge builds custom supply chain software with AI sales forecasting, inventory optimization, and supplier analytics purpose-built for your operations.",
     images: ["/og-image.png"],
   },
 };
@@ -128,7 +126,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Supply Chain Management Software",
-    "description": "ScaleForge builds custom supply chain management software with AI-powered sales forecasting, inventory optimisation, and supplier analytics — purpose-built for your operations.",
+    "description": "ScaleForge builds custom supply chain software with AI sales forecasting, inventory optimization, and supplier analytics purpose-built for your operations.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"

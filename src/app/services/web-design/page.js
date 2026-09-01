@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "Web Design Services | Custom UI/UX from ScaleForge",
   description:
-    "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+    "Custom, conversion-focused web design in Figma from ScaleForge. Zero templates. Mobile-first, WCAG-compliant UI/UX that turns clicks into clients.",
   alternates: {
     canonical: "https://scalesforge.site/services/web-design",
     languages: {
@@ -43,7 +43,7 @@ export const metadata = {
     title:
       "Web Design Services | Custom UI/UX from ScaleForge",
     description:
-      "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+      "Custom, conversion-focused web design in Figma from ScaleForge. Zero templates. Mobile-first, WCAG-compliant UI/UX that turns clicks into clients.",
     url: "https://scalesforge.site/services/web-design",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -54,7 +54,7 @@ export const metadata = {
     title:
       "Web Design Services | Custom UI/UX from ScaleForge",
     description:
-      "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+      "Custom, conversion-focused web design in Figma from ScaleForge. Zero templates. Mobile-first, WCAG-compliant UI/UX that turns clicks into clients.",
     images: ["/og-image.png"],
   },
 };
@@ -122,7 +122,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Web Design Services",
-    "description": "ScaleForge designs custom, conversion-focused websites in Figma. Zero templates. Mobile-first, WCAG-compliant, brand-driven design that turns clicks into clients.",
+    "description": "Custom, conversion-focused web design in Figma from ScaleForge. Zero templates. Mobile-first, WCAG-compliant UI/UX that turns clicks into clients.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"
@@ -157,7 +157,7 @@ const FAQS = [
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
 
@@ -312,7 +312,7 @@ const FAQS = [
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
     </>

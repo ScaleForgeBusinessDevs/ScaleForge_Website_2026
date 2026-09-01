@@ -31,7 +31,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge",
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
     url: "https://scalesforge.site/terms",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -42,7 +42,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge",
+      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
     images: ["/og-image.png"],
   },
 };
@@ -78,9 +78,48 @@ const TOC = [
 ];
 
 export default function TermsPage() {
+  const termsSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Service | ScaleForge",
+    "description": "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+    "url": "https://scalesforge.site/terms",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://scalesforge.site/terms"
+      }
+    ]
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(termsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#08080a] pb-12 pt-40 lg:pb-16 lg:pt-48">
         <div className="bg-grid-dark bg-grid-fade pointer-events-none absolute inset-0" />
@@ -125,7 +164,7 @@ export default function TermsPage() {
                 </h2>
                 <p>
                   These Terms of Service (&quot;Terms&quot;) govern your use of
-                  the ScaleForge website (scaleforge.com) and our services. By
+                  the ScaleForge website (scalesforge.site) and our services. By
                   accessing the Site or engaging ScaleForge for services, you
                   agree to be bound by these Terms. If you do not agree, do not
                   use the Site or our services.

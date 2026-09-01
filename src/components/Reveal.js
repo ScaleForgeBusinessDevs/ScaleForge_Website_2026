@@ -55,6 +55,7 @@ export default function Reveal({
               ).forEach((t) => {
                 t.classList.remove("gsap-will-reveal");
               });
+              ScrollTrigger.refresh();
             },
           });
         },

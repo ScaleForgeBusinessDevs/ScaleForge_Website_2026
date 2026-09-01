@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
+  title: "Our Approach | High-Ranking Sites | ScaleForge",
   description:
     "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
   alternates: {
@@ -39,8 +39,7 @@ export const metadata = {
     }
   },
   openGraph: {
-    title:
-      "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
+    title: "Our Approach | High-Ranking Sites | ScaleForge",
     description:
       "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
     url: "https://scalesforge.site/solutions",
@@ -50,8 +49,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Our Approach | How ScaleForge Builds Sites That Rank and Convert",
+    title: "Our Approach | High-Ranking Sites | ScaleForge",
     description:
       "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic. See how we work.",
     images: ["/og-image.png"],

@@ -5,8 +5,7 @@ import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
 import CTASection from "@/components/CTASection";
 import ProjectFilterBar from "@/components/ProjectFilterBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { getProjectsByCategory } from "@/lib/sanity/projectQueries";
-import { urlFor } from "@/lib/sanity/client";
+import projectsData from "@/data/projects.json";
 import { LayoutGrid } from "lucide-react";
 
 export const revalidate = 600; // Revalidate every 10 minutes (ISR)
@@ -58,27 +57,81 @@ export const metadata = {
 };
 
 function getImageUrl(project) {
-  return project.coverImage?.asset
-    ? urlFor(project.coverImage).width(800).height(500).url()
-    : null;
+  return project.coverImage?.localPath || project.coverImage?.url || null;
 }
 
 export default async function ProjectsPage({ searchParams }) {
   const params = await searchParams;
-  const category = params.category;
+  const rawCategory = params.category;
+  // Next.js searchParams delivers "+" literally (not decoded to space).
+  // Decode it so "Web+Development" matches "Web Development".
+  const category = rawCategory
+    ? decodeURIComponent(rawCategory.replace(/\+/g, " "))
+    : undefined;
 
-  let projects = [];
-  try {
-    projects = await getProjectsByCategory(category);
-  } catch {
-    // Sanity not yet configured — show empty state
+  let projects = projectsData;
+  if (category && category !== "all") {
+    projects = projectsData.filter(
+      (p) => p.category?.toLowerCase() === category.toLowerCase()
+    );
   }
 
-  const featured = projects.find((p) => p.featured);
+  // Only split out a featured project on the unfiltered "All Projects" view.
+  // When a category filter is active the featured banner is hidden (!category guard),
+  // so we must NOT remove the featured project from the grid — or it disappears entirely.
+  const featured = !category ? projects.find((p) => p.featured) : null;
   const grid = featured ? projects.filter((p) => p._id !== featured._id) : projects;
+
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects | ScaleForge",
+    "description": "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+    "url": "https://scalesforge.site/projects",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": projects.map((p, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": p.title,
+          "description": p.excerpt || p.title,
+          "url": p.slug?.current ? `https://scalesforge.site/projects/${p.slug.current}` : "https://scalesforge.site/projects"
+        }
+      }))
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://scalesforge.site/projects"
+      }
+    ]
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -139,13 +192,10 @@ export default async function ProjectsPage({ searchParams }) {
                 href={`/projects/${featured.slug.current}`}
                 className="group relative block overflow-hidden rounded-3xl border border-white/[0.07] bg-[#101013]"
               >
-                {featured.coverImage?.asset && (
+                {(featured.coverImage?.localPath || featured.coverImage?.url) && (
                   <div className="relative aspect-[21/9] overflow-hidden">
                     <img
-                      src={urlFor(featured.coverImage)
-                        .width(1440)
-                        .height(617)
-                        .url()}
+                      src={featured.coverImage.localPath || featured.coverImage.url}
                       alt={featured.coverImage.alt ?? featured.title}
                       className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />

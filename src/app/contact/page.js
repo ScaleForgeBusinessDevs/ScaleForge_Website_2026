@@ -132,18 +132,6 @@ export default function ContactPage() {
         "email": "scaleforgebusinessdev@gmail.com",
         "url": "https://scalesforge.site/contact"
       }
-    },
-    keywords: ["Contact ScaleForge", "Hire Digital Agency", "Book Tech Audit", "Cal.com Audit ScaleForge", "Web Development Quote"],
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1
-      }
     }
   };
 

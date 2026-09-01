@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "Content Creation & SEO Copywriting Services | ScaleForge",
   description:
-    "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+    "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog posts, landing pages, pillar guides, and copy built to rank and establish authority.",
   alternates: {
     canonical: "https://scalesforge.site/services/content-creation",
     languages: {
@@ -43,7 +43,7 @@ export const metadata = {
     title:
       "Content Creation & SEO Copywriting Services | ScaleForge",
     description:
-      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog posts, landing pages, pillar guides, and copy built to rank and establish authority.",
     url: "https://scalesforge.site/services/content-creation",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -54,7 +54,7 @@ export const metadata = {
     title:
       "Content Creation & SEO Copywriting Services | ScaleForge",
     description:
-      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+      "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog posts, landing pages, pillar guides, and copy built to rank and establish authority.",
     images: ["/og-image.png"],
   },
 };
@@ -121,7 +121,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Content Creation & SEO Copywriting Services",
-    "description": "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog articles, landing pages, pillar guides, and brand copy — built to rank and establish authority.",
+    "description": "Human-written, E-E-A-T compliant SEO content from ScaleForge. Blog posts, landing pages, pillar guides, and copy built to rank and establish authority.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"
@@ -154,7 +154,7 @@ const FAQS = [
           label: "Book a Free Content Strategy Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
         }}
-        secondaryCta={{ label: "Read Our Blog", href: "/blog" }}
+        secondaryCta={{ label: "View Our Projects", href: "/projects" }}
       />
 
       {/* Quality Over Volume */}

@@ -1,6 +1,4 @@
-import { getAllPosts } from "@/lib/sanity/queries";
-import { getAllProjects } from "@/lib/sanity/projectQueries";
-import { urlFor } from "@/lib/sanity/client";
+import projectsData from "@/data/projects.json";
 
 const siteUrl = "https://scalesforge.site";
 
@@ -28,7 +26,6 @@ const STATIC_PAGES = [
     "https://scalesforge.site/Assets/Shahood.avif",
     "https://scalesforge.site/Assets/Ruhan_2.avif"
   ] },
-  { url: `${siteUrl}/blog`, priority: 0.75, changeFrequency: "daily", images: [] },
   { url: `${siteUrl}/contact`, priority: 0.7, changeFrequency: "yearly", images: [] },
   { url: `${siteUrl}/privacy`, priority: 0.3, changeFrequency: "yearly", images: [] },
   { url: `${siteUrl}/terms`, priority: 0.3, changeFrequency: "yearly", images: [] },
@@ -36,17 +33,6 @@ const STATIC_PAGES = [
 
 export async function GET() {
   const now = new Date().toISOString();
-  let posts = [];
-  let projects = [];
-
-  try {
-    [posts, projects] = await Promise.all([
-      getAllPosts(),
-      getAllProjects()
-    ]);
-  } catch (error) {
-    console.error("Error fetching sitemap data from Sanity:", error);
-  }
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -74,38 +60,8 @@ export async function GET() {
   </url>`;
   }
 
-  // 2. Blog Posts
-  for (const post of posts) {
-    if (!post.slug?.current) continue;
-    
-    const postUrl = `${siteUrl}/blog/${post.slug.current}`;
-    xml += `
-  <url>
-    <loc>${postUrl}</loc>
-    <lastmod>${post.publishedDate ? new Date(post.publishedDate).toISOString() : now}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>`;
-
-    if (post.featuredImage?.asset) {
-      try {
-        const imageUrl = urlFor(post.featuredImage).url();
-        const safeTitle = post.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
-        xml += `
-    <image:image>
-      <image:loc>${imageUrl}</image:loc>
-      <image:title>${safeTitle}</image:title>
-    </image:image>`;
-      } catch (e) {
-        console.error("Error building image URL for post:", post.slug.current, e);
-      }
-    }
-
-    xml += `
-  </url>`;
-  }
-
-  // 3. Projects
-  for (const proj of projects) {
+  // 2. Projects
+  for (const proj of projectsData) {
     if (!proj.slug?.current) continue;
 
     const projUrl = `${siteUrl}/projects/${proj.slug.current}`;
@@ -116,18 +72,15 @@ export async function GET() {
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>`;
 
-    if (proj.coverImage?.asset) {
-      try {
-        const imageUrl = urlFor(proj.coverImage).url();
-        const safeTitle = proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c]));
-        xml += `
+    const imgPath = proj.coverImage?.localPath || proj.coverImage?.url;
+    if (imgPath) {
+      const fullImgUrl = imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath}`;
+      const safeTitle = proj.title ? proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c])) : "";
+      xml += `
     <image:image>
-      <image:loc>${imageUrl}</image:loc>
+      <image:loc>${fullImgUrl}</image:loc>
       <image:title>${safeTitle}</image:title>
     </image:image>`;
-      } catch (e) {
-        console.error("Error building image URL for project:", proj.slug.current, e);
-      }
     }
 
     xml += `

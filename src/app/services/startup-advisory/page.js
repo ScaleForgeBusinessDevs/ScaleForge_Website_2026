@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Startup Advisory Services | Strategic Mentorship from ScaleForge",
+  title: "Startup Advisory & Strategic Mentorship | ScaleForge",
   description:
-    "ScaleForge provides hands-on startup advisory: pitch deck creation, fundraising strategy, go-to-market planning, and investor introductions for early-stage founders.",
+    "ScaleForge provides hands-on startup advisory: pitch deck refinement, fundraising strategy, go-to-market planning, and investor introductions.",
   alternates: {
     canonical: "https://scalesforge.site/services/startup-advisory",
     languages: {
@@ -39,10 +39,9 @@ export const metadata = {
     }
   },
   openGraph: {
-    title:
-      "Startup Advisory Services | Strategic Mentorship from ScaleForge",
+    title: "Startup Advisory & Strategic Mentorship | ScaleForge",
     description:
-      "ScaleForge provides hands-on startup advisory: pitch deck creation, fundraising strategy, go-to-market planning, and investor introductions for early-stage founders.",
+      "ScaleForge provides hands-on startup advisory: pitch deck refinement, fundraising strategy, go-to-market planning, and investor introductions.",
     url: "https://scalesforge.site/services/startup-advisory",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -50,10 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Startup Advisory Services | Strategic Mentorship from ScaleForge",
+    title: "Startup Advisory & Strategic Mentorship | ScaleForge",
     description:
-      "ScaleForge provides hands-on startup advisory: pitch deck creation, fundraising strategy, go-to-market planning, and investor introductions for early-stage founders.",
+      "ScaleForge provides hands-on startup advisory: pitch deck refinement, fundraising strategy, go-to-market planning, and investor introductions.",
     images: ["/og-image.png"],
   },
 };
@@ -121,7 +119,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Startup Advisory Services",
-    "description": "ScaleForge provides hands-on startup advisory: pitch deck creation, fundraising strategy, go-to-market planning, and investor introductions for early-stage founders.",
+    "description": "ScaleForge provides hands-on startup advisory: pitch deck refinement, fundraising strategy, go-to-market planning, and investor introductions.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"

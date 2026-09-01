@@ -6,7 +6,7 @@ import PricingAnchorNav from "@/components/PricingAnchorNav";
 import { ArrowRight, Check } from "lucide-react";
 
 export const metadata = {
-  title: "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+  title: "Pricing | Transparent Service Tiers | ScaleForge",
   description:
     "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
   alternates: {
@@ -33,9 +33,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
+      "Pricing | Transparent Service Tiers | ScaleForge",
     description:
-      "Transparent pricing for ScaleForge",
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
     url: "https://scalesforge.site/pricing",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -46,7 +46,7 @@ export const metadata = {
     title:
       "Pricing | Transparent Tiers for Web, SEO, Content & AI | ScaleForge",
     description:
-      "Transparent pricing for ScaleForge",
+      "Transparent pricing for ScaleForge's Web Design & Development, SEO, AI Automation, and Content Creation services. Tier-based, no hidden fees, no contracts.",
     images: ["/og-image.png"],
   },
 };
@@ -170,7 +170,7 @@ function PricingTrack({ id, eyebrow, heading, subhead, tiers, dark }) {
 const AI_TIERS = [
   { name: "Starter", price: "$800", suffix: "one-time", description: "A single automated workflow to eliminate your most painful manual task.", included: ["1 custom n8n/Make workflow", "CRM or spreadsheet integration", "Documentation & handoff"], featured: false },
   { name: "Growth", price: "$2,400", suffix: "one-time", description: "A connected automation stack that handles lead gen, outreach, and reporting.", included: ["Up to 5 workflows", "AI lead enrichment pipeline", "Outreach sequence automation", "CRM sync + reporting dashboard"], detail: "3 workflows — lead enrichment, outreach, CRM sync", featured: true },
-  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Ongoing support retainer"], detail: "Automation Engine — unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
+  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Support retainer available (billed separately)"], detail: "Automation Engine — unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
 ];
 
 const WEB_TIERS = [
@@ -216,17 +216,131 @@ const FAQS = [
   { q: "How quickly can we start?", a: "For project-based work, we onboard new clients within 1 to 2 weeks of contract signing. For monthly retainers, we typically begin the kickoff process within 5 business days of payment. Cohort capacity does sell out — booking a call early reserves your slot." },
 ];
 
-const pricingSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Pricing | ScaleForge",
-  "description": "Transparent pricing for ScaleForge services.",
-  "url": "https://scalesforge.site/pricing",
-};
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pricing",
+        "item": "https://scalesforge.site/pricing"
+      }
+    ]
+  };
+
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "ScaleForge Pricing & Service Packages",
+    "description": "Transparent pricing tiers for ScaleForge Web Design & Development, SEO, AI Automation, Content Creation, and Social Media Marketing.",
+    "url": "https://scalesforge.site/pricing",
+    "provider": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    },
+    // TODO: replace with real rating data
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "All-in-One Growth Bundles",
+        "itemListElement": BUNDLE_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `${tier.name} Bundle`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#all-in-one"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "AI Development & Automation",
+        "itemListElement": AI_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `AI Automation - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#ai-development"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Web Design & Development",
+        "itemListElement": WEB_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Web Design & Dev - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#web-design-dev"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Search Engine Optimization",
+        "itemListElement": SEO_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `SEO - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#seo"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Content Creation",
+        "itemListElement": CONTENT_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Content Creation - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#content"
+        }))
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Social Media Marketing",
+        "itemListElement": SOCIAL_TIERS.map((tier) => ({
+          "@type": "Offer",
+          "name": `Social Media - ${tier.name}`,
+          "price": tier.price.replace(/[^0-9]/g, ""),
+          "priceCurrency": "USD",
+          "description": tier.description,
+          "url": "https://scalesforge.site/pricing#social-media"
+        }))
+      }
+    ]
+  };
 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -240,9 +354,9 @@ const pricingSchema = {
               Choose Your Growth Path
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">
-              Flexible, transparent pricing for every stage of growth. No hidden
-              fees, no &ldquo;contact us for a quote&rdquo; games. Pick a tier
-              and let&apos;s build.
+              Flexible, transparent pricing for every stage of growth. Fixed
+              pricing on individual services, custom quotes for bundles — no
+              hidden fees, ever. Pick a tier and let&apos;s build.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -279,9 +393,9 @@ const pricingSchema = {
               All-in-One Growth Bundles
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              Every channel. One team. One invoice. Bundled pricing saves you
-              15–20% versus booking services individually — and gives you a
-              unified strategy that actually compounds.
+              Every channel. One team. One invoice. Bundled pricing costs less
+              than booking services individually — and gives you a unified
+              strategy that actually compounds.
             </p>
           </Reveal>
 

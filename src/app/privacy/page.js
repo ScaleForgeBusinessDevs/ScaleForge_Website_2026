@@ -63,9 +63,48 @@ const TOC = [
 ];
 
 export default function PrivacyPage() {
+  const privacySchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy | ScaleForge",
+    "description": "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    "url": "https://scalesforge.site/privacy",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Privacy Policy",
+        "item": "https://scalesforge.site/privacy"
+      }
+    ]
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#08080a] pb-12 pt-40 lg:pb-16 lg:pt-48">
         <div className="bg-grid-dark bg-grid-fade pointer-events-none absolute inset-0" />
@@ -112,7 +151,7 @@ export default function PrivacyPage() {
                   ScaleForge (&quot;we,&quot; &quot;our,&quot; or
                   &quot;us&quot;) respects your privacy. This Privacy Policy
                   explains how we collect, use, share, and protect your personal
-                  information when you visit scaleforge.com (the
+                  information when you visit scalesforge.site (the
                   &quot;Site&quot;) or engage our services.
                 </p>
                 <p className="mt-4">
@@ -191,7 +230,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="ml-1 space-y-2">
                   {[
-                    "Service providers assisting our operations (e.g., Stripe for payments, Sanity for content storage, Vercel for hosting, email tools)",
+                    "Service providers assisting our operations (e.g., Stripe for payments, Vercel for hosting, email tools)",
                     "Legal authorities when required by law",
                     "Successor entities in the event of a merger, acquisition, or asset sale",
                   ].map((item) => (
@@ -304,7 +343,7 @@ export default function PrivacyPage() {
                 <p>
                   We use industry-standard security measures including HTTPS
                   encryption, access controls, secure storage with reputable
-                  providers (Vercel, Sanity, Google), and minimum-necessary data
+                  providers (Vercel, Google), and minimum-necessary data
                   collection. No system is 100% secure; in the unlikely event of
                   a breach affecting your data, we&apos;ll notify you per
                   applicable law.

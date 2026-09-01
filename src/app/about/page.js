@@ -85,9 +85,48 @@ const PAYMENT = [
 ];
 
 export default function About() {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About ScaleForge",
+    "description": "The ScaleForge story, operational standards, and executive leadership.",
+    "url": "https://scalesforge.site/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "ScaleForge",
+      "url": "https://scalesforge.site"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://scalesforge.site/about"
+      }
+    ]
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -437,7 +476,7 @@ export default function About() {
         }}
         secondaryCta={{
           label: "See Our Work",
-          href: "/blog?type=case-studies",
+          href: "/projects",
         }}
       />
     </>
