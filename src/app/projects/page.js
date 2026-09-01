@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { ShaderAnimation } from "@/components/ShaderAnimationLazy";
@@ -11,7 +12,7 @@ import { LayoutGrid } from "lucide-react";
 export const revalidate = 600; // Revalidate every 10 minutes (ISR)
 
 export const metadata = {
-  title: "Projects | ScaleForge",
+  title: "Our Work | Web, AI & SEO Case Studies | ScaleForge",
   description:
     "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
   alternates: {
@@ -19,9 +20,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/projects",
       "x-default": "https://scalesforge.site/projects"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/projects"
     }
   },
   keywords: ["ScaleForge Case Studies","Web Design Portfolio","AI Development Projects","Client Work","Next.js Site Examples"],
@@ -38,7 +36,7 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Projects | ScaleForge",
+      "Our Work | Web, AI & SEO Case Studies | ScaleForge",
     description:
       "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     url: "https://scalesforge.site/projects",
@@ -49,7 +47,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Projects | ScaleForge",
+      "Our Work | Web, AI & SEO Case Studies | ScaleForge",
     description:
       "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     images: ["/og-image.png"],
@@ -85,7 +83,7 @@ export default async function ProjectsPage({ searchParams }) {
   const projectsSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Projects | ScaleForge",
+    "name": "Our Work | ScaleForge Case Studies",
     "description": "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     "url": "https://scalesforge.site/projects",
     "mainEntity": {
@@ -133,7 +131,7 @@ export default async function ProjectsPage({ searchParams }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
           <ShaderAnimation />
         </div>
@@ -194,10 +192,13 @@ export default async function ProjectsPage({ searchParams }) {
               >
                 {(featured.coverImage?.localPath || featured.coverImage?.url) && (
                   <div className="relative aspect-[21/9] overflow-hidden">
-                    <img
+                    <Image
                       src={featured.coverImage.localPath || featured.coverImage.url}
                       alt={featured.coverImage.alt ?? featured.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 1440px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-[#08090a] via-[#08090a]/40 to-transparent" />

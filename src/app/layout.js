@@ -47,9 +47,20 @@ const turismo = localFont({
   display: "swap",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  colorScheme: "dark",
+  themeColor: "#08080a",
+};
+
 export const metadata = {
   metadataBase: new URL("https://scalesforge.site"),
-  title: "ScaleForge - Building Business and Automating Workflows",
+  title: {
+    default: "ScaleForge - Building Business and Automating Workflows",
+    template: "%s",
+  },
   description:
     "ScaleForge lets modern teams build, automate and monitor powerful workflows from one visual workspace.",
   icons: {
@@ -63,9 +74,6 @@ export const metadata = {
     languages: {
       "en": "/",
       "x-default": "/"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "/"
     }
   },
   keywords: [
@@ -97,12 +105,19 @@ export default function RootLayout({ children }) {
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://scalesforge.site/#organization",
     "name": "ScaleForge",
     "url": "https://scalesforge.site",
     "logo": "https://scalesforge.site/Assets/favicon_SF.png",
     "foundingDate": "2024",
     "description": "ScaleForge is a premier digital agency building high-performance websites, custom AI automations, and growth-driven SEO & content strategies.",
     "email": "scaleforgebusinessdev@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "addressCountry": "PK"
+    },
     "founder": [
       {
         "@type": "Person",
@@ -128,9 +143,22 @@ export default function RootLayout({ children }) {
     }
   };
 
+  const siteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://scalesforge.site/#website",
+    "name": "ScaleForge",
+    "alternateName": "ScaleForge Digital Growth Studio",
+    "url": "https://scalesforge.site",
+    "inLanguage": "en",
+    "publisher": { "@id": "https://scalesforge.site/#organization" }
+  };
+
   const profSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://scalesforge.site/#service",
+    "parentOrganization": { "@id": "https://scalesforge.site/#organization" },
     "name": "ScaleForge",
     "image": "https://scalesforge.site/Assets/favicon_SF.png",
     "url": "https://scalesforge.site",
@@ -138,8 +166,10 @@ export default function RootLayout({ children }) {
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
       "addressCountry": "PK"
     },
+    "email": "scaleforgebusinessdev@gmail.com",
     "serviceType": [
       "Web Design",
       "Web Development",
@@ -179,6 +209,11 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(profSchema) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
 
         <SmoothScroll />

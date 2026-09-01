@@ -21,9 +21,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/startup-advisory",
       "x-default": "https://scalesforge.site/services/startup-advisory"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/startup-advisory"
     }
   },
   keywords: ["Startup Advisory","Pitch Deck Design","Fundraising Strategy Founder","Go To Market Blueprint","Investor Introductions"],

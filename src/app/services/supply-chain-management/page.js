@@ -21,9 +21,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/supply-chain-management",
       "x-default": "https://scalesforge.site/services/supply-chain-management"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/supply-chain-management"
     }
   },
   keywords: ["Supply Chain Software","Sales Forecasting Models","Inventory Optimization System","ERP Custom Integration","SAP Dynamics Odoo API"],

@@ -35,6 +35,17 @@
 
 html {
   overflow-x: hidden;
+  /* Fixed navbar (72px) + pricing anchor rail — keep anchor targets clear of it. */
+  scroll-padding-top: 7.5rem;
+}
+
+/* Used by horizontally scrollable rails (e.g. the pricing anchor nav). */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 body {

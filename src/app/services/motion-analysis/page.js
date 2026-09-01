@@ -21,9 +21,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/motion-analysis",
       "x-default": "https://scalesforge.site/services/motion-analysis"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/motion-analysis"
     }
   },
   keywords: ["Time and Motion Study","Motion Analysis","Operations Efficiency Consulting","Workplace Productivity","Throughput Optimization"],

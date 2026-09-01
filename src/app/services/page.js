@@ -25,9 +25,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services",
       "x-default": "https://scalesforge.site/services"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services"
     }
   },
   keywords: ["ScaleForge Capabilities","Digital Agency Services","Enterprise Web Development","Local SEO Plans","Automated Pipelines"],

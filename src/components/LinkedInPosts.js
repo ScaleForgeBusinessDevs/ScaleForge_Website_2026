@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { LinkedinIcon } from "@/components/BrandIcons";
 import { ExternalLink } from "lucide-react";
@@ -30,13 +31,13 @@ function PostCard({ post }) {
 
       {/* Image if available */}
       {post.imageUrl && (
-        <div className="relative overflow-hidden rounded-xl border border-white/[0.05] bg-white/[0.02]">
-          <img
+        <div className="relative h-64 overflow-hidden rounded-xl border border-white/[0.05] bg-white/[0.02]">
+          <Image
             src={post.imageUrl}
-            alt="LinkedIn Post Visual"
-            className="w-full h-auto object-cover max-h-64 transition-transform duration-500 group-hover:scale-[1.015]"
-            loading="lazy"
-            referrerPolicy="no-referrer"
+            alt={`ScaleForge LinkedIn post from ${post.publishedAt}`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
           />
         </div>
       )}

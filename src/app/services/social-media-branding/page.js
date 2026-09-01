@@ -22,9 +22,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/social-media-branding",
       "x-default": "https://scalesforge.site/services/social-media-branding"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/social-media-branding"
     }
   },
   keywords: ["Social Media Branding", "Brand Visual Identity Design", "Canva Templates Design", "Brand Guidelines Booklet", "Scroll Stopping Graphics"],

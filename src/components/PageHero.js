@@ -11,7 +11,7 @@ export default function PageHero({
   stats,
 }) {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+    <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
       <div className="pointer-events-none absolute inset-0 z-0">
         <ShaderAnimation />
       </div>

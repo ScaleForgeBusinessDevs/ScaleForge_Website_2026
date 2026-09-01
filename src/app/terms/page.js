@@ -10,9 +10,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/terms",
       "x-default": "https://scalesforge.site/terms"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/terms"
     }
   },
   keywords: ["Terms of Service","ScaleForge Terms"],

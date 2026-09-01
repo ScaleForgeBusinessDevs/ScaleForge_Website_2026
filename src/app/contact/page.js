@@ -15,9 +15,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/contact",
       "x-default": "https://scalesforge.site/contact"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/contact"
     }
   },
   keywords: ["Contact ScaleForge", "Hire Digital Agency", "Book Tech Audit", "Cal.com Audit ScaleForge", "Web Development Quote"],
@@ -119,6 +116,25 @@ export default function ContactPage() {
   const calUrl =
     process.env.NEXT_PUBLIC_CAL_URL ?? "https://cal.com/scaleforge";
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://scalesforge.site/contact"
+      }
+    ]
+  };
+
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -141,8 +157,12 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
           <ShaderAnimation />
         </div>

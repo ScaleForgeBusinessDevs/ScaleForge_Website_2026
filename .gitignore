@@ -44,3 +44,5 @@ next-env.d.ts
 /PRDs/
 /Switzer_Complete/
 /claude-seo-main/
+.claude/
+

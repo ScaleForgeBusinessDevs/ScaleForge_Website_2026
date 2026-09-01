@@ -1,6 +1,6 @@
 export default function ProjectDetailLoading() {
   return (
-    <div className="min-h-screen bg-[#08090a]">
+    <div className="min-h-screen min-h-[100svh] bg-[#08090a]">
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#08090a] px-6 pb-0 pt-32 lg:px-10 lg:pt-36">
         <div className="mx-auto max-w-[1440px]">

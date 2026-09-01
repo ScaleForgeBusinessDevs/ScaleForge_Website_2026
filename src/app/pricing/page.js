@@ -14,9 +14,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/pricing",
       "x-default": "https://scalesforge.site/pricing"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/pricing"
     }
   },
   keywords: ["ScaleForge Pricing","Web Design Cost","SEO Agency Cost","AI Automation Pricing","Web Development Hourly Rate"],
@@ -342,7 +339,7 @@ const FAQS = [
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
           <ShaderAnimation />
         </div>

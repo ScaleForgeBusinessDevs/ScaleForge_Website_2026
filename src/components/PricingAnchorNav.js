@@ -31,7 +31,10 @@ export default function PricingAnchorNav() {
           : "-top-20 opacity-0 pointer-events-none"
       }`}
     >
-      <nav className="flex items-center justify-center gap-2 overflow-x-auto px-6 py-3.5 scrollbar-none sm:gap-8">
+      <nav
+        aria-label="Pricing sections"
+        className="flex items-center justify-start gap-5 overflow-x-auto overscroll-x-contain px-6 py-3.5 scrollbar-none sm:justify-center sm:gap-8"
+      >
         {LINKS.map((item) => (
           <a
             key={item.href}

@@ -29,7 +29,7 @@ const nextConfig = {
         ],
       },
       {
-        source: "/_next/:path*",
+        source: "/_next/static/:path*",
         headers: [
           {
             key: "X-Robots-Tag",

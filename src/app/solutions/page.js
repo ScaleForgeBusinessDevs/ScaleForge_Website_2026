@@ -21,9 +21,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/solutions",
       "x-default": "https://scalesforge.site/solutions"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/solutions"
     }
   },
   keywords: ["ScaleForge Solutions","How We Build Websites","ScaleForge Methodology","Conversion Focused Design","Organic Ranking Strategy"],
@@ -252,6 +249,25 @@ const DNA_BLOCKS = [
 ];
 
 export default function SolutionsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Our Approach",
+        "item": "https://scalesforge.site/solutions"
+      }
+    ]
+  };
+
   const solutionsSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -259,28 +275,34 @@ export default function SolutionsPage() {
     "description": "ScaleForge merges custom React architectures, AI automation, and semantic SEO to deliver sites that dominate search and convert traffic.",
     "url": "https://scalesforge.site/solutions",
     "mainEntity": {
-      "@type": "HowTo",
+      "@type": "ItemList",
       "name": "How ScaleForge Builds Digital Systems",
-      "step": [
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 4,
+      "itemListElement": [
         {
-          "@type": "HowToStep",
+          "@type": "ListItem",
+          "position": 1,
           "name": "Strategy & Discovery",
-          "text": "Deep-dive into your business goals, competitors, and target audience to create a data-driven roadmap."
+          "description": "Deep-dive into your business goals, competitors, and target audience to create a data-driven roadmap."
         },
         {
-          "@type": "HowToStep",
+          "@type": "ListItem",
+          "position": 2,
           "name": "Design & Architecture",
-          "text": "Custom UI/UX design and technical architecture built from scratch — no templates, no page builders."
+          "description": "Custom UI/UX design and technical architecture built from scratch — no templates, no page builders."
         },
         {
-          "@type": "HowToStep",
+          "@type": "ListItem",
+          "position": 3,
           "name": "Development & SEO",
-          "text": "Hand-coded Next.js development with semantic HTML, schema markup, and Core Web Vitals optimization."
+          "description": "Hand-coded Next.js development with semantic HTML, schema markup, and Core Web Vitals optimization."
         },
         {
-          "@type": "HowToStep",
+          "@type": "ListItem",
+          "position": 4,
           "name": "Launch & Growth",
-          "text": "Deployment, performance monitoring, and ongoing SEO + content strategy for compounding organic growth."
+          "description": "Deployment, performance monitoring, and ongoing SEO + content strategy for compounding organic growth."
         }
       ]
     }
@@ -291,6 +313,10 @@ export default function SolutionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(solutionsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageHero
         eyebrow="OUR APPROACH"

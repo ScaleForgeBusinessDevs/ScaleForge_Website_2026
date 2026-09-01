@@ -10,9 +10,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/privacy",
       "x-default": "https://scalesforge.site/privacy"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/privacy"
     }
   },
   keywords: ["Privacy Policy","ScaleForge Privacy"],

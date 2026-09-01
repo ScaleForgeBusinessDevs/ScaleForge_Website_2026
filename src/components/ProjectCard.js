@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { LayoutGrid, ArrowUpRight } from "lucide-react";
 import Reveal from "./Reveal";
@@ -33,10 +34,12 @@ export function ProjectCard({
         {/* Image */}
         <div className="relative aspect-[16/10] overflow-hidden">
           {image ? (
-            <img
+            <Image
               src={image}
               alt={title}
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-[#0f1011]">

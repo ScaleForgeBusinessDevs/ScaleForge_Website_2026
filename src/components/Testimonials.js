@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
 
 const TESTIMONIALS = [
@@ -67,11 +68,13 @@ export default function Testimonials() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       {/* Background image */}
-      <img
+      <Image
         src="/Assets/Testimonials.avif"
         alt=""
         aria-hidden
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
       />
 
       {/* Dark overlay so text stays readable */}

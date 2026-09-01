@@ -11,7 +11,6 @@ const PAGES = [
   { label: "Projects", href: "/projects" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Website Audit", href: "/audit" },
-  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -121,7 +120,7 @@ const CONTACT = [
         <circle cx="12" cy="10" r="3" />
       </svg>
     ),
-    label: "ADDRESS",
+    label: "US MAILING ADDRESS",
     value: "4803 Westpark Dr Ste 304B, Houston, TX 77063",
     href: "https://maps.google.com/?q=4803+Westpark+Dr+Ste+304B+Houston+TX+77063",
   },

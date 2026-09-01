@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function ProjectGallery({ images, projectTitle }) {
@@ -49,11 +50,13 @@ export function ProjectGallery({ images, projectTitle }) {
             className="group cursor-zoom-in overflow-hidden rounded-2xl border border-white/[0.07]"
             onClick={() => setLightboxIndex(i)}
           >
-            <div className="relative overflow-hidden">
-              <img
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <Image
                 src={img.src}
                 alt={img.alt ?? `${projectTitle} screenshot ${i + 1}`}
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               <div className="absolute inset-0 flex items-center justify-center bg-[#08090a]/0 opacity-0 transition-all duration-300 group-hover:bg-[#08090a]/40 group-hover:opacity-100">
@@ -105,12 +108,16 @@ export function ProjectGallery({ images, projectTitle }) {
             className="mx-16 flex max-h-[90vh] max-w-[90vw] flex-col items-center gap-4"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element -- lightbox
+                sizes to the intrinsic image, which next/image cannot express */}
             <img
               src={images[lightboxIndex].src}
               alt={
                 images[lightboxIndex].alt ??
                 `${projectTitle} screenshot ${lightboxIndex + 1}`
               }
+              loading="lazy"
+              decoding="async"
               className="max-h-[82vh] max-w-full rounded-2xl object-contain shadow-2xl"
             />
 

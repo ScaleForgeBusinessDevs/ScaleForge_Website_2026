@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import CTASection from "@/components/CTASection";
@@ -15,9 +16,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/about",
       "x-default": "https://scalesforge.site/about"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/about"
     }
   },
   keywords: ["ScaleForge Team","About ScaleForge","Digital Agency Story","Web Developers Karachi","AI Workflow Experts"],
@@ -128,7 +126,7 @@ export default function About() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
         <div className="pointer-events-none absolute inset-0 z-0">
           <ShaderAnimation />
         </div>
@@ -243,12 +241,13 @@ export default function About() {
             <Reveal>
               <div className="group flex flex-col">
                 {/* Photo */}
-                <div className="overflow-hidden rounded-2xl border border-white/[0.08]">
-                  <img
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/[0.08]">
+                  <Image
                     src="/Assets/Shahood.avif"
                     alt="Shahood Saleem — Founder & CEO"
-                    className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                    style={{ filter: "grayscale(100%)", aspectRatio: "3/4" }}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-top grayscale transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 {/* Info */}
@@ -309,12 +308,13 @@ export default function About() {
             <Reveal>
               <div className="group flex flex-col">
                 {/* Photo */}
-                <div className="overflow-hidden rounded-2xl border border-white/[0.08]">
-                  <img
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/[0.08]">
+                  <Image
                     src="/Assets/Ruhan_2.avif"
                     alt="Ruhan Bhaleshah — Partner & Technical Lead"
-                    className="w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                    style={{ filter: "grayscale(100%)", aspectRatio: "3/4" }}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-top grayscale transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 {/* Info */}

@@ -20,9 +20,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/web-development",
       "x-default": "https://scalesforge.site/services/web-development"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/web-development"
     }
   },
   keywords: ["Next.js Web Development","React JS Custom Coding","Supersonic Page Load Speeds","Core Web Vitals Optimization","Tailwind CSS Layouts"],
@@ -223,7 +220,7 @@ const FAQS = [
       >
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto flex max-w-3xl flex-col items-center text-center">
-            <h2 className="mt-5 text-[clamp(3rem,6.0vw,2.5rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
+            <h2 className="mt-5 text-[clamp(1.9rem,3.6vw,2.75rem)] font-display font-normal tracking-normal leading-[1.12] text-white">
               Engineered with Top-Tier Tools
             </h2>
           </Reveal>
@@ -305,7 +302,7 @@ const FAQS = [
           </Reveal>
 
           <Reveal className="mt-14 overflow-hidden rounded-2xl border border-white/[0.07]">
-            <div className="grid grid-cols-4 gap-0 border-b border-white/[0.07] bg-white/[0.02] px-6 py-3">
+            <div className="hidden grid-cols-4 gap-x-4 border-b border-white/[0.07] bg-white/[0.02] px-6 py-3 sm:grid">
               {[
                 "Core Metric",
                 "ScaleForge Target",
@@ -323,14 +320,29 @@ const FAQS = [
             {BENCHMARKS.map((row, i) => (
               <div
                 key={row.metric}
-                className={`grid grid-cols-4 gap-0 px-6 py-4 ${i < BENCHMARKS.length - 1 ? "border-b border-white/[0.07]" : ""}`}
+                className={`grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-4 sm:gap-x-4 sm:gap-y-0 sm:px-6 ${i < BENCHMARKS.length - 1 ? "border-b border-white/[0.07]" : ""}`}
               >
-                <p className="text-[13.5px] text-white/70">{row.metric}</p>
-                <p className="text-[13.5px] font-medium text-[#6fcf8e]">
+                <p className="text-[13.5px] font-medium text-white/80 sm:font-normal sm:text-white/70">
+                  {row.metric}
+                </p>
+                <p className="flex items-baseline justify-between gap-3 text-[13.5px] font-medium text-[#6fcf8e] sm:block">
+                  <span className="font-accent text-[10px] uppercase tracking-[0.14em] text-white/40 sm:hidden">
+                    ScaleForge
+                  </span>
                   {row.ours}
                 </p>
-                <p className="text-[13.5px] text-white/40">{row.industry}</p>
-                <p className="text-[13px] text-white/50">{row.impact}</p>
+                <p className="flex items-baseline justify-between gap-3 text-[13.5px] text-white/40 sm:block">
+                  <span className="font-accent text-[10px] uppercase tracking-[0.14em] text-white/40 sm:hidden">
+                    Industry
+                  </span>
+                  {row.industry}
+                </p>
+                <p className="flex items-baseline justify-between gap-3 text-[13px] text-white/50 sm:block">
+                  <span className="font-accent text-[10px] uppercase tracking-[0.14em] text-white/40 sm:hidden">
+                    Impact
+                  </span>
+                  {row.impact}
+                </p>
               </div>
             ))}
           </Reveal>

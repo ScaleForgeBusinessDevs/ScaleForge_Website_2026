@@ -9,7 +9,6 @@
 * [Pricing](https://scalesforge.site/pricing): Transparent tiers for web design, web development, SEO, content creation, and AI automations.
 * [Projects](https://scalesforge.site/projects): Selected case studies demonstrating user growth and workflow optimizations.
 * [About](https://scalesforge.site/about): ScaleForge story, core team profiles, and operational standards.
-* [Blog](https://scalesforge.site/blog): Strategic insights on development, automation, and search engine optimization.
 * [Contact](https://scalesforge.site/contact): Consultation request form and scheduling calendars.
 
 ## Digital Services & Capabilities

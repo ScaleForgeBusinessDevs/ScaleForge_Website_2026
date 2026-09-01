@@ -20,9 +20,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/ai-development",
       "x-default": "https://scalesforge.site/services/ai-development"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/ai-development"
     }
   },
   keywords: ["AI Automation Services","n8n Workflows","Make.com Automation","Zapier Integrations","AI Voice Agents","Vapi API"],

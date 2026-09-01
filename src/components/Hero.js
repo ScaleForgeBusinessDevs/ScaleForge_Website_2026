@@ -54,7 +54,7 @@ export default function Hero() {
     <section
       id="top"
       ref={root}
-      className="relative flex min-h-[100vh] items-center overflow-hidden bg-[#08080a] py-32"
+      className="relative flex min-h-[100vh] min-h-[100svh] items-center overflow-hidden bg-[#08080a] py-32"
     >
       <AnimatedGradient
         config={{ preset: "Prism" }}

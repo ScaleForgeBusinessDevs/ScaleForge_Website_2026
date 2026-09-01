@@ -23,9 +23,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/seo",
       "x-default": "https://scalesforge.site/services/seo"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/seo"
     }
   },
   keywords: ["Search Engine Optimization Services","Technical SEO Audit","On-Page Optimization","Authority Link Building","Organic Search Leads"],

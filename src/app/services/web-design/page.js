@@ -22,9 +22,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/web-design",
       "x-default": "https://scalesforge.site/services/web-design"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/web-design"
     }
   },
   keywords: ["Custom Web Design Figma","Figma Web Designer","UI UX Interface Agency","Mobile First Layouts","Zero Template Web Design"],

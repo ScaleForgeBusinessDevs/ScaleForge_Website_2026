@@ -22,9 +22,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/services/content-creation",
       "x-default": "https://scalesforge.site/services/content-creation"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/services/content-creation"
     }
   },
   keywords: ["SEO Copywriting","Content Strategy Agency","E-E-A-T Blog Writing","Pillar Guide Content","Google Snippets Optimization"],

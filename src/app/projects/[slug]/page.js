@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
@@ -17,6 +18,17 @@ export async function generateStaticParams() {
   return projectsData.map((p) => ({ slug: p.slug.current }));
 }
 
+// Google renders roughly 155-160 characters of a meta description. Cut at the
+// last word boundary before the limit rather than letting the SERP truncate.
+function clampDescription(text, max = 155) {
+  if (!text) return text;
+  const clean = String(text).replace(/s+/g, " ").trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[,;:-–—]+$/, "") + "…";
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
@@ -31,22 +43,20 @@ export async function generateMetadata({ params }) {
     } else {
       title = project.title + suffix;
     }
+    const metaDescription = clampDescription(project.excerpt);
     return {
       title,
-      description: project.excerpt,
+      description: metaDescription,
       alternates: {
         canonical: `https://scalesforge.site/projects/${slug}`,
         languages: {
           "en": `https://scalesforge.site/projects/${slug}`,
           "x-default": `https://scalesforge.site/projects/${slug}`
-        },
-        media: {
-          "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
         }
       },
       openGraph: {
         title,
-        description: project.excerpt,
+        description: metaDescription,
         url: `https://scalesforge.site/projects/${slug}`,
         siteName: "ScaleForge",
         images: imgUrl
@@ -57,7 +67,7 @@ export async function generateMetadata({ params }) {
       twitter: {
         card: "summary_large_image",
         title,
-        description: project.excerpt,
+        description: metaDescription,
         images: imgUrl ? [imgUrl] : undefined,
       },
     };
@@ -69,9 +79,6 @@ export async function generateMetadata({ params }) {
         languages: {
           "en": `https://scalesforge.site/projects/${slug}`,
           "x-default": `https://scalesforge.site/projects/${slug}`
-        },
-        media: {
-          "only screen and (max-width: 640px)": `https://scalesforge.site/projects/${slug}`
         }
       },
     };
@@ -163,9 +170,13 @@ const ptComponents = {
       if (!src) return null;
       return (
         <figure className="my-8">
+          {/* eslint-disable-next-line @next/next/no-img-element -- body images
+              have unknown intrinsic ratios; next/image needs fixed dimensions */}
           <img
             src={src}
             alt={value.alt ?? ""}
+            loading="lazy"
+            decoding="async"
             className="w-full rounded-2xl"
           />
 
@@ -211,6 +222,31 @@ export default async function ProjectDetailPage({ params }) {
   const categoryStyle =
     CATEGORY_COLORS[project.category] ?? "border-white/20 text-white/50";
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://scalesforge.site"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://scalesforge.site/projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": project.title,
+        "item": `https://scalesforge.site/projects/${slug}`
+      }
+    ]
+  };
+
   const projectDetailSchema = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -229,6 +265,10 @@ export default async function ProjectDetailPage({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(projectDetailSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
       <section className="relative bg-[#08080a] pb-0 pt-36 lg:pt-44">
@@ -291,12 +331,16 @@ export default async function ProjectDetailPage({ params }) {
         {heroImgUrl && (
           <div className="mt-10">
             <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
-              <img
-                src={heroImgUrl}
-                alt={project.coverImage?.alt ?? project.title}
-                className="w-full rounded-t-3xl object-cover aspect-[1.905] bg-white/[0.03]"
-                style={{ maxHeight: "70vh" }}
-              />
+              <div className="relative aspect-[1.905] max-h-[70vh] w-full overflow-hidden rounded-t-3xl bg-white/[0.03]">
+                <Image
+                  src={heroImgUrl}
+                  alt={project.coverImage?.alt ?? project.title}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 1440px"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         )}

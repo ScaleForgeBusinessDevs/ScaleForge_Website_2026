@@ -64,6 +64,25 @@ export default function Navbar() {
     };
   }, [open]);
 
+  // Any route change closes the drawer — otherwise it stays open over the new
+  // page and body scroll remains locked. Adjusted during render (not in an
+  // effect) so it lands in the same commit as the navigation.
+  const [lastPathname, setLastPathname] = useState(pathname);
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
+    setOpen(false);
+    setMobileServicesOpen(false);
+  }
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
   if (pathname.startsWith("/studio") || pathname.startsWith("/portal"))
     return null;
 
@@ -152,8 +171,10 @@ export default function Navbar() {
         </div>
 
         <button
-          aria-label="Toggle menu"
-          className="relative z-10 flex h-9 w-9 items-center justify-center text-[18px] text-white lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          className="relative z-10 -mr-2 flex h-11 w-11 items-center justify-center text-[18px] text-white lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={20} aria-hidden /> : <Menu size={20} aria-hidden />}
@@ -161,13 +182,16 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="mx-auto mt-2 max-w-[1440px] overflow-hidden rounded-2xl border border-white/[0.12] bg-[#0c0c0f]/90 px-6 py-6 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.55)] backdrop-blur-2xl lg:hidden">
-          <ul className="flex flex-col gap-4 font-sans text-[15px] font-[450] tracking-[-0.01em] text-white/65">
+        <div
+          id="mobile-nav"
+          className="mx-auto mt-2 max-h-[calc(100svh-7.5rem)] max-w-[1440px] overflow-y-auto overscroll-contain rounded-2xl border border-white/[0.12] bg-[#0c0c0f]/95 px-6 py-4 shadow-[0_8px_40px_-12px_rgba(0,0,0,0.55)] backdrop-blur-2xl lg:hidden"
+        >
+          <ul className="flex flex-col font-sans text-[15px] font-[450] tracking-[-0.01em] text-white/65">
             {LINKS.map((link) =>
               link.children ? (
                 <li key={link.label}>
                   <button
-                    className="flex w-full items-center justify-between"
+                    className="flex w-full items-center justify-between py-2.5 text-left"
                     onClick={() => setMobileServicesOpen((v) => !v)}
                     aria-expanded={mobileServicesOpen}
                   >
@@ -184,11 +208,12 @@ export default function Navbar() {
                       gridTemplateRows: mobileServicesOpen ? "1fr" : "0fr",
                     }}
                   >
-                    <div className="flex min-h-0 flex-col gap-3 overflow-hidden pt-4 pl-4 text-[12px] normal-case tracking-normal text-white/50">
+                    <div className="flex min-h-0 flex-col overflow-hidden pb-1 pl-4 text-[13px] normal-case tracking-normal text-white/50">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
+                          className="py-2"
                           onClick={() => setOpen(false)}
                         >
                           {child.label}
@@ -199,16 +224,20 @@ export default function Navbar() {
                 </li>
               ) : (
                 <li key={link.label}>
-                  <Link href={link.href} onClick={() => setOpen(false)}>
+                  <Link
+                    href={link.href}
+                    className="block py-2.5"
+                    onClick={() => setOpen(false)}
+                  >
                     {link.label}
                   </Link>
                 </li>
               ),
             )}
-            <li className="pt-2">
+            <li className="pb-1 pt-3">
               <Link
                 href="/contact"
-                className="inline-block rounded-full bg-[#2563eb] px-5 py-2 font-sans text-[12px] font-[550] tracking-[-0.01em] text-white"
+                className="inline-flex items-center rounded-full bg-[#2563eb] px-6 py-3 font-sans text-[13px] font-[550] tracking-[-0.01em] text-white"
                 onClick={() => setOpen(false)}
               >
                 Book a Call

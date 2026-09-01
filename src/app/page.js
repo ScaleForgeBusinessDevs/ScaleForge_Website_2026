@@ -19,9 +19,6 @@ export const metadata = {
     languages: {
       "en": "https://scalesforge.site/",
       "x-default": "https://scalesforge.site/"
-    },
-    media: {
-      "only screen and (max-width: 640px)": "https://scalesforge.site/"
     }
   },
   openGraph: {
@@ -50,17 +47,6 @@ export const metadata = {
 
 export default function Home() {
   const homeSchemas = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ScaleForge",
-      "url": "https://scalesforge.site",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://scalesforge.site/projects?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
     {
       "@context": "https://schema.org",
       "@type": "SiteNavigationElement",

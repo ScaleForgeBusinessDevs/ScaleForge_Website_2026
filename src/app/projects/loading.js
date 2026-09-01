@@ -24,7 +24,7 @@ export default function ProjectsLoading() {
   return (
     <>
       {/* Hero skeleton */}
-      <section className="relative flex min-h-screen items-center overflow-hidden bg-[#08090a]">
+      <section className="relative flex min-h-screen min-h-[100svh] items-center overflow-hidden bg-[#08090a]">
         <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-32 lg:px-10 lg:pt-28">
           <div className="max-w-4xl space-y-4">
             <div className="h-3.5 w-16 animate-pulse rounded-full bg-white/[0.06]" />

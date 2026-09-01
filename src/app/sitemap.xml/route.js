@@ -6,41 +6,58 @@ import { getPriorityCombos } from "@/lib/programmaticSeo";
 
 const siteUrl = "https://scalesforge.site";
 
+// Regenerate at most once a day — the sitemap has no per-request state.
+export const revalidate = 86400;
+
+// `lastmod` must reflect the last *meaningful content change*, not the time the
+// sitemap was served. Emitting `new Date()` for every URL on every request tells
+// Google the whole site changed on every crawl, and it starts ignoring lastmod
+// entirely. Bump the date here when a page's content actually changes.
 const STATIC_PAGES = [
-  { url: `${siteUrl}/`, priority: 1.0, changeFrequency: "weekly", images: [
+  { url: `${siteUrl}/`, lastmod: "2026-09-01", priority: 1.0, changeFrequency: "weekly", images: [
     "https://scalesforge.site/Assets/favicon_SF.png",
     "https://scalesforge.site/Assets/linkedin-post-1.avif",
     "https://scalesforge.site/Assets/linkedin-post-2.avif",
     "https://scalesforge.site/Assets/linkedin-post-3.avif"
   ] },
-  { url: `${siteUrl}/solutions`, priority: 0.9, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services`, priority: 0.9, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/ai-development`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/web-design`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/web-development`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/seo`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/content-creation`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/supply-chain-management`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/motion-analysis`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/social-media-branding`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/services/startup-advisory`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/industries`, priority: 0.9, changeFrequency: "weekly", images: [] },
-  { url: `${siteUrl}/locations`, priority: 0.9, changeFrequency: "weekly", images: [] },
-  { url: `${siteUrl}/case-studies`, priority: 0.85, changeFrequency: "weekly", images: [] },
-  { url: `${siteUrl}/audit`, priority: 0.85, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/pricing`, priority: 0.8, changeFrequency: "monthly", images: [] },
-  { url: `${siteUrl}/projects`, priority: 0.8, changeFrequency: "weekly", images: [] },
-  { url: `${siteUrl}/about`, priority: 0.7, changeFrequency: "monthly", images: [
+  { url: `${siteUrl}/solutions`, lastmod: "2026-08-19", priority: 0.9, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services`, lastmod: "2026-08-19", priority: 0.9, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/ai-development`, lastmod: "2026-07-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/web-design`, lastmod: "2026-08-20", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/web-development`, lastmod: "2026-08-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/seo`, lastmod: "2026-08-20", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/content-creation`, lastmod: "2026-08-20", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/supply-chain-management`, lastmod: "2026-08-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/motion-analysis`, lastmod: "2026-08-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/social-media-branding`, lastmod: "2026-08-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/services/startup-advisory`, lastmod: "2026-08-19", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/industries`, lastmod: "2026-09-01", priority: 0.9, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/locations`, lastmod: "2026-09-01", priority: 0.9, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/case-studies`, lastmod: "2026-09-01", priority: 0.85, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/audit`, lastmod: "2026-09-01", priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/pricing`, lastmod: "2026-08-20", priority: 0.8, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/projects`, lastmod: "2026-08-20", priority: 0.8, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/about`, lastmod: "2026-08-20", priority: 0.7, changeFrequency: "monthly", images: [
     "https://scalesforge.site/Assets/Shahood.avif",
     "https://scalesforge.site/Assets/Ruhan_2.avif"
   ] },
-  { url: `${siteUrl}/contact`, priority: 0.7, changeFrequency: "yearly", images: [] },
-  { url: `${siteUrl}/privacy`, priority: 0.3, changeFrequency: "yearly", images: [] },
-  { url: `${siteUrl}/terms`, priority: 0.3, changeFrequency: "yearly", images: [] },
+  { url: `${siteUrl}/contact`, lastmod: "2026-08-19", priority: 0.7, changeFrequency: "yearly", images: [] },
+  { url: `${siteUrl}/privacy`, lastmod: "2026-08-21", priority: 0.3, changeFrequency: "yearly", images: [] },
+  { url: `${siteUrl}/terms`, lastmod: "2026-08-19", priority: 0.3, changeFrequency: "yearly", images: [] },
 ];
 
+const escapeXml = (value) =>
+  String(value).replace(/[<>&'"]/g, (c) => ({
+    "<": "&lt;",
+    ">": "&gt;",
+    "&": "&amp;",
+    "'": "&apos;",
+    '"': "&quot;",
+  })[c]);
+
 export async function GET() {
-  const now = new Date().toISOString();
+  const fallbackDate = new Date().toISOString().slice(0, 10);
+  const now = fallbackDate;
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -51,19 +68,19 @@ export async function GET() {
     xml += `
   <url>
     <loc>${page.url}</loc>
-    <lastmod>${now}</lastmod>
+    <lastmod>${page.lastmod || fallbackDate}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>`;
-    
+
     if (page.images && page.images.length > 0) {
       for (const img of page.images) {
         xml += `
     <image:image>
-      <image:loc>${img}</image:loc>
+      <image:loc>${escapeXml(img)}</image:loc>
     </image:image>`;
       }
     }
-    
+
     xml += `
   </url>`;
   }
@@ -76,18 +93,17 @@ export async function GET() {
     xml += `
   <url>
     <loc>${projUrl}</loc>
-    <lastmod>${proj.publishedAt ? new Date(proj.publishedAt).toISOString() : now}</lastmod>
+    <lastmod>${proj.publishedAt ? String(proj.publishedAt).slice(0, 10) : fallbackDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>`;
 
     const imgPath = proj.coverImage?.localPath || proj.coverImage?.url;
     if (imgPath) {
       const fullImgUrl = imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath}`;
-      const safeTitle = proj.title ? proj.title.replace(/[<>&'"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '\'': '&apos;', '"': '&quot;' }[c])) : "";
       xml += `
     <image:image>
-      <image:loc>${fullImgUrl}</image:loc>
-      <image:title>${safeTitle}</image:title>
+      <image:loc>${escapeXml(fullImgUrl)}</image:loc>
+      <image:title>${escapeXml(proj.title || "")}</image:title>
     </image:image>`;
     }
 
