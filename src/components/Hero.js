@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import dynamic from "next/dynamic";
-const NeatBackground = dynamic(() => import("./NeatBackground"), { ssr: false });
+const AnimatedGradient = dynamic(() => import("./AnimatedGradient"), { ssr: false });
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -56,8 +56,11 @@ export default function Hero() {
       ref={root}
       className="relative flex min-h-[100vh] items-center overflow-hidden bg-[#08080a] py-32"
     >
-      <NeatBackground className="pointer-events-none absolute inset-0" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[480px] bg-gradient-to-b from-white/[0.05] to-transparent" />
+      <AnimatedGradient
+        config={{ preset: "Prism" }}
+        className="pointer-events-none absolute inset-0"
+        style={{ position: "absolute", zIndex: 0 }}
+      />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent to-[#08080a]" />
 
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col items-center px-6 text-center lg:px-10">
