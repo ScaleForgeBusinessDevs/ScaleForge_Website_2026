@@ -1,4 +1,8 @@
 import projectsData from "@/data/projects.json";
+import caseStudiesData from "@/data/caseStudies.json";
+import industriesData from "@/data/industries.json";
+import locationsData from "@/data/locations.json";
+import { getPriorityCombos } from "@/lib/programmaticSeo";
 
 const siteUrl = "https://scalesforge.site";
 
@@ -20,6 +24,10 @@ const STATIC_PAGES = [
   { url: `${siteUrl}/services/motion-analysis`, priority: 0.85, changeFrequency: "monthly", images: [] },
   { url: `${siteUrl}/services/social-media-branding`, priority: 0.85, changeFrequency: "monthly", images: [] },
   { url: `${siteUrl}/services/startup-advisory`, priority: 0.85, changeFrequency: "monthly", images: [] },
+  { url: `${siteUrl}/industries`, priority: 0.9, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/locations`, priority: 0.9, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/case-studies`, priority: 0.85, changeFrequency: "weekly", images: [] },
+  { url: `${siteUrl}/audit`, priority: 0.85, changeFrequency: "monthly", images: [] },
   { url: `${siteUrl}/pricing`, priority: 0.8, changeFrequency: "monthly", images: [] },
   { url: `${siteUrl}/projects`, priority: 0.8, changeFrequency: "weekly", images: [] },
   { url: `${siteUrl}/about`, priority: 0.7, changeFrequency: "monthly", images: [
@@ -87,6 +95,54 @@ export async function GET() {
   </url>`;
   }
 
+  // 3. Case Studies
+  for (const cs of caseStudiesData) {
+    if (!cs.slug) continue;
+    xml += `
+  <url>
+    <loc>${siteUrl}/case-studies/${cs.slug}</loc>
+    <lastmod>${cs.publishedAt ? new Date(cs.publishedAt).toISOString() : now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+  }
+
+  // 4. Industry Hubs
+  for (const ind of industriesData) {
+    if (!ind.slug) continue;
+    xml += `
+  <url>
+    <loc>${siteUrl}/industries/${ind.slug}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>`;
+  }
+
+  // 5. Location Hubs
+  for (const loc of locationsData) {
+    if (!loc.slug) continue;
+    xml += `
+  <url>
+    <loc>${siteUrl}/locations/${loc.slug}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>`;
+  }
+
+  // 6. Validated Priority Combos
+  const priorityCombos = getPriorityCombos();
+  for (const combo of priorityCombos) {
+    xml += `
+  <url>
+    <loc>${siteUrl}/${combo.serviceSlug}/${combo.industrySlug}/${combo.locationSlug}</loc>
+    <lastmod>${now}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>${combo.priority || 0.7}</priority>
+  </url>`;
+  }
+
   xml += `
 </urlset>`;
 
@@ -97,3 +153,4 @@ export async function GET() {
     }
   });
 }
+

@@ -9,41 +9,83 @@ const PAGES = [
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
   { label: "Projects", href: "/projects" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Website Audit", href: "/audit" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
-// ── Industries ────────────────────────────────────────────────────────────────
+// ── Industries with Slugs ─────────────────────────────────────────────────────
 const INDUSTRIES = [
-  "Accounting & CPA Firms",
-  "Auto Repair & Mechanics",
-  "Bicycle Shops & Retailers",
-  "Construction & Contractors",
-  "Dental Practices",
-  "E-Commerce & Online Brands",
-  "Financial Advisors",
-  "Fitness & Gyms",
-  "Healthcare & Clinics",
-  "HVAC & Home Services",
-  "Insurance Agencies",
-  "Law Firms & Attorneys",
-  "Manufacturing & B2B",
-  "Medical Spas & Aesthetics",
-  "Plumbing Companies",
-  "Property Management",
-  "Real Estate",
-  "Restaurant & Food Service",
-  "Staffing & Recruiting",
-  "Technology & SaaS",
+  { label: "Accounting & CPA Firms", slug: "accounting-cpa-firms" },
+  { label: "Auto Repair & Mechanics", slug: "auto-repair-mechanics" },
+  { label: "Bicycle Shops & Retailers", slug: "bicycle-shops-retailers" },
+  { label: "Construction & Contractors", slug: "construction-contractors" },
+  { label: "Dental Practices", slug: "dental-practices" },
+  { label: "E-Commerce & Online Brands", slug: "e-commerce-online-brands" },
+  { label: "Financial Advisors", slug: "financial-advisors" },
+  { label: "Fitness & Gyms", slug: "fitness-gyms" },
+  { label: "Healthcare & Clinics", slug: "healthcare-clinics" },
+  { label: "HVAC & Home Services", slug: "hvac-home-services" },
+  { label: "Insurance Agencies", slug: "insurance-agencies" },
+  { label: "Law Firms & Attorneys", slug: "law-firms-attorneys" },
+  { label: "Manufacturing & B2B", slug: "manufacturing-b2b" },
+  { label: "Medical Spas & Aesthetics", slug: "medical-spas-aesthetics" },
+  { label: "Plumbing Companies", slug: "plumbing-companies" },
+  { label: "Property Management", slug: "property-management" },
+  { label: "Real Estate", slug: "real-estate" },
+  { label: "Restaurant & Food Service", slug: "restaurant-food-service" },
+  { label: "Staffing & Recruiting", slug: "staffing-recruiting" },
+  { label: "Technology & SaaS", slug: "technology-saas" },
 ];
 
-// ── Location abbreviations ────────────────────────────────────────────────────
+// ── Locations with Slugs ──────────────────────────────────────────────────────
 const LOCATIONS = [
-  "HOU", "ATX", "DTX", "SF", "MIA", "CHI", "NYC", "DC", "LA", "ATL", "BOS", "DEN", "BNA",
-  "PHL", "PHX", "SAT", "SAN", "SEA", "CLT", "IND", "SJC", "CMH", "PDX", "LAS", "MEM",
-  "BAL", "MKE", "ABQ", "TUC", "FRE", "SAC", "MCI", "MCO", "CLE", "PIT", "CIN", "TPA",
-  "STL", "RIC", "RDU", "SLC", "PVD", "ORF", "TUL",
+  { code: "HOU", slug: "houston" },
+  { code: "ATX", slug: "austin" },
+  { code: "DTX", slug: "dallas" },
+  { code: "SF", slug: "san-francisco" },
+  { code: "MIA", slug: "miami" },
+  { code: "CHI", slug: "chicago" },
+  { code: "NYC", slug: "new-york" },
+  { code: "DC", slug: "washington-dc" },
+  { code: "LA", slug: "los-angeles" },
+  { code: "ATL", slug: "atlanta" },
+  { code: "BOS", slug: "boston" },
+  { code: "DEN", slug: "denver" },
+  { code: "BNA", slug: "nashville" },
+  { code: "PHL", slug: "philadelphia" },
+  { code: "PHX", slug: "phoenix" },
+  { code: "SAT", slug: "san-antonio" },
+  { code: "SAN", slug: "san-diego" },
+  { code: "SEA", slug: "seattle" },
+  { code: "CLT", slug: "charlotte" },
+  { code: "IND", slug: "indianapolis" },
+  { code: "SJC", slug: "san-jose" },
+  { code: "CMH", slug: "columbus" },
+  { code: "PDX", slug: "portland" },
+  { code: "LAS", slug: "las-vegas" },
+  { code: "MEM", slug: "memphis" },
+  { code: "BAL", slug: "baltimore" },
+  { code: "MKE", slug: "milwaukee" },
+  { code: "ABQ", slug: "albuquerque" },
+  { code: "TUC", slug: "tucson" },
+  { code: "FRE", slug: "fresno" },
+  { code: "SAC", slug: "sacramento" },
+  { code: "MCI", slug: "kansas-city" },
+  { code: "MCO", slug: "orlando" },
+  { code: "CLE", slug: "cleveland" },
+  { code: "PIT", slug: "pittsburgh" },
+  { code: "CIN", slug: "cincinnati" },
+  { code: "TPA", slug: "tampa" },
+  { code: "STL", slug: "st-louis" },
+  { code: "RIC", slug: "richmond" },
+  { code: "RDU", slug: "raleigh-durham" },
+  { code: "SLC", slug: "salt-lake-city" },
+  { code: "PVD", slug: "providence" },
+  { code: "ORF", slug: "norfolk-virginia-beach" },
+  { code: "TUL", slug: "tulsa" },
 ];
 
 // ── Contact cards ─────────────────────────────────────────────────────────────
@@ -186,13 +228,26 @@ export default function Footer() {
 
         {/* ── Industries row ── */}
         <div className="border-b border-white/[0.06] py-8">
-          <p className="mb-4 text-[10px] font-semibold tracking-[0.18em] text-white/85 uppercase">
-            Industries
-          </p>
+          <div className="mb-4 flex items-center justify-between">
+            <p className="text-[10px] font-semibold tracking-[0.18em] text-white/85 uppercase">
+              Industries
+            </p>
+            <Link
+              href="/industries"
+              className="text-[11px] text-[#a5aef0] hover:underline"
+            >
+              All Industries Directory →
+            </Link>
+          </div>
           <div className="flex flex-wrap gap-y-2">
             {INDUSTRIES.map((ind, i) => (
-              <span key={ind} className="text-[12.5px] text-white/45">
-                {ind}
+              <span key={ind.slug} className="text-[12.5px] text-white/45">
+                <Link
+                  href={`/industries/${ind.slug}`}
+                  className="transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
+                >
+                  {ind.label}
+                </Link>
                 {i < INDUSTRIES.length - 1 && (
                   <span className="mx-2.5 text-white/20">|</span>
                 )}
@@ -203,13 +258,26 @@ export default function Footer() {
 
         {/* ── Locations row ── */}
         <div className="border-b border-white/[0.06] py-8">
-          <p className="mb-4 text-[10px] font-semibold tracking-[0.18em] text-white/85 uppercase">
-            Locations
-          </p>
+          <div className="mb-4 flex items-center justify-between">
+            <p className="text-[10px] font-semibold tracking-[0.18em] text-white/85 uppercase">
+              Locations
+            </p>
+            <Link
+              href="/locations"
+              className="text-[11px] text-[#a5aef0] hover:underline"
+            >
+              All US Metro Hubs →
+            </Link>
+          </div>
           <div className="flex flex-wrap gap-y-2">
             {LOCATIONS.map((loc, i) => (
-              <span key={loc} className="text-[12.5px] text-white/45">
-                {loc}
+              <span key={loc.code} className="text-[12.5px] text-white/45">
+                <Link
+                  href={`/locations/${loc.slug}`}
+                  className="transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
+                >
+                  {loc.code}
+                </Link>
                 {i < LOCATIONS.length - 1 && (
                   <span className="mx-2 text-white/20">|</span>
                 )}
@@ -238,4 +306,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

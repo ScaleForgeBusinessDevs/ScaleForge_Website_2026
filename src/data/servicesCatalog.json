@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "seo",
+    "title": "Search Engine Optimization",
+    "shortName": "SEO",
+    "tagline": "Rank on Page 1, Capture Inbound Commercial Intent & Compound Pipeline",
+    "startingPrice": "$400 / mo",
+    "deliveryTime": "Ongoing Monthly Retainer (First Results in 30–60 Days)",
+    "deliverables": [
+      "Targeted commercial keyword research & mapping",
+      "Comprehensive technical SEO audit, Core Web Vitals & schema markup",
+      "On-page content optimization & conversion architecture",
+      "High-authority backlink outreach & digital PR",
+      "Local Map Pack & Google Business Profile optimization",
+      "Monthly transparent rank tracking & revenue attribution dashboard"
+    ],
+    "methodology": "We target high-intent bottom-of-funnel keywords that prospects search right when they are ready to hire or buy — not vanity traffic.",
+    "idealFor": "Businesses seeking a predictable stream of inbound leads without constantly burning cash on rising pay-per-click ad auctions."
+  },
+  {
+    "slug": "web-development",
+    "title": "Custom Web Development",
+    "shortName": "Web Development",
+    "tagline": "Lightning-Fast Next.js Websites, Portals & Web Apps Built to Scale",
+    "startingPrice": "$1,200",
+    "deliveryTime": "2–4 Weeks Delivery",
+    "deliverables": [
+      "Custom Next.js & React architecture (sub-second load times)",
+      "Headless CMS integration (Sanity / custom database)",
+      "Mobile-first responsive engineering across all viewports",
+      "Clean semantic HTML5, accessible WCAG 2.1 AA compliant UI",
+      "Automated lead capture, webhook CRM sync & calendar booking",
+      "Full source code ownership & lifetime handoff documentation"
+    ],
+    "methodology": "We build with Next.js App Router, Tailwind CSS, and headless architectures to deliver 95+ PageSpeed scores that convert visitors into revenue.",
+    "idealFor": "Companies with slow, outdated, or generic template websites that fail to convert traffic or represent their true brand prestige."
+  },
+  {
+    "slug": "web-design",
+    "title": "UI/UX & Web Design",
+    "shortName": "Web Design",
+    "tagline": "Bespoke, World-Class Digital Aesthetics Designed for High Conversion",
+    "startingPrice": "$1,200",
+    "deliveryTime": "1–3 Weeks Delivery",
+    "deliverables": [
+      "Figma design system & interactive component library",
+      "High-converting wireframes & user journey mapping",
+      "Modern dark-mode & glassmorphism visual direction",
+      "Interactive micro-animations & smooth scroll prototypes",
+      "Custom iconography, graphic assets & responsive typography"
+    ],
+    "methodology": "Design that wows on first glance and guides the user frictionlessly toward booking a call or requesting a proposal.",
+    "idealFor": "Brands that need an elite visual identity that justifies premium pricing and instantly builds trust with enterprise buyers."
+  },
+  {
+    "slug": "ai-development",
+    "title": "AI Development & Automations",
+    "shortName": "AI Automation",
+    "tagline": "Eliminate Manual Gruntwork with Custom n8n, Make & AI Voice Agents",
+    "startingPrice": "$800",
+    "deliveryTime": "1–2 Weeks Delivery",
+    "deliverables": [
+      "Custom n8n / Make automated multi-step workflows",
+      "Autonomous lead enrichment & email qualification pipelines",
+      "Vapi / Retell AI voice calling agents for 24/7 client intake",
+      "CRM 2-way data sync (HubSpot, Salesforce, Notion, Supabase)",
+      "Internal AI knowledge bots powered by your company SOPs"
+    ],
+    "methodology": "We connect your disparate software stack into an automated operating machine that works 24/7 without manual intervention.",
+    "idealFor": "Fast-growing teams spending 15+ hours weekly on repetitive copy-pasting, lead routing, or manual follow-ups."
+  },
+  {
+    "slug": "content-creation",
+    "title": "Content Creation & SEO Strategy",
+    "shortName": "Content Creation",
+    "tagline": "Topical Authority Articles, Pillar Guides & Strategic Content",
+    "startingPrice": "$350 / mo",
+    "deliveryTime": "Ongoing Monthly Delivery",
+    "deliverables": [
+      "Topical authority keyword clustering & editorial calendar",
+      "In-depth research-backed articles (1,500–2,500 words each)",
+      "Internal linking architecture & keyword optimization",
+      "Branded custom visual assets & infographics for each article",
+      "Direct CMS staging, meta description writing & publishing"
+    ],
+    "methodology": "Content written to solve real customer problems and satisfy Google's Helpful Content signals, driving compounding organic authority.",
+    "idealFor": "Founders who want to build a dominant organic acquisition channel without hiring an expensive in-house writing team."
+  },
+  {
+    "slug": "social-media-branding",
+    "title": "Social Media Branding & Growth",
+    "shortName": "Social Media",
+    "tagline": "Daily Authority Presence Across LinkedIn, X & Short-Form Video",
+    "startingPrice": "$400 / mo",
+    "deliveryTime": "Ongoing Monthly Retainer",
+    "deliverables": [
+      "High-engagement carousel designs & infographic posts",
+      "Founder thought-leadership ghostwriting for LinkedIn & X",
+      "Short-form video editing (Reels, TikToks, YouTube Shorts)",
+      "Monthly content scheduling & community engagement management",
+      "Audience analytics, profile optimization & follower conversion tracking"
+    ],
+    "methodology": "Positioning your leadership team as the undeniable category experts in your industry through consistent, high-signal content.",
+    "idealFor": "Agencies, SaaS founders, and service executives who want an active, polished personal or company brand without spending hours drafting posts."
+  },
+  {
+    "slug": "startup-advisory",
+    "title": "Startup & Growth Advisory",
+    "shortName": "Startup Advisory",
+    "tagline": "Go-to-Market Strategy, Technical Architecture & Traction Advisory",
+    "startingPrice": "$1,500 / mo",
+    "deliveryTime": "Bi-Weekly Strategy Sprints",
+    "deliverables": [
+      "Comprehensive digital go-to-market (GTM) roadmap",
+      "Tech stack architecture & vendor cost optimization",
+      "Product pricing, packaging & margin restructuring",
+      "Conversion rate optimization (CRO) audits on existing funnels",
+      "Direct Slack access to senior technical & growth leadership"
+    ],
+    "methodology": "Hands-on strategic advisory from experienced builders who have launched and scaled digital platforms from zero to multi-six-figure ARR.",
+    "idealFor": "Early-stage founders and scaling operators preparing for product launches, fundraising rounds, or major growth pivots."
+  },
+  {
+    "slug": "supply-chain-management",
+    "title": "Supply Chain & Logistics Digitization",
+    "shortName": "Supply Chain",
+    "tagline": "Custom Tracking Dashboards, Inventory APIs & ERP Integrations",
+    "startingPrice": "$2,500",
+    "deliveryTime": "3–6 Weeks Delivery",
+    "deliverables": [
+      "Custom supply chain visibility dashboards & client tracking portals",
+      "Automated inventory sync across warehouses & 3PLs",
+      "Carrier API integrations (FedEx, UPS, FreightQuote, ShipStation)",
+      "Automated bill of lading (BOL) and invoice reconciliation workflows",
+      "Real-time dispatch alert systems via SMS and webhooks"
+    ],
+    "methodology": "Transforming fragmented logistics spreadsheets into unified, real-time operating platforms with zero human error.",
+    "idealFor": "Distributors, 3PLs, freight brokers, and manufacturing suppliers looking to modernize client-facing tracking and back-office operations."
+  },
+  {
+    "slug": "motion-analysis",
+    "title": "Motion Analysis & Web Animation",
+    "shortName": "Motion Analysis",
+    "tagline": "Interactive WebGL, GSAP & Shader Experiences That Mesmerize",
+    "startingPrice": "$1,800",
+    "deliveryTime": "2–4 Weeks Delivery",
+    "deliverables": [
+      "Custom WebGL & Three.js 3D interactive canvases",
+      "Precision GSAP timeline scroll-driven choreographies",
+      "Fluid 60fps micro-interactions with zero layout jank",
+      "Interactive 3D product configurators & interactive data charts",
+      "Mobile-optimized animation fallbacks for maximum battery efficiency"
+    ],
+    "methodology": "Interactive web motion engineered with WebGL shaders and GPU-accelerated compositing to wow visitors while preserving sub-second performance.",
+    "idealFor": "High-end technology, architecture, fashion, and consumer brands that require an unforgettable, award-winning interactive digital experience."
+  }
+]

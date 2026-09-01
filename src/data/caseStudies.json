@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "property-seven-crm-real-estate",
+    "title": "Property Seven: Custom Real Estate CRM & High-Velocity Lead Engine",
+    "client": "Property Seven Real Estate Group",
+    "clientLocation": "Houston, TX",
+    "clientContact": "Daniel Torres, Managing Principal",
+    "industry": "Real Estate",
+    "industrySlug": "real-estate",
+    "services": ["Web Development", "UI/UX Design", "AI Automation"],
+    "serviceSlugs": ["web-development", "web-design", "ai-development"],
+    "heroMetric": "+280% Inbound Lead Flow",
+    "metrics": [
+      { "label": "Inbound Lead Growth", "value": "+280%" },
+      { "label": "Time to Deploy", "value": "12 Days" },
+      { "label": "Manual Data Entry Reduction", "value": "85%" },
+      { "label": "Average Page Load Speed", "value": "0.62s" }
+    ],
+    "challenge": "Property Seven was struggling with fragmented lead intake across Zillow, manual spreadsheets, and an unbranded legacy CRM that took 24+ hours to route inquiries to agents. High-value luxury home buyers were falling through the cracks, leading to lost commissions.",
+    "solution": "ScaleForge architected a bespoke Next.js web portal with instant MLS integration, automated lead scoring, and instant WhatsApp/SMS agent dispatch via an automated n8n pipeline. Every inquiry is now enriched with public property equity data and routed within 45 seconds.",
+    "testimonial": {
+      "quote": "From Figma to fully deployed in under two weeks. The speed, automation precision, and attention to brand detail was unlike anything we experienced with previous agencies. Our agents are closing deals faster than ever.",
+      "author": "Daniel Torres",
+      "role": "Founder & CEO, Property Seven",
+      "avatar": "/Assets/Ruhan_2.avif"
+    },
+    "coverImage": "/Assets/projects/property-seven-crm-for-real-estate-agencies-cover.png",
+    "galleryImages": [
+      "/Assets/projects/property-seven-crm-for-real-estate-agencies-gallery-1.png",
+      "/Assets/projects/property-seven-crm-for-real-estate-agencies-gallery-2.png"
+    ],
+    "featured": true,
+    "publishedAt": "2026-06-28"
+  },
+  {
+    "slug": "apex-health-clinic-seo-growth",
+    "title": "Apex Health: +340% Organic Patient Consultations in 90 Days",
+    "client": "Apex Specialty Medical Clinics",
+    "clientLocation": "Austin, TX",
+    "clientContact": "Dr. Marcus Vance, Medical Director",
+    "industry": "Healthcare & Clinics",
+    "industrySlug": "healthcare-clinics",
+    "services": ["SEO", "Content Creation", "Web Development"],
+    "serviceSlugs": ["seo", "content-creation", "web-development"],
+    "heroMetric": "+340% Organic Patient Growth",
+    "metrics": [
+      { "label": "Organic Traffic Increase", "value": "+340%" },
+      { "label": "First Page Google Keywords", "value": "64+" },
+      { "label": "Monthly Inbound Calls", "value": "180+" },
+      { "label": "Patient Acquisition CAC Reduction", "value": "-58%" }
+    ],
+    "challenge": "Apex was spending over $12,000/month on Google pay-per-click ads with rising patient acquisition costs. Their website lacked condition-specific landing pages and suffered from poor local Map Pack visibility across the greater metro area.",
+    "solution": "We executed a comprehensive programmatic healthcare SEO strategy, creating 30+ medically reviewed condition hubs with structured schema markup, symptom-to-specialist pathways, and automated HIPAA-compliant consultation booking.",
+    "testimonial": {
+      "quote": "ScaleForge completely transformed our patient acquisition economics. We cut our paid ad budget in half while booking 3x more patient consultations directly from organic Google searches.",
+      "author": "Dr. Marcus Vance",
+      "role": "Medical Director, Apex Health",
+      "avatar": "/Assets/Shahood.avif"
+    },
+    "coverImage": "/Assets/Testimonials.avif",
+    "featured": true,
+    "publishedAt": "2026-07-15"
+  },
+  {
+    "slug": "horizon-dental-cosmetic-patient-engine",
+    "title": "Horizon Dental: Securing #1 Map Pack Rankings for High-Ticket Implants",
+    "client": "Horizon Dental & Implant Center",
+    "clientLocation": "Dallas, TX",
+    "clientContact": "Dr. Elena Rostova, DDS",
+    "industry": "Dental Practices",
+    "industrySlug": "dental-practices",
+    "services": ["SEO", "Web Design", "AI Automation"],
+    "serviceSlugs": ["seo", "web-design", "ai-development"],
+    "heroMetric": "$420k+ Implant Revenue",
+    "metrics": [
+      { "label": "Implant Case Value Added", "value": "$420,000+" },
+      { "label": "Google Map Pack #1 Positions", "value": "14" },
+      { "label": "Online Smile Consultation Leads", "value": "92 / mo" },
+      { "label": "Mobile Conversion Rate", "value": "9.4%" }
+    ],
+    "challenge": "Competing against aggressive corporate dental chains, Horizon Dental was invisible for high-value cosmetic and dental implant searches. Their legacy WordPress site took 4.8 seconds to load on mobile phones.",
+    "solution": "ScaleForge rebuilt their digital presence on Next.js, created an interactive virtual smile assessment tool, and dominated Dallas-Fort Worth local SEO for cosmetic veneer and All-on-4 dental implant queries.",
+    "testimonial": {
+      "quote": "Our high-margin implant consultations tripled within four months of launching the new site and SEO system. ScaleForge delivered exactly what they promised with zero fluff.",
+      "author": "Dr. Elena Rostova",
+      "role": "Lead Surgeon, Horizon Dental Center",
+      "avatar": "/Assets/Ruhan_2.avif"
+    },
+    "coverImage": "/Assets/projects/property-seven-crm-for-real-estate-agencies-cover.png",
+    "featured": true,
+    "publishedAt": "2026-07-29"
+  },
+  {
+    "slug": "swift-logistics-automated-freight-platform",
+    "title": "SwiftLogistics: AI Freight Quoting & Automated Carrier Tracking",
+    "client": "Swift Freight & 3PL Logistics",
+    "clientLocation": "Chicago, IL",
+    "clientContact": "Sarah Jenkins, VP of Operations",
+    "industry": "Manufacturing & B2B",
+    "industrySlug": "manufacturing-b2b",
+    "services": ["AI Automation", "Supply Chain Digitization", "Web Development"],
+    "serviceSlugs": ["ai-development", "supply-chain-management", "web-development"],
+    "heroMetric": "14 Hours Saved / Week per Broker",
+    "metrics": [
+      { "label": "Operations Time Saved", "value": "14 hrs/wk" },
+      { "label": "Instant Quote Response Time", "value": "< 30 sec" },
+      { "label": "Broker Capacity Increase", "value": "+125%" },
+      { "label": "Carrier Document Sync Accuracy", "value": "99.8%" }
+    ],
+    "challenge": "Freight brokers were spending 3+ hours daily manually retyping Bill of Lading emails into dispatch spreadsheets and calling drivers for location check-ins. Customer inquiries went unanswered during off-peak hours.",
+    "solution": "We engineered an automated AI OCR email extraction pipeline and real-time client tracking portal with instant carrier rate calculation and automated SMS dispatch tracking.",
+    "testimonial": {
+      "quote": "ScaleForge automated the single most painful operational bottleneck in our brokerage. Our team can now manage double the freight volume without increasing overhead.",
+      "author": "Sarah Jenkins",
+      "role": "VP of Operations, SwiftLogistics",
+      "avatar": "/Assets/Shahood.avif"
+    },
+    "coverImage": "/Assets/Testimonials.avif",
+    "featured": true,
+    "publishedAt": "2026-08-10"
+  }
+]

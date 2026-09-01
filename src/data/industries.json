@@ -1,0 +1,558 @@
+[
+  {
+    "id": "accounting-cpa-firms",
+    "slug": "accounting-cpa-firms",
+    "name": "Accounting & CPA Firms",
+    "singular": "Accounting Firm",
+    "shortName": "CPA & Accounting",
+    "category": "Professional Financial Services",
+    "marketStat": "Over 78% of high-net-worth individuals and SMB founders search for local CPA advisory firms online before booking a tax strategy consultation.",
+    "benchmark": "Average CPA firm customer lifetime value exceeds $4,800/yr with an organic search lead conversion rate of 4.6%.",
+    "painPoints": [
+      "Seasonal tax-season traffic surges that fail to convert into year-round advisory retainers",
+      "Outdated legacy websites lacking secure client intake portals and automated scheduling",
+      "Zero local map pack visibility for high-intent queries like 'tax planning CPA' or 'fractional CFO'"
+    ],
+    "solutions": [
+      "High-converting advisory landing pages structured around corporate tax, bookkeeping, and fractional CFO services",
+      "Automated lead capture workflows with instant calendar scheduling and CRM qualification",
+      "Hyper-local technical SEO and schema markup securing Google Map Pack rankings in target wealth corridors"
+    ],
+    "targetKeywords": [
+      "CPA marketing agency",
+      "SEO for accounting firms",
+      "accountant web design",
+      "tax advisory lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "ai-development", "content-creation"],
+    "faqs": [
+      {
+        "q": "How does specialized SEO help CPA and accounting firms?",
+        "a": "Instead of competing on generic tax terms during April, we optimize your site for high-margin, year-round search queries such as corporate tax restructuring, fractional CFO advisory, and QuickBooks migration."
+      },
+      {
+        "q": "Can you integrate client portals and calendar schedulers?",
+        "a": "Yes. We engineer seamless integrations with Calendly, Cal.com, HubSpot, and secure document vaults to eliminate manual back-and-forth emails."
+      }
+    ]
+  },
+  {
+    "id": "auto-repair-mechanics",
+    "slug": "auto-repair-mechanics",
+    "name": "Auto Repair & Mechanics",
+    "singular": "Auto Repair Shop",
+    "shortName": "Auto Repair",
+    "category": "Automotive Services",
+    "marketStat": "82% of vehicle owners find their local mechanic via emergency mobile searches when experiencing immediate car issues.",
+    "benchmark": "Top-ranked auto repair centers convert mobile local intent queries into booked bay appointments at 12.4%.",
+    "painPoints": [
+      "Low mobile call-conversion rates due to slow, non-responsive websites",
+      "Dependence on expensive pay-per-click ads with high click-fraud rates",
+      "Lack of automated SMS review generation to build dominant Google Business Profile authority"
+    ],
+    "solutions": [
+      "Lightning-fast mobile web architecture with tap-to-call, emergency booking, and live bay availability",
+      "Dominant local Map Pack SEO targeting brake repair, transmission, engine diagnostics, and European vehicle care",
+      "Automated review capture systems that generate 5-star Google reviews on customer vehicle pickup"
+    ],
+    "targetKeywords": [
+      "auto repair SEO",
+      "mechanic website design",
+      "local SEO for auto shops",
+      "car repair lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "social-media-branding"],
+    "faqs": [
+      {
+        "q": "How quickly can local SEO drive appointments for an auto repair shop?",
+        "a": "With high-intent local citation cleanup, Google Business Profile optimization, and fast landing pages, auto repair clients typically see increased inbound call volume within 30 to 60 days."
+      }
+    ]
+  },
+  {
+    "id": "bicycle-shops-retailers",
+    "slug": "bicycle-shops-retailers",
+    "name": "Bicycle Shops & Retailers",
+    "singular": "Bicycle Shop",
+    "shortName": "Bicycle Retail",
+    "category": "Retail & Recreation",
+    "marketStat": "E-bike sales and premium cycling maintenance have grown 43% year-over-year, driven primarily by online local inventory discovery.",
+    "benchmark": "Cycling shops displaying real-time inventory and online service booking achieve 3.4x higher foot-traffic retention.",
+    "painPoints": [
+      "Inventory fragmentation between in-store POS (Lightspeed/Shopify) and website",
+      "High competition from direct-to-consumer online bike brands",
+      "Under-monetized service departments due to manual repair intake"
+    ],
+    "solutions": [
+      "Seamless POS sync turning local searchers into in-store buyers",
+      "Dedicated high-margin tune-up & custom bike build booking funnels",
+      "Local cycling community content and route hubs that capture organic recreational search"
+    ],
+    "targetKeywords": [
+      "bike shop web design",
+      "bicycle store local SEO",
+      "e-bike repair marketing",
+      "cycling retailer e-commerce"
+    ],
+    "recommendedServices": ["web-development", "seo", "content-creation"]
+  },
+  {
+    "id": "construction-contractors",
+    "slug": "construction-contractors",
+    "name": "Construction & Contractors",
+    "singular": "General Contractor",
+    "shortName": "Construction",
+    "category": "Commercial & Residential Construction",
+    "marketStat": "Over $350k in average commercial construction contracts originate from inbound organic search queries evaluating regional contractor portfolios.",
+    "benchmark": "Interactive 3D project galleries and clear estimating calculators increase RFP request volume by 58%.",
+    "painPoints": [
+      "Poor portfolio presentation failing to convey commercial build quality",
+      "Unqualified tire-kicker leads wasting estimating team hours",
+      "Weak geo-targeted authority outside the immediate zip code"
+    ],
+    "solutions": [
+      "Architectural-grade project showcase websites with interactive project filters and spec sheets",
+      "Dynamic multi-step project qualification forms routing pre-vetted leads directly to project managers",
+      "Regional programmatic SEO capturing sub-contractor and commercial build searches across entire metro areas"
+    ],
+    "targetKeywords": [
+      "construction marketing agency",
+      "general contractor SEO",
+      "commercial builder website",
+      "remodeling contractor lead gen"
+    ],
+    "recommendedServices": ["web-development", "seo", "ai-development"]
+  },
+  {
+    "id": "dental-practices",
+    "slug": "dental-practices",
+    "name": "Dental Practices",
+    "singular": "Dental Practice",
+    "shortName": "Dental",
+    "category": "Healthcare & Dentistry",
+    "marketStat": "Dental implants, Invisalign, and cosmetic veneers account for over 65% of high-margin practice revenues acquired through search.",
+    "benchmark": "High-performing dental sites with patient finance calculators and online appointment scheduling convert at 8.9%.",
+    "painPoints": [
+      "High acquisition costs on Google Ads bidding against corporate dental chains",
+      "Websites that look like generic cookie-cutter templates with stock imagery",
+      "Lack of focus on high-ticket cosmetic and surgical procedures in search rankings"
+    ],
+    "solutions": [
+      "Bespoke clinical web design featuring real doctor profiles, patient transformations, and virtual smile consultations",
+      "Procedure-specific programmatic SEO capturing high-value searches like 'All-on-4 dental implants' and 'clear aligners'",
+      "HIPAA-compliant online booking and patient intake automation reducing front-desk workload"
+    ],
+    "targetKeywords": [
+      "dental practice SEO",
+      "dentist web design",
+      "cosmetic dentistry marketing",
+      "invisalign patient lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "content-creation", "ai-development"]
+  },
+  {
+    "id": "e-commerce-online-brands",
+    "slug": "e-commerce-online-brands",
+    "name": "E-Commerce & Online Brands",
+    "singular": "E-Commerce Brand",
+    "shortName": "E-Commerce",
+    "category": "Digital Retail & D2C",
+    "marketStat": "Organic search delivers a 2.4x higher average customer lifetime value for DTC brands compared to paid social channels.",
+    "benchmark": "Sub-second PageSpeed optimizations reduce cart abandonment by an average of 21% on Shopify and Next.js storefronts.",
+    "painPoints": [
+      "Rising paid ad CAC eroding gross margins across Meta and Google Ads",
+      "Slow storefront performance hurting mobile conversions and organic rankings",
+      "Poor collection taxonomy and thin product descriptions missing long-tail search intent"
+    ],
+    "solutions": [
+      "Headless Next.js e-commerce architecture delivering sub-second load times and 95+ Core Web Vitals scores",
+      "Programmatic collection and category SEO expanding indexable long-tail keyword footprint by 10x",
+      "Automated customer win-back and review workflows powered by AI email sequences"
+    ],
+    "targetKeywords": [
+      "ecommerce SEO agency",
+      "shopify plus development",
+      "headless commerce Next.js",
+      "DTC organic growth"
+    ],
+    "recommendedServices": ["web-development", "seo", "ai-development", "content-creation"]
+  },
+  {
+    "id": "financial-advisors",
+    "slug": "financial-advisors",
+    "name": "Financial Advisors",
+    "singular": "Financial Advisory Firm",
+    "shortName": "Financial Advisory",
+    "category": "Wealth Management",
+    "marketStat": "90% of ultra-high-net-worth investors research financial advisors online before initiating retirement or estate planning discussions.",
+    "benchmark": "Wealth management firms publishing thought-leadership guides generate 3.8x more qualified booked discovery meetings.",
+    "painPoints": [
+      "Strict compliance hurdles limiting generic social media marketing",
+      "Stale brochure websites that fail to establish fiduciary credibility",
+      "Lack of educational content answering complex tax, equity, and retirement scenarios"
+    ],
+    "solutions": [
+      "FINRA/SEC-compliant high-authority web design emphasizing fiduciary integrity and institutional security",
+      "Topical authority content clusters on wealth preservation, 401(k) rollovers, and executive stock options",
+      "Interactive retirement roadmap calculators that capture qualified investor leads"
+    ],
+    "targetKeywords": [
+      "financial advisor SEO",
+      "wealth management web design",
+      "RIA marketing agency",
+      "retirement planning lead generation"
+    ],
+    "recommendedServices": ["seo", "content-creation", "web-design"]
+  },
+  {
+    "id": "fitness-gyms",
+    "slug": "fitness-gyms",
+    "name": "Fitness & Gyms",
+    "singular": "Fitness Center & Gym",
+    "shortName": "Fitness & Gyms",
+    "category": "Health & Wellness",
+    "marketStat": "74% of boutique fitness and gym memberships start with an online search for local trial passes or personal training programs.",
+    "benchmark": "Gyms with automated instant pass checkout and SMS follow-up convert trial inquiries at 34%.",
+    "painPoints": [
+      "High member churn requiring constant top-of-funnel membership acquisition",
+      "Disjointed booking systems causing drop-offs during class reservations",
+      "Weak Google Map rankings against national big-box gym chains"
+    ],
+    "solutions": [
+      "High-energy, conversion-optimized gym websites with instant 1-click free pass claiming",
+      "Local SEO dominance for personal training, CrossFit, Pilates, and 24/7 fitness searches",
+      "AI-driven SMS automation that nurtures trial visitors into annual recurring memberships"
+    ],
+    "targetKeywords": [
+      "gym website design",
+      "fitness center SEO",
+      "personal trainer marketing",
+      "crossfit gym lead generation"
+    ],
+    "recommendedServices": ["web-development", "seo", "social-media-branding", "ai-development"]
+  },
+  {
+    "id": "healthcare-clinics",
+    "slug": "healthcare-clinics",
+    "name": "Healthcare & Clinics",
+    "singular": "Medical Clinic",
+    "shortName": "Healthcare",
+    "category": "Medical & Clinical Services",
+    "marketStat": "88% of patients research healthcare providers, specialty clinics, and physician reviews online before booking an appointment.",
+    "benchmark": "Clinics offering online self-scheduling experience a 40% reduction in patient no-show rates.",
+    "painPoints": [
+      "Complex medical compliance and patient privacy (HIPAA) constraints",
+      "Cluttered, outdated hospital-style navigation confusing patients looking for care",
+      "Low search visibility for specific clinical treatments and symptoms"
+    ],
+    "solutions": [
+      "HIPAA-compliant, patient-centric web design with intuitive symptom-to-specialist pathways",
+      "Condition-specific medical SEO architecture building search authority for treatments and procedures",
+      "Automated appointment booking and digital intake forms integrating directly with your EHR"
+    ],
+    "targetKeywords": [
+      "healthcare marketing agency",
+      "medical clinic SEO",
+      "clinic website development",
+      "physician lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "content-creation"]
+  },
+  {
+    "id": "hvac-home-services",
+    "slug": "hvac-home-services",
+    "name": "HVAC & Home Services",
+    "singular": "HVAC Company",
+    "shortName": "HVAC & Home Services",
+    "category": "Home Trade Services",
+    "marketStat": "Emergency AC and heating replacement searches command over $1,200 in gross profit per completed service call.",
+    "benchmark": "HVAC companies holding the top 3 Google Local Pack spots capture 71% of all local emergency service calls.",
+    "painPoints": [
+      "Extreme seasonality in weather-driven revenue swings",
+      "Prohibitive Google LSA and PPC pay-per-lead costs exceeding $150/lead",
+      "Lack of automated dispatch intake for after-hours emergency calls"
+    ],
+    "solutions": [
+      "Local 3-Pack SEO domination across AC repair, furnace install, heat pump maintenance, and duct cleaning",
+      "Conversion-engineered landing pages featuring emergency dispatch click-to-call buttons and financing calculators",
+      "AI voice dispatch assistants capturing and booking after-hours furnace and AC breakdowns 24/7"
+    ],
+    "targetKeywords": [
+      "HVAC SEO marketing",
+      "AC repair website design",
+      "home service lead generation",
+      "heating contractor SEO"
+    ],
+    "recommendedServices": ["seo", "ai-development", "web-development"]
+  },
+  {
+    "id": "insurance-agencies",
+    "slug": "insurance-agencies",
+    "name": "Insurance Agencies",
+    "singular": "Independent Insurance Agency",
+    "shortName": "Insurance",
+    "category": "Commercial & Personal Insurance",
+    "marketStat": "Commercial liability, cyber insurance, and group health policies have seen a 55% jump in online discovery by business decision-makers.",
+    "benchmark": "Multi-carrier quote comparison calculators increase insurance lead generation conversion by 62%.",
+    "painPoints": [
+      "Competing against multi-billion dollar direct carriers (Geico, Progressive)",
+      "Low lead-to-bind conversion rates from third-party shared lead brokers",
+      "Complex commercial product explanations driving high bounce rates"
+    ],
+    "solutions": [
+      "Independent agency authority websites emphasizing local brokerage relationships and coverage advocacy",
+      "Interactive instant policy estimate funnels filtering commercial vs. personal lines",
+      "Commercial niche SEO targeting contractors, truckers, medical malpractice, and cyber liability"
+    ],
+    "targetKeywords": [
+      "insurance agency SEO",
+      "commercial insurance website",
+      "independent agent marketing",
+      "insurance broker lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "content-creation"]
+  },
+  {
+    "id": "law-firms-attorneys",
+    "slug": "law-firms-attorneys",
+    "name": "Law Firms & Attorneys",
+    "singular": "Law Firm",
+    "shortName": "Legal & Law Firms",
+    "category": "Legal Practice",
+    "marketStat": "Over $100k in average case value can originate from a single high-ranking personal injury, corporate litigation, or family law search.",
+    "benchmark": "Elite law firm websites featuring verdict track records and instant case evaluations convert organic search traffic at 6.1%.",
+    "painPoints": [
+      "Cut-throat Google Ads cost-per-click exceeding $250+ per click on legal keywords",
+      "Websites that lack compelling verdict proof and modern attorney bios",
+      "Slow response times to online case inquiries leading prospective clients to call competitors"
+    ],
+    "solutions": [
+      "Prestige law firm web development showcasing settlement records, credentials, and practice areas",
+      "Aggressive practice-area organic SEO capturing high-intent search queries across your state or metro",
+      "Automated 24/7 client intake chatbots and instant intake routing directly to managing partners"
+    ],
+    "targetKeywords": [
+      "law firm SEO agency",
+      "attorney website design",
+      "personal injury marketing",
+      "legal practice lead generation"
+    ],
+    "recommendedServices": ["seo", "web-development", "ai-development", "content-creation"]
+  },
+  {
+    "id": "manufacturing-b2b",
+    "slug": "manufacturing-b2b",
+    "name": "Manufacturing & B2B",
+    "singular": "B2B Manufacturer",
+    "shortName": "Manufacturing & B2B",
+    "category": "Industrial & Manufacturing",
+    "marketStat": "70% of B2B procurement officers define their supplier shortlists entirely through search engines before contacting sales teams.",
+    "benchmark": "Interactive 3D CAD viewer models and detailed spec sheets generate 4.5x higher RFQ submission rates.",
+    "painPoints": [
+      "Outdated catalog websites failing to communicate modern precision engineering capabilities",
+      "Long sales cycles with no automated lead nurture touchpoints",
+      "Search invisibility for custom fabrication, CNC machining, and OEM component keywords"
+    ],
+    "solutions": [
+      "Industrial-grade B2B web portals with searchable spec catalogs, CAD downloads, and instant RFQ builders",
+      "Technical B2B SEO targeting industrial engineers, procurement directors, and plant managers",
+      "Automated lead enrichment pipelines that notify sales reps the moment a tier-1 prospect browses specs"
+    ],
+    "targetKeywords": [
+      "manufacturing SEO agency",
+      "industrial website design",
+      "B2B manufacturer lead gen",
+      "OEM precision engineering marketing"
+    ],
+    "recommendedServices": ["web-development", "seo", "ai-development", "content-creation"]
+  },
+  {
+    "id": "medical-spas-aesthetics",
+    "slug": "medical-spas-aesthetics",
+    "name": "Medical Spas & Aesthetics",
+    "singular": "Medical Spa",
+    "shortName": "Med Spas & Aesthetics",
+    "category": "Aesthetic Medicine",
+    "marketStat": "Med spa treatments like Botox, laser resurfacing, and body contouring drive over $1,400 in annual client spend acquired via local search.",
+    "benchmark": "Visual before-and-after galleries with procedure filtering increase med spa consultation bookings by 84%.",
+    "painPoints": [
+      "High customer acquisition costs driven by heavy reliance on discounted Groupon deals",
+      "Poor before-and-after image presentation that fails modern aesthetic standards",
+      "Low re-booking frequency for recurring treatments"
+    ],
+    "solutions": [
+      "Luxury medical aesthetic websites featuring HD before-and-after sliders, practitioner credentials, and VIP memberships",
+      "High-ticket treatment SEO capturing laser lipo, Morpheus8, dermal fillers, and weight management searches",
+      "Automated re-engagement SMS workflows prompting clients when treatments are due for touch-ups"
+    ],
+    "targetKeywords": [
+      "med spa marketing agency",
+      "medical spa SEO",
+      "aesthetic clinic website design",
+      "botox patient lead generation"
+    ],
+    "recommendedServices": ["web-design", "web-development", "seo", "social-media-branding"]
+  },
+  {
+    "id": "plumbing-companies",
+    "slug": "plumbing-companies",
+    "name": "Plumbing Companies",
+    "singular": "Plumbing Company",
+    "shortName": "Plumbing Services",
+    "category": "Home Trade Services",
+    "marketStat": "Emergency plumbing and sewer replacement queries are 92% mobile with immediate same-day hiring intent.",
+    "benchmark": "Plumbing websites featuring real-time dispatch availability and transparent diagnostic pricing convert at 14.1%.",
+    "painPoints": [
+      "High cost per lead from shared lead brokers delivering stale or out-of-area requests",
+      "Low search visibility for high-ticket services like trenchless sewer repair and commercial repiping",
+      "Unoptimized mobile websites with difficult phone number access during water emergencies"
+    ],
+    "solutions": [
+      "Emergency-first mobile web design with prominent click-to-call banners and GPS-localized dispatch notices",
+      "Local Map Pack domination capturing drain cleaning, water heater install, slab leak, and hydro jetting searches",
+      "AI call tracking and missed-call SMS text-back to capture customers before they call another plumber"
+    ],
+    "targetKeywords": [
+      "plumbing SEO agency",
+      "plumber website design",
+      "emergency plumbing marketing",
+      "sewer repair lead generation"
+    ],
+    "recommendedServices": ["seo", "ai-development", "web-development"]
+  },
+  {
+    "id": "property-management",
+    "slug": "property-management",
+    "name": "Property Management",
+    "singular": "Property Management Company",
+    "shortName": "Property Management",
+    "category": "Real Estate Services",
+    "marketStat": "Real estate investors managing 5+ doors search extensively online for property management fee transparency and tenant retention data.",
+    "benchmark": "Websites featuring instant management fee calculators and rental yield estimators convert owner inquiries at 7.3%.",
+    "painPoints": [
+      "Websites built solely for tenants rather than targeting lucrative property owners seeking management",
+      "Lack of clear ROI demonstrations for absentee landlords and out-of-state investors",
+      "Low organic search visibility for commercial vs. residential management"
+    ],
+    "solutions": [
+      "Owner-focused property management websites highlighting low vacancy rates, maintenance guarantees, and fee structures",
+      "Targeted organic SEO for landlord searches like 'HOA management', 'short-term rental management', and 'commercial leasing'",
+      "Interactive rental income calculator generating pre-qualified property owner leads directly into your CRM"
+    ],
+    "targetKeywords": [
+      "property management SEO",
+      "property management web design",
+      "landlord lead generation",
+      "HOA management marketing"
+    ],
+    "recommendedServices": ["web-development", "seo", "content-creation"]
+  },
+  {
+    "id": "real-estate",
+    "slug": "real-estate",
+    "name": "Real Estate",
+    "singular": "Real Estate Brokerage",
+    "shortName": "Real Estate & Brokerages",
+    "category": "Residential & Commercial Real Estate",
+    "marketStat": "97% of home buyers and luxury property investors utilize search engines as their primary discovery channel.",
+    "benchmark": "Custom neighborhood guide hubs with live MLS/IDX integrations generate 5.6x more qualified listing inquiries.",
+    "painPoints": [
+      "Dependency on Zillow and Realtor.com taking massive splits on lead referrals",
+      "Generic template websites with slow, unbranded IDX search widgets",
+      "Difficulty establishing dominant local organic search authority in specific luxury neighborhoods"
+    ],
+    "solutions": [
+      "Custom Next.js luxury real estate websites with lightning-fast MLS/IDX map integration and custom filters",
+      "Hyper-local neighborhood and subdivision SEO pages capturing buyers searching specific communities",
+      "Automated lead capture workflows offering instant home valuations and off-market inventory alerts"
+    ],
+    "targetKeywords": [
+      "real estate web design",
+      "realtor SEO agency",
+      "luxury real estate marketing",
+      "IDX website development"
+    ],
+    "recommendedServices": ["web-development", "seo", "social-media-branding", "content-creation"]
+  },
+  {
+    "id": "restaurant-food-service",
+    "slug": "restaurant-food-service",
+    "name": "Restaurant & Food Service",
+    "singular": "Restaurant & Hospitality Group",
+    "shortName": "Restaurant & Food Service",
+    "category": "Hospitality & Dining",
+    "marketStat": "90% of diners research menus, visual food photography, and reserve tables via smartphone searches before dining.",
+    "benchmark": "Restaurants with commission-free direct online ordering increase average guest check size by 27%.",
+    "painPoints": [
+      "Paying 25%–30% predatory commission fees to third-party delivery apps like DoorDash and UberEats",
+      "PDF menus that are unreadable on mobile screens and invisible to Google's indexing crawlers",
+      "Poor Google Maps ranking for local cuisine, private dining, and catering queries"
+    ],
+    "solutions": [
+      "Direct-to-consumer online ordering and catering request portals with zero commission fees",
+      "HTML5 interactive mobile menus fully indexed by Google for dish-specific search visibility",
+      "Local hospitality SEO dominating 'best dinner in [City]', private dining rooms, and corporate catering"
+    ],
+    "targetKeywords": [
+      "restaurant website design",
+      "restaurant SEO agency",
+      "online ordering web development",
+      "catering lead generation"
+    ],
+    "recommendedServices": ["web-design", "web-development", "seo", "social-media-branding"]
+  },
+  {
+    "id": "staffing-recruiting",
+    "slug": "staffing-recruiting",
+    "name": "Staffing & Recruiting",
+    "singular": "Staffing & Executive Search Agency",
+    "shortName": "Staffing & Recruiting",
+    "category": "Human Capital & Recruitment",
+    "marketStat": "Enterprise hiring managers and HR directors use search engines to source specialized boutique recruiting partners in their niche.",
+    "benchmark": "Staffing firms with integrated job boards and candidate qualification workflows capture 3.2x more employer contracts.",
+    "painPoints": [
+      "Websites that only attract candidates rather than corporate clients with open placement requisitions",
+      "Slow resume processing creating massive bottlenecks in recruiter screening pipelines",
+      "Lack of niche authority in specialized sectors like tech, healthcare, and engineering"
+    ],
+    "solutions": [
+      "Dual-funnel staffing agency websites addressing both employer client hiring needs and candidate talent pipelines",
+      "AI resume parser and candidate enrichment integrations speeding up submittal timelines by 60%",
+      "Specialty sector SEO positioning your agency for executive search, IT staffing, and nurse recruitment queries"
+    ],
+    "targetKeywords": [
+      "staffing agency SEO",
+      "recruiting firm website design",
+      "executive search marketing",
+      "headhunter lead generation"
+    ],
+    "recommendedServices": ["web-development", "seo", "ai-development", "content-creation"]
+  },
+  {
+    "id": "technology-saas",
+    "slug": "technology-saas",
+    "name": "Technology & SaaS",
+    "singular": "Technology & SaaS Company",
+    "shortName": "Technology & SaaS",
+    "category": "Software & Technology",
+    "marketStat": "Organic product-led content and programmatic comparison SEO generate over 60% of recurring ARR for high-growth SaaS companies.",
+    "benchmark": "B2B SaaS landing pages with interactive product demos and self-serve onboarding convert at 7.8%.",
+    "painPoints": [
+      "High churn on paid ad signups due to poor conversion messaging on product features",
+      "Lack of product-led SEO targeting 'alternative to [competitor]' and programmatic use-case landing pages",
+      "Complex developer documentation and API portals that look unpolished"
+    ],
+    "solutions": [
+      "Modern, high-converting SaaS marketing websites with interactive product previews, live calculators, and dark mode aesthetics",
+      "Programmatic competitor comparison and integration SEO hubs driving scalable inbound product trials",
+      "Automated lead enrichment and demo booking sequences routing high-ACV enterprise prospects directly to SDRs"
+    ],
+    "targetKeywords": [
+      "SaaS web design",
+      "SaaS SEO agency",
+      "software marketing website",
+      "product led growth SEO"
+    ],
+    "recommendedServices": ["web-development", "seo", "content-creation", "ai-development"]
+  }
+]
