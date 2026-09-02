@@ -113,18 +113,6 @@ const CONTACT = [
     href: "/contact",
   },
   {
-    id: "address",
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-        <circle cx="12" cy="10" r="3" />
-      </svg>
-    ),
-    label: "US MAILING ADDRESS",
-    value: "4803 Westpark Dr Ste 304B, Houston, TX 77063",
-    href: "https://maps.google.com/?q=4803+Westpark+Dr+Ste+304B+Houston+TX+77063",
-  },
-  {
     id: "linkedin",
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
