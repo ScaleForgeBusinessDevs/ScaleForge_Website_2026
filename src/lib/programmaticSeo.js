@@ -96,7 +96,7 @@ export function generateComboContent(service, industry, location) {
 
   // Tailored title and description
   const pageTitle = `${service.title} for ${industry.name} in ${location.city}, ${location.stateCode} | ScaleForge`;
-  const metaDescription = `Grow your ${industry.singular.toLowerCase()} in ${location.city}, ${location.stateCode} with bespoke ${service.shortName.toLowerCase()}, custom Next.js engineering, and high-intent local acquisition from ScaleForge.`;
+  const metaDescription = `Grow your ${industry.singular.toLowerCase()} in ${location.city}, ${location.stateCode} with ${service.shortName.toLowerCase()}, custom Next.js engineering, and high-intent local acquisition from ScaleForge.`;
 
   // Unique contextualized intro variation based on service type
   let introHeadline = `Scaling ${industry.name} Across ${location.city} with Custom ${service.shortName}`;
@@ -107,7 +107,7 @@ export function generateComboContent(service, industry, location) {
     introParagraph = `When prospective clients in ${location.metro} search for top-tier ${industry.singular.toLowerCase()} services, where does your firm appear? ScaleForge engineers hyper-targeted local SEO systems that secure dominant Google Map Pack positions and capture high-intent organic search queries across ${location.city} and surrounding sub-markets.`;
   } else if (service.slug === "web-development" || service.slug === "web-design") {
     introHeadline = `Custom High-Converting Web Architecture for ${location.city} ${industry.name}`;
-    introParagraph = `Your website is the single most valuable 24/7 digital asset for your ${industry.singular.toLowerCase()} in ${location.city}. We replace slow, outdated legacy builders with custom Next.js web applications delivering sub-second load times, interactive client portals, and seamless conversion funnels that turn visitors into booked retainers.`;
+    introParagraph = `Your website is the single most valuable 24/7 digital asset for your ${industry.singular.toLowerCase()} in ${location.city}. We replace slow, outdated legacy builders with custom Next.js web applications delivering sub-second load times, interactive client portals, and conversion funnels that turn visitors into booked retainers.`;
   } else if (service.slug === "ai-development") {
     introHeadline = `Automated Operating Workflows & AI Systems for ${industry.name} in ${location.city}`;
     introParagraph = `Eliminate manual operational drag in your ${location.city} ${industry.singular.toLowerCase()}. From autonomous lead qualification and CRM synchronization to 24/7 AI voice dispatch, ScaleForge builds custom n8n and Make workflows that allow your team to handle 2x client volume without expanding overhead.`;
@@ -133,7 +133,7 @@ export function generateComboContent(service, industry, location) {
   const faqs = [
     {
       q: `Why choose ScaleForge for ${service.title} for ${industry.name} in ${location.city}?`,
-      a: `ScaleForge combines deep vertical expertise in ${industry.name.toLowerCase()} with hands-on knowledge of the ${location.city}, ${location.stateCode} regional economy. We do not use cookie-cutter WordPress templates — our Next.js architecture, verified conversion track record, and transparent pricing ensure maximum return on investment.`,
+      a: `ScaleForge combines deep vertical expertise in ${industry.name.toLowerCase()} with hands-on knowledge of the ${location.city}, ${location.stateCode} regional economy. We do not use cookie-cutter WordPress templates. Our Next.js architecture, verified conversion track record, and transparent pricing drive the return on your investment.`,
     },
     {
       q: `How long does it take to see tangible results in ${location.city}?`,
@@ -164,7 +164,6 @@ export function generateProgrammaticSchemas({
   industry,
   location,
   canonicalUrl,
-  faqs,
 }) {
   const schemas = [];
 
@@ -212,50 +211,20 @@ export function generateProgrammaticSchemas({
     "@type": "Service",
     name: `${service?.title} for ${industry?.name} in ${location?.city}, ${location?.stateCode}`,
     serviceType: service?.title,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "ScaleForge",
-      url: siteUrl,
-      telephone: "+1-832-555-0199",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "4803 Westpark Dr Ste 304B",
-        addressLocality: location?.city || "Houston",
-        addressRegion: location?.stateCode || "TX",
-        postalCode: "77063",
-        addressCountry: "US",
-      },
-      areaServed: {
-        "@type": "City",
-        name: location?.city,
-        containedInPlace: {
-          "@type": "State",
-          name: location?.state,
-        },
-      },
-    },
+    // ScaleForge works remotely and has no premises in these cities, so the
+    // provider points at the single real Organization entity rather than
+    // asserting a street address that does not exist locally.
+    provider: { "@id": `${siteUrl}/#organization` },
     areaServed: {
       "@type": "AdministrativeArea",
       name: `${location?.city}, ${location?.stateCode}`,
     },
-    description: `Bespoke ${service?.title.toLowerCase()} and digital growth systems for ${industry?.name.toLowerCase()} in ${location?.city}, ${location?.stateCode}.`,
+    description: `${service?.title} and digital growth systems built for ${industry?.name.toLowerCase()} in ${location?.city}, ${location?.stateCode}.`,
   });
 
-  // 3. FAQPage Schema
-  if (faqs && faqs.length > 0) {
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.a,
-        },
-      })),
-    });
-  }
+  // FAQPage is intentionally NOT emitted here. The combo page renders
+  // <FAQAccordion>, which already publishes a FAQPage node for the same
+  // questions; adding a second one put two FAQPage entities on every page.
 
   return schemas;
 }

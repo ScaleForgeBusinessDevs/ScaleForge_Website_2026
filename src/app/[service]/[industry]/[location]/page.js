@@ -91,7 +91,6 @@ export default async function ProgrammaticComboPage({ params }) {
     industry,
     location,
     canonicalUrl,
-    faqs: content.faqs,
   });
 
   const allIndustries = getAllIndustries();
@@ -235,7 +234,7 @@ export default async function ProgrammaticComboPage({ params }) {
                   Full-Scope {service.title} Package
                 </h2>
                 <p className="mt-3 text-[14px] leading-relaxed text-white/60">
-                  Everything engineered bespoke — no outsourced shortcuts or generic themes.
+                  Every piece engineered to order. No outsourced shortcuts, no generic themes.
                 </p>
               </div>
 
@@ -265,7 +264,7 @@ export default async function ProgrammaticComboPage({ params }) {
                     &ldquo;{content.featuredCaseStudy.testimonial?.quote || content.featuredCaseStudy.solution}&rdquo;
                   </p>
                   <p className="mt-3 text-[12px] text-white/40">
-                    — {content.featuredCaseStudy.testimonial?.author || content.featuredCaseStudy.clientContact}
+                    {content.featuredCaseStudy.testimonial?.author || content.featuredCaseStudy.clientContact}
                   </p>
                 </div>
                 <Link

@@ -84,11 +84,11 @@ const STANDARDS = [
 ];
 
 const FAQS = [
-  { q: "What is the difference between web design and web development?", a: "Design is the visual and experiential layer — wireframes, layouts, color, type, and interaction patterns delivered in Figma. Development is turning those designs into a working website using code (Next.js, React, Tailwind). We do both, and they work best when delivered by the same team." },
+  { q: "What is the difference between web design and web development?", a: "Design is the visual and experiential layer: wireframes, layouts, color, type, and interaction patterns delivered in Figma. Development is turning those designs into a working website using code (Next.js, React, Tailwind). We do both, and they work best when delivered by the same team." },
   { q: "How long does the web design stage take?", a: "A typical design engagement takes 2 to 4 weeks depending on scope. A small marketing site (5–7 pages) lands in around 2 weeks. A complex platform with custom illustrations, animations, and multiple templates can take 4 to 6 weeks." },
   { q: "Do I need to have brand assets ready?", a: "No. If you have a logo, color palette, and rough brand guidelines, we'll work with them. If you don't, we'll build a brand identity from scratch as part of the engagement. Either way, you leave with a fully documented style guide." },
   { q: "Will my custom design be mobile-friendly?", a: "Yes. We design mobile-first, which means the smallest screen size is the starting point. Every layout, every component, every animation is tested across iPhones, Android phones, and tablets before sign-off." },
-  { q: "Can you redesign my existing website?", a: "Yes — and it's one of our most common engagements. We start with a full audit of your current site (analytics, heatmaps, competitor analysis) and design a new version specifically tuned to lift the metrics you care about: time on page, bounce rate, conversion rate." }
+  { q: "Can you redesign my existing website?", a: "Yes. It is one of our most common engagements. We start with a full audit of your current site (analytics, heatmaps, competitor analysis) and design a new version specifically tuned to lift the metrics you care about: time on page, bounce rate, conversion rate." }
 ];
 
   const breadcrumbSchema = {
@@ -171,7 +171,7 @@ const FAQS = [
               If your web presence feels outdated, slow, or difficult to
               navigate, you lose prospect trust immediately. A generic template
               is a costly liability. High-fidelity custom design is a powerful
-              growth asset — and the cheapest way to lift conversions across
+              growth asset, and the cheapest way to lift conversions across
               every channel feeding into your site.
             </p>
           </Reveal>

@@ -14,7 +14,7 @@ export const revalidate = 600; // Revalidate every 10 minutes (ISR)
 export const metadata = {
   title: "Our Work | Web, AI & SEO Case Studies | ScaleForge",
   description:
-    "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+    "Browse the ScaleForge project portfolio: websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
   alternates: {
     canonical: "https://scalesforge.site/projects",
     languages: {
@@ -38,7 +38,7 @@ export const metadata = {
     title:
       "Our Work | Web, AI & SEO Case Studies | ScaleForge",
     description:
-      "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+      "Browse the ScaleForge project portfolio: websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     url: "https://scalesforge.site/projects",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -49,7 +49,7 @@ export const metadata = {
     title:
       "Our Work | Web, AI & SEO Case Studies | ScaleForge",
     description:
-      "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+      "Browse the ScaleForge project portfolio: websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     images: ["/og-image.png"],
   },
 };
@@ -76,7 +76,7 @@ export default async function ProjectsPage({ searchParams }) {
 
   // Only split out a featured project on the unfiltered "All Projects" view.
   // When a category filter is active the featured banner is hidden (!category guard),
-  // so we must NOT remove the featured project from the grid — or it disappears entirely.
+  // so we must NOT remove the featured project from the grid, or it disappears entirely.
   const featured = !category ? projects.find((p) => p.featured) : null;
   const grid = featured ? projects.filter((p) => p._id !== featured._id) : projects;
 
@@ -84,7 +84,7 @@ export default async function ProjectsPage({ searchParams }) {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Our Work | ScaleForge Case Studies",
-    "description": "Browse the ScaleForge project portfolio — websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
+    "description": "Browse the ScaleForge project portfolio: websites, AI automation systems, SEO campaigns, and branding work built for ambitious businesses.",
     "url": "https://scalesforge.site/projects",
     "mainEntity": {
       "@type": "ItemList",
@@ -146,7 +146,7 @@ export default async function ProjectsPage({ searchParams }) {
               Projects That Prove What&apos;s Possible
             </h1>
             <h2 className="mx-auto mt-6 text-center text-[15px] leading-[1.8] text-white/50">
-              Real websites, real SEO results, real AI systems — built for
+              Real websites, real SEO results, real AI systems. Built for
               ambitious brands that refuse to settle for average.
             </h2>
           </Reveal>
@@ -168,12 +168,12 @@ export default async function ProjectsPage({ searchParams }) {
               our portfolio represents more than just aesthetic design; it
               showcases engineered growth. We partner with industry-leading
               founders and marketing teams to architect digital experiences that
-              seamlessly convert visitors into loyal customers. Our approach
+              turn visitors into loyal customers. Our approach
               prioritizes performance, technical excellence, and user-centric
               design principles. Whether we are developing a lightning-fast
               Next.js web application, orchestrating a technical SEO turnaround
               to capture organic market share, or building custom AI automation
-              pipelines to streamline backend operations, every project is
+              pipelines that cut manual backend work, every project is
               treated as a foundational asset for your business. We don't just
               build websites; we build scalable digital infrastructure. Explore
               our recent case studies and client deployments below to see how we
@@ -258,8 +258,8 @@ export default async function ProjectsPage({ searchParams }) {
               />
               <p className="mt-4 text-[15px] text-white/30">
                 {category
-                  ? `No ${category} projects yet — check back soon.`
-                  : "No projects published yet — check back soon."}
+                  ? `No ${category} projects yet. Check back soon.`
+                  : "No projects published yet. Check back soon."}
               </p>
             </div>
           )}

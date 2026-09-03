@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     role: "CEO",
     quote:
       "One of the most corporative and active team of developers and SEO experts we have worked with yet.",
-    industry: "Car Rental Company — Malaysia",
+    industry: "Car Rental Company, Malaysia",
   },
   {
     initials: "DT",
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     role: "Founder & CEO",
     quote:
       "From Figma to fully deployed in under two weeks. The speed and attention to brand detail was unlike anything we experienced with previous agencies.",
-    industry: "Real Estate Agency — USA",
+    industry: "Real Estate Agency, USA",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-            Real results, real feedback — from the founders and operators
+            Real results, real feedback from the founders and operators
             who&apos;ve worked with us.
           </p>
         </Reveal>

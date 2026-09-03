@@ -83,11 +83,11 @@ const STANDARDS = [
 ];
 
 const FAQS = [
-  { q: "What is content marketing and how does it power SEO?", a: "Content marketing is the discipline of creating helpful, search-optimized content that attracts your ideal customers organically. It powers SEO because Google's job is to surface the most useful content for any given query — and consistent, high-quality content is the most direct way to become that “most useful” resource in your industry." },
+  { q: "What is content marketing and how does it power SEO?", a: "Content marketing is the discipline of creating helpful, search-optimized content that attracts your ideal customers organically. It powers SEO because Google's job is to surface the most useful content for any given query. Consistent, high-quality content is the most direct way to become that “most useful” resource in your industry." },
   { q: "How many blog posts do I need to publish to see results?", a: "For most industries, publishing 2 to 4 high-quality posts per month over 6+ months will move the needle on organic traffic. Competitive niches need 6+ posts per month. We map a content calendar tied to your keyword strategy and grow the cadence as authority compounds." },
   { q: "What is a content cluster strategy?", a: "A content cluster is a group of related articles (5 to 20) all linking to a central “pillar” page on a single topic. This structure tells Google you're an authority on that subject and dramatically improves rankings for the pillar. We architect clusters around your highest-value commercial keywords." },
-  { q: "What is Google's E-E-A-T and why does it affect rankings?", a: "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness — the four signals Google uses to evaluate content quality. Content that demonstrates real expertise (cited sources, author credentials, original analysis) ranks higher than generic content. We write to E-E-A-T standards as a baseline, not an upgrade." },
-  { q: "Can I just use ChatGPT to write all of my website content?", a: "You can, and many businesses do — but it costs them. Google's systems are explicitly tuned to deprioritize thin, AI-generated content that lacks original insight. We use AI as a research and outline tool, but every piece of final prose is written by a human editor who understands your business and your audience. The difference shows up in rankings." }
+  { q: "What is Google's E-E-A-T and why does it affect rankings?", a: "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Those are the four signals Google uses to evaluate content quality. Content that demonstrates real expertise (cited sources, author credentials, original analysis) ranks higher than generic content. We write to E-E-A-T standards as a baseline, not an upgrade." },
+  { q: "Can I just use ChatGPT to write all of my website content?", a: "You can, and many businesses do. It costs them. Google's systems are explicitly tuned to deprioritize thin, AI-generated content that lacks original insight. We use AI as a research and outline tool, but every piece of final prose is written by a human editor who understands your business and your audience. The difference shows up in rankings." }
 ];
 
   const breadcrumbSchema = {
@@ -164,8 +164,8 @@ const FAQS = [
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-white/60">
               The internet is saturated with generic, low-quality AI copy that
               ranks for nothing. Google&apos;s systems are specifically designed
-              to filter out and deprioritize thin, unhelpful content — and
-              they&apos;re getting better at it every month.
+              to filter out and deprioritize thin, unhelpful content, and
+              they get better at it every month.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-white/60">
               At ScaleForge, quality is non-negotiable. Every paragraph we
@@ -241,7 +241,7 @@ const FAQS = [
               <Quote size={24} className="text-white/20" aria-hidden />
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 100% human-crafted editorial. AI is used for research support
-                and outline scaffolding — never for final prose.
+                and outline scaffolding. Never for final prose.
               </p>
             </Reveal>
           </div>

@@ -36,13 +36,13 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `Web Design, SEO & AI Solutions for ${industry.name} | ScaleForge`,
-    description: `Bespoke digital growth architecture for ${industry.name.toLowerCase()}. High-converting Next.js web applications, local Map Pack SEO, and automated client workflows.`,
+    description: `Digital growth architecture built for ${industry.name.toLowerCase()}. High-converting Next.js web applications, local Map Pack SEO, and automated client workflows.`,
     alternates: {
       canonical: `${siteUrl}/industries/${industry.slug}`,
     },
     openGraph: {
       title: `Web Design, SEO & AI Solutions for ${industry.name} | ScaleForge`,
-      description: `Bespoke digital growth architecture for ${industry.name.toLowerCase()}. High-converting Next.js web applications, local Map Pack SEO, and automated client workflows.`,
+      description: `Digital growth architecture built for ${industry.name.toLowerCase()}. High-converting Next.js web applications, local Map Pack SEO, and automated client workflows.`,
       url: `${siteUrl}/industries/${industry.slug}`,
       siteName: "ScaleForge",
       images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -127,7 +127,7 @@ export default async function IndustryHubPage({ params }) {
               {industry.category} Specialization
             </span>
             <h1 className="mt-5 text-[clamp(2.1rem,5vw,3.6rem)] font-display font-normal leading-[1.12] text-white">
-              Bespoke Web, SEO & Automation for {industry.name}
+              Web, SEO and Automation Built for {industry.name}
             </h1>
             <p className="mt-4 text-[16px] leading-relaxed text-white/60">
               {industry.marketStat}

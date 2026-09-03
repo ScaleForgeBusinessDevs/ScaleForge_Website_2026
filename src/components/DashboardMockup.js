@@ -12,13 +12,13 @@ const BARS = [
 
 const ROWS = [
   {
-    name: "Order sync — Shopify",
+    name: "Order sync: Shopify",
     status: "Active",
     time: "2 mins ago",
     tone: "amber",
   },
   {
-    name: "Email campaign — Q3 launch",
+    name: "Email campaign: Q3 launch",
     status: "Completed",
     time: "18 mins ago",
     tone: "green",
@@ -30,7 +30,7 @@ const ROWS = [
     tone: "amber",
   },
   {
-    name: "Report generation — Weekly",
+    name: "Report generation: Weekly",
     status: "Completed",
     time: "3 hours ago",
     tone: "green",

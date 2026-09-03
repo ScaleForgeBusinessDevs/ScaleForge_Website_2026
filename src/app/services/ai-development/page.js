@@ -80,12 +80,12 @@ function StepFlow({ steps }) {
 export default function AIDevelopmentPage() {
 
 const CAPABILITIES = [
-  { title: "Lead Generation Automation", body: "Automatically scrape, enrich, qualify, and deliver high-intent leads directly into your CRM — without touching a spreadsheet.", icon: Magnet },
-  { title: "AI Cold Calling Agents", body: "Deploy Vapi-powered AI voice agents that call your lead list, handle objections, and book qualified appointments into your calendar — 24/7.", icon: PhoneOutgoing },
+  { title: "Lead Generation Automation", body: "Automatically scrape, enrich, qualify, and deliver high-intent leads straight into your CRM. Nobody touches a spreadsheet.", icon: Magnet },
+  { title: "AI Cold Calling Agents", body: "Deploy Vapi-powered AI voice agents that call your lead list, handle objections, and book qualified appointments into your calendar around the clock.", icon: PhoneOutgoing },
   { title: "Social Media Automation", body: "Generate, schedule, and publish branded content across Instagram, LinkedIn, X, and TikTok on a automated publishing pipeline.", icon: Share2 },
   { title: "AI Content Generation", body: "Automatically produce SEO blog posts, email sequences, and ad copy from a single brief using structured AI pipelines built in n8n or Make.com.", icon: Sparkles },
-  { title: "Workflow & CRM Automation", body: "Connect your entire business stack — Notion, Google Sheets, HubSpot, Slack — into one seamless automated data pipeline with zero manual input.", icon: Network },
-  { title: "Custom AI Agents & Chatbots", body: "Build bespoke AI agents trained on your business data to handle customer queries, internal requests, and support tickets autonomously.", icon: Bot },
+  { title: "Workflow & CRM Automation", body: "Connect your entire business stack (Notion, Google Sheets, HubSpot, Slack) into one automated data pipeline. Zero manual input.", icon: Network },
+  { title: "Custom AI Agents & Chatbots", body: "Build custom AI agents trained on your business data to handle customer queries, internal requests, and support tickets autonomously.", icon: Bot },
 ];
 
 const PLATFORMS = ["Instagram", "LinkedIn", "X (Twitter)", "TikTok", "Facebook", "YouTube Shorts", "Pinterest"];
@@ -110,7 +110,7 @@ const LEAD_GEN_STEPS = [
   { title: "Target Identification", body: "Define your ICP by industry, company size, location, and job title inside a Notion database." },
   { title: "Data Scraping", body: "n8n automatically scrapes LinkedIn, Google Maps, or Apollo for matching prospects." },
   { title: "Enrichment", body: "Each lead is enriched with verified email, phone, and company revenue data via API." },
-  { title: "Qualification", body: "AI scores and filters leads against your criteria — only hot prospects make the cut." },
+  { title: "Qualification", body: "AI scores and filters leads against your criteria. Only hot prospects make the cut." },
   { title: "CRM Delivery", body: "Qualified leads land in your Google Sheets CRM with automated follow-up sequences triggered." },
 ];
 
@@ -146,10 +146,10 @@ const VAPI_REPLACES = [
 
 const FAQS = [
   { q: "What is AI automation and how does it save my business time?", a: "AI automation uses tools like n8n, Make, and Zapier to connect your business apps and trigger actions automatically. Instead of your team copying data between systems, scheduling social posts, or following up with leads manually, the automation does it 24/7 without input. The result: 6+ recovered hours per employee per week and dramatically faster response times." },
-  { q: "Do I need technical knowledge to use the automations you build?", a: "No. Every automation we build is designed to run silently in the background. You interact with familiar tools — Google Sheets, Notion, your CRM — exactly as you do today. The automation happens behind the scenes. We also deliver full documentation and a training session so your team understands what's running and how." },
-  { q: "How does Vapi AI cold calling work?", a: "Vapi is an AI voice infrastructure that lets us build voice agents capable of holding real-time conversations over phone calls. We train the agent on your sales script, configure objection handling, connect it to your lead list and calendar, and deploy it. The agent calls leads, qualifies them, and books appointments — at a fraction of the cost of human SDRs." },
+  { q: "Do I need technical knowledge to use the automations you build?", a: "No. Every automation we build runs silently in the background. You keep working in the same tools you use today: Google Sheets, Notion, your CRM. The automation happens behind the scenes. We also deliver full documentation and a training session so your team understands what's running and how." },
+  { q: "How does Vapi AI cold calling work?", a: "Vapi is an AI voice infrastructure that lets us build voice agents capable of holding real-time conversations over phone calls. We train the agent on your sales script, configure objection handling, connect it to your lead list and calendar, and deploy it. The agent calls leads, qualifies them, and books appointments at a fraction of the cost of human SDRs." },
   { q: "How quickly can you build and deploy an automation?", a: "Most automations are deployed within 2 to 4 weeks. Simpler workflows (lead enrichment, social scheduling) can be live in under 10 business days. Complex multi-system orchestrations (full CRM automation, voice agent deployment) typically take 3 to 4 weeks including testing and hand-off." },
-  { q: "Is my business data safe with self-hosted tools like n8n?", a: "Yes — and that's precisely why we offer self-hosted n8n as the default for sensitive workflows. Your data never leaves your infrastructure. For clients with lower compliance demands, we deploy on managed n8n cloud, Make.com, or Zapier depending on the use case." },
+  { q: "Is my business data safe with self-hosted tools like n8n?", a: "Yes. That is exactly why self-hosted n8n is our default for sensitive workflows. Your data never leaves your infrastructure. For clients with lower compliance demands, we deploy on managed n8n cloud, Make.com, or Zapier depending on the use case." },
   { q: "What does ongoing maintenance look like?", a: "After hand-off, you have two options: take full ownership and run the automations yourself, or retain ScaleForge on a monthly maintenance plan for monitoring, updates, and expansions. Most clients start with maintenance for the first 90 days and then transition to full ownership once their team is fluent." }
 ];
 
@@ -209,7 +209,7 @@ const FAQS = [
       <PageHero
         eyebrow="AI AUTOMATION"
         title="AI Systems That Scale Your Business on Autopilot"
-        subhead="We build bespoke automation workflows using n8n, Make.com, Zapier, Vapi, Notion, and Google Sheets to eliminate repetitive work, generate leads, and publish content — while you focus on growing your business."
+        subhead="We build custom automation workflows on n8n, Make.com, Zapier, Vapi, Notion, and Google Sheets. They kill repetitive work, generate leads, and publish content while you focus on growing the business."
         primaryCta={{
           label: "Book a Free Automation Audit",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -272,7 +272,7 @@ const FAQS = [
         </div>
       </section>
 
-      {/* Example Flow 1 — Lead Generation */}
+      {/* Example Flow 1: Lead Generation */}
       <section
         id="examples"
         className="scroll-mt-28 border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32"
@@ -283,8 +283,8 @@ const FAQS = [
               Automated Lead Generation
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              A fully hands-off pipeline that finds, enriches, qualifies, and
-              delivers ready-to-contact leads — built on n8n and Google Sheets.
+              A hands-off pipeline that finds, enriches, qualifies, and
+              delivers ready-to-contact leads. Built on n8n and Google Sheets.
             </p>
           </Reveal>
 
@@ -313,7 +313,7 @@ const FAQS = [
         </div>
       </section>
 
-      {/* Example Flow 2 — AI Cold Calling with Vapi */}
+      {/* Example Flow 2: AI Cold Calling with Vapi */}
       <section className="bg-[#08080a] py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
@@ -323,7 +323,7 @@ const FAQS = [
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
               A Vapi-powered voice agent dials your lead list, holds natural
               conversations, handles objections, and books qualified
-              appointments — completely autonomously.
+              appointments on its own.
             </p>
           </Reveal>
 
@@ -377,7 +377,7 @@ const FAQS = [
         </div>
       </section>
 
-      {/* Example Flow 3 — Social Media Autopilot */}
+      {/* Example Flow 3: Social Media Autopilot */}
       <section className="border-y border-white/[0.06] bg-[#0c0c0f] py-24 lg:py-32">
         <div className="mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto flex max-w-2xl flex-col items-center text-center">
@@ -385,8 +385,8 @@ const FAQS = [
               Social Media on Autopilot
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              From a single content brief in Notion to published posts across
-              Instagram, LinkedIn, X, and TikTok — without touching a scheduling
+              One content brief in Notion becomes published posts across
+              Instagram, LinkedIn, X, and TikTok. You never open a scheduling
               tool.
             </p>
           </Reveal>
@@ -500,7 +500,7 @@ const FAQS = [
 
       <CTASection
         title="Ready to Automate Your Business?"
-        body="Book a free 30-minute automation audit. We'll identify the highest-ROI workflows in your business and outline exactly what we can build for you — no commitment, no obligation."
+        body="Book a free 30-minute automation audit. We'll identify the highest-ROI workflows in your business and outline exactly what we can build for you. No commitment, no obligation."
         primaryCta={{
           label: "Book a Free Automation Audit",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",

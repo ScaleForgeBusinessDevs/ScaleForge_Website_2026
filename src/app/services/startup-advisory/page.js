@@ -57,9 +57,9 @@ export default function StartupAdvisoryPage() {
 
 const OFFERINGS = [
   { title: "Go-to-Market Strategy", body: "We map your ICP, define your positioning statement, identify the fastest acquisition channels, and build a phased GTM roadmap that minimises burn while maximising early traction.", icon: Target },
-  { title: "Pitch Deck Creation", body: "Investor-ready decks that tell a compelling narrative: problem, solution, market size, traction, team, and ask — structured to survive the first 90-second filter from a VC associate.", icon: Lightbulb },
-  { title: "Fundraising Strategy", body: "We advise on round sizing, valuation anchoring, SAFE vs. priced round mechanics, and which investor archetypes to target at each stage — from pre-seed angels to Series A funds.", icon: LineChart },
-  { title: "Investor Introductions", body: "Warm introductions to our network of angel investors, syndicate leads, and early-stage VCs actively deploying capital in your sector — so your outreach starts at second base.", icon: Users },
+  { title: "Pitch Deck Creation", body: "Investor-ready decks that tell a compelling narrative: problem, solution, market size, traction, team, and ask. Structured to survive the first 90-second filter from a VC associate.", icon: Lightbulb },
+  { title: "Fundraising Strategy", body: "We advise on round sizing, valuation anchoring, SAFE vs. priced round mechanics, and which investor archetypes to target at each stage, from pre-seed angels to Series A funds.", icon: LineChart },
+  { title: "Investor Introductions", body: "Warm introductions to our network of angel investors, syndicate leads, and early-stage VCs actively deploying capital in your sector, so your outreach starts at second base.", icon: Users },
   { title: "OKR & KPI Framework Setup", body: "Define the right metrics to track at your stage, set up a lightweight OKR system your team will actually use, and build a weekly cadence that keeps execution locked to strategy.", icon: Megaphone }
 ];
 
@@ -68,7 +68,7 @@ const PROCESS = [
   { title: "Strategy Blueprint", body: "We deliver a concise written strategy document covering GTM priorities, fundraising timeline, and 90-day execution milestones." },
   { title: "Pitch & Materials Build", body: "Co-create your investor deck, one-pager, and financial model, iterating until every slide earns its place and every number is defensible." },
   { title: "Investor Targeting", body: "Curate a tiered investor list, draft personalised outreach, and make warm introductions where relevant." },
-  { title: "Ongoing Advisory", body: "Weekly check-ins, deal support, and ad-hoc advisory as your raise progresses — we stay in the room until the round closes." }
+  { title: "Ongoing Advisory", body: "Weekly check-ins, deal support, and ad-hoc advisory as your raise progresses. We stay in the room until the round closes." }
 ];
 
 const STANDARDS = [
@@ -83,9 +83,9 @@ const STANDARDS = [
 const FAQS = [
   { q: "What stage startups do you work with?", a: "We focus on pre-seed through Series A. The sweet spot is a founder who has a working MVP and at least some early user traction but hasn't yet formalised their fundraising strategy or GTM playbook. We occasionally take on idea-stage founders with unusually strong domain expertise." },
   { q: "Do you take equity in exchange for advisory?", a: "We offer both fee-based and equity-based advisory arrangements depending on the engagement length and the founder's preference. Equity arrangements are typically 0.25–0.75% with a 12–24 month cliff and standard vesting. We're happy to discuss what structure makes most sense for your situation." },
-  { q: "How are advisor sessions structured?", a: "Standard engagements include one structured 60-minute call per week. Before each call you submit an update covering metrics, blockers, and questions. We review it in advance and arrive prepared to go deep — no status update theatre, just high-signal strategic discussion." },
-  { q: "Can you help us if we're not fundraising yet?", a: "Absolutely. Many of our most impactful advisory relationships start long before a fundraise — working on pricing strategy, hiring sequence, product positioning, and channel selection. Getting these fundamentals right dramatically shortens the time between founding and a fundable traction story." },
-  { q: "What sectors do you have the deepest expertise in?", a: "We have the strongest networks and pattern recognition in B2B SaaS, AI/ML tooling, digital media, and professional services tech. We also work with consumer brands and marketplace businesses where the founder brings strong domain expertise we can leverage." }
+  { q: "How are advisor sessions structured?", a: "Standard engagements include one structured 60-minute call per week. Before each call you submit an update covering metrics, blockers, and questions. We review it in advance and arrive prepared to go deep. No status update theatre, just high-signal strategic discussion." },
+  { q: "Can you help us if we're not fundraising yet?", a: "Absolutely. Many of our most impactful advisory relationships start long before a fundraise, working on pricing strategy, hiring sequence, product positioning, and channel selection. Getting these fundamentals right dramatically shortens the time between founding and a fundable traction story." },
+  { q: "What sectors do you have the deepest expertise in?", a: "We have the strongest networks and pattern recognition in B2B SaaS, AI/ML tooling, digital media, and professional services tech. We also work with consumer brands and marketplace businesses where the founder brings domain expertise we can build on." }
 ];
 
   const breadcrumbSchema = {
@@ -157,12 +157,12 @@ const FAQS = [
         <div className="mx-auto max-w-[1100px] px-6 text-center lg:px-10">
           <Reveal className="flex flex-col items-center">
             <p className="mx-auto mt-7 text-[clamp(1.4rem,3vw,1.9rem)] font-display font-normal leading-[1.3] text-white">
-              &ldquo;90% of startups fail — but those with active advisors are
+              &ldquo;90% of startups fail. Those with active advisors are
               3× more likely to raise their next round successfully.&rdquo;
             </p>
             <p className="mx-auto mt-7 max-w-xl text-[14.5px] leading-relaxed text-white/60">
               The difference between a startup that survives and one that scales
-              is rarely the idea — it&apos;s the quality of strategic decisions
+              is rarely the idea. It is the quality of strategic decisions
               made in the first 18 months. A great advisor compresses your
               learning curve, prevents expensive mistakes, and opens doors that
               take years to open alone.
@@ -179,8 +179,8 @@ const FAQS = [
               What We Advise On
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              Every engagement is different. We focus on the highest-leverage
-              work for your current stage.
+              Every engagement is different. We focus on the work with the
+              biggest payoff for your current stage.
             </p>
           </Reveal>
 
@@ -286,7 +286,7 @@ const FAQS = [
 
       <CTASection
         title="Ready to Build Something That Lasts?"
-        body="Book a free 30-minute founder diagnostic. We'll review your current traction, identify the biggest strategic gaps, and tell you exactly how we can help — no pitch, no obligation."
+        body="Book a free 30-minute founder diagnostic. We'll review your current traction, identify the biggest strategic gaps, and tell you exactly how we can help. No pitch, no obligation."
         primaryCta={{
           label: "Book a Free Founder Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",

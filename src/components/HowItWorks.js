@@ -85,7 +85,7 @@ export default function HowItWorks() {
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/60">
             Real-time automation, full visibility, and refined operational
-            workflows — built around your team&rsquo;s pace.
+            workflows, built around your team&rsquo;s pace.
           </p>
         </Reveal>
 

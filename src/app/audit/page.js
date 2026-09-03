@@ -5,16 +5,16 @@ import CTASection from "@/components/CTASection";
 import { Sparkles, Shield, Zap, Search, CheckCircle2, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "Free Website & SEO Performance Audit | ScaleForge",
+  title: "Free Website Speed & SEO Audit | ScaleForge",
   description:
-    "Run an instant 15-second diagnostic on your website. Audit Core Web Vitals, local SEO schema, mobile responsiveness, and conversion architecture with ScaleForge.",
+    "Run your site through the Google PageSpeed Insights API and get real Lighthouse scores for speed, Core Web Vitals, technical SEO, accessibility and best practices.",
   alternates: {
     canonical: "https://scalesforge.site/audit",
   },
   openGraph: {
-    title: "Free Website & SEO Performance Audit | ScaleForge",
+    title: "Free Website Speed & SEO Audit | ScaleForge",
     description:
-      "Run an instant 15-second diagnostic on your website. Audit Core Web Vitals, local SEO schema, mobile responsiveness, and conversion architecture with ScaleForge.",
+      "Run your site through the Google PageSpeed Insights API and get real Lighthouse scores for speed, Core Web Vitals, technical SEO, accessibility and best practices.",
     url: "https://scalesforge.site/audit",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -24,20 +24,28 @@ export const metadata = {
 
 const AUDIT_FAQS = [
   {
-    q: "How does the ScaleForge instant audit tool work?",
-    a: "Our automated diagnostic engine inspects your domain's public HTTP headers, Core Web Vitals indicators, structured schema markup, mobile viewport configuration, and key conversion pathways in real time.",
+    q: "How does the audit tool work?",
+    a: "We send your URL to the Google PageSpeed Insights API. Google loads your page on a simulated mobile device, runs Lighthouse against it, and returns scores for performance, SEO, accessibility and best practices. We display those results without changing them.",
   },
   {
-    q: "Is this preliminary audit really 100% free?",
-    a: "Yes. You get an immediate on-screen score across Performance, SEO, Mobile UX, and Conversion Readiness with zero login or payment required.",
+    q: "How long does the scan take?",
+    a: "Most sites finish in 20 to 45 seconds. Large pages take up to a minute. The wait is Google running the page load, not our servers.",
   },
   {
-    q: "What happens if my site scores below 70?",
-    a: "A score below 70 indicates critical leaks — such as slow load times driving up bounce rates or missing schema markup causing Google to ignore your local business. You can request our team's manual technical roadmap to fix these issues.",
+    q: "Is the audit really free?",
+    a: "Yes. There is no login, no payment and no limit on how many times you run it. The scores appear on screen as soon as Google returns them.",
   },
   {
-    q: "Can you fix the issues discovered during the audit?",
-    a: "Yes. ScaleForge specializes in high-velocity custom Next.js web development, technical SEO repairs, and AI automation workflows designed to turn underperforming websites into category leaders.",
+    q: "What does a low score actually mean?",
+    a: "Lighthouse marks each check as passed, needs improvement or failed. A low performance score usually points to heavy images, render-blocking scripts or slow server response. A low SEO score usually points to missing titles, missing meta descriptions or pages Google cannot crawl. The findings list names the specific check that failed.",
+  },
+  {
+    q: "Why is my score different from the last run?",
+    a: "Lighthouse simulates a network and CPU, so a single run varies by a few points between tests. Treat the category score as a range rather than an exact number. The failed checks are the reliable part.",
+  },
+  {
+    q: "Can you fix what the audit finds?",
+    a: "Yes. We rebuild sites on Next.js, repair technical SEO, and cut load times. Leave your email after the scan and a member of our team reviews the report by hand, then sends back a prioritised fix list.",
   },
 ];
 
@@ -55,7 +63,7 @@ export default function AuditPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Instant Website Audit",
+        name: "Website Audit",
         item: "https://scalesforge.site/audit",
       },
     ],
@@ -75,13 +83,15 @@ export default function AuditPage() {
         <div className="relative mx-auto max-w-[1440px] px-6 lg:px-10">
           <Reveal className="mx-auto max-w-3xl text-center">
             <span className="font-accent text-[10px] uppercase tracking-[0.2em] text-[#a5aef0]">
-              Competitive Advantage Engine
+              Free Diagnostic
             </span>
             <h1 className="mt-5 text-[clamp(2.1rem,5vw,3.6rem)] font-display font-normal leading-[1.12] text-white">
-              Instant Website & SEO Performance Audit
+              Website Speed &amp; SEO Audit
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-[15.5px] leading-relaxed text-white/60">
-              Discover hidden technical bottlenecks, speed penalties, missing schema tags, and conversion drop-offs costing your business qualified clients every month.
+              See the same Lighthouse scores Google uses to judge your site. Real
+              Core Web Vitals, real crawlability checks, real accessibility
+              results. No sign-up.
             </p>
           </Reveal>
 
@@ -96,9 +106,11 @@ export default function AuditPage() {
               <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#2563eb]/20 text-[#2563eb]">
                 <Zap size={18} />
               </span>
-              <h4 className="mt-4 text-[15px] font-medium text-white">Sub-Second Speed Checks</h4>
+              <h4 className="mt-4 text-[15px] font-medium text-white">Core Web Vitals</h4>
               <p className="mt-2 text-[12.5px] leading-relaxed text-white/50">
-                Identify heavy render-blocking scripts and uncompressed assets destroying your Google Core Web Vitals.
+                Largest Contentful Paint, Cumulative Layout Shift and Total
+                Blocking Time, plus the render-blocking scripts and oversized
+                images behind them.
               </p>
             </div>
 
@@ -106,9 +118,11 @@ export default function AuditPage() {
               <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#5e6ad2]/20 text-[#a5aef0]">
                 <Search size={18} />
               </span>
-              <h4 className="mt-4 text-[15px] font-medium text-white">Search Schema Verification</h4>
+              <h4 className="mt-4 text-[15px] font-medium text-white">Crawlability Checks</h4>
               <p className="mt-2 text-[12.5px] leading-relaxed text-white/50">
-                Ensure Google crawlers can accurately index your local business coordinates, services, and client reviews.
+                Whether Google can crawl the page, whether it has a title and
+                meta description, and whether your links carry text a crawler
+                can read.
               </p>
             </div>
 
@@ -116,9 +130,10 @@ export default function AuditPage() {
               <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
                 <TrendingUp size={18} />
               </span>
-              <h4 className="mt-4 text-[15px] font-medium text-white">Conversion Funnel Analysis</h4>
+              <h4 className="mt-4 text-[15px] font-medium text-white">Mobile &amp; Accessibility</h4>
               <p className="mt-2 text-[12.5px] leading-relaxed text-white/50">
-                Pinpoint mobile UX friction points and missing call-to-action triggers that cause prospects to bounce.
+                Viewport configuration, tap target sizes, legible font sizes,
+                image alt text and colour contrast on a simulated phone.
               </p>
             </div>
           </Reveal>

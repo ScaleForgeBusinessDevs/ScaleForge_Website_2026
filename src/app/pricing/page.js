@@ -166,8 +166,8 @@ function PricingTrack({ id, eyebrow, heading, subhead, tiers, dark }) {
 
 const AI_TIERS = [
   { name: "Starter", price: "$800", suffix: "one-time", description: "A single automated workflow to eliminate your most painful manual task.", included: ["1 custom n8n/Make workflow", "CRM or spreadsheet integration", "Documentation & handoff"], featured: false },
-  { name: "Growth", price: "$2,400", suffix: "one-time", description: "A connected automation stack that handles lead gen, outreach, and reporting.", included: ["Up to 5 workflows", "AI lead enrichment pipeline", "Outreach sequence automation", "CRM sync + reporting dashboard"], detail: "3 workflows — lead enrichment, outreach, CRM sync", featured: true },
-  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Support retainer available (billed separately)"], detail: "Automation Engine — unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
+  { name: "Growth", price: "$2,400", suffix: "one-time", description: "A connected automation stack that handles lead gen, outreach, and reporting.", included: ["Up to 5 workflows", "AI lead enrichment pipeline", "Outreach sequence automation", "CRM sync + reporting dashboard"], detail: "3 workflows: lead enrichment, outreach, CRM sync", featured: true },
+  { name: "Enterprise", price: "$4,500+", suffix: "one-time", description: "Full-stack automation infrastructure with AI voice, self-hosted tooling, and unlimited scope.", included: ["Unlimited workflows", "Vapi AI voice agents", "Self-hosted n8n instance", "Custom API integrations", "Support retainer available (billed separately)"], detail: "Automation Engine: unlimited workflows, Vapi AI, self-hosted n8n", featured: false },
 ];
 
 const WEB_TIERS = [
@@ -203,14 +203,14 @@ const CUSTOM_EXAMPLES = [
 ];
 
 const FAQS = [
-  { q: "Are these prices final, or do you charge extra fees?", a: "The listed prices are what you pay. No setup fees, no surprise add-ons. The only exceptions are third-party costs we pass through at cost (hosting, CMS subscriptions, API usage) — and those are itemized in the engagement contract before signing." },
-  { q: "Do you offer a money-back guarantee or trial period?", a: "For project-based work (Web Design & Development, AI Development), we offer a 30-day satisfaction guarantee on the first milestone. If the initial design or build doesn't meet expectations, we refund the deposit. For monthly retainers (SEO, Content), there's no long-term contract — cancel anytime with 30 days' notice." },
+  { q: "Are these prices final, or do you charge extra fees?", a: "The listed prices are what you pay. No setup fees, no surprise add-ons. The only exceptions are third-party costs we pass through at cost: hosting, CMS subscriptions, API usage. Those are itemized in the engagement contract before you sign." },
+  { q: "Do you offer a money-back guarantee or trial period?", a: "For project-based work (Web Design & Development, AI Development), we offer a 30-day satisfaction guarantee on the first milestone. If the initial design or build doesn't meet expectations, we refund the deposit. For monthly retainers (SEO, Content), there is no long-term contract. Cancel anytime with 30 days' notice." },
   { q: "What payment methods do you accept?", a: "Wire transfer, Stripe (card), Wise, Payoneer, and Upwork escrow. For larger engagements, we typically use Upwork or Contra escrow to give clients additional payment protection." },
   { q: "Do you offer payment plans?", a: "Yes. For project-based work, we structure payments in milestones: typically 30% deposit, 30% mid-build, 40% on delivery. For larger engagements (Enterprise tier), we can split into 4 to 6 milestones." },
-  { q: "What's not included in the tiers?", a: "Third-party costs (domain, hosting, CMS subscriptions, ad spend, premium plugin licenses) are not included and are billed at cost. Content writing in the Web tiers does not include long-form blog content — that's covered by the Content Creation tiers." },
+  { q: "What's not included in the tiers?", a: "Third-party costs (domain, hosting, CMS subscriptions, ad spend, premium plugin licenses) are not included and are billed at cost. Content writing in the Web tiers does not include long-form blog content. The Content Creation tiers cover that." },
   { q: "Can I switch tiers mid-engagement?", a: "Yes. For monthly retainers (SEO, Content), you can switch tiers at the start of any billing cycle. For project tiers, scope changes are handled through a change order at the standard tier upgrade rate." },
-  { q: "Do you work with international clients?", a: "Yes — we work primarily with clients in the US, UK, Canada, Australia, and the EU. All pricing is in USD. We invoice in USD and accept payment in your local currency via Wise or Stripe (we absorb minor conversion variance)." },
-  { q: "How quickly can we start?", a: "For project-based work, we onboard new clients within 1 to 2 weeks of contract signing. For monthly retainers, we typically begin the kickoff process within 5 business days of payment. Cohort capacity does sell out — booking a call early reserves your slot." },
+  { q: "Do you work with international clients?", a: "Yes. We work primarily with clients in the US, UK, Canada, Australia, and the EU. All pricing is in USD. We invoice in USD and accept payment in your local currency via Wise or Stripe (we absorb minor conversion variance)." },
+  { q: "How quickly can we start?", a: "For project-based work, we onboard new clients within 1 to 2 weeks of contract signing. For monthly retainers, we typically begin the kickoff process within 5 business days of payment. Cohort capacity does sell out, so booking a call early reserves your slot." },
 ];
 
   const breadcrumbSchema = {
@@ -242,14 +242,6 @@ const FAQS = [
       "@type": "Organization",
       "name": "ScaleForge",
       "url": "https://scalesforge.site"
-    },
-    // TODO: replace with real rating data
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "12",
-      "bestRating": "5",
-      "worstRating": "1"
     },
     "itemListElement": [
       {
@@ -352,8 +344,8 @@ const FAQS = [
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-[15px] leading-relaxed text-white/60">
               Flexible, transparent pricing for every stage of growth. Fixed
-              pricing on individual services, custom quotes for bundles — no
-              hidden fees, ever. Pick a tier and let&apos;s build.
+              pricing on individual services, custom quotes for bundles, no
+              hidden fees ever. Pick a tier and let&apos;s build.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
@@ -376,7 +368,7 @@ const FAQS = [
 
       <PricingAnchorNav />
 
-      {/* All-in-One Bundles — shown first */}
+      {/* All-in-One Bundles, shown first */}
       <section
         id="all-in-one"
         className="scroll-mt-36 border-b border-white/[0.06] bg-[#08080a] py-24 lg:py-32"
@@ -391,7 +383,7 @@ const FAQS = [
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
               Every channel. One team. One invoice. Bundled pricing costs less
-              than booking services individually — and gives you a unified
+              than booking services individually. You also get one unified
               strategy that actually compounds.
             </p>
           </Reveal>
@@ -433,7 +425,7 @@ const FAQS = [
         id="web-design-dev"
         eyebrow="DESIGN & ENGINEERING"
         heading="Web Design & Development"
-        subhead="From clean marketing sites to complex e-commerce systems — built bespoke, owned outright."
+        subhead="From clean marketing sites to complex e-commerce systems. Built to order, owned outright."
         tiers={WEB_TIERS}
       />
 
@@ -474,9 +466,9 @@ const FAQS = [
                 </h2>
                 <p className="mt-4 text-[14.5px] leading-relaxed text-white/60">
                   Every business is different. If your needs don&apos;t fit
-                  cleanly into the tiers above — whether that&apos;s a hybrid
-                  engagement, multi-track retainer, or a build outside our
-                  standard scope — let&apos;s talk.
+                  cleanly into the tiers above, let&apos;s talk. That covers a
+                  hybrid engagement, a multi-track retainer, or a build outside
+                  our standard scope.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a

@@ -84,18 +84,10 @@ export default async function LocationHubPage({ params }) {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: `ScaleForge - ${location.city} Digital Growth & Web Agency`,
+    "@type": "Service",
+    name: `Web Development, SEO and AI Automation for ${location.city}, ${location.stateCode}`,
     url: `${siteUrl}/locations/${location.slug}`,
-    telephone: "+1-832-555-0199",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "4803 Westpark Dr Ste 304B",
-      addressLocality: location.city,
-      addressRegion: location.stateCode,
-      postalCode: "77063",
-      addressCountry: "US",
-    },
+    provider: { "@id": `${siteUrl}/#organization` },
     areaServed: {
       "@type": "City",
       name: location.city,
@@ -104,7 +96,7 @@ export default async function LocationHubPage({ params }) {
         name: location.state,
       },
     },
-    description: `Leading digital agency in ${location.city}, ${location.stateCode} providing custom web development, SEO, and AI automations.`,
+    description: `Remote digital agency serving ${location.city}, ${location.stateCode} with custom web development, SEO, and AI automations.`,
   };
 
   const locationFaqs = [

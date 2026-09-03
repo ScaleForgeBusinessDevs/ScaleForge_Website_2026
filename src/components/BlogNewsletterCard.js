@@ -23,7 +23,7 @@ export default function BlogNewsletterCard() {
         />
 
         <p className="text-[12px] italic text-white/35">
-          Newsletter coming soon — check back later.
+          Newsletter coming soon. Check back later.
         </p>
       </div>
       <p className="mt-3 text-[11px] italic text-white/30">

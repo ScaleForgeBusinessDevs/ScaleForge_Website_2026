@@ -17,7 +17,7 @@ import {
 export const metadata = {
   title: "SEO Services | Rank Higher on Google with ScaleForge",
   description:
-    "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+    "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building. Engineered to rank and stay ranked. Free audit available.",
   alternates: {
     canonical: "https://scalesforge.site/services/seo",
     languages: {
@@ -41,7 +41,7 @@ export const metadata = {
     title:
       "SEO Services | Rank Higher on Google with ScaleForge",
     description:
-      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building. Engineered to rank and stay ranked. Free audit available.",
     url: "https://scalesforge.site/services/seo",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -52,7 +52,7 @@ export const metadata = {
     title:
       "SEO Services | Rank Higher on Google with ScaleForge",
     description:
-      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+      "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building. Engineered to rank and stay ranked. Free audit available.",
     images: ["/og-image.png"],
   },
 };
@@ -93,11 +93,11 @@ const TIMELINE = [
 ];
 
 const FAQS = [
-  { q: "What is technical SEO?", a: "Technical SEO is the foundation layer — the structural, behind-the-scenes work that makes your website crawlable, indexable, and trustworthy to search engines. It covers site speed (Core Web Vitals), sitemap configuration, schema markup, redirects, canonical tags, and crawl budget. Without strong technical SEO, content and backlink efforts hit a ceiling." },
-  { q: "How long does it take to see SEO results?", a: "For low-competition keywords, you can see ranking movement within 60 to 90 days. For competitive commercial keywords, expect 6 to 9 months before you see top-of-page rankings. SEO is a long game — anyone promising page-one rankings in 30 days is either lying or using tactics that will get you penalized." },
-  { q: "What is local SEO and how does it help service businesses?", a: "Local SEO is the discipline of ranking in the 'Map Pack' — the three local business listings that appear above traditional results when someone searches for a service near them. For service businesses (dentists, lawyers, plumbers, home services), local SEO is often higher-ROI than national SEO because the intent is purchase-ready." },
-  { q: "How do backlinks help my search rankings?", a: "Backlinks are votes of confidence. When another website links to yours, search engines interpret it as a signal that your content is trustworthy and worth citing. The number, quality, and topical relevance of those links is one of the strongest ranking factors Google uses. We earn backlinks through editorial outreach and digital PR — never through link farms or paid networks." },
-  { q: "What is the difference between on-page and off-page SEO?", a: "On-page SEO is what we control on your website — titles, headings, content quality, internal linking, schema. Off-page SEO is what happens outside your website — backlinks, brand mentions, social signals. A complete SEO strategy needs both. We deliver both." }
+  { q: "What is technical SEO?", a: "Technical SEO is the foundation layer. It is the structural, behind-the-scenes work that makes your website crawlable, indexable, and trustworthy to search engines. It covers site speed (Core Web Vitals), sitemap configuration, schema markup, redirects, canonical tags, and crawl budget. Without strong technical SEO, content and backlink efforts hit a ceiling." },
+  { q: "How long does it take to see SEO results?", a: "For low-competition keywords, you can see ranking movement within 60 to 90 days. For competitive commercial keywords, expect 6 to 9 months before you see top-of-page rankings. SEO is a long game. Anyone promising page-one rankings in 30 days is either lying or using tactics that will get you penalized." },
+  { q: "What is local SEO and how does it help service businesses?", a: "Local SEO is the discipline of ranking in the 'Map Pack', the three local business listings that appear above traditional results when someone searches for a service near them. For service businesses (dentists, lawyers, plumbers, home services), local SEO is often higher-ROI than national SEO because the intent is purchase-ready." },
+  { q: "How do backlinks help my search rankings?", a: "Backlinks are votes of confidence. When another website links to yours, search engines interpret it as a signal that your content is trustworthy and worth citing. The number, quality, and topical relevance of those links is one of the strongest ranking factors Google uses. We earn backlinks through editorial outreach and digital PR. Never through link farms or paid networks." },
+  { q: "What is the difference between on-page and off-page SEO?", a: "On-page SEO is what we control on your website: titles, headings, content quality, internal linking, schema. Off-page SEO is what happens outside it: backlinks, brand mentions, social signals. A complete SEO strategy needs both. We deliver both." }
 ];
 
   const breadcrumbSchema = {
@@ -128,7 +128,7 @@ const FAQS = [
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "SEO Services",
-    "description": "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building — engineered to rank and stay ranked. Free audit available.",
+    "description": "Technical SEO audits, on-page optimization, keyword strategy, local SEO, and authority link building. Engineered to rank and stay ranked. Free audit available.",
     "brand": {
         "@type": "Brand",
         "name": "ScaleForge"
@@ -173,8 +173,8 @@ const FAQS = [
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-white/60">
               Paid advertising stops generating traffic the exact microsecond
-              you stop paying. Organic search traffic is the opposite —
-              it&apos;s a compounding asset. A single keyword cluster ranked
+              you stop paying. Organic search traffic is the opposite. It is a
+              compounding asset. A single keyword cluster ranked
               today keeps generating qualified leads day after day, month after
               month, costing nothing per click.
             </p>
@@ -362,7 +362,7 @@ const FAQS = [
 
       <CTASection
         title="Find Out Exactly Why Your Website Is Not Ranking"
-        body="Order your free comprehensive SEO audit. We'll catalog your crawl errors, scan Core Web Vitals barriers, identify keyword targets in your sector, and design a customized traffic timeline — no commitment required."
+        body="Order your free comprehensive SEO audit. We'll catalog your crawl errors, scan Core Web Vitals barriers, identify keyword targets in your sector, and design a customized traffic timeline. No commitment required."
         primaryCta={{
           label: "Get a Free SEO Audit",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",

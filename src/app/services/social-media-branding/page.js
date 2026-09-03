@@ -60,15 +60,15 @@ export default function SocialMediaBrandingPage() {
 
   const OFFERINGS = [
     { title: "Visual Identity System", body: "Custom color palettes, typography pairings, icon sets, and a comprehensive brand guideline document that keeps every post, story, and reel unmistakably yours.", icon: Palette },
-    { title: "Content Template Design", body: "A full library of editable Canva or Figma templates — post formats, carousel slides, story frames, and highlight covers — designed to your brand and ready for your team to use daily.", icon: Camera },
+    { title: "Content Template Design", body: "A full library of editable Canva or Figma templates: post formats, carousel slides, story frames, and highlight covers. Built to your brand and ready for your team to use daily.", icon: Camera },
     { title: "Profile & Bio Optimisation", body: "Profile pictures, banner artwork, keyword-optimised bios, and link-in-bio pages that communicate authority and drive clicks across LinkedIn, Instagram, and X.", icon: PenTool },
     { title: "Content Strategy & Calendar", body: "A data-driven content strategy defining your pillars, posting frequency, hook frameworks, and a 30-day editorial calendar mapped to your business goals.", icon: BarChart2 },
-    { title: "Brand Voice Guidelines", body: "A documented brand voice playbook — tone, vocabulary, do's and don'ts — so every caption and comment sounds like you, whether written by the founder or a hired copywriter.", icon: Megaphone }
+    { title: "Brand Voice Guidelines", body: "A documented brand voice playbook covering tone, vocabulary, and the do's and don'ts. Every caption and comment sounds like you, whether the founder or a hired copywriter wrote it.", icon: Megaphone }
   ];
 
   const PROCESS = [
     { title: "Brand Discovery", body: "We interview you on your audience, competitors, aspirations, and what feeling you want your brand to evoke before we design a single pixel." },
-    { title: "Competitor Visual Audit", body: "We study the top accounts in your niche — what works, what's oversaturated, and where the white space is for you to stand out." },
+    { title: "Competitor Visual Audit", body: "We study the top accounts in your niche: what works, what is oversaturated, and where the white space sits for you to stand out." },
     { title: "Identity Design", body: "We build your full visual identity system: palette, type stack, grid rules, and a master style guide that governs every platform." },
     { title: "Template Library", body: "We design your platform-specific content templates in Figma or Canva, covering all major post formats and stories." },
     { title: "Strategy & Handoff", body: "We deliver your content strategy, 30-day calendar, and a guided walkthrough of every deliverable so your team is immediately operational." }
@@ -85,9 +85,9 @@ export default function SocialMediaBrandingPage() {
 
   const FAQS = [
     { q: "What platforms do you design for?", a: "We cover LinkedIn, Instagram, X (Twitter), Facebook, TikTok, and YouTube. Most branding engagements focus on 2–3 platforms chosen based on where your audience is most concentrated. We always recommend LinkedIn for B2B and Instagram for B2C as starting points." },
-    { q: "Do I need to have an existing brand before starting?", a: "No. We can work from scratch — starting with just your business name and a rough sense of your audience and values. If you have existing brand assets (logo, colours, fonts), we'll build on them. If you don't, we create them from the ground up as part of the engagement." },
+    { q: "Do I need to have an existing brand before starting?", a: "No. We can work from scratch, starting with just your business name and a rough sense of your audience and values. If you have existing brand assets (logo, colours, fonts), we'll build on them. If you don't, we create them from the ground up as part of the engagement." },
     { q: "How long does the branding process take?", a: "A full social media branding engagement typically takes 3–4 weeks: one week for discovery and audit, one to two weeks for identity design and feedback cycles, and one week for template production and strategy delivery." },
-    { q: "Will my team be able to use the templates independently?", a: "Yes — that's the whole point. All templates are built in Canva or Figma with clearly labelled layers, locked brand elements, and editable text/image zones. We walk your team through every template in a recorded handoff session." },
+    { q: "Will my team be able to use the templates independently?", a: "Yes. That is the whole point. All templates are built in Canva or Figma with clearly labelled layers, locked brand elements, and editable text/image zones. We walk your team through every template in a recorded handoff session." },
     { q: "Can you also manage our social media after the branding is done?", a: "We don't offer ongoing social media management directly, but we can connect you with our AI automation pipelines that auto-generate and schedule content, or refer you to trusted content management partners in our network." }
   ];
 
@@ -147,7 +147,7 @@ export default function SocialMediaBrandingPage() {
       <PageHero
         eyebrow="SOCIAL MEDIA BRANDING"
         title="A Brand Identity That Stops the Scroll"
-        subhead="ScaleForge builds complete social media brand systems — visual identity, content templates, strategy, and voice guidelines — so your business looks premium and posts consistently across every platform."
+        subhead="ScaleForge builds complete social media brand systems: visual identity, content templates, strategy, and voice guidelines. Your business looks premium and posts consistently on every platform."
         primaryCta={{
           label: "Book a Free Brand Review",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -175,7 +175,7 @@ export default function SocialMediaBrandingPage() {
         </div>
       </section>
 
-      {/* LinkedIn Posts — Live Feed */}
+      {/* LinkedIn Posts: Live Feed */}
       <LinkedInPosts />
 
       {/* Core Offerings */}

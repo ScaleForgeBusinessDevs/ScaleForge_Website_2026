@@ -20,10 +20,10 @@
     "stateCode": "TX",
     "metro": "Austin-Round Rock Metropolitan Area",
     "population": "2.4M+",
-    "economicHub": "Silicon Hills — High-Tech, SaaS, Venture Capital & Clean Energy",
+    "economicHub": "Silicon Hills: High-Tech, SaaS, Venture Capital and Clean Energy",
     "growthStat": "Austin consistently ranks #1 in the US for tech startup density and VC capital deployment per capita.",
     "topIndustries": ["Technology & SaaS", "E-Commerce & Online Brands", "Real Estate", "Fitness & Gyms", "Dental Practices"],
-    "localContext": "Austin's fast-moving startup and commercial environment demands state-of-the-art web engineering, AI workflow automations, and aggressive organic search strategies to stand out in the Silicon Hills."
+    "localContext": "Austin's fast-moving startup and commercial environment rewards modern web engineering, AI workflow automations, and aggressive organic search strategies that stand out in the Silicon Hills."
   },
   {
     "code": "DTX",
@@ -36,7 +36,7 @@
     "economicHub": "Corporate Headquarters, Financial Services, Logistics & Aviation",
     "growthStat": "DFW is the fastest-growing metro area in the nation, housing 24 Fortune 500 headquarters and tens of thousands of growing SMBs.",
     "topIndustries": ["Financial Advisors", "Law Firms & Attorneys", "Manufacturing & B2B", "Property Management", "HVAC & Home Services"],
-    "localContext": "The Dallas-Fort Worth metroplex is a corporate powerhouse where established service providers, logistics firms, and legal practices need cutting-edge digital infrastructure to win high-ticket contracts."
+    "localContext": "The Dallas-Fort Worth metroplex is a corporate powerhouse where established service providers, logistics firms, and legal practices need serious digital infrastructure to win high-ticket contracts."
   },
   {
     "code": "SF",
@@ -205,7 +205,7 @@
     "economicHub": "Cybersecurity, Military Logistics, Healthcare & Hospitality",
     "growthStat": "San Antonio is the #2 hub in the nation for federal and commercial cybersecurity operations outside Washington DC.",
     "topIndustries": ["Healthcare & Clinics", "Auto Repair & Mechanics", "Construction & Contractors", "Plumbing Companies", "Insurance Agencies"],
-    "localContext": "San Antonio's robust industrial and medical economy presents tremendous upside for service businesses leveraging modern SEO and automated lead routing."
+    "localContext": "San Antonio's deep industrial and medical economy leaves real upside for service businesses that run modern SEO and automated lead routing."
   },
   {
     "code": "SAN",
@@ -296,7 +296,7 @@
     "economicHub": "Silicon Forest Semiconductor, Athletic Footwear Design, Cleantech & Coffee",
     "growthStat": "Portland houses the global headquarters and design centers for the world's leading athletic footwear and outdoor apparel brands.",
     "topIndustries": ["Bicycle Shops & Retailers", "E-Commerce & Online Brands", "Restaurant & Food Service", "Fitness & Gyms", "Dental Practices"],
-    "localContext": "Portland consumers demand authenticity, ethical transparency, and seamless digital booking across local retail and health practices."
+    "localContext": "Portland consumers demand authenticity, ethical transparency, and frictionless digital booking across local retail and health practices."
   },
   {
     "code": "LAS",
@@ -322,7 +322,7 @@
     "economicHub": "Global Air Cargo Logistics (FedEx World Hub), Biomedical & AgTech",
     "growthStat": "Memphis International Airport is the busiest cargo airport in North America, moving over 4.5 million metric tons of goods annually.",
     "topIndustries": ["Manufacturing & B2B", "Staffing & Recruiting", "Plumbing Companies", "Auto Repair & Mechanics", "Healthcare & Clinics"],
-    "localContext": "Memphis businesses leverage automated lead workflows and local search to win commercial supply chain and industrial contracts."
+    "localContext": "Memphis businesses use automated lead workflows and local search to win commercial supply chain and industrial contracts."
   },
   {
     "code": "BAL",
@@ -452,7 +452,7 @@
     "economicHub": "Autonomous Robotics (Robotics Row), AI Research & Advanced Medicine",
     "growthStat": "Carnegie Mellon University and Pittsburgh's tech ecosystem attract hundreds of millions in autonomous robotics and AI investment.",
     "topIndustries": ["Technology & SaaS", "Healthcare & Clinics", "Law Firms & Attorneys", "HVAC & Home Services", "Construction & Contractors"],
-    "localContext": "The Steel City's transformation into a robotics and tech leader demands cutting-edge web design and deep search presence for local businesses."
+    "localContext": "The Steel City's turn toward robotics and tech rewards sharp web design and deep search presence for local businesses."
   },
   {
     "code": "CIN",
@@ -514,7 +514,7 @@
     "stateCode": "NC",
     "metro": "Research Triangle (Raleigh-Durham-Chapel Hill)",
     "population": "2.2M+",
-    "economicHub": "Research Triangle Park (RTP) — Biotechnology, Software & Cleantech",
+    "economicHub": "Research Triangle Park (RTP): Biotechnology, Software and Cleantech",
     "growthStat": "The Research Triangle is the largest research park in North America, with over 300 global innovation companies.",
     "topIndustries": ["Technology & SaaS", "Healthcare & Clinics", "Dental Practices", "Staffing & Recruiting", "Real Estate"],
     "localContext": "The Triangle's highly educated population expects clean UX, instant page speeds, and informative, authoritative digital content."

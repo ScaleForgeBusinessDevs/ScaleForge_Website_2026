@@ -33,7 +33,7 @@ const FEATURES = [
   {
     icon: Network,
     title: "Full-Stack Technical Capability",
-    body: "From headless CMS builds and third-party API wiring to n8n automation pipelines — we handle every layer of your technical infrastructure.",
+    body: "Headless CMS builds, third-party API wiring, n8n automation pipelines. We handle every layer of your technical infrastructure.",
     points: [
       "CMS, CRM & API integrations",
       "Custom n8n & AI pipelines",
@@ -51,8 +51,8 @@ export default function AutomationLimits() {
             What We Build For You
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-            Bespoke digital architecture engineered to scale your operations,
-            presence, and client acquisition.
+            Digital architecture built to scale your operations, presence and
+            client acquisition.
           </p>
         </Reveal>
 

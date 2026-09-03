@@ -7,14 +7,14 @@ import { ArrowRight, Sparkles, Shield, Building2, TrendingUp } from "lucide-reac
 export const metadata = {
   title: "Industry Verticals & Digital Solutions | ScaleForge",
   description:
-    "Explore bespoke web development, local SEO, and custom AI automations engineered specifically for 20 specialized industry verticals by ScaleForge.",
+    "Web development, local SEO, and AI automations built for 20 specific industry verticals. See what ScaleForge ships for yours.",
   alternates: {
     canonical: "https://scalesforge.site/industries",
   },
   openGraph: {
     title: "Industry Verticals & Digital Solutions | ScaleForge",
     description:
-      "Explore bespoke web development, local SEO, and custom AI automations engineered specifically for 20 specialized industry verticals by ScaleForge.",
+      "Web development, local SEO, and AI automations built for 20 specific industry verticals. See what ScaleForge ships for yours.",
     url: "https://scalesforge.site/industries",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -60,7 +60,7 @@ export default function IndustriesIndexPage() {
               Vertical Specialization
             </span>
             <h1 className="mt-5 text-[clamp(2.1rem,5vw,3.6rem)] font-display font-normal leading-[1.12] text-white">
-              Bespoke Growth Systems by Industry
+              Growth Systems Built by Industry
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-[15.5px] leading-relaxed text-white/60">
               We do not build generic template websites. Every industry solution is custom-architected around the specific search intent, compliance rules, and conversion drivers of your vertical.

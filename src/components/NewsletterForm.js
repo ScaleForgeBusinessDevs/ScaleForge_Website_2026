@@ -18,7 +18,7 @@ export default function NewsletterForm({ compact = false }) {
         <p
           className={`text-white/35 italic ${compact ? "mt-3 text-[11.5px]" : "mt-3 text-[12px]"}`}
         >
-          Newsletter coming soon — check back later.
+          Newsletter coming soon. Check back later.
         </p>
       </div>
       {!compact && (

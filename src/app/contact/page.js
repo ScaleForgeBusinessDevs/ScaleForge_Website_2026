@@ -60,7 +60,7 @@ const CONTACT_FAQS = [
   },
   {
     q: "Do I need to have a project fully scoped before reaching out?",
-    a: "No. Some of our best engagements start with a vague idea and a few real constraints. The first call exists to scope and clarify — bring whatever you have.",
+    a: "No. Some of our best engagements start with a vague idea and a few real constraints. The first call exists to scope and clarify, so bring whatever you have.",
   },
   {
     q: "What's the best channel for urgent matters?",
@@ -304,7 +304,7 @@ export default function ContactPage() {
         questions={CONTACT_FAQS}
       />
 
-      {/* Closing — Newsletter */}
+      {/* Closing: Newsletter */}
       <section className="relative overflow-hidden bg-[#08080a] py-20 lg:py-24">
         <div className="bg-grid-dark bg-grid-fade pointer-events-none absolute inset-0" />
         <div className="relative mx-auto max-w-[620px] px-6 lg:px-10">
@@ -315,7 +315,7 @@ export default function ContactPage() {
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
               If you&apos;re not ready to fill out a form or book a call but
               want to keep ScaleForge on your radar, our weekly newsletter
-              delivers one actionable insight per week — no spam.
+              delivers one actionable insight per week. No spam.
             </p>
             <NewsletterForm />
           </Reveal>

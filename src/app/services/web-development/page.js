@@ -67,7 +67,7 @@ const TECH_STACK = [
   { name: "Next.js", body: "The powerful React framework trusted by Hulu, TikTok, and Twitch to deliver server-side pre-rendering and static page generation." },
   { name: "Tailwind CSS", body: "A utility-first stylesheet framework that compiles down to incredibly tiny, fast-loading, bloat-free CSS classes." },
   { name: "Vercel CDN", body: "Global serverless hosting that caches your website at edge nodes around the world, delivering sub-200ms response times." },
-  { name: "TypeScript", body: "A strict syntactical superset of JavaScript that adds robust type safety, eliminating runtime layout bugs before deployment." }
+  { name: "TypeScript", body: "A strict syntactical superset of JavaScript that adds type safety, catching runtime layout bugs before deployment." }
 ];
 
 const BENCHMARKS = [
@@ -79,11 +79,11 @@ const BENCHMARKS = [
 ];
 
 const FAQS = [
-  { q: "What is Next.js and why do you use it?", a: "Next.js is a React-based framework that powers some of the highest-traffic sites on the internet — Hulu, TikTok, Twitch, Notion. It combines server-side rendering, static generation, and edge caching to deliver pages faster than traditional WordPress or PHP setups. For SEO and conversion, it's the strongest foundation available." },
+  { q: "What is Next.js and why do you use it?", a: "Next.js is a React-based framework behind some of the highest-traffic sites on the internet: Hulu, TikTok, Twitch, Notion. It combines server-side rendering, static generation, and edge caching to deliver pages faster than traditional WordPress or PHP setups. For SEO and conversion, it's the strongest foundation available." },
   { q: "What is the development timeline for a new website?", a: "A custom build typically runs 3 to 6 weeks from design hand-off to production launch. A standard 10–15 page site lands in 3 to 4 weeks. Complex builds (e-commerce, custom integrations, multi-language) take 5 to 8 weeks. We commit to firm milestones at kickoff." },
-  { q: "Can you migrate my existing site to Next.js?", a: "Yes. Migration is a common engagement. We audit the existing site, map content into our new architecture, set up redirects to preserve SEO equity, and rebuild from scratch on Next.js. The new site is faster, leaner, and ranks better — without losing the search authority you've already earned." },
+  { q: "Can you migrate my existing site to Next.js?", a: "Yes. Migration is a common engagement. We audit the existing site, map content into our new architecture, set up redirects to preserve SEO equity, and rebuild from scratch on Next.js. The new site is faster, leaner, and ranks better, and you keep the search authority you have already earned." },
   { q: "Do I need to understand coding to edit my site later?", a: "No. We integrate a headless CMS (typically Sanity) that gives you a clean visual dashboard to edit pages, blog posts, and content without touching code. Your team updates content the way you'd update a Google Doc." },
-  { q: "What support do you provide after the site goes live?", a: "Every engagement includes 30 to 90 days of post-launch support (varies by tier — see pricing). After that, we offer optional monthly retainers for ongoing development, performance monitoring, and feature additions. Most clients move to a small retainer once the initial build is stable." }
+  { q: "What support do you provide after the site goes live?", a: "Every engagement includes 30 to 90 days of post-launch support, which varies by tier. See pricing for the detail. After that, we offer optional monthly retainers for ongoing development, performance monitoring, and feature additions. Most clients move to a small retainer once the initial build is stable." }
 ];
 
   const breadcrumbSchema = {
@@ -142,7 +142,7 @@ const FAQS = [
       <PageHero
         eyebrow="ELITE CODING"
         title="Custom Web Development Built for Supersonic Speed"
-        subhead="We build custom websites using Next.js — the same framework powering Hulu, TikTok, and Twitch. Every line of code is compiled for Core Web Vitals dominance and lasting search authority."
+        subhead="We build custom websites on Next.js, the same framework behind Hulu, TikTok, and Twitch. Every line of code is compiled for Core Web Vitals dominance and lasting search authority."
         primaryCta={{
           label: "Book a Free Technical Audit",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -164,8 +164,8 @@ const FAQS = [
                 40% of internet users abandon a web page
               </strong>{" "}
               if it takes more than 3 seconds to render. A slow, bloated
-              WordPress site doesn&apos;t just annoy visitors — it&apos;s
-              actively pushing your rankings down.
+              WordPress site does not just annoy visitors. It actively pushes
+              your rankings down.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-white/60">
               Our handcrafted Next.js builds give you a tremendous performance
@@ -245,7 +245,7 @@ const FAQS = [
             ))}
           </Reveal>
 
-          {/* inline code snippet — credibility signal for dev buyers */}
+          {/* inline code snippet: credibility signal for dev buyers */}
           <Reveal className="mt-6 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#101013] p-6 font-mono text-[12.5px] leading-relaxed">
             <p className="text-white/30">
               {"// Every page export is typed and clean"}

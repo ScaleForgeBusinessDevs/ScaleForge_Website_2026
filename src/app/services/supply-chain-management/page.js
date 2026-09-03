@@ -65,15 +65,15 @@ const STATS = [
 const OFFERINGS = [
   { title: "AI-Powered Sales Forecasting", body: "Machine learning models trained on your historical sales data, seasonality patterns, and external signals to produce accurate demand forecasts at SKU, category, and regional levels.", icon: TrendingUp },
   { title: "Inventory Optimisation", body: "Automated reorder point calculations, safety stock modelling, and dead-stock alerts that prevent both stockouts and costly overstock situations across your warehouse network.", icon: Package },
-  { title: "Supplier & Procurement Analytics", body: "Real-time dashboards tracking supplier lead times, fill rates, and cost variance — so you can renegotiate from a position of data and identify single-source risks before they become crises.", icon: Truck },
-  { title: "ERP & Systems Integration", body: "Seamless two-way integrations with SAP, Oracle, Microsoft Dynamics, Odoo, and custom ERP systems — your forecast data flows automatically without manual re-entry.", icon: GitBranch },
-  { title: "Executive Reporting Dashboards", body: "Role-specific dashboards for operations managers, finance teams, and C-suite — showing the KPIs each stakeholder needs without the noise they don't.", icon: BarChart2 }
+  { title: "Supplier & Procurement Analytics", body: "Real-time dashboards tracking supplier lead times, fill rates, and cost variance. You renegotiate from a position of data and spot single-source risks before they become crises.", icon: Truck },
+  { title: "ERP & Systems Integration", body: "Two-way integrations with SAP, Oracle, Microsoft Dynamics, Odoo, and custom ERP systems. Forecast data flows automatically with no manual re-entry.", icon: GitBranch },
+  { title: "Executive Reporting Dashboards", body: "Role-specific dashboards for operations managers, finance teams, and the C-suite. Each stakeholder sees the KPIs they need without the noise they don't.", icon: BarChart2 }
 ];
 
 const PROCESS = [
   { title: "Operations Audit", body: "We map your current supply chain workflows, data sources, pain points, and the specific forecasting and reporting gaps costing you money today." },
   { title: "Data Architecture", body: "We design the data model connecting your sales history, inventory levels, supplier records, and external market signals into a unified forecasting layer." },
-  { title: "Model Development", body: "We build and train demand forecasting models — statistical, ML, or hybrid — tuned to your category dynamics and validated against held-out historical data." },
+  { title: "Model Development", body: "We build and train demand forecasting models, statistical or ML or hybrid, tuned to your category dynamics and validated against held-out historical data." },
   { title: "Software Build", body: "We develop the custom application layer: dashboards, alert systems, automated reports, and ERP sync pipelines, all built in your preferred technology stack." },
   { title: "Deployment & Training", body: "We deploy to production, train your team on the system, and monitor forecast accuracy and system stability for the first 90 days post-launch." }
 ];
@@ -91,7 +91,7 @@ const FAQS = [
   { q: "What data do you need to build a forecasting model?", a: "At minimum, 12–24 months of historical sales data at SKU or product category level. Better models come with additional signals: promotional calendars, seasonality flags, supplier lead times, and external data like economic indicators or web traffic. We conduct a data audit at the start of every engagement to assess what you have and what we can supplement." },
   { q: "Can you integrate with our existing ERP system?", a: "Yes. We have integration experience with SAP, Oracle NetSuite, Microsoft Dynamics 365, Odoo, and custom-built ERP systems. For systems without a native API, we build ETL pipelines to extract, transform, and sync data on a scheduled basis. Integration complexity and timeline depends on your system's API maturity." },
   { q: "How accurate are the sales forecasts?", a: "Accuracy varies by industry and data quality, but our models typically achieve 85–96% accuracy at the 30-day horizon for established product lines with 18+ months of clean historical data. New products, highly seasonal categories, and markets with significant external volatility will have wider confidence intervals, which we model explicitly." },
-  { q: "Do we need a data team to maintain the system?", a: "No. We build systems designed to be maintained by operations or finance teams without data science backgrounds. Models are retrained automatically on a scheduled basis. You receive clear accuracy reports and drift alerts so you always know when a model needs attention — and we handle the retraining under a maintenance contract." },
+  { q: "Do we need a data team to maintain the system?", a: "No. Operations or finance teams maintain these systems without a data science background. Models are retrained automatically on a scheduled basis. You receive clear accuracy reports and drift alerts, so you always know when a model needs attention. We handle the retraining under a maintenance contract." },
   { q: "How long does a full build take?", a: "A standard forecasting platform with 2–3 integrations and a dashboard layer typically takes 8–14 weeks from kickoff to production. More complex deployments with multiple warehouses, international data sources, or legacy ERP systems can run 16–24 weeks. We always start with a scoped MVP delivered in the first 4 weeks so your team can validate the approach early." }
 ];
 
@@ -151,7 +151,7 @@ const FAQS = [
       <PageHero
         eyebrow="SUPPLY CHAIN"
         title="Custom Software That Forecasts Demand and Cuts Waste"
-        subhead="ScaleForge builds purpose-built supply chain management platforms with AI-powered sales forecasting, real-time inventory intelligence, and supplier analytics — replacing spreadsheets with systems that actually scale."
+        subhead="ScaleForge builds purpose-built supply chain management platforms with AI-powered sales forecasting, real-time inventory intelligence, and supplier analytics. Spreadsheets go away. Systems that scale replace them."
         primaryCta={{
           label: "Book a Free Operations Review",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -187,8 +187,8 @@ const FAQS = [
               Platform Capabilities
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-              Every module is purpose-built for your operations — not a generic
-              SaaS platform forced to fit your workflow.
+              Every module is purpose-built for your operations. This is not a
+              generic SaaS platform forced to fit your workflow.
             </p>
           </Reveal>
 
@@ -247,7 +247,7 @@ const FAQS = [
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 We don&apos;t sell you a generic SaaS licence with 80% of
                 features you&apos;ll never use. We build exactly what your
-                supply chain needs — nothing more, nothing less.
+                supply chain needs. Nothing more, nothing less.
               </p>
             </Reveal>
           </div>

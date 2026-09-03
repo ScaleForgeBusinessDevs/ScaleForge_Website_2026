@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 export const metadata = {
   title: "Terms of Service | ScaleForge",
   description:
-    "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+    "Terms governing the use of ScaleForge's website and services: engagement terms, payment, IP, liability, and governing law.",
   alternates: {
     canonical: "https://scalesforge.site/terms",
     languages: {
@@ -28,7 +28,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+      "Terms governing the use of ScaleForge's website and services: engagement terms, payment, IP, liability, and governing law.",
     url: "https://scalesforge.site/terms",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -39,7 +39,7 @@ export const metadata = {
     title:
       "Terms of Service | ScaleForge",
     description:
-      "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+      "Terms governing the use of ScaleForge's website and services: engagement terms, payment, IP, liability, and governing law.",
     images: ["/og-image.png"],
   },
 };
@@ -79,7 +79,7 @@ export default function TermsPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Terms of Service | ScaleForge",
-    "description": "Terms governing the use of ScaleForge's website and services — engagement terms, payment, IP, liability, and governing law.",
+    "description": "Terms governing the use of ScaleForge's website and services: engagement terms, payment, IP, liability, and governing law.",
     "url": "https://scalesforge.site/terms",
     "isPartOf": {
       "@type": "WebSite",

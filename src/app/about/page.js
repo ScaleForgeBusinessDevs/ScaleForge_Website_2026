@@ -10,7 +10,7 @@ import TwitterXIcon from "@/components/TwitterXIcon";
 export const metadata = {
   title: "About ScaleForge | Our Team, Story & Values",
   description:
-    "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+    "Meet the founders behind ScaleForge, a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
   alternates: {
     canonical: "https://scalesforge.site/about",
     languages: {
@@ -34,7 +34,7 @@ export const metadata = {
     title:
       "About ScaleForge | Our Team, Story & Values",
     description:
-      "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+      "Meet the founders behind ScaleForge, a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
     url: "https://scalesforge.site/about",
     siteName: "ScaleForge",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -45,7 +45,7 @@ export const metadata = {
     title:
       "About ScaleForge | Our Team, Story & Values",
     description:
-      "Meet the founders behind ScaleForge — a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
+      "Meet the founders behind ScaleForge, a Karachi-based studio building custom Next.js sites, AI automation, and SEO systems for ambitious businesses worldwide.",
     images: ["/og-image.png"],
   },
 };
@@ -138,7 +138,7 @@ export default function About() {
               Forging the Future of Digital Excellence
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-white/60">
-              ScaleForge isn&apos;t just an agency — it&apos;s a strategic
+              ScaleForge is not just an agency. It is a strategic
               partnership between two builders who got tired of watching
               ambitious businesses get burned by template shops and disappearing
               freelancers. We built the studio we wished existed.
@@ -159,7 +159,7 @@ export default function About() {
                 ScaleForge started with a frustration. After years of watching
                 ambitious businesses pay agencies for slow WordPress sites,
                 generic SEO retainers, and disappearing freelancers, Shahood and
-                Ruhan decided to build the studio they wished existed — one that
+                Ruhan decided to build the studio they wished existed: one that
                 did the work properly, owned its outcomes, and treated every
                 engagement like a partnership. In 2024, the two co-founded
                 ScaleForge as a formal partnership under Pakistan&apos;s
@@ -171,7 +171,7 @@ export default function About() {
                 ScaleForge operates as a remote-first studio based in Karachi,
                 serving clients across the US, UK, Australia, and the EU. Every
                 engagement is led directly by the founders or a senior team
-                member they&apos;ve trained — no account managers, no telephone
+                member they&apos;ve trained. No account managers, no telephone
                 game, no diluted execution.
               </p>
               <p>
@@ -182,7 +182,7 @@ export default function About() {
                 >
                   AI Development & Automation
                 </Link>{" "}
-                as a flagship service, building bespoke automation systems using
+                as a flagship service, building custom automation systems using
                 n8n, Make.com, Vapi, Notion, and Google Sheets alongside the
                 original Next.js web engineering and SEO work that built the
                 firm.
@@ -244,7 +244,7 @@ export default function About() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/[0.08]">
                   <Image
                     src="/Assets/Shahood.avif"
-                    alt="Shahood Saleem — Founder & CEO"
+                    alt="Shahood Saleem, Founder and CEO"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-top grayscale transition-transform duration-700 group-hover:scale-[1.03]"
@@ -311,7 +311,7 @@ export default function About() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/[0.08]">
                   <Image
                     src="/Assets/Ruhan_2.avif"
-                    alt="Ruhan Bhaleshah — Partner & Technical Lead"
+                    alt="Ruhan Bhaleshah, Partner and Technical Lead"
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-top grayscale transition-transform duration-700 group-hover:scale-[1.03]"
@@ -408,7 +408,7 @@ export default function About() {
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/60">
               ScaleForge operates remote-first, with clients across the US, UK,
-              Canada, Australia, and the EU. We work in your time zone —
+              Canada, Australia, and the EU. We work in your time zone:
               meetings booked during your business hours, async updates
               delivered overnight when needed.
             </p>

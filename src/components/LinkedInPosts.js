@@ -87,7 +87,7 @@ export default async function LinkedInPosts() {
             See Our Work in the Wild
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/60">
-            Real insights, campaign results, and branding breakdowns — pulled
+            Real insights, campaign results, and branding breakdowns, pulled
             from our LinkedIn.
           </p>
         </Reveal>

@@ -173,7 +173,7 @@ export default function Footer() {
                 <li key={p.href}>
                   <Link
                     href={p.href}
-                    className="text-[13.5px] text-white/55 transition-colors hover:text-white/80"
+                    className="block py-1 text-[13.5px] text-white/55 transition-colors hover:text-white/80"
                   >
                     {p.label}
                   </Link>
@@ -221,7 +221,7 @@ export default function Footer() {
             </p>
             <Link
               href="/industries"
-              className="text-[11px] text-[#a5aef0] hover:underline"
+              className="inline-block py-1 text-[11px] text-[#a5aef0] hover:underline"
             >
               All Industries Directory →
             </Link>
@@ -231,7 +231,7 @@ export default function Footer() {
               <span key={ind.slug} className="text-[12.5px] text-white/45">
                 <Link
                   href={`/industries/${ind.slug}`}
-                  className="transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
+                  className="inline-block py-1.5 transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
                 >
                   {ind.label}
                 </Link>
@@ -251,7 +251,7 @@ export default function Footer() {
             </p>
             <Link
               href="/locations"
-              className="text-[11px] text-[#a5aef0] hover:underline"
+              className="inline-block py-1 text-[11px] text-[#a5aef0] hover:underline"
             >
               All US Metro Hubs →
             </Link>
@@ -261,7 +261,7 @@ export default function Footer() {
               <span key={loc.code} className="text-[12.5px] text-white/45">
                 <Link
                   href={`/locations/${loc.slug}`}
-                  className="transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
+                  className="inline-block py-1.5 transition-colors hover:text-white/85 hover:underline decoration-white/20 underline-offset-4"
                 >
                   {loc.code}
                 </Link>
@@ -279,11 +279,11 @@ export default function Footer() {
             © {new Date().getFullYear()} ScaleForge. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-[12.5px] text-white/40">
-            <Link href="/privacy" className="hover:text-white/65 transition-colors">
+            <Link href="/privacy" className="inline-block py-1 transition-colors hover:text-white/65">
               Privacy Policy
             </Link>
             <span className="text-white/20">|</span>
-            <Link href="/terms" className="hover:text-white/65 transition-colors">
+            <Link href="/terms" className="inline-block py-1 transition-colors hover:text-white/65">
               Terms of Service
             </Link>
           </div>

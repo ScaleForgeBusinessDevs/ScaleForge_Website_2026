@@ -19,7 +19,7 @@ const QUESTIONS = [
   },
   {
     q: "What if I need custom development outside your standard services?",
-    a: "We build bespoke integrations, custom data pipelines, and custom software systems regularly. During our initial scoping call, we will map out your exact system requirements and propose a tailored technical solution.",
+    a: "We build custom integrations, data pipelines, and software systems regularly. During our initial scoping call, we will map out your exact system requirements and propose a tailored technical solution.",
   },
   {
     q: "Do you work with international clients?",

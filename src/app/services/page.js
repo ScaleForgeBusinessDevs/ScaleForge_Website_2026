@@ -69,9 +69,9 @@ const SERVICES = [
     eyebrow: "FLAGSHIP",
     name: "AI Development & Automation",
     valueProp:
-      "Automated Systems That Generate Leads, Call Prospects, and Publish Content — 24/7",
+      "Automated Systems That Generate Leads, Call Prospects, and Publish Content Around the Clock",
     body: [
-      "We build bespoke AI automation workflows using n8n, Make.com, Zapier, Vapi, Notion, and Google Sheets to eliminate repetitive work, automate lead generation, run AI cold calling agents, and publish content — all on autopilot.",
+      "We build custom AI automation workflows on n8n, Make.com, Zapier, Vapi, Notion, and Google Sheets. They kill repetitive work, generate leads, run AI cold calling agents, and publish content on autopilot.",
       "This isn't off-the-shelf chatbots. We architect end-to-end pipelines tailored to how your business actually works, then hand them off with full documentation so your team owns them outright.",
     ],
     included: [
@@ -91,7 +91,7 @@ const SERVICES = [
     valueProp: "Conversion-Focused UI/UX That Builds Trust Instantly",
     body: [
       "Your website is your number-one salesperson. Visitors decide whether to stay or leave inside 50 milliseconds. Our design process starts with your business goals and maps a journey that guides users smoothly toward making an inquiry.",
-      "Every layout is drawn in Figma from scratch — zero templates, zero pre-made components — to match your brand and conversion targets exactly.",
+      "Every layout is drawn in Figma from scratch to match your brand and conversion targets exactly. Zero templates. Zero pre-made components.",
     ],
     included: [
       "Custom visual identity and brand style guide",
@@ -109,14 +109,14 @@ const SERVICES = [
     name: "Web Development",
     valueProp: "Fast, Scalable Websites Built with Next.js",
     body: [
-      "A gorgeous design is worthless if your website is slow, buggy, or difficult to crawl. We engineer every site in Next.js — the same framework powering Hulu, TikTok, and Twitch — for sub-1.5-second load times, clean semantic HTML, and long-term scalability.",
+      "A gorgeous design is worthless if your website is slow, buggy, or difficult to crawl. We engineer every site in Next.js, the same framework behind Hulu, TikTok, and Twitch. That buys sub-1.5-second load times, clean semantic HTML, and long-term scalability.",
       "Every line of code is typed. Every component earns its place. The result is a site that ranks on Google's terms and never breaks when a plugin updates.",
     ],
     included: [
       "Next.js and Tailwind CSS custom programming",
       "Performance optimization (Core Web Vitals)",
       "SEO-ready schema markup & semantic architecture",
-      "Robust headless CMS integration (Sanity)",
+      "Headless CMS integration (Sanity)",
       "Comprehensive cross-browser and cross-device QA",
     ],
     href: "/services/web-development",
@@ -129,7 +129,7 @@ const SERVICES = [
     valueProp: "Rank Higher on Google. Stay There.",
     body: [
       "Organic search is the highest-ROI investment you can make in marketing. We cover all three critical layers: technical foundation fixes, strategic keyword content creation, and authority-building backlink outreach.",
-      "Rankings built on shortcuts disappear overnight. We build them to compound — month after month, year after year.",
+      "Rankings built on shortcuts disappear overnight. We build them to compound month after month, year after year.",
     ],
     included: [
       "Full technical SEO audit & root-cause fixing",
@@ -166,7 +166,7 @@ const SERVICES = [
     name: "Startup Advisory",
     valueProp: "Strategic Mentorship for Founders Who Move Fast",
     body: [
-      "We work directly with early-stage founders to sharpen strategy, build investor-ready materials, and open doors. From pitch deck creation and fundraising strategy to OKR frameworks and go-to-market planning — hands-on advisory from people who have been in the room.",
+      "We work directly with early-stage founders to sharpen strategy, build investor-ready materials, and open doors. Pitch decks, fundraising strategy, OKR frameworks, go-to-market planning. Hands-on advisory from people who have been in the room.",
       "Every engagement is structured, prepared, and output-driven. No generic mentorship sessions. Every week produces something concrete your business can act on immediately.",
     ],
     included: [
@@ -185,7 +185,7 @@ const SERVICES = [
     name: "Social Media Branding",
     valueProp: "A Brand Identity That Stops the Scroll",
     body: [
-      "We build complete social media brand systems — visual identity, content templates, strategy, and voice guidelines — so your business looks premium and posts consistently across every platform.",
+      "We build complete social media brand systems: visual identity, content templates, strategy, and voice guidelines. Your business looks premium and posts consistently on every platform.",
       "Every template is designed to be used the same day. No design skills required. We hand off a full library of editable assets plus a 30-day content calendar your team can execute immediately.",
     ],
     included: [
@@ -204,7 +204,7 @@ const SERVICES = [
     name: "Supply Chain Management",
     valueProp: "Custom Software That Forecasts Demand and Cuts Waste",
     body: [
-      "We build purpose-built supply chain platforms with AI-powered sales forecasting, real-time inventory intelligence, and supplier analytics — replacing spreadsheets with systems that actually scale.",
+      "We build purpose-built supply chain platforms with AI-powered sales forecasting, real-time inventory intelligence, and supplier analytics. Spreadsheets go away. Systems that scale replace them.",
       "Custom models trained on your historical data deliver 85–96% forecast accuracy at the 30-day horizon, with automated reorder triggers and live ERP sync eliminating manual data entry entirely.",
     ],
     included: [
@@ -223,7 +223,7 @@ const SERVICES = [
     name: "Motion Analysis",
     valueProp: "Eliminate Wasted Motion. Recover Hidden Capacity.",
     body: [
-      "We conduct digital time and motion studies that identify exactly where your workforce time goes — and precisely how to get more output from the same headcount without adding cost.",
+      "We run digital time and motion studies that show exactly where your workforce time goes, then show how to get more output from the same headcount without adding cost.",
       "Our studies combine industrial engineering methodology with modern digital capture tools to deliver results that are 3× faster and significantly more accurate than traditional clipboard-based approaches.",
     ],
     included: [
@@ -293,7 +293,7 @@ export default function ServicesIndexPage() {
       <PageHero
         eyebrow="OUR CAPABILITIES"
         title="Full-Service Web, SEO, and AI Solutions"
-        subhead="From building AI automation pipelines to coding custom platforms to ranking them on page one of Google — ScaleForge delivers every service your business needs to grow online, under one roof."
+        subhead="Build AI automation pipelines. Code custom platforms. Rank them on page one of Google. ScaleForge delivers every service your business needs to grow online, under one roof."
         primaryCta={{
           label: "Book a Free Strategy Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -318,7 +318,7 @@ export default function ServicesIndexPage() {
               Our services are engineered to work in tandem. Design shapes the
               user experience. Development guarantees supersonic speed. SEO
               drives targeted traffic. Content converts it. AI automation
-              handles the volume — so you scale without scaling overhead.
+              handles the volume. You scale without scaling overhead.
             </p>
           </Reveal>
         </div>
@@ -402,7 +402,7 @@ export default function ServicesIndexPage() {
 
       <CTASection
         title="Not Sure Where to Start?"
-        body="Every business has unique growth dynamics. Book a free 30-minute strategic briefing. We'll analyze your current site's search presence and draft a custom action plan — no obligation, no upsell."
+        body="Every business has unique growth dynamics. Book a free 30-minute strategic briefing. We'll analyze your current site's search presence and draft a custom action plan. No obligation, no upsell."
         primaryCta={{
           label: "Book a Free Strategy Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",

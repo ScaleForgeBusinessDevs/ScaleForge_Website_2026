@@ -156,7 +156,7 @@ function RosterVisual() {
         ))}
       </div>
       <p className="mt-5 text-[12px] text-white/40">
-        4 / 6 slots filled — 2 remaining. Roster resets each season.
+        4 of 6 slots filled, 2 remaining. Roster resets each season.
       </p>
     </div>
   );
@@ -166,7 +166,7 @@ function UpdateFeedVisual() {
   const updates = [
     { time: "Mon · 09:14", text: "Strategy brief reviewed and locked" },
     { time: "Wed · 15:40", text: "Homepage architecture milestone shipped" },
-    { time: "Fri · 11:02", text: "SEO schema pass complete — live on staging" },
+    { time: "Fri · 11:02", text: "SEO schema pass complete, live on staging" },
   ];
   return (
     <div className="rounded-2xl border border-white/[0.07] bg-[#101013] p-7">
@@ -199,9 +199,9 @@ const STATS = [
 
 const VALUES = [
   { title: "Performance First", body: "Every technical and creative decision ties directly back to one question: will this improve conversion, speed, or ranking? If the answer is no, we don't do it." },
-  { title: "Radical Transparency", body: "You see every line of code, every report, every invoice. We don't hide behind jargon or dashboards — you know exactly what's happening and why." },
+  { title: "Radical Transparency", body: "You see every line of code, every report, every invoice. We don't hide behind jargon or dashboards. You know exactly what's happening and why." },
   { title: "Long-Term Compounding", body: "We don't chase vanity metrics or quick wins. Every action is designed to compound: content that builds authority, code that scales, and SEO that strengthens with age." },
-  { title: "Ownership & Independence", body: "When the engagement ends, you own everything — code, content, accounts, analytics. No vendor lock-in. No hostage negotiations. Your platform is yours." },
+  { title: "Ownership & Independence", body: "When the engagement ends, you own everything: code, content, accounts, analytics. No vendor lock-in. No hostage negotiations. Your platform is yours." },
 ];
 
 const INDUSTRIES = [
@@ -217,18 +217,18 @@ const INDUSTRIES = [
 
 const DNA_BLOCKS = [
   {
-    title: "Bespoke Speed. Complete Code Safety.",
-    body: "Every project we take on is built from scratch — no page builders, no WordPress themes, no borrowed components. We write clean, typed TypeScript from line one, which means your website is faster, safer, and owned entirely by you. Our code doesn't break when a plugin updates. It doesn't slow down when traffic spikes. It simply performs.",
+    title: "Purpose-Built Speed. Complete Code Safety.",
+    body: "Every project we take on is built from scratch. No page builders, no WordPress themes, no borrowed components. We write clean, typed TypeScript from line one, which means your website is faster, safer, and owned entirely by you. Our code doesn't break when a plugin updates. It doesn't slow down when traffic spikes. It simply performs.",
     visual: <CodeSnippetVisual />,
   },
   {
     title: "No Libraries or Themes Bloated with Markup.",
-    body: "Pre-built themes ship with thousands of lines of CSS and JavaScript you'll never use. That dead weight silently kills your PageSpeed scores and handicaps your Google rankings. We design and develop every component purposefully — each pixel earns its place. The result is a website that loads in under 1.5 seconds on mobile, with a score your competitors simply cannot match.",
+    body: "Pre-built themes ship with thousands of lines of CSS and JavaScript you'll never use. That dead weight silently kills your PageSpeed scores and handicaps your Google rankings. We design and develop every component purposefully, so each pixel earns its place. The result is a website that loads in under 1.5 seconds on mobile, with a score your competitors simply cannot match.",
     visual: <ScoreDialVisual />,
   },
   {
     title: "Long-Term Organic System Visibility.",
-    body: "Rankings built on shortcuts disappear overnight. We architect your website's semantic HTML structure, schema markup, and content hierarchy so search engines can crawl, understand, and trust your pages completely. Every heading, every internal link, and every piece of metadata is a deliberate signal to Google — compounding your authority month after month.",
+    body: "Rankings built on shortcuts disappear overnight. We architect your website's semantic HTML structure, schema markup, and content hierarchy so search engines can crawl, understand, and trust your pages completely. Every heading, every internal link, and every piece of metadata is a deliberate signal to Google. Your authority compounds month after month.",
     visual: <RankingLadderVisual />,
   },
   {
@@ -290,7 +290,7 @@ export default function SolutionsPage() {
           "@type": "ListItem",
           "position": 2,
           "name": "Design & Architecture",
-          "description": "Custom UI/UX design and technical architecture built from scratch — no templates, no page builders."
+          "description": "Custom UI/UX design and technical architecture built from scratch. No templates, no page builders."
         },
         {
           "@type": "ListItem",
@@ -337,8 +337,8 @@ export default function SolutionsPage() {
               Why Most Agencies Fail You
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-relaxed text-white/60">
-              Most agencies spin up a template, call it custom, and disappear —
-              leaving you with a slow, bloated site that&apos;s invisible on
+              Most agencies spin up a template, call it custom, and disappear.
+              You are left with a slow, bloated site that is invisible on
               Google and impossible to scale. ScaleForge is the antidote:
               pixel-perfect engineering, high-intent SEO architecture, and AI
               automation systems built to compound your authority and efficiency

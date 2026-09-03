@@ -41,10 +41,10 @@ export async function POST(request) {
   const fields = [
     ["Name", name],
     ["Email", email],
-    ["Company / Website", company || "—"],
+    ["Company / Website", company || "Not provided"],
     ["Interested In", services.join(", ")],
-    ["Budget", budget || "—"],
-    ["Timeline", timeline || "—"],
+    ["Budget", budget || "Not provided"],
+    ["Timeline", timeline || "Not provided"],
   ];
 
   const textBody = [

@@ -24,7 +24,7 @@ const FEATURES = [
   },
   {
     title: "Automations",
-    body: "Streamline your workflows, reduce manual work, and enhance efficiency with custom automation solutions.",
+    body: "Cut manual work out of your workflows and lift efficiency with custom automation.",
     icon: "spark",
   },
   {

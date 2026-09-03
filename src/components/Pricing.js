@@ -5,7 +5,7 @@ import Link from "next/link";
 const SERVICES_TEASER = [
   {
     title: "Web Design & Development",
-    desc: "From bespoke high-converting marketing sites to complex web applications. Built with modern tech stacks, fully SEO-optimized, and hand-off ready.",
+    desc: "From high-converting marketing sites to complex web applications. Built with modern tech stacks, fully SEO-optimized, and hand-off ready.",
     icon: Code,
     priceEstimate: "Starts at $1,800",
   },

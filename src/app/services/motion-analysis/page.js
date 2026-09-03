@@ -65,16 +65,16 @@ const STATS = [
 ];
 
 const OFFERINGS = [
-  { title: "Digital Time Studies", body: "Precision time capture across every task element using digital tools — replacing stopwatch-and-clipboard with structured data collection that is faster, more accurate, and instantly analysable.", icon: Activity },
+  { title: "Digital Time Studies", body: "Precision time capture across every task element using digital tools. Structured data collection replaces the stopwatch and clipboard, and it is faster, more accurate, and instantly analysable.", icon: Activity },
   { title: "Motion & Workflow Mapping", body: "Spaghetti diagrams, process flow maps, and value-stream mapping of physical and digital workflows to visualise exactly where time, movement, and effort are being wasted.", icon: Layers },
   { title: "Efficiency Benchmarking", body: "We establish performance baselines and compare them against industry standards, best-in-class benchmarks, and internal variance to identify your highest-ROI improvement targets.", icon: Crosshair },
   { title: "Work Sampling Studies", body: "Statistical sampling of workforce activity across shifts to determine the ratio of productive, semi-productive, and non-productive time without continuous observation.", icon: ClipboardList },
-  { title: "Digital Reports & Dashboards", body: "Comprehensive digital study reports with interactive charts, standard time calculations, efficiency ratings, and prioritised improvement recommendations — ready to share with leadership.", icon: FileBarChart },
+  { title: "Digital Reports & Dashboards", body: "Comprehensive digital study reports with interactive charts, standard time calculations, efficiency ratings, and prioritised improvement recommendations, ready to share with leadership.", icon: FileBarChart },
 ];
 
 const PROCESS = [
   { title: "Scope & Planning", body: "We define the study scope: which tasks, work centres, departments, or shifts to analyse, the level of elemental detail required, and the observation period." },
-  { title: "Observation & Data Capture", body: "Our analysts conduct structured observations using digital time study software — capturing elemental times, activity classifications, and performance ratings in real time." },
+  { title: "Observation & Data Capture", body: "Our analysts run structured observations in digital time study software, capturing elemental times, activity classifications, and performance ratings in real time." },
   { title: "Data Validation", body: "Captured data is checked for statistical reliability, outliers are flagged and reviewed, and performance ratings are normalised to a consistent observer baseline." },
   { title: "Analysis & Benchmarking", body: "We calculate standard times, efficiency percentages, and utilisation rates, then benchmark against your internal best performers and industry reference data." },
   { title: "Report & Recommendations", body: "We deliver a full digital study report, improvement priority matrix, and a 90-day implementation roadmap with projected throughput and cost impact." },
@@ -93,7 +93,7 @@ const FAQS = [
   { q: "What is a time and motion study and how is it used?", a: "A time and motion study is a structured methodology for measuring how long each element of a work task takes and how people physically move to perform it. The data is used to calculate standard times, identify inefficiency, reduce unnecessary motion, and set evidence-based productivity targets. Originally developed by Frederick Taylor and Frank Gilbreth, modern digital time and motion studies are significantly faster and more accurate than the original clipboard-based approach." },
   { q: "What industries benefit most from motion analysis?", a: "Manufacturing, warehousing and logistics, assembly operations, healthcare patient-care workflows, construction site operations, retail back-of-house processes, and call centre workflows all show strong ROI from time and motion studies. Any operation where human labour is a significant cost driver and work is at least partially repeatable is a candidate." },
   { q: "How long does a typical time and motion study take?", a: "Study duration depends on the number of tasks, shifts, and work centres in scope. A focused single-department study typically takes 1–2 weeks of observation followed by 1 week of analysis and reporting. Multi-site or cross-functional studies covering multiple departments can run 4–8 weeks. We always begin with a scoping call to produce a precise timeline estimate." },
-  { q: "How do you handle worker union or staff concerns?", a: "We always recommend transparent communication with the workforce before a study begins. Research consistently shows that workers who understand the purpose of a study — improving workflows, not replacing jobs — produce more representative data and are more receptive to the resulting changes. We can provide a communication template for your team." },
+  { q: "How do you handle worker union or staff concerns?", a: "We always recommend transparent communication with the workforce before a study begins. Research consistently shows that workers who understand the purpose of a study produce more representative data and accept the resulting changes more readily. The purpose is improving workflows, not replacing jobs. We can provide a communication template for your team." },
   { q: "Do you help with implementing the recommendations?", a: "Yes. Our standard engagement includes a 90-day improvement roadmap with specific recommendations, projected gains, and implementation sequencing. We can also be retained to support the change management process: running kaizen workshops, training team leaders on the new standard methods, and re-measuring post-implementation to quantify actual gains achieved." }
 ];
 
@@ -153,7 +153,7 @@ const FAQS = [
       <PageHero
         eyebrow="MOTION ANALYSIS"
         title="Eliminate Wasted Motion. Recover Hidden Capacity."
-        subhead="ScaleForge conducts digital time and motion studies that identify exactly where your workforce time goes — and precisely how to get more output from the same headcount."
+        subhead="ScaleForge runs digital time and motion studies that show exactly where your workforce time goes, then show how to get more output from the same headcount."
         primaryCta={{
           label: "Book a Free Study Scoping Call",
           href: "https://cal.com/shahood-saleem-gbzisb/30min",
@@ -173,8 +173,8 @@ const FAQS = [
             </p>
             <p className="mx-auto mt-7 max-w-xl text-[14.5px] leading-relaxed text-white/60">
               Most operational improvement initiatives fail because they target
-              symptoms — adding headcount, extending shifts, or investing in
-              automation — without first understanding exactly how current time
+              symptoms. They add headcount, extend shifts, or invest in
+              automation without first understanding exactly how current time
               and motion is allocated. A time and motion study gives you the
               diagnostic data to make changes that actually work.
             </p>
@@ -250,7 +250,7 @@ const FAQS = [
               <Quote size={24} className="text-white/20" aria-hidden />
               <p className="mt-3 text-[15px] italic leading-relaxed text-white/65">
                 We don&apos;t just hand you a spreadsheet. Every study ends with
-                a specific, sequenced, costed improvement roadmap — so your
+                a specific, sequenced, costed improvement roadmap, so your
                 operations team knows exactly what to do on Monday morning.
               </p>
             </Reveal>

@@ -109,7 +109,7 @@ export default function CaseStudiesPage() {
                     <blockquote className="mt-6 border-l-2 border-[#5e6ad2]/40 pl-3.5 text-[12.5px] italic text-white/60">
                       &ldquo;{study.testimonial.quote}&rdquo;
                       <span className="block mt-1 font-normal not-italic text-white/40">
-                        — {study.testimonial.author}, {study.testimonial.role}
+                        {study.testimonial.author}, {study.testimonial.role}
                       </span>
                     </blockquote>
                   )}

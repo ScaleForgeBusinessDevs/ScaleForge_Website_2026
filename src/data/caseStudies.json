@@ -17,7 +17,7 @@
       { "label": "Average Page Load Speed", "value": "0.62s" }
     ],
     "challenge": "Property Seven was struggling with fragmented lead intake across Zillow, manual spreadsheets, and an unbranded legacy CRM that took 24+ hours to route inquiries to agents. High-value luxury home buyers were falling through the cracks, leading to lost commissions.",
-    "solution": "ScaleForge architected a bespoke Next.js web portal with instant MLS integration, automated lead scoring, and instant WhatsApp/SMS agent dispatch via an automated n8n pipeline. Every inquiry is now enriched with public property equity data and routed within 45 seconds.",
+    "solution": "ScaleForge architected a custom Next.js web portal with instant MLS integration, automated lead scoring, and instant WhatsApp/SMS agent dispatch via an automated n8n pipeline. Every inquiry is now enriched with public property equity data and routed within 45 seconds.",
     "testimonial": {
       "quote": "From Figma to fully deployed in under two weeks. The speed, automation precision, and attention to brand detail was unlike anything we experienced with previous agencies. Our agents are closing deals faster than ever.",
       "author": "Daniel Torres",

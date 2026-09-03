@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 export const metadata = {
   title: "Privacy Policy | ScaleForge",
   description:
-    "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    "ScaleForge's Privacy Policy. How we collect, use, and protect your data when you visit our site or engage our services.",
   alternates: {
     canonical: "https://scalesforge.site/privacy",
     languages: {
@@ -64,7 +64,7 @@ export default function PrivacyPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Privacy Policy | ScaleForge",
-    "description": "ScaleForge's Privacy Policy — how we collect, use, and protect your data when you visit our site or engage our services.",
+    "description": "ScaleForge's Privacy Policy. How we collect, use, and protect your data when you visit our site or engage our services.",
     "url": "https://scalesforge.site/privacy",
     "isPartOf": {
       "@type": "WebSite",
@@ -169,7 +169,7 @@ export default function PrivacyPage() {
                     "Name, email, company, and details you submit via contact forms",
                     "Communications you send us (email, chat, call recordings if applicable)",
                     "Project briefs, files, and access credentials you share for service delivery",
-                    "Payment information (processed by third-party providers — see Section 4)",
+                    "Payment information (processed by third-party providers, see Section 4)",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-white/30" />
